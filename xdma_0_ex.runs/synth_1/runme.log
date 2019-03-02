@@ -1,0 +1,425 @@
+
+*** Running vivado
+    with args -log xilinx_dma_pcie_ep.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xilinx_dma_pcie_ep.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xilinx_dma_pcie_ep.tcl -notrace
+Command: synth_design -top xilinx_dma_pcie_ep -part xc7k410tffv900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-86] Your Synthesis license expires in 10 day(s)
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 34556 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 502.449 ; gain = 105.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'xilinx_dma_pcie_ep' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xilinx_dma_pcie_ep.sv:57]
+	Parameter PL_LINK_CAP_MAX_LINK_WIDTH bound to: 8 - type: integer 
+	Parameter PL_SIM_FAST_LINK_TRAINING bound to: FALSE - type: string 
+	Parameter PL_LINK_CAP_MAX_LINK_SPEED bound to: 1 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter EXT_PIPE_SIM bound to: FALSE - type: string 
+	Parameter C_ROOT_PORT bound to: FALSE - type: string 
+	Parameter C_DEVICE_NUMBER bound to: 0 - type: integer 
+	Parameter AXIS_CCIX_RX_TDATA_WIDTH bound to: 256 - type: integer 
+	Parameter AXIS_CCIX_TX_TDATA_WIDTH bound to: 256 - type: integer 
+	Parameter AXIS_CCIX_RX_TUSER_WIDTH bound to: 46 - type: integer 
+	Parameter AXIS_CCIX_TX_TUSER_WIDTH bound to: 46 - type: integer 
+	Parameter USER_CLK_FREQ bound to: 4 - type: integer 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_NUM_USR_IRQ bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19625]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19625]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (2#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+INFO: [Synth 8-6157] synthesizing module 'xdma_0' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/xdma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xdma_0' (3#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/xdma_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xdma_app' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xdma_app.v:57]
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter PL_LINK_CAP_MAX_LINK_WIDTH bound to: 8 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXIS_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_RQ_USER_WIDTH bound to: 62 - type: integer 
+	Parameter C_S_AXIS_CQP_USER_WIDTH bound to: 88 - type: integer 
+	Parameter C_M_AXIS_RC_USER_WIDTH bound to: 75 - type: integer 
+	Parameter C_S_AXIS_CC_USER_WIDTH bound to: 33 - type: integer 
+	Parameter C_S_KEEP_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_KEEP_WIDTH bound to: 4 - type: integer 
+	Parameter C_XDMA_NUM_CHNL bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'blk_mem_axiLM_inst' of module 'blk_mem_gen_0' requires 21 connections, but only 19 given [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xdma_app.v:194]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (5#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'blk_mem_xdma_inst' of module 'blk_mem_gen_1' requires 33 connections, but only 31 given [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xdma_app.v:216]
+WARNING: [Synth 8-350] instance 'blk_mem_gen_bypass_inst' of module 'blk_mem_gen_1' requires 33 connections, but only 31 given [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xdma_app.v:251]
+INFO: [Synth 8-6155] done synthesizing module 'xdma_app' (6#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xdma_app.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xilinx_dma_pcie_ep' (7#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xilinx_dma_pcie_ep.sv:57]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[63]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[62]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[61]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[60]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[59]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[58]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[57]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[56]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[55]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[54]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[53]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[52]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[51]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[50]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[49]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[48]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[47]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[46]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[45]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[44]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[43]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[42]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[41]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[40]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[39]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[38]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[37]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[36]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[35]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[34]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[33]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_awaddr[32]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[63]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[62]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[61]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[60]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[59]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[58]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[57]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[56]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[55]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[54]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[53]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[52]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[51]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[50]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[49]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[48]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[47]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[46]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[45]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[44]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[43]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[42]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[41]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[40]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[39]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[38]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[37]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[36]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[35]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[34]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[33]
+WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[32]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 556.344 ; gain = 158.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 556.344 ; gain = 158.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 556.344 ; gain = 158.895
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k410tffv900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/.Xil/Vivado-18708-ASJHM1/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xilinx_dma_pcie_ep_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'bd_sys_clk_p'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'bd_sys_clk_n'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'bd_sys_clk_p'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'bd_sys_clk_n'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'RxD'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'TxD'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'USB_RTS'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'USB_CTS'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'RxD'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'TxD'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'USB_RTS'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'USB_CTS'. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:42]
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xilinx_dma_pcie_ep_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 920.785 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_axiLM_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_gen_bypass_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_xdma_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 920.785 ; gain = 523.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k410tffv900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 920.785 ; gain = 523.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for xdma_0_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xdma_app_i/blk_mem_gen_bypass_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xdma_app_i/blk_mem_xdma_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xdma_app_i/blk_mem_axiLM_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 920.785 ; gain = 523.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 920.785 ; gain = 523.336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1540 (col length:140)
+BRAMs: 1590 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 920.785 ; gain = 523.336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'xdma_0_i/axi_aclk' to pin 'xdma_0_i/bbstub_axi_aclk/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 945.980 ; gain = 548.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 946.129 ; gain = 548.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 946.910 ; gain = 549.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xdma_0        |         1|
+|2     |blk_mem_gen_0 |         1|
+|3     |blk_mem_gen_1 |         2|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |blk_mem_gen_1    |     1|
+|3     |blk_mem_gen_1__1 |     1|
+|4     |xdma_0           |     1|
+|5     |IBUFDS_GTE2      |     1|
+|6     |IBUF             |    19|
+|7     |OBUF             |    16|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+-------------+---------+------+
+|      |Instance     |Module   |Cells |
++------+-------------+---------+------+
+|1     |top          |         |  1199|
+|2     |  xdma_app_i |xdma_app |   339|
++------+-------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 947.285 ; gain = 549.836
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 947.285 ; gain = 185.395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 947.285 ; gain = 549.836
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:00 . Memory (MB): peak = 976.906 ; gain = 591.578
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xilinx_dma_pcie_ep_utilization_synth.rpt -pb xilinx_dma_pcie_ep_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.430 . Memory (MB): peak = 977.223 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  2 22:40:46 2019...

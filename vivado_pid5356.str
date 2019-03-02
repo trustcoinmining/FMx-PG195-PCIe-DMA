@@ -1,0 +1,520 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 5356
+License: Customer
+
+Current time: 	Sat Mar 02 21:17:07 KST 2019
+Time zone: 	Korea Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 94 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ASJ
+User home directory: C:/Users/ASJ
+User working directory: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ASJ/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ASJ/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ASJ/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/vivado.log
+Vivado journal file location: 	c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/vivado.jou
+Engine tmp dir: 	c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/.Xil/Vivado-5356-ASJHM1
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	141 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 510 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 58 MB (+58360kb) [00:00:16]
+// [Engine Memory]: 474 MB (+345762kb) [00:00:16]
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// bx (ck):  Sourcing Tcl script 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.tcl' : addNotify
+// Tcl Message: source c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.tcl -notrace 
+// Tcl Message: INFO: [open_example_project] Creating new example project... 
+// HMemoryUtils.trashcanNow. Engine heap size: 532 MB. GUI used memory: 35 MB. Current time: 3/2/19 9:17:09 PM KST
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 532 MB (+36109kb) [00:00:20]
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 584 MB (+26391kb) [00:00:27]
+// [GUI Memory]: 62 MB (+1465kb) [00:00:29]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 773.930 ; gain = 119.656 
+// Tcl Message: INFO: [open_example_project] Importing original IP ... 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 632 MB. GUI used memory: 39 MB. Current time: 3/2/19 9:17:29 PM KST
+// [Engine Memory]: 632 MB (+19116kb) [00:00:40]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 665 MB (+1554kb) [00:00:48]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_ip: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 827.016 ; gain = 53.086 
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2668ms to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: reset_target: Time (s): cpu = 00:00:38 ; elapsed = 00:01:11 . Memory (MB): peak = 830.750 ; gain = 3.734 
+// Tcl Message: INFO: [open_example_project] Generating the example project IP ... INFO: [open_example_project] Adding example synthesis HDL files ... INFO: [open_example_project] Adding example synthesis miscellaneous files ... INFO: [open_example_project] Adding example XDC files ... INFO: [open_example_project] Adding simulation HDL files ... 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: CREATE_IP_CORE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [open_example_project] Adding simulation miscellaneous files ... INFO: [open_example_project] Sourcing example extension scripts ... 
+// Tcl Message: INFO: [filemgmt 56-101] Creating core container 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0.xcix' for IP 'blk_mem_gen_0' INFO: [Device 21-403] Loading part xc7k410tffv900-2 
+// TclEventType: REPORT_IP_STATUS_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 968 MB. GUI used memory: 39 MB. Current time: 3/2/19 9:19:27 PM KST
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 968 MB (+283500kb) [00:02:44]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 971 MB. GUI used memory: 38 MB. Current time: 3/2/19 9:19:40 PM KST
+// Tcl Message: create_ip: Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1119.879 ; gain = 278.813 
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [filemgmt 56-101] Creating core container 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1.xcix' for IP 'blk_mem_gen_1' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'... 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_1'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_1'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_1'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_1'... 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_1'... 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1122.703 ; gain = 0.000 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: INFO: [open_example_project] Rebuilding all the top level IPs ... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xsim/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xsim/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/modelsim/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/modelsim/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/questa/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/questa/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/ies/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/ies/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/vcs/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/vcs/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/riviera/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/riviera/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/activehdl/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/activehdl/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xcelium/blk_mem_gen_1.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xcelium/summary.log' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/xsim/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/xsim/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/modelsim/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/modelsim/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/questa/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/questa/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/ies/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/ies/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/vcs/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/vcs/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/riviera/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/riviera/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/activehdl/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/activehdl/summary.log' INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/xcelium/blk_mem_gen_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_0/xcelium/summary.log' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// [GUI Memory]: 72 MB (+6592kb) [00:03:58]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xsim/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xsim/sys_clk_gen_ps_v.txt' INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/modelsim/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/modelsim/sys_clk_gen_ps_v.txt' INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/questa/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/questa/sys_clk_gen_ps_v.txt' 
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/ies/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/ies/sys_clk_gen_ps_v.txt' 
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/vcs/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/vcs/sys_clk_gen_ps_v.txt' INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/riviera/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/riviera/sys_clk_gen_ps_v.txt' 
+// Tcl Message: INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/activehdl/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/activehdl/sys_clk_gen_ps_v.txt' INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)... 
+// Tcl Message: INFO: [exportsim-Tcl-29] Script generated: 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xcelium/xdma_0.sh' INFO: [SIM-utils-43] Exported 'C:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xcelium/sys_clk_gen_ps_v.txt' 
+// TclEventType: STOP_PROGRESS_DIALOG
+// [GUI Memory]: 80 MB (+4463kb) [00:04:26]
+dismissDialog("Sourcing Tcl script 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.tcl'"); // bx (ck)
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: export_ip_user_files: Time (s): cpu = 00:00:40 ; elapsed = 00:01:12 . Memory (MB): peak = 1134.387 ; gain = 11.684 
+// Tcl Message: INFO: [open_example_project] Open Example Project completed 
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1115ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1802ms to process. Increasing delay to 6000 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 65243 ms. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 85 MB (+1085kb) [00:05:56]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 8117 ms. Increasing delay to 4000 ms.
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 40 MB. Current time: 3/2/19 9:23:00 PM KST
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3595 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5622 ms. Increasing delay to 6000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 4403ms to process. Increasing delay to 7000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1948ms to process. Increasing delay to 8000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 5200ms to process. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 28817 ms. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3738 ms. Increasing delay to 8000 ms.
+// Elapsed time: 579 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// PAPropertyPanels.initPanels (xilinx_xdma_pcie_x0y0.xdc) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, xilinx_xdma_pcie_x0y0.xdc]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, xilinx_xdma_pcie_x0y0.xdc]", 5, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, xilinx_xdma_pcie_x0y0.xdc]", 5, false); // B (D, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("xilinx_xdma_pcie_x0y0.xdc", 393, 207); // ce (w, ck)
+// [GUI Memory]: 92 MB (+2905kb) [00:14:30]
+// Elapsed time: 119 seconds
+selectCodeEditor("xilinx_xdma_pcie_x0y0.xdc", 55, 311); // ce (w, ck)
+typeControlKey((HResource) null, "xilinx_xdma_pcie_x0y0.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("xilinx_xdma_pcie_x0y0.xdc", 135, 67); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 85 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// Tcl Command: 'file mkdir c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1'
+// B (ck): Create Constraints File: addNotify
+// Tcl Message: file mkdir c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1 
+// Elapsed time: 18 seconds
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "k410tFM2Constraints"); // X (C, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (B)
+dismissDialog("Create Constraints File"); // B (ck)
+// Tcl Command: 'file mkdir c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 30 seconds
+// Tcl Message: file mkdir c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new 
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset constrs_1 c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc 
+// c (ck): Add Sources: addNotify
+// bx (c):  Add Constraint  : addNotify
+dismissDialog("Add Constraint"); // bx (c)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, k410tFM2Constraints.xdc]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, k410tFM2Constraints.xdc]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,024 MB. GUI used memory: 46 MB. Current time: 3/2/19 9:35:20 PM KST
+// [Engine Memory]: 1,024 MB (+7214kb) [00:18:31]
+typeControlKey((HResource) null, "k410tFM2Constraints.xdc", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("k410tFM2Constraints.xdc", 12, 4); // ce (w, ck)
+typeControlKey((HResource) null, "k410tFM2Constraints.xdc", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("k410tFM2Constraints.xdc", 130, 199); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // ax (f, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ad (ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci' is already up-to-date 
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Mar  2 21:36:09 2019] Launched blk_mem_gen_1_synth_1, blk_mem_gen_0_synth_1... Run output will be captured here: blk_mem_gen_1_synth_1: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1/runme.log blk_mem_gen_0_synth_1: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/runme.log [Sat Mar  2 21:36:10 2019] Launched synth_1... Run output will be captured here: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 5310 ms. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 475ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 759ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,041 MB. GUI used memory: 48 MB. Current time: 3/2/19 9:39:37 PM KST
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 736ms to process. Increasing delay to 3000 ms.
+// [Engine Memory]: 1,084 MB (+9491kb) [00:22:57]
+// [GUI Memory]: 97 MB (+1215kb) [00:22:57]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 636ms to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 104 MB (+2155kb) [00:22:58]
+// [GUI Memory]: 110 MB (+209kb) [00:22:58]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1921 ms. Increasing delay to 4000 ms.
+// TclEventType: RUN_COMPLETED
+// ah (ck): Synthesis Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+// Elapsed time: 1566 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Mar  2 22:02:18 2019] Launched impl_1... Run output will be captured here: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 7 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2493 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 57 MB. Current time: 3/2/19 10:09:42 PM KST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 7960 ms. Increasing delay to 6000 ms.
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 2051 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (Q, ah)
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci' is already up-to-date 
+// Tcl Message: [Sat Mar  2 22:36:34 2019] Launched impl_1... Run output will be captured here: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// Elapsed time: 27 seconds
+selectButton((HResource) null, "Sources_settings"); // u (f, ck): TRUE
+selectButton((HResource) null, "Properties_settings"); // u (f, ck): TRUE
+// Elapsed time: 13 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, ck)
+// Elapsed time: 18 seconds
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aE (Q, ck)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aE (Q, ck)
+// Elapsed time: 15 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'U7' (IOBS). [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:27]. ]", 3, false); // ah (O, ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+// Elapsed time: 18 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'U7' (IOBS). [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:27]. ]", 3, false); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'U7' (IOBS). [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:27]. ]", 3, false); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'U7' (IOBS). [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:27]. ]", 3, false, false, false, false, false, true); // ah (O, ck) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("k410tFM2Constraints.xdc", 171, 201); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Mar  2 22:39:11 2019] Launched synth_1... Run output will be captured here: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/runme.log [Sat Mar  2 22:39:11 2019] Launched impl_1... Run output will be captured here: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,097 MB. GUI used memory: 56 MB. Current time: 3/2/19 10:39:44 PM KST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 451 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_0_i : xdma_0 (xdma_0.xci)]", 2); // B (D, ck)
+// A (ck): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // A (ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3, true); // B (D, ck) - Node
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6190 ms. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10269 ms. Increasing delay to 9000 ms.
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 34 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, ck)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 18); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 18); // u (O, ck)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 32); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 32); // u (O, ck)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_0_i : xdma_0 (xdma_0.xci)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_0_i : xdma_0 (xdma_0.xci)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// O (ck):  Re-customize IP : addNotify
+// r (ck): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3, true); // B (D, ck) - Node
+// [GUI Memory]: 116 MB (+1090kb) [01:31:15]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xilinx_dma_pcie_ep (xilinx_dma_pcie_ep.sv), xdma_app_i : xdma_app (xdma_app.v)]", 3, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+dismissDialog("Re-customize IP"); // O (ck)
+dismissDialog("Re-customize IP"); // r (ck)
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:19]. ]", 2); // ah (O, ck)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aQ, ck): FALSE
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, true); // g (aQ, ck): TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:19]. ]", 2, true); // ah (O, ck) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:19]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;c:\works\tcm-fm2\FM2-Pcie-pg195\pci-e2018.03\xdmaprj2\xdma_0_ex\xdma_0_ex.srcs\constrs_1\new\k410tFM2Constraints.xdc;-;;-;16;-;line;-;19;-;;-;16;-;"); // ah (O, ck)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc:19]. ]", 2); // ah (O, ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, xilinx_xdma_pcie_x0y0.xdc]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, xilinx_xdma_pcie_x0y0.xdc]", 10, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "k410tFM2Constraints.xdc", 2); // k (j, ck)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "xilinx_xdma_pcie_x0y0.xdc (2)", 4); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 8, true); // B (D, ck) - Node
+// [GUI Memory]: 123 MB (+859kb) [01:33:28]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5995 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1505 ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 130 MB (+444kb) [01:38:14]
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 808 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+// [GUI Memory]: 138 MB (+1901kb) [01:46:53]
