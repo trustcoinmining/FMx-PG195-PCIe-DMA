@@ -1,14 +1,14 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Mar  2 21:39:31 2019
--- Host        : ASJHM1 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+-- Date        : Tue Mar  5 14:45:51 2019
+-- Host        : vr-2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_sim_netlist.vhdl
+--               D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_sim_netlist.vhdl
 -- Design      : blk_mem_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7k410tffv900-2
+-- Device      : xc7k410tffg900-2
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_read_fsm is
   port (
     s_axi_arready : out STD_LOGIC;
-    s_axi_rvalid : out STD_LOGIC;
+    \gaxi_lite_sm.r_valid_r_reg_0\ : out STD_LOGIC;
     ENB_I : out STD_LOGIC;
     ADDRBWRADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -37,17 +37,17 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_read_fsm is
   signal ar_ready_c : STD_LOGIC;
   signal \gaxi_lite_sm.outstanding_read_r_i_1_n_0\ : STD_LOGIC;
   signal \gaxi_lite_sm.r_valid_r_i_1_n_0\ : STD_LOGIC;
+  signal \^gaxi_lite_sm.r_valid_r_reg_0\ : STD_LOGIC;
   signal next_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal outstanding_read_r : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
   signal pipeline_full_c10_out : STD_LOGIC;
   signal present_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \^s_axi_rvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_14\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \gaxi_lite_sm.present_state[0]_i_1\ : label is "soft_lutpair0";
 begin
-  s_axi_rvalid <= \^s_axi_rvalid\;
+  \gaxi_lite_sm.r_valid_r_reg_0\ <= \^gaxi_lite_sm.r_valid_r_reg_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_10\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"AC"
@@ -93,7 +93,7 @@ begin
       INIT => X"2"
     )
         port map (
-      I0 => \^s_axi_rvalid\,
+      I0 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I1 => s_axi_rready,
       O => pipeline_full_c10_out
     );
@@ -105,7 +105,7 @@ begin
       I0 => present_state(0),
       I1 => outstanding_read_r,
       I2 => s_axi_rready,
-      I3 => \^s_axi_rvalid\,
+      I3 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I4 => present_state(1),
       O => p_0_in
     );
@@ -188,7 +188,7 @@ begin
     )
         port map (
       I0 => present_state(0),
-      I1 => \^s_axi_rvalid\,
+      I1 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I2 => outstanding_read_r,
       I3 => present_state(1),
       I4 => s_axi_rready,
@@ -225,7 +225,7 @@ begin
       I2 => present_state(0),
       I3 => outstanding_read_r,
       I4 => s_axi_rready,
-      I5 => \^s_axi_rvalid\,
+      I5 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       O => \gaxi_lite_sm.outstanding_read_r_i_1_n_0\
     );
 \gaxi_lite_sm.outstanding_read_r_reg\: unisim.vcomponents.FDRE
@@ -247,7 +247,7 @@ begin
       I0 => s_axi_arvalid,
       I1 => s_axi_rready,
       I2 => present_state(0),
-      I3 => \^s_axi_rvalid\,
+      I3 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I4 => present_state(1),
       O => next_state(0)
     );
@@ -258,7 +258,7 @@ begin
         port map (
       I0 => present_state(0),
       I1 => outstanding_read_r,
-      I2 => \^s_axi_rvalid\,
+      I2 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I3 => present_state(1),
       I4 => s_axi_arvalid,
       I5 => s_axi_rready,
@@ -293,7 +293,7 @@ begin
         port map (
       I0 => s_axi_arvalid,
       I1 => s_axi_rready,
-      I2 => \^s_axi_rvalid\,
+      I2 => \^gaxi_lite_sm.r_valid_r_reg_0\,
       I3 => outstanding_read_r,
       I4 => present_state(1),
       I5 => present_state(0),
@@ -307,7 +307,7 @@ begin
       C => s_aclk,
       CE => '1',
       D => \gaxi_lite_sm.r_valid_r_i_1_n_0\,
-      Q => \^s_axi_rvalid\,
+      Q => \^gaxi_lite_sm.r_valid_r_reg_0\,
       R => SR(0)
     );
 end STRUCTURE;
@@ -323,17 +323,17 @@ entity blk_mem_gen_0_blk_mem_axi_write_fsm is
     ENA_I : out STD_LOGIC;
     s_axi_wr_en_c : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \gaxi_bvalid_noid_r.bvalid_r_reg\ : out STD_LOGIC;
+    \bvalid_count_r_reg[1]\ : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
     s_axi_awvalid : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
     ENA_dly_D : in STD_LOGIC;
-    \bvalid_count_r_reg[2]\ : in STD_LOGIC;
-    \bvalid_count_r_reg[1]\ : in STD_LOGIC;
-    \bvalid_count_r_reg[0]\ : in STD_LOGIC;
+    \gaxi_bvalid_noid_r.bvalid_r_reg\ : in STD_LOGIC;
+    \gaxi_bvalid_noid_r.bvalid_r_reg_0\ : in STD_LOGIC;
+    \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\ : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg_0\ : in STD_LOGIC
+    \gaxi_bvalid_noid_r.bvalid_r_reg_1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_axi_write_fsm : entity is "blk_mem_axi_write_fsm";
@@ -342,19 +342,17 @@ end blk_mem_gen_0_blk_mem_axi_write_fsm;
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_write_fsm is
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aw_ready_c : STD_LOGIC;
-  signal \bready_timeout_c__0\ : STD_LOGIC;
+  signal \bready_timeout_c__1\ : STD_LOGIC;
   signal next_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal present_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute RTL_KEEP : string;
-  attribute RTL_KEEP of present_state : signal is "yes";
   signal \^s_axi_wr_en_c\ : STD_LOGIC;
   signal w_ready_c : STD_LOGIC;
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_lite_sm.present_state_reg[0]\ : label is "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00";
-  attribute KEEP : string;
-  attribute KEEP of \FSM_sequential_gaxi_lite_sm.present_state_reg[0]\ : label is "yes";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_lite_sm.present_state_reg[1]\ : label is "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00";
-  attribute KEEP of \FSM_sequential_gaxi_lite_sm.present_state_reg[1]\ : label is "yes";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT[9]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \gaxi_lite_sm.w_ready_r_i_1\ : label is "soft_lutpair1";
 begin
   SR(0) <= \^sr\(0);
   s_axi_wr_en_c <= \^s_axi_wr_en_c\;
@@ -376,7 +374,7 @@ begin
         port map (
       I0 => s_axi_wvalid,
       I1 => s_axi_awvalid,
-      I2 => \bready_timeout_c__0\,
+      I2 => \bready_timeout_c__1\,
       I3 => present_state(0),
       I4 => present_state(1),
       I5 => s_axi_bready,
@@ -387,7 +385,7 @@ begin
       INIT => X"2230EEFC88FC88FC"
     )
         port map (
-      I0 => \bready_timeout_c__0\,
+      I0 => \bready_timeout_c__1\,
       I1 => present_state(1),
       I2 => s_axi_awvalid,
       I3 => s_axi_wvalid,
@@ -422,12 +420,12 @@ begin
       INIT => X"FFFBFF00"
     )
         port map (
-      I0 => \bvalid_count_r_reg[1]\,
+      I0 => \gaxi_bvalid_noid_r.bvalid_r_reg_0\,
       I1 => s_axi_bready,
-      I2 => \bvalid_count_r_reg[2]\,
+      I2 => \gaxi_bvalid_noid_r.bvalid_r_reg\,
       I3 => \^s_axi_wr_en_c\,
-      I4 => \gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      O => \gaxi_bvalid_noid_r.bvalid_r_reg\
+      I4 => \gaxi_bvalid_noid_r.bvalid_r_reg_1\,
+      O => \bvalid_count_r_reg[1]\
     );
 \gaxi_bvalid_noid_r.bvalid_r_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -444,7 +442,7 @@ begin
       INIT => X"00004F00"
     )
         port map (
-      I0 => \bready_timeout_c__0\,
+      I0 => \bready_timeout_c__1\,
       I1 => s_axi_wvalid,
       I2 => present_state(0),
       I3 => s_axi_awvalid,
@@ -466,7 +464,7 @@ begin
         port map (
       I0 => s_axi_awvalid,
       I1 => s_axi_bready,
-      I2 => \bready_timeout_c__0\,
+      I2 => \bready_timeout_c__1\,
       I3 => present_state(1),
       I4 => s_axi_wvalid,
       I5 => present_state(0),
@@ -477,10 +475,10 @@ begin
       INIT => X"10"
     )
         port map (
-      I0 => \bvalid_count_r_reg[2]\,
-      I1 => \bvalid_count_r_reg[1]\,
-      I2 => \bvalid_count_r_reg[0]\,
-      O => \bready_timeout_c__0\
+      I0 => \gaxi_bvalid_noid_r.bvalid_r_reg\,
+      I1 => \gaxi_bvalid_noid_r.bvalid_r_reg_0\,
+      I2 => \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\,
+      O => \bready_timeout_c__1\
     );
 \gaxi_lite_sm.aw_ready_r_reg\: unisim.vcomponents.FDRE
     generic map(
@@ -500,7 +498,7 @@ begin
         port map (
       I0 => present_state(0),
       I1 => s_axi_wvalid,
-      I2 => \bready_timeout_c__0\,
+      I2 => \bready_timeout_c__1\,
       I3 => s_axi_awvalid,
       I4 => present_state(1),
       O => w_ready_c
@@ -524,7 +522,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_gen_prim_wrapper is
   port (
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC;
+    \SAFETY_CKT_GEN.POR_A_reg\ : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     ENA_I : in STD_LOGIC;
     ENB_I : in STD_LOGIC;
@@ -540,11 +538,11 @@ entity blk_mem_gen_0_blk_mem_gen_prim_wrapper is
 end blk_mem_gen_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_wrapper is
-  signal \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_72\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_73\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_74\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
+  signal \^safety_ckt_gen.por_a_reg\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
@@ -556,7 +554,7 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_wrapper is
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-  \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ <= \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\;
+  \SAFETY_CKT_GEN.POR_A_reg\ <= \^safety_ckt_gen.por_a_reg\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
@@ -769,7 +767,7 @@ begin
       REGCEAREGCE => '0',
       REGCEB => '0',
       RSTRAMARSTRAM => POR_A,
-      RSTRAMB => \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\,
+      RSTRAMB => \^safety_ckt_gen.por_a_reg\,
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
@@ -783,7 +781,7 @@ begin
         port map (
       I0 => POR_A,
       I1 => s_aresetn,
-      O => \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\
+      O => \^safety_ckt_gen.por_a_reg\
     );
 end STRUCTURE;
 library IEEE;
@@ -793,7 +791,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_read_wrapper is
   port (
     s_axi_arready : out STD_LOGIC;
-    s_axi_rvalid : out STD_LOGIC;
+    \gaxi_lite_sm.r_valid_r_reg\ : out STD_LOGIC;
     ENB_I : out STD_LOGIC;
     ADDRBWRADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -819,12 +817,12 @@ axi_read_fsm: entity work.blk_mem_gen_0_blk_mem_axi_read_fsm
       ENB_dly_D => ENB_dly_D,
       Q(9 downto 0) => araddr_reg(9 downto 0),
       SR(0) => SR(0),
+      \gaxi_lite_sm.r_valid_r_reg_0\ => \gaxi_lite_sm.r_valid_r_reg\,
       s_aclk => s_aclk,
       s_axi_araddr(9 downto 0) => s_axi_araddr(9 downto 0),
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_rready => s_axi_rready,
-      s_axi_rvalid => s_axi_rvalid
+      s_axi_rready => s_axi_rready
     );
 \gaxi_lite_sm.araddr_reg_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -946,7 +944,7 @@ entity blk_mem_gen_0_blk_mem_axi_write_wrapper is
     s_axi_awready : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wready : out STD_LOGIC;
-    s_axi_bvalid : out STD_LOGIC;
+    \gaxi_bvalid_noid_r.bvalid_r_reg_0\ : out STD_LOGIC;
     ENA_I : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
     s_aclk : in STD_LOGIC;
@@ -971,22 +969,22 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_write_wrapper is
   signal \bvalid_count_r_reg_n_0_[0]\ : STD_LOGIC;
   signal \bvalid_count_r_reg_n_0_[1]\ : STD_LOGIC;
   signal \bvalid_count_r_reg_n_0_[2]\ : STD_LOGIC;
-  signal \^s_axi_bvalid\ : STD_LOGIC;
+  signal \^gaxi_bvalid_noid_r.bvalid_r_reg_0\ : STD_LOGIC;
   signal s_axi_wr_en_c : STD_LOGIC;
 begin
   SR(0) <= \^sr\(0);
-  s_axi_bvalid <= \^s_axi_bvalid\;
+  \gaxi_bvalid_noid_r.bvalid_r_reg_0\ <= \^gaxi_bvalid_noid_r.bvalid_r_reg_0\;
 axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
      port map (
       E(0) => addr_en_c,
       ENA_I => ENA_I,
       ENA_dly_D => ENA_dly_D,
       SR(0) => \^sr\(0),
-      \bvalid_count_r_reg[0]\ => \bvalid_count_r_reg_n_0_[0]\,
-      \bvalid_count_r_reg[1]\ => \bvalid_count_r_reg_n_0_[1]\,
-      \bvalid_count_r_reg[2]\ => \bvalid_count_r_reg_n_0_[2]\,
-      \gaxi_bvalid_noid_r.bvalid_r_reg\ => axi_wr_fsm_n_6,
-      \gaxi_bvalid_noid_r.bvalid_r_reg_0\ => \^s_axi_bvalid\,
+      \bvalid_count_r_reg[1]\ => axi_wr_fsm_n_6,
+      \gaxi_bvalid_noid_r.bvalid_r_reg\ => \bvalid_count_r_reg_n_0_[2]\,
+      \gaxi_bvalid_noid_r.bvalid_r_reg_0\ => \bvalid_count_r_reg_n_0_[1]\,
+      \gaxi_bvalid_noid_r.bvalid_r_reg_1\ => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
+      \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\ => \bvalid_count_r_reg_n_0_[0]\,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
       s_axi_awready => s_axi_awready,
@@ -1003,7 +1001,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
         port map (
       I0 => s_axi_wr_en_c,
       I1 => s_axi_bready,
-      I2 => \^s_axi_bvalid\,
+      I2 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
       I3 => \bvalid_count_r_reg_n_0_[1]\,
       I4 => \bvalid_count_r_reg_n_0_[2]\,
       I5 => \bvalid_count_r_reg_n_0_[0]\,
@@ -1017,7 +1015,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       I0 => \bvalid_count_r_reg_n_0_[2]\,
       I1 => \bvalid_count_r_reg_n_0_[0]\,
       I2 => \bvalid_count_r_reg_n_0_[1]\,
-      I3 => \^s_axi_bvalid\,
+      I3 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
       I4 => s_axi_bready,
       I5 => s_axi_wr_en_c,
       O => \bvalid_count_r[1]_i_1_n_0\
@@ -1030,7 +1028,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       I0 => \bvalid_count_r_reg_n_0_[2]\,
       I1 => \bvalid_count_r_reg_n_0_[0]\,
       I2 => \bvalid_count_r_reg_n_0_[1]\,
-      I3 => \^s_axi_bvalid\,
+      I3 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
       I4 => s_axi_bready,
       I5 => s_axi_wr_en_c,
       O => \bvalid_count_r[2]_i_1_n_0\
@@ -1076,7 +1074,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       C => s_aclk,
       CE => '1',
       D => axi_wr_fsm_n_6,
-      Q => \^s_axi_bvalid\,
+      Q => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
       R => \^sr\(0)
     );
 \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\: unisim.vcomponents.FDRE
@@ -1190,8 +1188,9 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_width is
   signal ENB_dly : STD_LOGIC;
   signal \^enb_dly_d\ : STD_LOGIC;
   signal POR_A : STD_LOGIC;
-  signal RSTA_SHFT_REG : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\ : STD_LOGIC;
+  signal \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\ : STD_LOGIC;
+  signal p_0_in : STD_LOGIC_VECTOR ( 1 to 1 );
   signal p_3_out : STD_LOGIC;
   signal \prim_noinit.ram_n_32\ : STD_LOGIC;
   signal ram_rstram_a_busy : STD_LOGIC;
@@ -1252,8 +1251,8 @@ begin
       INIT => X"6"
     )
         port map (
-      I0 => RSTA_SHFT_REG(0),
-      I1 => RSTA_SHFT_REG(4),
+      I0 => p_0_in(1),
+      I1 => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\,
       O => p_3_out
     );
 \SAFETY_CKT_GEN.POR_A_reg\: unisim.vcomponents.FDRE
@@ -1293,7 +1292,7 @@ begin
       C => s_aclk,
       CE => '1',
       D => '1',
-      Q => RSTA_SHFT_REG(0),
+      Q => p_0_in(1),
       R => '0'
     );
 \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\: unisim.vcomponents.SRL16E
@@ -1307,7 +1306,7 @@ begin
       A3 => '0',
       CE => '1',
       CLK => s_aclk,
-      D => RSTA_SHFT_REG(0),
+      D => p_0_in(1),
       Q => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\
     );
 \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]\: unisim.vcomponents.FDRE
@@ -1318,7 +1317,7 @@ begin
       C => s_aclk,
       CE => '1',
       D => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\,
-      Q => RSTA_SHFT_REG(4),
+      Q => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\,
       R => '0'
     );
 \SAFETY_CKT_GEN.nSPRAM_RST_BUSY.RSTB_BUSY_NO_REG.RSTB_BUSY_i_1\: unisim.vcomponents.LUT4
@@ -1343,11 +1342,11 @@ begin
 \prim_noinit.ram\: entity work.blk_mem_gen_0_blk_mem_gen_prim_wrapper
      port map (
       ADDRBWRADDR(9 downto 0) => ADDRBWRADDR(9 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ => \prim_noinit.ram_n_32\,
       ENA_I => ENA_I,
       ENB_I => ENB_I,
       POR_A => POR_A,
       Q(9 downto 0) => Q(9 downto 0),
+      \SAFETY_CKT_GEN.POR_A_reg\ => \prim_noinit.ram_n_32\,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
       s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
@@ -1445,16 +1444,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity blk_mem_gen_0_blk_mem_gen_v8_4_1_synth is
+entity blk_mem_gen_0_blk_mem_gen_v8_4_2_synth is
   port (
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awready : out STD_LOGIC;
     s_axi_wready : out STD_LOGIC;
-    s_axi_bvalid : out STD_LOGIC;
+    \gaxi_bvalid_noid_r.bvalid_r_reg\ : out STD_LOGIC;
     rsta_busy : out STD_LOGIC;
     rstb_busy : out STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
-    s_axi_rvalid : out STD_LOGIC;
+    \gaxi_lite_sm.r_valid_r_reg\ : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1468,10 +1467,10 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_1_synth is
     s_axi_rready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
-end blk_mem_gen_0_blk_mem_gen_v8_4_1_synth;
+  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
+end blk_mem_gen_0_blk_mem_gen_v8_4_2_synth;
 
-architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_1_synth is
+architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_2_synth is
   signal s_aresetn_a_c : STD_LOGIC;
   signal s_axi_araddr_out_c : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal s_axi_awaddr_out_c : STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -1502,12 +1501,12 @@ begin
       ENB_I => \valid.cstr/ramloop[0].ram.r/ENB_I\,
       ENB_dly_D => \valid.cstr/ramloop[0].ram.r/ENB_dly_D\,
       SR(0) => s_aresetn_a_c,
+      \gaxi_lite_sm.r_valid_r_reg\ => \gaxi_lite_sm.r_valid_r_reg\,
       s_aclk => s_aclk,
       s_axi_araddr(9 downto 0) => s_axi_araddr(9 downto 0),
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_rready => s_axi_rready,
-      s_axi_rvalid => s_axi_rvalid
+      s_axi_rready => s_axi_rready
     );
 \gnbram.gaxibmg.axi_wr_fsm\: entity work.blk_mem_gen_0_blk_mem_axi_write_wrapper
      port map (
@@ -1515,13 +1514,13 @@ begin
       ENA_dly_D => \valid.cstr/ramloop[0].ram.r/ENA_dly_D\,
       Q(9 downto 0) => s_axi_awaddr_out_c(9 downto 0),
       SR(0) => s_aresetn_a_c,
+      \gaxi_bvalid_noid_r.bvalid_r_reg_0\ => \gaxi_bvalid_noid_r.bvalid_r_reg\,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
       s_axi_awaddr(9 downto 0) => s_axi_awaddr(9 downto 0),
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
-      s_axi_bvalid => s_axi_bvalid,
       s_axi_wready => s_axi_wready,
       s_axi_wvalid => s_axi_wvalid
     );
@@ -1530,7 +1529,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity blk_mem_gen_0_blk_mem_gen_v8_4_1 is
+entity blk_mem_gen_0_blk_mem_gen_v8_4_2 is
   port (
     clka : in STD_LOGIC;
     rsta : in STD_LOGIC;
@@ -1597,158 +1596,162 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_1 is
     s_axi_rdaddrecc : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute C_ADDRA_WIDTH : integer;
-  attribute C_ADDRA_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 10;
+  attribute C_ADDRA_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 10;
   attribute C_ADDRB_WIDTH : integer;
-  attribute C_ADDRB_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 10;
+  attribute C_ADDRB_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 10;
   attribute C_ALGORITHM : integer;
-  attribute C_ALGORITHM of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_ALGORITHM of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 4;
+  attribute C_AXI_ID_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 4;
   attribute C_AXI_SLAVE_TYPE : integer;
-  attribute C_AXI_SLAVE_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_AXI_SLAVE_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_AXI_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_BYTE_SIZE : integer;
-  attribute C_BYTE_SIZE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 8;
+  attribute C_BYTE_SIZE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 8;
   attribute C_COMMON_CLK : integer;
-  attribute C_COMMON_CLK of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_COMMON_CLK of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_COUNT_18K_BRAM : string;
-  attribute C_COUNT_18K_BRAM of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "0";
+  attribute C_COUNT_18K_BRAM of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "0";
   attribute C_COUNT_36K_BRAM : string;
-  attribute C_COUNT_36K_BRAM of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "1";
+  attribute C_COUNT_36K_BRAM of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "1";
   attribute C_CTRL_ECC_ALGO : string;
-  attribute C_CTRL_ECC_ALGO of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "NONE";
+  attribute C_CTRL_ECC_ALGO of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "NONE";
   attribute C_DEFAULT_DATA : string;
-  attribute C_DEFAULT_DATA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "0";
+  attribute C_DEFAULT_DATA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "0";
   attribute C_DISABLE_WARN_BHV_COLL : integer;
-  attribute C_DISABLE_WARN_BHV_COLL of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_COLL of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_DISABLE_WARN_BHV_RANGE : integer;
-  attribute C_DISABLE_WARN_BHV_RANGE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_RANGE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_ELABORATION_DIR : string;
-  attribute C_ELABORATION_DIR of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "./";
+  attribute C_ELABORATION_DIR of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "./";
   attribute C_ENABLE_32BIT_ADDRESS : integer;
-  attribute C_ENABLE_32BIT_ADDRESS of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_ENABLE_32BIT_ADDRESS of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_DEEPSLEEP_PIN : integer;
-  attribute C_EN_DEEPSLEEP_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_DEEPSLEEP_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_ECC_PIPE : integer;
-  attribute C_EN_ECC_PIPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_ECC_PIPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_RDADDRA_CHG : integer;
-  attribute C_EN_RDADDRA_CHG of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_RDADDRA_CHG of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_RDADDRB_CHG : integer;
-  attribute C_EN_RDADDRB_CHG of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_RDADDRB_CHG of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_EN_SAFETY_CKT of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_EN_SHUTDOWN_PIN : integer;
-  attribute C_EN_SHUTDOWN_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_SHUTDOWN_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EN_SLEEP_PIN : integer;
-  attribute C_EN_SLEEP_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_SLEEP_PIN of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     5.96515 mW";
+  attribute C_EST_POWER_SUMMARY of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "Estimated Power for IP     :     5.96515 mW";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "kintex7";
+  attribute C_FAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "kintex7";
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_AXI_ID of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_ENA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_ENB of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_INJECTERR : integer;
-  attribute C_HAS_INJECTERR of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_INJECTERR of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_REGCEA : integer;
-  attribute C_HAS_REGCEA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_REGCEA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_REGCEB : integer;
-  attribute C_HAS_REGCEB of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_REGCEB of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_RSTA : integer;
-  attribute C_HAS_RSTA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_RSTA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_RSTB of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
-  attribute C_HAS_SOFTECC_INPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_SOFTECC_INPUT_REGS_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
-  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_INITA_VAL : string;
-  attribute C_INITA_VAL of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "0";
+  attribute C_INITA_VAL of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "0";
   attribute C_INITB_VAL : string;
-  attribute C_INITB_VAL of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "0";
+  attribute C_INITB_VAL of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "0";
   attribute C_INIT_FILE : string;
-  attribute C_INIT_FILE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_0.mem";
+  attribute C_INIT_FILE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_0.mem";
   attribute C_INIT_FILE_NAME : string;
-  attribute C_INIT_FILE_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "no_coe_file_loaded";
+  attribute C_INIT_FILE_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "no_coe_file_loaded";
   attribute C_INTERFACE_TYPE : integer;
-  attribute C_INTERFACE_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_INTERFACE_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_LOAD_INIT_FILE : integer;
-  attribute C_LOAD_INIT_FILE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_LOAD_INIT_FILE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_MEM_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_MUX_PIPELINE_STAGES : integer;
-  attribute C_MUX_PIPELINE_STAGES of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_MUX_PIPELINE_STAGES of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_PRIM_TYPE : integer;
-  attribute C_PRIM_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_PRIM_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1024;
+  attribute C_READ_DEPTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1024;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1024;
+  attribute C_READ_DEPTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1024;
+  attribute C_READ_LATENCY_A : integer;
+  attribute C_READ_LATENCY_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
+  attribute C_READ_LATENCY_B : integer;
+  attribute C_READ_LATENCY_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_READ_WIDTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_READ_WIDTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_RSTRAM_A : integer;
-  attribute C_RSTRAM_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_RSTRAM_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_RSTRAM_B : integer;
-  attribute C_RSTRAM_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_RSTRAM_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_RST_PRIORITY_A : string;
-  attribute C_RST_PRIORITY_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "CE";
+  attribute C_RST_PRIORITY_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "CE";
   attribute C_RST_PRIORITY_B : string;
-  attribute C_RST_PRIORITY_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "CE";
+  attribute C_RST_PRIORITY_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "CE";
   attribute C_SIM_COLLISION_CHECK : string;
-  attribute C_SIM_COLLISION_CHECK of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "ALL";
+  attribute C_SIM_COLLISION_CHECK of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "ALL";
   attribute C_USE_BRAM_BLOCK : integer;
-  attribute C_USE_BRAM_BLOCK of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_USE_BRAM_BLOCK of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_USE_BYTE_WEA : integer;
-  attribute C_USE_BYTE_WEA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_USE_BYTE_WEA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_USE_BYTE_WEB : integer;
-  attribute C_USE_BYTE_WEB of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_USE_BYTE_WEB of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_USE_DEFAULT_DATA : integer;
-  attribute C_USE_DEFAULT_DATA of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_USE_DEFAULT_DATA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_USE_ECC : integer;
-  attribute C_USE_ECC of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_USE_ECC of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_USE_SOFTECC : integer;
-  attribute C_USE_SOFTECC of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_USE_SOFTECC of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_USE_URAM : integer;
-  attribute C_USE_URAM of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_USE_URAM of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_WEA_WIDTH : integer;
-  attribute C_WEA_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 4;
+  attribute C_WEA_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 4;
   attribute C_WEB_WIDTH : integer;
-  attribute C_WEB_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 4;
+  attribute C_WEB_WIDTH of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 4;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1024;
+  attribute C_WRITE_DEPTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1024;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 1024;
+  attribute C_WRITE_DEPTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1024;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "READ_FIRST";
+  attribute C_WRITE_MODE_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
-  attribute C_WRITE_MODE_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "READ_FIRST";
+  attribute C_WRITE_MODE_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "READ_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_WRITE_WIDTH_A of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_WRITE_WIDTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
-  attribute C_XDEVICEFAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "kintex7";
+  attribute C_XDEVICEFAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "kintex7";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
+  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of blk_mem_gen_0_blk_mem_gen_v8_4_1 : entity is "yes";
-end blk_mem_gen_0_blk_mem_gen_v8_4_1;
+  attribute downgradeipidentifiedwarnings of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "yes";
+end blk_mem_gen_0_blk_mem_gen_v8_4_2;
 
-architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_1 is
+architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_2 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
@@ -1856,8 +1859,10 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst_blk_mem_gen: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
+inst_blk_mem_gen: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2_synth
      port map (
+      \gaxi_bvalid_noid_r.bvalid_r_reg\ => s_axi_bvalid,
+      \gaxi_lite_sm.r_valid_r_reg\ => s_axi_rvalid,
       rsta_busy => rsta_busy,
       rstb_busy => rstb_busy,
       s_aclk => s_aclk,
@@ -1869,10 +1874,8 @@ inst_blk_mem_gen: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
-      s_axi_bvalid => s_axi_bvalid,
       s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
       s_axi_rready => s_axi_rready,
-      s_axi_rvalid => s_axi_rvalid,
       s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
       s_axi_wready => s_axi_wready,
       s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
@@ -1910,11 +1913,11 @@ entity blk_mem_gen_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of blk_mem_gen_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of blk_mem_gen_0 : entity is "blk_mem_gen_0,blk_mem_gen_v8_4_1,{}";
+  attribute CHECK_LICENSE_TYPE of blk_mem_gen_0 : entity is "blk_mem_gen_0,blk_mem_gen_v8_4_2,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of blk_mem_gen_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of blk_mem_gen_0 : entity is "blk_mem_gen_v8_4_1,Vivado 2018.2";
+  attribute x_core_info of blk_mem_gen_0 : entity is "blk_mem_gen_v8_4_2,Vivado 2018.3";
 end blk_mem_gen_0;
 
 architecture STRUCTURE of blk_mem_gen_0 is
@@ -2029,6 +2032,10 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute C_READ_DEPTH_A of U0 : label is 1024;
   attribute C_READ_DEPTH_B : integer;
   attribute C_READ_DEPTH_B of U0 : label is 1024;
+  attribute C_READ_LATENCY_A : integer;
+  attribute C_READ_LATENCY_A of U0 : label is 1;
+  attribute C_READ_LATENCY_B : integer;
+  attribute C_READ_LATENCY_B of U0 : label is 1;
   attribute C_READ_WIDTH_A : integer;
   attribute C_READ_WIDTH_A of U0 : label is 32;
   attribute C_READ_WIDTH_B : integer;
@@ -2079,9 +2086,9 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of s_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.ACLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of s_aclk : signal is "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000";
+  attribute x_interface_parameter of s_aclk : signal is "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
   attribute x_interface_info of s_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.ARESETN RST";
-  attribute x_interface_parameter of s_aresetn : signal is "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW";
+  attribute x_interface_parameter of s_aresetn : signal is "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARREADY";
   attribute x_interface_info of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARVALID";
   attribute x_interface_info of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWREADY";
@@ -2094,14 +2101,14 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WVALID";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME AXILite_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME AXILite_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RRESP";
   attribute x_interface_info of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WDATA";
   attribute x_interface_info of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WSTRB";
 begin
-U0: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_1
+U0: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2
      port map (
       addra(9 downto 0) => B"0000000000",
       addrb(9 downto 0) => B"0000000000",

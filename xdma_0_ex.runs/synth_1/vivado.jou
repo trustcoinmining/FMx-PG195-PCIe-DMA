@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Mar  2 22:39:17 2019
-# Process ID: 18708
-# Current directory: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar  5 14:51:53 2019
+# Process ID: 42268
+# Current directory: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1
 # Command line: vivado.exe -log xilinx_dma_pcie_ep.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xilinx_dma_pcie_ep.tcl
-# Log file: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.vds
-# Journal file: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/synth_1\vivado.jou
+# Log file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.vds
+# Journal file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source xilinx_dma_pcie_ep.tcl -notrace

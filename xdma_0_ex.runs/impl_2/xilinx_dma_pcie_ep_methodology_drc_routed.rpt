@@ -1,0 +1,60 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Mar  5 14:57:23 2019
+| Host         : vr-2 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file xilinx_dma_pcie_ep_methodology_drc_routed.rpt -pb xilinx_dma_pcie_ep_methodology_drc_routed.pb -rpx xilinx_dma_pcie_ep_methodology_drc_routed.rpx
+| Design       : xilinx_dma_pcie_ep
+| Device       : xc7k410tffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 5
++---------+----------+------------------------------+------------+
+| Rule    | Severity | Description                  | Violations |
++---------+----------+------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert | 5          |
++---------+----------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_int_reg/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/__0/i_, with 2 or more inputs, drives asynchronous preset/clear pin(s) xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[3].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+

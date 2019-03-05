@@ -1,18 +1,18 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Mar  2 21:39:31 2019
-// Host        : ASJHM1 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Tue Mar  5 14:45:51 2019
+// Host        : vr-2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_sim_netlist.v
+//               D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_sim_netlist.v
 // Design      : blk_mem_gen_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7k410tffv900-2
+// Device      : xc7k410tffg900-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "blk_mem_gen_0,blk_mem_gen_v8_4_1,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_1,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "blk_mem_gen_0,blk_mem_gen_v8_4_2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_2,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module blk_mem_gen_0
    (rsta_busy,
@@ -38,9 +38,9 @@ module blk_mem_gen_0
     s_axi_rready);
   output rsta_busy;
   output rstb_busy;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000" *) input s_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW" *) input s_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME AXILite_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [31:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME AXILite_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [31:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WDATA" *) input [31:0]s_axi_wdata;
@@ -141,6 +141,8 @@ module blk_mem_gen_0
   (* C_PRIM_TYPE = "1" *) 
   (* C_READ_DEPTH_A = "1024" *) 
   (* C_READ_DEPTH_B = "1024" *) 
+  (* C_READ_LATENCY_A = "1" *) 
+  (* C_READ_LATENCY_B = "1" *) 
   (* C_READ_WIDTH_A = "32" *) 
   (* C_READ_WIDTH_B = "32" *) 
   (* C_RSTRAM_A = "0" *) 
@@ -165,7 +167,7 @@ module blk_mem_gen_0
   (* C_WRITE_WIDTH_B = "32" *) 
   (* C_XDEVICEFAMILY = "kintex7" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  blk_mem_gen_0_blk_mem_gen_v8_4_1 U0
+  blk_mem_gen_0_blk_mem_gen_v8_4_2 U0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clka(1'b0),
@@ -234,7 +236,7 @@ endmodule
 (* ORIG_REF_NAME = "blk_mem_axi_read_fsm" *) 
 module blk_mem_gen_0_blk_mem_axi_read_fsm
    (s_axi_arready,
-    s_axi_rvalid,
+    \gaxi_lite_sm.r_valid_r_reg_0 ,
     ENB_I,
     ADDRBWRADDR,
     E,
@@ -246,7 +248,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
     Q,
     s_axi_araddr);
   output s_axi_arready;
-  output s_axi_rvalid;
+  output \gaxi_lite_sm.r_valid_r_reg_0 ;
   output ENB_I;
   output [9:0]ADDRBWRADDR;
   output [0:0]E;
@@ -267,6 +269,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
   wire ar_ready_c;
   wire \gaxi_lite_sm.outstanding_read_r_i_1_n_0 ;
   wire \gaxi_lite_sm.r_valid_r_i_1_n_0 ;
+  wire \gaxi_lite_sm.r_valid_r_reg_0 ;
   wire [1:0]next_state;
   wire outstanding_read_r;
   wire p_0_in;
@@ -277,7 +280,6 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
   wire s_axi_arready;
   wire s_axi_arvalid;
   wire s_axi_rready;
-  wire s_axi_rvalid;
 
   LUT3 #(
     .INIT(8'hAC)) 
@@ -311,7 +313,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
   LUT2 #(
     .INIT(4'h2)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_14 
-       (.I0(s_axi_rvalid),
+       (.I0(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I1(s_axi_rready),
         .O(pipeline_full_c10_out));
   LUT5 #(
@@ -320,7 +322,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
        (.I0(present_state[0]),
         .I1(outstanding_read_r),
         .I2(s_axi_rready),
-        .I3(s_axi_rvalid),
+        .I3(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I4(present_state[1]),
         .O(p_0_in));
   LUT6 #(
@@ -379,7 +381,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
     .INIT(64'h05FF012205FF0177)) 
     \gaxi_lite_sm.ar_ready_r_i_1 
        (.I0(present_state[0]),
-        .I1(s_axi_rvalid),
+        .I1(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I2(outstanding_read_r),
         .I3(present_state[1]),
         .I4(s_axi_rready),
@@ -407,7 +409,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
         .I2(present_state[0]),
         .I3(outstanding_read_r),
         .I4(s_axi_rready),
-        .I5(s_axi_rvalid),
+        .I5(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .O(\gaxi_lite_sm.outstanding_read_r_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -424,7 +426,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
        (.I0(s_axi_arvalid),
         .I1(s_axi_rready),
         .I2(present_state[0]),
-        .I3(s_axi_rvalid),
+        .I3(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I4(present_state[1]),
         .O(next_state[0]));
   LUT6 #(
@@ -432,7 +434,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
     \gaxi_lite_sm.present_state[1]_i_1 
        (.I0(present_state[0]),
         .I1(outstanding_read_r),
-        .I2(s_axi_rvalid),
+        .I2(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I3(present_state[1]),
         .I4(s_axi_arvalid),
         .I5(s_axi_rready),
@@ -458,7 +460,7 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
     \gaxi_lite_sm.r_valid_r_i_1 
        (.I0(s_axi_arvalid),
         .I1(s_axi_rready),
-        .I2(s_axi_rvalid),
+        .I2(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .I3(outstanding_read_r),
         .I4(present_state[1]),
         .I5(present_state[0]),
@@ -469,14 +471,14 @@ module blk_mem_gen_0_blk_mem_axi_read_fsm
        (.C(s_aclk),
         .CE(1'b1),
         .D(\gaxi_lite_sm.r_valid_r_i_1_n_0 ),
-        .Q(s_axi_rvalid),
+        .Q(\gaxi_lite_sm.r_valid_r_reg_0 ),
         .R(SR));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_axi_read_wrapper" *) 
 module blk_mem_gen_0_blk_mem_axi_read_wrapper
    (s_axi_arready,
-    s_axi_rvalid,
+    \gaxi_lite_sm.r_valid_r_reg ,
     ENB_I,
     ADDRBWRADDR,
     SR,
@@ -486,7 +488,7 @@ module blk_mem_gen_0_blk_mem_axi_read_wrapper
     s_axi_rready,
     s_axi_araddr);
   output s_axi_arready;
-  output s_axi_rvalid;
+  output \gaxi_lite_sm.r_valid_r_reg ;
   output ENB_I;
   output [9:0]ADDRBWRADDR;
   input [0:0]SR;
@@ -502,12 +504,12 @@ module blk_mem_gen_0_blk_mem_axi_read_wrapper
   wire [0:0]SR;
   wire addr_en_c;
   wire [9:0]araddr_reg;
+  wire \gaxi_lite_sm.r_valid_r_reg ;
   wire s_aclk;
   wire [9:0]s_axi_araddr;
   wire s_axi_arready;
   wire s_axi_arvalid;
   wire s_axi_rready;
-  wire s_axi_rvalid;
 
   blk_mem_gen_0_blk_mem_axi_read_fsm axi_read_fsm
        (.ADDRBWRADDR(ADDRBWRADDR),
@@ -516,12 +518,12 @@ module blk_mem_gen_0_blk_mem_axi_read_wrapper
         .ENB_dly_D(ENB_dly_D),
         .Q(araddr_reg),
         .SR(SR),
+        .\gaxi_lite_sm.r_valid_r_reg_0 (\gaxi_lite_sm.r_valid_r_reg ),
         .s_aclk(s_aclk),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_arready(s_axi_arready),
         .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid));
+        .s_axi_rready(s_axi_rready));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_lite_sm.araddr_reg_reg[0] 
@@ -612,48 +614,48 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
     ENA_I,
     s_axi_wr_en_c,
     E,
-    \gaxi_bvalid_noid_r.bvalid_r_reg ,
+    \bvalid_count_r_reg[1] ,
     s_aclk,
     s_axi_wvalid,
     s_axi_awvalid,
     s_axi_bready,
     ENA_dly_D,
-    \bvalid_count_r_reg[2] ,
-    \bvalid_count_r_reg[1] ,
-    \bvalid_count_r_reg[0] ,
+    \gaxi_bvalid_noid_r.bvalid_r_reg ,
+    \gaxi_bvalid_noid_r.bvalid_r_reg_0 ,
+    \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] ,
     s_aresetn,
-    \gaxi_bvalid_noid_r.bvalid_r_reg_0 );
+    \gaxi_bvalid_noid_r.bvalid_r_reg_1 );
   output s_axi_awready;
   output [0:0]SR;
   output s_axi_wready;
   output ENA_I;
   output s_axi_wr_en_c;
   output [0:0]E;
-  output \gaxi_bvalid_noid_r.bvalid_r_reg ;
+  output \bvalid_count_r_reg[1] ;
   input s_aclk;
   input s_axi_wvalid;
   input s_axi_awvalid;
   input s_axi_bready;
   input ENA_dly_D;
-  input \bvalid_count_r_reg[2] ;
-  input \bvalid_count_r_reg[1] ;
-  input \bvalid_count_r_reg[0] ;
-  input s_aresetn;
+  input \gaxi_bvalid_noid_r.bvalid_r_reg ;
   input \gaxi_bvalid_noid_r.bvalid_r_reg_0 ;
+  input \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] ;
+  input s_aresetn;
+  input \gaxi_bvalid_noid_r.bvalid_r_reg_1 ;
 
   wire [0:0]E;
   wire ENA_I;
   wire ENA_dly_D;
   wire [0:0]SR;
   wire aw_ready_c;
-  wire bready_timeout_c__0;
-  wire \bvalid_count_r_reg[0] ;
+  wire bready_timeout_c__1;
   wire \bvalid_count_r_reg[1] ;
-  wire \bvalid_count_r_reg[2] ;
   wire \gaxi_bvalid_noid_r.bvalid_r_reg ;
   wire \gaxi_bvalid_noid_r.bvalid_r_reg_0 ;
+  wire \gaxi_bvalid_noid_r.bvalid_r_reg_1 ;
+  wire \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] ;
   wire [1:0]next_state;
-  (* RTL_KEEP = "yes" *) wire [1:0]present_state;
+  wire [1:0]present_state;
   wire s_aclk;
   wire s_aresetn;
   wire s_axi_awready;
@@ -677,7 +679,7 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
     \FSM_sequential_gaxi_lite_sm.present_state[0]_i_1 
        (.I0(s_axi_wvalid),
         .I1(s_axi_awvalid),
-        .I2(bready_timeout_c__0),
+        .I2(bready_timeout_c__1),
         .I3(present_state[0]),
         .I4(present_state[1]),
         .I5(s_axi_bready),
@@ -685,7 +687,7 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
   LUT6 #(
     .INIT(64'h2230EEFC88FC88FC)) 
     \FSM_sequential_gaxi_lite_sm.present_state[1]_i_1 
-       (.I0(bready_timeout_c__0),
+       (.I0(bready_timeout_c__1),
         .I1(present_state[1]),
         .I2(s_axi_awvalid),
         .I3(s_axi_wvalid),
@@ -693,7 +695,6 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
         .I5(present_state[0]),
         .O(next_state[1]));
   (* FSM_ENCODED_STATES = "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_lite_sm.present_state_reg[0] 
@@ -703,7 +704,6 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
         .Q(present_state[0]),
         .R(SR));
   (* FSM_ENCODED_STATES = "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_lite_sm.present_state_reg[1] 
@@ -715,12 +715,12 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
   LUT5 #(
     .INIT(32'hFFFBFF00)) 
     \gaxi_bvalid_noid_r.bvalid_r_i_1 
-       (.I0(\bvalid_count_r_reg[1] ),
+       (.I0(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
         .I1(s_axi_bready),
-        .I2(\bvalid_count_r_reg[2] ),
+        .I2(\gaxi_bvalid_noid_r.bvalid_r_reg ),
         .I3(s_axi_wr_en_c),
-        .I4(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
-        .O(\gaxi_bvalid_noid_r.bvalid_r_reg ));
+        .I4(\gaxi_bvalid_noid_r.bvalid_r_reg_1 ),
+        .O(\bvalid_count_r_reg[1] ));
   LUT3 #(
     .INIT(8'h48)) 
     \gaxi_bvalid_noid_r.bvalid_r_i_2 
@@ -728,10 +728,11 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
         .I1(s_axi_wvalid),
         .I2(present_state[0]),
         .O(s_axi_wr_en_c));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00004F00)) 
     \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT[9]_i_1 
-       (.I0(bready_timeout_c__0),
+       (.I0(bready_timeout_c__1),
         .I1(s_axi_wvalid),
         .I2(present_state[0]),
         .I3(s_axi_awvalid),
@@ -747,7 +748,7 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
     \gaxi_lite_sm.aw_ready_r_i_2 
        (.I0(s_axi_awvalid),
         .I1(s_axi_bready),
-        .I2(bready_timeout_c__0),
+        .I2(bready_timeout_c__1),
         .I3(present_state[1]),
         .I4(s_axi_wvalid),
         .I5(present_state[0]),
@@ -755,10 +756,10 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
   LUT3 #(
     .INIT(8'h10)) 
     \gaxi_lite_sm.aw_ready_r_i_3 
-       (.I0(\bvalid_count_r_reg[2] ),
-        .I1(\bvalid_count_r_reg[1] ),
-        .I2(\bvalid_count_r_reg[0] ),
-        .O(bready_timeout_c__0));
+       (.I0(\gaxi_bvalid_noid_r.bvalid_r_reg ),
+        .I1(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
+        .I2(\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] ),
+        .O(bready_timeout_c__1));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_lite_sm.aw_ready_r_reg 
@@ -767,12 +768,13 @@ module blk_mem_gen_0_blk_mem_axi_write_fsm
         .D(aw_ready_c),
         .Q(s_axi_awready),
         .R(SR));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h11117F00)) 
     \gaxi_lite_sm.w_ready_r_i_1 
        (.I0(present_state[0]),
         .I1(s_axi_wvalid),
-        .I2(bready_timeout_c__0),
+        .I2(bready_timeout_c__1),
         .I3(s_axi_awvalid),
         .I4(present_state[1]),
         .O(w_ready_c));
@@ -791,7 +793,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
    (s_axi_awready,
     SR,
     s_axi_wready,
-    s_axi_bvalid,
+    \gaxi_bvalid_noid_r.bvalid_r_reg_0 ,
     ENA_I,
     Q,
     s_aclk,
@@ -804,7 +806,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
   output s_axi_awready;
   output [0:0]SR;
   output s_axi_wready;
-  output s_axi_bvalid;
+  output \gaxi_bvalid_noid_r.bvalid_r_reg_0 ;
   output ENA_I;
   output [9:0]Q;
   input s_aclk;
@@ -827,13 +829,13 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
   wire \bvalid_count_r_reg_n_0_[0] ;
   wire \bvalid_count_r_reg_n_0_[1] ;
   wire \bvalid_count_r_reg_n_0_[2] ;
+  wire \gaxi_bvalid_noid_r.bvalid_r_reg_0 ;
   wire s_aclk;
   wire s_aresetn;
   wire [9:0]s_axi_awaddr;
   wire s_axi_awready;
   wire s_axi_awvalid;
   wire s_axi_bready;
-  wire s_axi_bvalid;
   wire s_axi_wr_en_c;
   wire s_axi_wready;
   wire s_axi_wvalid;
@@ -843,11 +845,11 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
         .ENA_I(ENA_I),
         .ENA_dly_D(ENA_dly_D),
         .SR(SR),
-        .\bvalid_count_r_reg[0] (\bvalid_count_r_reg_n_0_[0] ),
-        .\bvalid_count_r_reg[1] (\bvalid_count_r_reg_n_0_[1] ),
-        .\bvalid_count_r_reg[2] (\bvalid_count_r_reg_n_0_[2] ),
-        .\gaxi_bvalid_noid_r.bvalid_r_reg (axi_wr_fsm_n_6),
-        .\gaxi_bvalid_noid_r.bvalid_r_reg_0 (s_axi_bvalid),
+        .\bvalid_count_r_reg[1] (axi_wr_fsm_n_6),
+        .\gaxi_bvalid_noid_r.bvalid_r_reg (\bvalid_count_r_reg_n_0_[2] ),
+        .\gaxi_bvalid_noid_r.bvalid_r_reg_0 (\bvalid_count_r_reg_n_0_[1] ),
+        .\gaxi_bvalid_noid_r.bvalid_r_reg_1 (\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
+        .\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] (\bvalid_count_r_reg_n_0_[0] ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_awready(s_axi_awready),
@@ -861,7 +863,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
     \bvalid_count_r[0]_i_1 
        (.I0(s_axi_wr_en_c),
         .I1(s_axi_bready),
-        .I2(s_axi_bvalid),
+        .I2(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
         .I3(\bvalid_count_r_reg_n_0_[1] ),
         .I4(\bvalid_count_r_reg_n_0_[2] ),
         .I5(\bvalid_count_r_reg_n_0_[0] ),
@@ -872,7 +874,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
        (.I0(\bvalid_count_r_reg_n_0_[2] ),
         .I1(\bvalid_count_r_reg_n_0_[0] ),
         .I2(\bvalid_count_r_reg_n_0_[1] ),
-        .I3(s_axi_bvalid),
+        .I3(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
         .I4(s_axi_bready),
         .I5(s_axi_wr_en_c),
         .O(\bvalid_count_r[1]_i_1_n_0 ));
@@ -882,7 +884,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
        (.I0(\bvalid_count_r_reg_n_0_[2] ),
         .I1(\bvalid_count_r_reg_n_0_[0] ),
         .I2(\bvalid_count_r_reg_n_0_[1] ),
-        .I3(s_axi_bvalid),
+        .I3(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
         .I4(s_axi_bready),
         .I5(s_axi_wr_en_c),
         .O(\bvalid_count_r[2]_i_1_n_0 ));
@@ -916,7 +918,7 @@ module blk_mem_gen_0_blk_mem_axi_write_wrapper
        (.C(s_aclk),
         .CE(1'b1),
         .D(axi_wr_fsm_n_6),
-        .Q(s_axi_bvalid),
+        .Q(\gaxi_bvalid_noid_r.bvalid_r_reg_0 ),
         .R(SR));
   FDRE \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0] 
        (.C(s_aclk),
@@ -1077,8 +1079,9 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
   wire ENB_dly_D;
   wire POR_A;
   wire [9:0]Q;
-  wire [4:0]RSTA_SHFT_REG;
   wire \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0 ;
+  wire \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4] ;
+  wire [1:1]p_0_in;
   wire p_3_out;
   wire \prim_noinit.ram_n_32 ;
   wire ram_rstram_a_busy;
@@ -1126,8 +1129,8 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
   LUT2 #(
     .INIT(4'h6)) 
     \SAFETY_CKT_GEN.POR_A_i_1 
-       (.I0(RSTA_SHFT_REG[0]),
-        .I1(RSTA_SHFT_REG[4]),
+       (.I0(p_0_in),
+        .I1(\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4] ),
         .O(p_3_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -1156,7 +1159,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
        (.C(s_aclk),
         .CE(1'b1),
         .D(1'b1),
-        .Q(RSTA_SHFT_REG[0]),
+        .Q(p_0_in),
         .R(1'b0));
   (* srl_bus_name = "U0/\inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg " *) 
   (* srl_name = "U0/\inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3 " *) 
@@ -1169,7 +1172,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
         .A3(1'b0),
         .CE(1'b1),
         .CLK(s_aclk),
-        .D(RSTA_SHFT_REG[0]),
+        .D(p_0_in),
         .Q(\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -1177,7 +1180,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
        (.C(s_aclk),
         .CE(1'b1),
         .D(\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0 ),
-        .Q(RSTA_SHFT_REG[4]),
+        .Q(\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4] ),
         .R(1'b0));
   LUT4 #(
     .INIT(16'hFFFD)) 
@@ -1195,11 +1198,11 @@ module blk_mem_gen_0_blk_mem_gen_prim_width
         .R(1'b0));
   blk_mem_gen_0_blk_mem_gen_prim_wrapper \prim_noinit.ram 
        (.ADDRBWRADDR(ADDRBWRADDR),
-        .\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 (\prim_noinit.ram_n_32 ),
         .ENA_I(ENA_I),
         .ENB_I(ENB_I),
         .POR_A(POR_A),
         .Q(Q),
+        .\SAFETY_CKT_GEN.POR_A_reg (\prim_noinit.ram_n_32 ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_rdata(s_axi_rdata),
@@ -1210,7 +1213,7 @@ endmodule
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module blk_mem_gen_0_blk_mem_gen_prim_wrapper
    (s_axi_rdata,
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ,
+    \SAFETY_CKT_GEN.POR_A_reg ,
     s_aclk,
     ENA_I,
     ENB_I,
@@ -1221,7 +1224,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper
     s_axi_wstrb,
     s_aresetn);
   output [31:0]s_axi_rdata;
-  output \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ;
+  output \SAFETY_CKT_GEN.POR_A_reg ;
   input s_aclk;
   input ENA_I;
   input ENB_I;
@@ -1233,7 +1236,6 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper
   input s_aresetn;
 
   wire [9:0]ADDRBWRADDR;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_72 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_73 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_74 ;
@@ -1242,6 +1244,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper
   wire ENB_I;
   wire POR_A;
   wire [9:0]Q;
+  wire \SAFETY_CKT_GEN.POR_A_reg ;
   wire s_aclk;
   wire s_aresetn;
   wire [31:0]s_axi_rdata;
@@ -1460,7 +1463,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper
         .REGCEAREGCE(1'b0),
         .REGCEB(1'b0),
         .RSTRAMARSTRAM(POR_A),
-        .RSTRAMB(\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ),
+        .RSTRAMB(\SAFETY_CKT_GEN.POR_A_reg ),
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
@@ -1471,7 +1474,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3 
        (.I0(POR_A),
         .I1(s_aresetn),
-        .O(\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ));
+        .O(\SAFETY_CKT_GEN.POR_A_reg ));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_top" *) 
@@ -1549,16 +1552,17 @@ endmodule
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "blk_mem_gen_0.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "1" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
-(* C_READ_DEPTH_A = "1024" *) (* C_READ_DEPTH_B = "1024" *) (* C_READ_WIDTH_A = "32" *) 
-(* C_READ_WIDTH_B = "32" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 
-(* C_RST_PRIORITY_A = "CE" *) (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) 
-(* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "1" *) (* C_USE_BYTE_WEB = "1" *) 
-(* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
-(* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) 
-(* C_WRITE_DEPTH_A = "1024" *) (* C_WRITE_DEPTH_B = "1024" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
-(* C_WRITE_MODE_B = "READ_FIRST" *) (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) 
-(* C_XDEVICEFAMILY = "kintex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module blk_mem_gen_0_blk_mem_gen_v8_4_1
+(* C_READ_DEPTH_A = "1024" *) (* C_READ_DEPTH_B = "1024" *) (* C_READ_LATENCY_A = "1" *) 
+(* C_READ_LATENCY_B = "1" *) (* C_READ_WIDTH_A = "32" *) (* C_READ_WIDTH_B = "32" *) 
+(* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) (* C_RST_PRIORITY_A = "CE" *) 
+(* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) (* C_USE_BRAM_BLOCK = "0" *) 
+(* C_USE_BYTE_WEA = "1" *) (* C_USE_BYTE_WEB = "1" *) (* C_USE_DEFAULT_DATA = "0" *) 
+(* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) (* C_USE_URAM = "0" *) 
+(* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) (* C_WRITE_DEPTH_A = "1024" *) 
+(* C_WRITE_DEPTH_B = "1024" *) (* C_WRITE_MODE_A = "READ_FIRST" *) (* C_WRITE_MODE_B = "READ_FIRST" *) 
+(* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) (* C_XDEVICEFAMILY = "kintex7" *) 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module blk_mem_gen_0_blk_mem_gen_v8_4_2
    (clka,
     rsta,
     ena,
@@ -1810,8 +1814,10 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  blk_mem_gen_0_blk_mem_gen_v8_4_1_synth inst_blk_mem_gen
-       (.rsta_busy(rsta_busy),
+  blk_mem_gen_0_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
+       (.\gaxi_bvalid_noid_r.bvalid_r_reg (s_axi_bvalid),
+        .\gaxi_lite_sm.r_valid_r_reg (s_axi_rvalid),
+        .rsta_busy(rsta_busy),
         .rstb_busy(rstb_busy),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
@@ -1822,26 +1828,24 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1
         .s_axi_awready(s_axi_awready),
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid(s_axi_bvalid),
         .s_axi_rdata(s_axi_rdata),
         .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wready(s_axi_wready),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
-module blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
+module blk_mem_gen_0_blk_mem_gen_v8_4_2_synth
    (s_axi_rdata,
     s_axi_awready,
     s_axi_wready,
-    s_axi_bvalid,
+    \gaxi_bvalid_noid_r.bvalid_r_reg ,
     rsta_busy,
     rstb_busy,
     s_axi_arready,
-    s_axi_rvalid,
+    \gaxi_lite_sm.r_valid_r_reg ,
     s_aclk,
     s_aresetn,
     s_axi_wdata,
@@ -1856,11 +1860,11 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
   output [31:0]s_axi_rdata;
   output s_axi_awready;
   output s_axi_wready;
-  output s_axi_bvalid;
+  output \gaxi_bvalid_noid_r.bvalid_r_reg ;
   output rsta_busy;
   output rstb_busy;
   output s_axi_arready;
-  output s_axi_rvalid;
+  output \gaxi_lite_sm.r_valid_r_reg ;
   input s_aclk;
   input s_aresetn;
   input [31:0]s_axi_wdata;
@@ -1873,6 +1877,8 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
   input s_axi_arvalid;
   input s_axi_rready;
 
+  wire \gaxi_bvalid_noid_r.bvalid_r_reg ;
+  wire \gaxi_lite_sm.r_valid_r_reg ;
   wire rsta_busy;
   wire rstb_busy;
   wire s_aclk;
@@ -1887,10 +1893,8 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
   wire s_axi_awready;
   wire s_axi_awvalid;
   wire s_axi_bready;
-  wire s_axi_bvalid;
   wire [31:0]s_axi_rdata;
   wire s_axi_rready;
-  wire s_axi_rvalid;
   wire [31:0]s_axi_wdata;
   wire s_axi_wready;
   wire [3:0]s_axi_wstrb;
@@ -1919,24 +1923,24 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_1_synth
         .ENB_I(\valid.cstr/ramloop[0].ram.r/ENB_I ),
         .ENB_dly_D(\valid.cstr/ramloop[0].ram.r/ENB_dly_D ),
         .SR(s_aresetn_a_c),
+        .\gaxi_lite_sm.r_valid_r_reg (\gaxi_lite_sm.r_valid_r_reg ),
         .s_aclk(s_aclk),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_arready(s_axi_arready),
         .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid));
+        .s_axi_rready(s_axi_rready));
   blk_mem_gen_0_blk_mem_axi_write_wrapper \gnbram.gaxibmg.axi_wr_fsm 
        (.ENA_I(\valid.cstr/ramloop[0].ram.r/ENA_I ),
         .ENA_dly_D(\valid.cstr/ramloop[0].ram.r/ENA_dly_D ),
         .Q(s_axi_awaddr_out_c),
         .SR(s_aresetn_a_c),
+        .\gaxi_bvalid_noid_r.bvalid_r_reg_0 (\gaxi_bvalid_noid_r.bvalid_r_reg ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
         .s_axi_awready(s_axi_awready),
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid(s_axi_bvalid),
         .s_axi_wready(s_axi_wready),
         .s_axi_wvalid(s_axi_wvalid));
 endmodule

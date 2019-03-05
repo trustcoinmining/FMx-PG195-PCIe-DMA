@@ -1,26 +1,29 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Mar  2 21:36:18 2019
-# Process ID: 38292
-# Current directory: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar  5 14:44:26 2019
+# Process ID: 51696
+# Current directory: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
-# Log file: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
-# Journal file: c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1\vivado.jou
+# Log file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace
-Command: synth_design -top blk_mem_gen_0 -part xc7k410tffv900-2 -mode out_of_context
+WARNING: [Board 49-69] Validation failed for board file C:/Xilinx/Vivado/2018.3/data/boards/board_files/k410tFM2/1.0/board.xml:
+ Pin Map file does not provide LOC constraints for PHY_TXD0COMP : xilinx.com:k410tfm2:part0:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - C:/Xilinx/Vivado/2018.3/data/boards/board_files/k410tFM2/1.0/board.xml
+Command: synth_design -top blk_mem_gen_0 -part xc7k410tffg900-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
-INFO: [Common 17-86] Your Synthesis license expires in 10 day(s)
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15948 
+INFO: Helper process launched with PID 47892 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 445.914 ; gain = 97.930
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 478.355 ; gain = 100.484
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:85]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -79,6 +82,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/works/tcm-fm2/FM2-Pc
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
 	Parameter C_COMMON_CLK bound to: 1 - type: integer 
@@ -94,8 +99,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/works/tcm-fm2/FM2-Pc
 	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.96515 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:265]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (13#1) [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:85]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'd:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_2' [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:267]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (13#1) [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:85]
 WARNING: [Synth 8-3331] design blk_mem_axi_read_fsm has unconnected port S_AXI_RLAST
 WARNING: [Synth 8-3331] design blk_mem_axi_read_fsm has unconnected port S_AXI_R_LAST_INT
 WARNING: [Synth 8-3331] design blk_mem_axi_read_fsm has unconnected port S_AXI_ARLEN[7]
@@ -198,7 +203,7 @@ WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTA_I
 WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTA_I[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:45 ; elapsed = 00:01:56 . Memory (MB): peak = 711.480 ; gain = 363.496
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 747.391 ; gain = 369.520
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,44 +216,46 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:56 . Memory (MB): peak = 711.480 ; gain = 363.496
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 747.391 ; gain = 369.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:46 ; elapsed = 00:01:56 . Memory (MB): peak = 711.480 ; gain = 363.496
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 747.391 ; gain = 369.520
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Device 21-403] Loading part xc7k410tffv900-2
+INFO: [Device 21-403] Loading part xc7k410tffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 887.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 856.078 ; gain = 1.566
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 887.016 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 888.574 ; gain = 1.570
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 856.078 ; gain = 508.094
+Finished Constraint Validation : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 888.574 ; gain = 510.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7k410tffv900-2
+Loading part: xc7k410tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 856.078 ; gain = 508.094
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 888.574 ; gain = 510.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 856.078 ; gain = 508.094
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 888.574 ; gain = 510.703
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gaxi_lite_sm.present_state_reg' in module 'blk_mem_axi_write_fsm'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -266,7 +273,7 @@ INFO: [Synth 8-5544] ROM "bready_timeout_c" won't be mapped to Block RAM because
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gaxi_lite_sm.present_state_reg' using encoding 'sequential' in module 'blk_mem_axi_write_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:06 ; elapsed = 00:02:21 . Memory (MB): peak = 856.078 ; gain = 508.094
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 888.574 ; gain = 510.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -371,7 +378,7 @@ INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_bl
 INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]' (FD) to 'U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]'
 INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_B_reg' (FD) to 'U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_A_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:23 . Memory (MB): peak = 856.078 ; gain = 508.094
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 888.574 ; gain = 510.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -383,13 +390,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:25 ; elapsed = 00:02:44 . Memory (MB): peak = 902.840 ; gain = 554.855
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 932.699 ; gain = 554.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:26 ; elapsed = 00:02:44 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -401,7 +408,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:26 ; elapsed = 00:02:44 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,7 +432,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -438,7 +445,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -450,25 +457,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -478,7 +485,7 @@ Static Shift Register Report:
 +-------------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name        | RTL Name                                                                                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +-------------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|blk_mem_gen_v8_4_1 | inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|blk_mem_gen_v8_4_2 | inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +-------------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -514,8 +521,8 @@ Report Instance Areas:
 |      |Instance                               |Module                    |Cells |
 +------+---------------------------------------+--------------------------+------+
 |1     |top                                    |                          |    80|
-|2     |  U0                                   |blk_mem_gen_v8_4_1        |    80|
-|3     |    inst_blk_mem_gen                   |blk_mem_gen_v8_4_1_synth  |    80|
+|2     |  U0                                   |blk_mem_gen_v8_4_2        |    80|
+|3     |    inst_blk_mem_gen                   |blk_mem_gen_v8_4_2_synth  |    80|
 |4     |      \gnbram.gaxibmg.axi_blk_mem_gen  |blk_mem_gen_top           |    15|
 |5     |        \valid.cstr                    |blk_mem_gen_generic_cstr  |    15|
 |6     |          \ramloop[0].ram.r            |blk_mem_gen_prim_width    |    15|
@@ -526,29 +533,33 @@ Report Instance Areas:
 |11    |        axi_wr_fsm                     |blk_mem_axi_write_fsm     |    14|
 +------+---------------------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:28 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 188 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:02:28 . Memory (MB): peak = 922.715 ; gain = 430.133
-Synthesis Optimization Complete : Time (s): cpu = 00:02:29 ; elapsed = 00:02:47 . Memory (MB): peak = 922.715 ; gain = 574.730
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:01:04 . Memory (MB): peak = 953.191 ; gain = 434.137
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 953.191 ; gain = 575.320
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 963.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+30 Infos, 101 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:33 ; elapsed = 00:02:53 . Memory (MB): peak = 932.383 ; gain = 595.871
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 963.500 ; gain = 597.102
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 963.500 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blk_mem_gen_0, cache-ID = d9fc884e59b77731
 INFO: [Coretcl 2-1174] Renamed 10 cell refs.
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 963.500 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blk_mem_gen_0_utilization_synth.rpt -pb blk_mem_gen_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.427 . Memory (MB): peak = 932.383 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Mar  2 21:39:31 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  5 14:45:51 2019...

@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc rfile:../../../xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc rfile:../../../xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc rfile:../../../xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc rfile:../../../xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:123 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC IBUFDS_GTE2_X0Y3 [get_cells refclk_ibuf]
 set_property src_info {type:XDC file:2 line:19 export:INPUT save:INPUT read:READ} [current_design]

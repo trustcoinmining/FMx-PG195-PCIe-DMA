@@ -1,18 +1,18 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Mar  2 21:39:41 2019
-// Host        : ASJHM1 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Tue Mar  5 14:45:53 2019
+// Host        : vr-2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/works/tcm-fm2/FM2-Pcie-pg195/pci-e2018.03/xdmaprj2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1_sim_netlist.v
+//               D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1_sim_netlist.v
 // Design      : blk_mem_gen_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7k410tffv900-2
+// Device      : xc7k410tffg900-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "blk_mem_gen_1,blk_mem_gen_v8_4_1,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_1,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "blk_mem_gen_1,blk_mem_gen_v8_4_2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_2,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module blk_mem_gen_1
    (rsta_busy,
@@ -50,9 +50,9 @@ module blk_mem_gen_1
     s_axi_rready);
   output rsta_busy;
   output rstb_busy;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000" *) input s_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW" *) input s_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_SLAVE_S_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s_axi_awid;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_SLAVE_S_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [3:0]s_axi_awid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWADDR" *) input [31:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWLEN" *) input [7:0]s_axi_awlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWSIZE" *) input [2:0]s_axi_awsize;
@@ -174,6 +174,8 @@ module blk_mem_gen_1
   (* C_PRIM_TYPE = "1" *) 
   (* C_READ_DEPTH_A = "256" *) 
   (* C_READ_DEPTH_B = "256" *) 
+  (* C_READ_LATENCY_A = "1" *) 
+  (* C_READ_LATENCY_B = "1" *) 
   (* C_READ_WIDTH_A = "128" *) 
   (* C_READ_WIDTH_B = "128" *) 
   (* C_RSTRAM_A = "0" *) 
@@ -198,7 +200,7 @@ module blk_mem_gen_1
   (* C_WRITE_WIDTH_B = "128" *) 
   (* C_XDEVICEFAMILY = "kintex7" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  blk_mem_gen_1_blk_mem_gen_v8_4_1 U0
+  blk_mem_gen_1_blk_mem_gen_v8_4_2 U0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clka(1'b0),
@@ -268,157 +270,154 @@ endmodule
 module blk_mem_gen_1_blk_mem_axi_read_fsm
    (s_axi_arready,
     SR,
-    s_axi_rvalid,
+    \gaxi_full_sm.r_valid_r_reg_0 ,
     s_axi_rlast,
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1] ,
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ,
-    \gaxi_full_sm.outstanding_read_r_reg_0 ,
-    \gaxi_full_sm.arlen_cntr_reg[3] ,
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11] ,
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]_0 ,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ,
+    \gaxi_full_sm.r_valid_r_reg_1 ,
+    \gaxi_full_sm.r_valid_r_reg_2 ,
+    s_axi_arvalid_0,
+    s_axi_arlen_2_sp_1,
     D,
-    \grid.ar_id_r_reg[3] ,
-    \gaxi_full_sm.arlen_cntr_reg[7] ,
-    \gaxi_full_sm.arlen_cntr_reg[6] ,
-    \grid.S_AXI_RID_reg[3] ,
+    s_axi_arvalid_1,
+    \s_axi_arlen[7] ,
+    \gaxi_full_sm.arlen_cntr_reg[4] ,
+    \s_axi_arid[3] ,
     ENB_I,
     E,
-    \gaxi_full_sm.arlen_cntr_reg[0] ,
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11] ,
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_1 ,
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 ,
+    \gaxi_full_sm.r_valid_r_reg_3 ,
+    s_axi_arvalid_2,
+    s_axi_arvalid_3,
+    \s_axi_arburst[1] ,
+    \s_axi_araddr[11] ,
     ADDRARDADDR,
     s_aclk,
     s_aresetn,
     s_axi_arvalid,
     s_axi_rready,
     s_axi_arlen,
-    Q,
-    s_axi_araddr_2_sp_1,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] ,
     s_axi_araddr,
-    \s_axi_araddr[2]_0 ,
-    s_axi_araddr_0_sp_1,
-    s_axi_arlen_5_sp_1,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] ,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] ,
+    \gaxi_full_sm.arlen_cntr_reg[6] ,
+    Q,
+    \gaxi_full_sm.arlen_cntr_reg[5] ,
+    \gaxi_full_sm.arlen_cntr_reg[5]_0 ,
+    \gaxi_full_sm.arlen_cntr_reg[3] ,
+    \gaxi_full_sm.arlen_cntr_reg[4]_0 ,
+    \gaxi_full_sm.arlen_cntr_reg[7] ,
     \gaxi_full_sm.arlen_cntr_reg[7]_0 ,
-    s_axi_arlen_4_sp_1,
-    \gaxi_full_sm.arlen_cntr_reg[3]_0 ,
-    \gaxi_full_sm.arlen_cntr_reg[0]_0 ,
-    \gaxi_full_sm.arlen_cntr_reg[4] ,
-    s_axi_arlen_1_sp_1,
-    \gaxi_full_sm.arlen_cntr_reg[6]_0 ,
-    \s_axi_arsize[2] ,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] ,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ,
     s_axi_arsize,
-    \s_axi_araddr[2]_1 ,
-    s_axi_arlen_6_sp_1,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ,
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]_0 ,
     s_axi_arid,
-    \grid.ar_id_r_reg[3]_0 ,
+    \grid.S_AXI_RID_reg[3] ,
     ENB_dly_D,
     s_axi_arburst,
     addr_cnt_enb_r,
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ,
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ,
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] ,
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ,
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ,
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] ,
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ,
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ,
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ,
     incr_en_r,
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 );
   output s_axi_arready;
   output [0:0]SR;
-  output s_axi_rvalid;
+  output \gaxi_full_sm.r_valid_r_reg_0 ;
   output s_axi_rlast;
-  output [0:0]\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1] ;
-  output \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ;
-  output \gaxi_full_sm.outstanding_read_r_reg_0 ;
-  output \gaxi_full_sm.arlen_cntr_reg[3] ;
-  output \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11] ;
-  output \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]_0 ;
+  output [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ;
+  output \gaxi_full_sm.r_valid_r_reg_1 ;
+  output \gaxi_full_sm.r_valid_r_reg_2 ;
+  output s_axi_arvalid_0;
+  output s_axi_arlen_2_sp_1;
   output [4:0]D;
-  output \grid.ar_id_r_reg[3] ;
-  output [7:0]\gaxi_full_sm.arlen_cntr_reg[7] ;
-  output \gaxi_full_sm.arlen_cntr_reg[6] ;
-  output [3:0]\grid.S_AXI_RID_reg[3] ;
+  output s_axi_arvalid_1;
+  output [7:0]\s_axi_arlen[7] ;
+  output \gaxi_full_sm.arlen_cntr_reg[4] ;
+  output [3:0]\s_axi_arid[3] ;
   output ENB_I;
   output [0:0]E;
-  output [0:0]\gaxi_full_sm.arlen_cntr_reg[0] ;
-  output [0:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11] ;
-  output [0:0]\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_1 ;
-  output [7:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 ;
+  output [0:0]\gaxi_full_sm.r_valid_r_reg_3 ;
+  output [0:0]s_axi_arvalid_2;
+  output s_axi_arvalid_3;
+  output [0:0]\s_axi_arburst[1] ;
+  output [7:0]\s_axi_araddr[11] ;
   output [7:0]ADDRARDADDR;
   input s_aclk;
   input s_aresetn;
   input s_axi_arvalid;
   input s_axi_rready;
   input [7:0]s_axi_arlen;
-  input [4:0]Q;
-  input s_axi_araddr_2_sp_1;
+  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] ;
   input [11:0]s_axi_araddr;
-  input \s_axi_araddr[2]_0 ;
-  input s_axi_araddr_0_sp_1;
-  input s_axi_arlen_5_sp_1;
-  input [7:0]\gaxi_full_sm.arlen_cntr_reg[7]_0 ;
-  input s_axi_arlen_4_sp_1;
-  input \gaxi_full_sm.arlen_cntr_reg[3]_0 ;
-  input \gaxi_full_sm.arlen_cntr_reg[0]_0 ;
-  input \gaxi_full_sm.arlen_cntr_reg[4] ;
-  input s_axi_arlen_1_sp_1;
-  input \gaxi_full_sm.arlen_cntr_reg[6]_0 ;
-  input [0:0]\s_axi_arsize[2] ;
+  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] ;
+  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] ;
+  input \gaxi_full_sm.arlen_cntr_reg[6] ;
+  input [7:0]Q;
+  input \gaxi_full_sm.arlen_cntr_reg[5] ;
+  input \gaxi_full_sm.arlen_cntr_reg[5]_0 ;
+  input \gaxi_full_sm.arlen_cntr_reg[3] ;
+  input \gaxi_full_sm.arlen_cntr_reg[4]_0 ;
+  input \gaxi_full_sm.arlen_cntr_reg[7] ;
+  input \gaxi_full_sm.arlen_cntr_reg[7]_0 ;
+  input [0:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] ;
+  input [4:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ;
   input [2:0]s_axi_arsize;
-  input \s_axi_araddr[2]_1 ;
-  input s_axi_arlen_6_sp_1;
+  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ;
+  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]_0 ;
   input [3:0]s_axi_arid;
-  input [3:0]\grid.ar_id_r_reg[3]_0 ;
+  input [3:0]\grid.S_AXI_RID_reg[3] ;
   input ENB_dly_D;
   input [1:0]s_axi_arburst;
   input [8:0]addr_cnt_enb_r;
-  input [7:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 ;
+  input [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ;
+  input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ;
+  input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] ;
   input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ;
   input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ;
-  input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] ;
-  input \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ;
-  input [4:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ;
+  input [4:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ;
   input incr_en_r;
-  input \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] ;
+  input \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 ;
 
   wire [7:0]ADDRARDADDR;
   wire [4:0]D;
+  wire [7:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ;
+  wire [4:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ;
   wire [0:0]E;
   wire ENB_I;
   wire ENB_dly_D;
-  wire \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0 ;
-  wire [4:0]Q;
+  wire \FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0 ;
+  wire [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ;
+  wire [7:0]Q;
   wire [0:0]SR;
   wire [8:0]addr_cnt_enb_r;
   wire ar_ready_c;
   wire \gaxi_full_sm.S_AXI_RLAST_i_1_n_0 ;
+  wire \gaxi_full_sm.S_AXI_RLAST_i_2_n_0 ;
   wire \gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ;
-  wire \gaxi_full_sm.S_AXI_RLAST_i_4_n_0 ;
   wire \gaxi_full_sm.ar_ready_r_i_2_n_0 ;
   wire \gaxi_full_sm.ar_ready_r_i_4_n_0 ;
+  wire \gaxi_full_sm.ar_ready_r_i_5_n_0 ;
+  wire \gaxi_full_sm.ar_ready_r_i_6_n_0 ;
   wire \gaxi_full_sm.arlen_cntr[2]_i_2_n_0 ;
-  wire [0:0]\gaxi_full_sm.arlen_cntr_reg[0] ;
-  wire \gaxi_full_sm.arlen_cntr_reg[0]_0 ;
   wire \gaxi_full_sm.arlen_cntr_reg[3] ;
-  wire \gaxi_full_sm.arlen_cntr_reg[3]_0 ;
   wire \gaxi_full_sm.arlen_cntr_reg[4] ;
+  wire \gaxi_full_sm.arlen_cntr_reg[4]_0 ;
+  wire \gaxi_full_sm.arlen_cntr_reg[5] ;
+  wire \gaxi_full_sm.arlen_cntr_reg[5]_0 ;
   wire \gaxi_full_sm.arlen_cntr_reg[6] ;
-  wire \gaxi_full_sm.arlen_cntr_reg[6]_0 ;
-  wire [7:0]\gaxi_full_sm.arlen_cntr_reg[7] ;
-  wire [7:0]\gaxi_full_sm.arlen_cntr_reg[7]_0 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11] ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]_0 ;
-  wire [0:0]\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1] ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ;
-  wire [0:0]\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_1 ;
-  wire [0:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11] ;
-  wire [7:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 ;
-  wire [7:0]\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] ;
+  wire \gaxi_full_sm.arlen_cntr_reg[7] ;
+  wire \gaxi_full_sm.arlen_cntr_reg[7]_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0 ;
@@ -426,53 +425,53 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_4_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_5_n_0 ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_2_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4_n_0 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_9_n_0 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ;
-  wire [4:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ;
+  wire [0:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]_0 ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] ;
+  wire [4:0]\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ;
   wire \gaxi_full_sm.outstanding_read_r_i_1_n_0 ;
-  wire \gaxi_full_sm.outstanding_read_r_reg_0 ;
   wire \gaxi_full_sm.r_valid_r_i_1_n_0 ;
   wire \gaxi_full_sm.r_valid_r_i_2_n_0 ;
+  wire \gaxi_full_sm.r_valid_r_reg_0 ;
+  wire \gaxi_full_sm.r_valid_r_reg_1 ;
+  wire \gaxi_full_sm.r_valid_r_reg_2 ;
+  wire [0:0]\gaxi_full_sm.r_valid_r_reg_3 ;
   wire [3:0]\grid.S_AXI_RID_reg[3] ;
-  wire \grid.ar_id_r_reg[3] ;
-  wire [3:0]\grid.ar_id_r_reg[3]_0 ;
   wire incr_en_r;
   wire [1:0]next_state;
   wire outstanding_read_r;
-  (* RTL_KEEP = "yes" *) wire [1:0]present_state;
+  wire [1:0]present_state;
   wire s_aclk;
   wire s_aresetn;
   wire [11:0]s_axi_araddr;
-  wire \s_axi_araddr[2]_0 ;
-  wire \s_axi_araddr[2]_1 ;
-  wire s_axi_araddr_0_sn_1;
-  wire s_axi_araddr_2_sn_1;
+  wire [7:0]\s_axi_araddr[11] ;
   wire [1:0]s_axi_arburst;
+  wire [0:0]\s_axi_arburst[1] ;
   wire [3:0]s_axi_arid;
+  wire [3:0]\s_axi_arid[3] ;
   wire [7:0]s_axi_arlen;
-  wire s_axi_arlen_1_sn_1;
-  wire s_axi_arlen_4_sn_1;
-  wire s_axi_arlen_5_sn_1;
-  wire s_axi_arlen_6_sn_1;
+  wire [7:0]\s_axi_arlen[7] ;
+  wire s_axi_arlen_2_sn_1;
   wire s_axi_arready;
   wire [2:0]s_axi_arsize;
-  wire [0:0]\s_axi_arsize[2] ;
   wire s_axi_arvalid;
+  wire s_axi_arvalid_0;
+  wire s_axi_arvalid_1;
+  wire [0:0]s_axi_arvalid_2;
+  wire s_axi_arvalid_3;
   wire s_axi_rlast;
   wire s_axi_rready;
-  wire s_axi_rvalid;
 
-  assign s_axi_araddr_0_sn_1 = s_axi_araddr_0_sp_1;
-  assign s_axi_araddr_2_sn_1 = s_axi_araddr_2_sp_1;
-  assign s_axi_arlen_1_sn_1 = s_axi_arlen_1_sp_1;
-  assign s_axi_arlen_4_sn_1 = s_axi_arlen_4_sp_1;
-  assign s_axi_arlen_5_sn_1 = s_axi_arlen_5_sp_1;
-  assign s_axi_arlen_6_sn_1 = s_axi_arlen_6_sp_1;
+  assign s_axi_arlen_2_sp_1 = s_axi_arlen_2_sn_1;
   LUT6 #(
     .INIT(64'hABABFFBFAAAAEEAE)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_1 
@@ -480,7 +479,7 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(present_state[0]),
         .I2(present_state[1]),
         .I3(outstanding_read_r),
-        .I4(\gaxi_full_sm.outstanding_read_r_reg_0 ),
+        .I4(\gaxi_full_sm.r_valid_r_reg_2 ),
         .I5(s_axi_arvalid),
         .O(ENB_I));
   LUT5 #(
@@ -489,8 +488,8 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[4]),
         .I1(s_axi_araddr[5]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [1]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [1]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ),
         .O(ADDRARDADDR[1]));
   LUT6 #(
     .INIT(64'hEA45EF40EF40EF40)) 
@@ -498,16 +497,17 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[3]),
         .I1(s_axi_araddr[4]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [0]),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [0]),
         .I4(incr_en_r),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [4]),
+        .I5(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [4]),
         .O(ADDRARDADDR[0]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h4500FFFF)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20 
        (.I0(outstanding_read_r),
         .I1(s_axi_rready),
-        .I2(s_axi_rvalid),
+        .I2(\gaxi_full_sm.r_valid_r_reg_0 ),
         .I3(present_state[1]),
         .I4(present_state[0]),
         .O(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ));
@@ -517,9 +517,9 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[8]),
         .I1(s_axi_araddr[11]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [7]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] ),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [6]),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [7]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 ),
+        .I5(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [6]),
         .O(ADDRARDADDR[7]));
   LUT5 #(
     .INIT(32'hEA45EF40)) 
@@ -527,8 +527,8 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[8]),
         .I1(s_axi_araddr[10]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [6]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] ),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [6]),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 ),
         .O(ADDRARDADDR[6]));
   LUT6 #(
     .INIT(64'hEFEAEFEF40454040)) 
@@ -536,9 +536,9 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[8]),
         .I1(s_axi_araddr[9]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [4]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [5]),
+        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [4]),
+        .I5(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [5]),
         .O(ADDRARDADDR[5]));
   LUT5 #(
     .INIT(32'hEF40EA45)) 
@@ -546,8 +546,8 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[7]),
         .I1(s_axi_araddr[8]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [4]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [4]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ),
         .O(ADDRARDADDR[4]));
   LUT5 #(
     .INIT(32'hEF40EA45)) 
@@ -555,8 +555,8 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[6]),
         .I1(s_axi_araddr[7]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [3]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [3]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] ),
         .O(ADDRARDADDR[3]));
   LUT5 #(
     .INIT(32'hEF40EA45)) 
@@ -564,41 +564,47 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(addr_cnt_enb_r[5]),
         .I1(s_axi_araddr[6]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [2]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] ),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [2]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ),
         .O(ADDRARDADDR[2]));
   LUT6 #(
-    .INIT(64'h4545450555555515)) 
+    .INIT(64'h5100515151515151)) 
     \FSM_sequential_gaxi_full_sm.present_state[0]_i_1__0 
-       (.I0(\gaxi_full_sm.ar_ready_r_i_4_n_0 ),
-        .I1(present_state[1]),
-        .I2(present_state[0]),
-        .I3(\gaxi_full_sm.outstanding_read_r_reg_0 ),
-        .I4(outstanding_read_r),
+       (.I0(\gaxi_full_sm.ar_ready_r_i_5_n_0 ),
+        .I1(\gaxi_full_sm.ar_ready_r_i_4_n_0 ),
+        .I2(\gaxi_full_sm.r_valid_r_reg_2 ),
+        .I3(present_state[1]),
+        .I4(present_state[0]),
         .I5(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
         .O(next_state[0]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00EC0020)) 
+    .INIT(64'hFFFFFEFAEEEAEEEA)) 
     \FSM_sequential_gaxi_full_sm.present_state[1]_i_1__0 
-       (.I0(s_axi_arvalid),
-        .I1(present_state[0]),
-        .I2(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I3(present_state[1]),
-        .I4(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
-        .I5(\FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0 ),
+       (.I0(s_axi_arvalid_3),
+        .I1(\gaxi_full_sm.ar_ready_r_i_4_n_0 ),
+        .I2(\gaxi_full_sm.r_valid_r_reg_2 ),
+        .I3(s_axi_arvalid),
+        .I4(outstanding_read_r),
+        .I5(\FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0 ),
         .O(next_state[1]));
-  LUT6 #(
-    .INIT(64'hEE00EE00FC000C00)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'h0000F088)) 
     \FSM_sequential_gaxi_full_sm.present_state[1]_i_2 
-       (.I0(outstanding_read_r),
-        .I1(\gaxi_full_sm.outstanding_read_r_reg_0 ),
-        .I2(s_axi_arvalid),
-        .I3(present_state[1]),
-        .I4(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I5(present_state[0]),
-        .O(\FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0 ));
+       (.I0(s_axi_arvalid),
+        .I1(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I2(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
+        .I3(present_state[0]),
+        .I4(present_state[1]),
+        .O(s_axi_arvalid_3));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \FSM_sequential_gaxi_full_sm.present_state[1]_i_3 
+       (.I0(present_state[0]),
+        .I1(present_state[1]),
+        .O(\FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "wait_rdaddr:00,os_rd:11,rd_mem:01,reg_rdaddr:10" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_full_sm.present_state_reg[0] 
@@ -608,7 +614,6 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .Q(present_state[0]),
         .R(SR));
   (* FSM_ENCODED_STATES = "wait_rdaddr:00,os_rd:11,rd_mem:01,reg_rdaddr:10" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_full_sm.present_state_reg[1] 
@@ -618,40 +623,42 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .Q(present_state[1]),
         .R(SR));
   LUT5 #(
-    .INIT(32'hFFFE00FE)) 
+    .INIT(32'hFFFB00FB)) 
     \gaxi_full_sm.S_AXI_RLAST_i_1 
-       (.I0(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ),
+       (.I0(\gaxi_full_sm.S_AXI_RLAST_i_2_n_0 ),
         .I1(\gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ),
-        .I2(\gaxi_full_sm.S_AXI_RLAST_i_4_n_0 ),
-        .I3(\gaxi_full_sm.outstanding_read_r_reg_0 ),
+        .I2(\gaxi_full_sm.r_valid_r_reg_1 ),
+        .I3(\gaxi_full_sm.r_valid_r_reg_2 ),
         .I4(s_axi_rlast),
         .O(\gaxi_full_sm.S_AXI_RLAST_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0004000000000000)) 
+    \gaxi_full_sm.S_AXI_RLAST_i_2 
+       (.I0(present_state[1]),
+        .I1(present_state[0]),
+        .I2(Q[7]),
+        .I3(Q[6]),
+        .I4(\gaxi_full_sm.arlen_cntr_reg[4] ),
+        .I5(s_axi_rready),
+        .O(\gaxi_full_sm.S_AXI_RLAST_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hBF)) 
+    \gaxi_full_sm.S_AXI_RLAST_i_3 
+       (.I0(present_state[0]),
+        .I1(s_axi_arvalid),
+        .I2(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .O(\gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'hD0000000)) 
-    \gaxi_full_sm.S_AXI_RLAST_i_2 
-       (.I0(s_axi_rvalid),
+    \gaxi_full_sm.S_AXI_RLAST_i_4 
+       (.I0(\gaxi_full_sm.r_valid_r_reg_0 ),
         .I1(s_axi_rready),
         .I2(outstanding_read_r),
         .I3(present_state[1]),
         .I4(present_state[0]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ));
-  LUT3 #(
-    .INIT(8'h20)) 
-    \gaxi_full_sm.S_AXI_RLAST_i_3 
-       (.I0(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I1(present_state[0]),
-        .I2(s_axi_arvalid),
-        .O(\gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0004000000000000)) 
-    \gaxi_full_sm.S_AXI_RLAST_i_4 
-       (.I0(present_state[1]),
-        .I1(present_state[0]),
-        .I2(\gaxi_full_sm.arlen_cntr_reg[7]_0 [7]),
-        .I3(\gaxi_full_sm.arlen_cntr_reg[7]_0 [6]),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[6] ),
-        .I5(s_axi_rready),
-        .O(\gaxi_full_sm.S_AXI_RLAST_i_4_n_0 ));
+        .O(\gaxi_full_sm.r_valid_r_reg_1 ));
   FDRE \gaxi_full_sm.S_AXI_RLAST_reg 
        (.C(s_aclk),
         .CE(1'b1),
@@ -659,41 +666,57 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .Q(s_axi_rlast),
         .R(SR));
   LUT6 #(
-    .INIT(64'hFFFFFFFF0300AA00)) 
+    .INIT(64'hFFFFFFFF08FF0808)) 
     \gaxi_full_sm.ar_ready_r_i_1 
        (.I0(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
-        .I1(outstanding_read_r),
-        .I2(\gaxi_full_sm.outstanding_read_r_reg_0 ),
-        .I3(present_state[0]),
-        .I4(present_state[1]),
-        .I5(\gaxi_full_sm.ar_ready_r_i_4_n_0 ),
+        .I1(present_state[0]),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_2 ),
+        .I4(\gaxi_full_sm.ar_ready_r_i_4_n_0 ),
+        .I5(\gaxi_full_sm.ar_ready_r_i_5_n_0 ),
         .O(ar_ready_c));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \gaxi_full_sm.ar_ready_r_i_2 
        (.I0(s_axi_rready),
-        .I1(\gaxi_full_sm.arlen_cntr_reg[6] ),
-        .I2(\gaxi_full_sm.arlen_cntr_reg[7]_0 [6]),
-        .I3(\gaxi_full_sm.arlen_cntr_reg[7]_0 [7]),
+        .I1(\gaxi_full_sm.arlen_cntr_reg[4] ),
+        .I2(Q[6]),
+        .I3(Q[7]),
         .O(\gaxi_full_sm.ar_ready_r_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \gaxi_full_sm.ar_ready_r_i_3 
-       (.I0(s_axi_rvalid),
+       (.I0(\gaxi_full_sm.r_valid_r_reg_0 ),
         .I1(s_axi_rready),
-        .O(\gaxi_full_sm.outstanding_read_r_reg_0 ));
-  LUT6 #(
-    .INIT(64'h4050405544554055)) 
+        .O(\gaxi_full_sm.r_valid_r_reg_2 ));
+  LUT4 #(
+    .INIT(16'h00B0)) 
     \gaxi_full_sm.ar_ready_r_i_4 
-       (.I0(present_state[0]),
-        .I1(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I2(s_axi_rready),
-        .I3(s_axi_arvalid),
-        .I4(present_state[1]),
-        .I5(s_axi_rvalid),
+       (.I0(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I1(s_axi_arvalid),
+        .I2(present_state[1]),
+        .I3(present_state[0]),
         .O(\gaxi_full_sm.ar_ready_r_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h88B8888888BB88BB)) 
+    \gaxi_full_sm.ar_ready_r_i_5 
+       (.I0(\gaxi_full_sm.ar_ready_r_i_6_n_0 ),
+        .I1(present_state[0]),
+        .I2(s_axi_rready),
+        .I3(present_state[1]),
+        .I4(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I5(s_axi_arvalid),
+        .O(\gaxi_full_sm.ar_ready_r_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'h00A2)) 
+    \gaxi_full_sm.ar_ready_r_i_6 
+       (.I0(present_state[1]),
+        .I1(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I2(s_axi_rready),
+        .I3(outstanding_read_r),
+        .O(\gaxi_full_sm.ar_ready_r_i_6_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.ar_ready_r_reg 
@@ -709,18 +732,18 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(s_axi_arlen[0]),
         .I2(s_axi_arvalid),
         .I3(present_state[0]),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [0]),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [0]));
+        .I4(Q[0]),
+        .O(\s_axi_arlen[7] [0]));
   LUT6 #(
     .INIT(64'hB4B7B484B484B4B7)) 
     \gaxi_full_sm.arlen_cntr[1]_i_1 
        (.I0(s_axi_arlen[0]),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_arlen[1]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [1]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[7]_0 [0]),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [1]));
+        .I3(s_axi_arvalid_1),
+        .I4(Q[1]),
+        .I5(Q[0]),
+        .O(\s_axi_arlen[7] [1]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hE1FFE100)) 
@@ -730,37 +753,37 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I2(s_axi_arlen[2]),
         .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I4(\gaxi_full_sm.arlen_cntr[2]_i_2_n_0 ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [2]));
+        .O(\s_axi_arlen[7] [2]));
   LUT6 #(
     .INIT(64'hFB08FB08FB0808FB)) 
     \gaxi_full_sm.arlen_cntr[2]_i_2 
        (.I0(s_axi_arlen[2]),
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
-        .I3(\gaxi_full_sm.arlen_cntr_reg[7]_0 [2]),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [0]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[7]_0 [1]),
+        .I3(Q[2]),
+        .I4(Q[0]),
+        .I5(Q[1]),
         .O(\gaxi_full_sm.arlen_cntr[2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hB484B4B7B4B7B484)) 
     \gaxi_full_sm.arlen_cntr[3]_i_1 
-       (.I0(\gaxi_full_sm.arlen_cntr_reg[3] ),
+       (.I0(s_axi_arlen_2_sn_1),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_arlen[3]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [3]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[0]_0 ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [3]));
+        .I3(s_axi_arvalid_1),
+        .I4(Q[3]),
+        .I5(\gaxi_full_sm.arlen_cntr_reg[3] ),
+        .O(\s_axi_arlen[7] [3]));
   LUT6 #(
     .INIT(64'hEF10EF1FEF10E010)) 
     \gaxi_full_sm.arlen_cntr[4]_i_1 
        (.I0(s_axi_arlen[3]),
-        .I1(\gaxi_full_sm.arlen_cntr_reg[3] ),
+        .I1(s_axi_arlen_2_sn_1),
         .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I3(s_axi_arlen[4]),
-        .I4(\grid.ar_id_r_reg[3] ),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[4] ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [4]));
+        .I4(s_axi_arvalid_1),
+        .I5(\gaxi_full_sm.arlen_cntr_reg[4]_0 ),
+        .O(\s_axi_arlen[7] [4]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hFE)) 
@@ -768,89 +791,82 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(s_axi_arlen[2]),
         .I1(s_axi_arlen[0]),
         .I2(s_axi_arlen[1]),
-        .O(\gaxi_full_sm.arlen_cntr_reg[3] ));
+        .O(s_axi_arlen_2_sn_1));
   LUT6 #(
     .INIT(64'h7848787B787B7848)) 
     \gaxi_full_sm.arlen_cntr[5]_i_1 
-       (.I0(s_axi_arlen_4_sn_1),
+       (.I0(\gaxi_full_sm.arlen_cntr_reg[5] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_arlen[5]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [5]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[3]_0 ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [5]));
+        .I3(s_axi_arvalid_1),
+        .I4(Q[5]),
+        .I5(\gaxi_full_sm.arlen_cntr_reg[5]_0 ),
+        .O(\s_axi_arlen[7] [5]));
   LUT6 #(
     .INIT(64'h7848787B787B7848)) 
     \gaxi_full_sm.arlen_cntr[6]_i_1 
-       (.I0(s_axi_arlen_5_sn_1),
+       (.I0(\gaxi_full_sm.arlen_cntr_reg[6] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_arlen[6]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [6]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[6] ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [6]));
+        .I3(s_axi_arvalid_1),
+        .I4(Q[6]),
+        .I5(\gaxi_full_sm.arlen_cntr_reg[4] ),
+        .O(\s_axi_arlen[7] [6]));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     \gaxi_full_sm.arlen_cntr[6]_i_3 
-       (.I0(\gaxi_full_sm.arlen_cntr_reg[7]_0 [4]),
-        .I1(\gaxi_full_sm.arlen_cntr_reg[7]_0 [2]),
-        .I2(\gaxi_full_sm.arlen_cntr_reg[7]_0 [1]),
-        .I3(\gaxi_full_sm.arlen_cntr_reg[7]_0 [0]),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [3]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[7]_0 [5]),
-        .O(\gaxi_full_sm.arlen_cntr_reg[6] ));
+       (.I0(Q[4]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[3]),
+        .I5(Q[5]),
+        .O(\gaxi_full_sm.arlen_cntr_reg[4] ));
   LUT6 #(
     .INIT(64'hFFFF0FDFFFFF00D0)) 
     \gaxi_full_sm.arlen_cntr[7]_i_1 
-       (.I0(s_axi_rvalid),
+       (.I0(\gaxi_full_sm.r_valid_r_reg_0 ),
         .I1(s_axi_rready),
         .I2(present_state[0]),
         .I3(present_state[1]),
         .I4(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
         .I5(s_axi_arvalid),
-        .O(\gaxi_full_sm.arlen_cntr_reg[0] ));
+        .O(\gaxi_full_sm.r_valid_r_reg_3 ));
   LUT6 #(
     .INIT(64'hB080B0B3B0B3B080)) 
     \gaxi_full_sm.arlen_cntr[7]_i_2 
-       (.I0(s_axi_arlen_1_sn_1),
+       (.I0(\gaxi_full_sm.arlen_cntr_reg[7] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_arlen[7]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(\gaxi_full_sm.arlen_cntr_reg[7]_0 [7]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[6]_0 ),
-        .O(\gaxi_full_sm.arlen_cntr_reg[7] [7]));
+        .I3(s_axi_arvalid_1),
+        .I4(Q[7]),
+        .I5(\gaxi_full_sm.arlen_cntr_reg[7]_0 ),
+        .O(\s_axi_arlen[7] [7]));
   LUT1 #(
     .INIT(2'h1)) 
     \gaxi_full_sm.aw_ready_r_i_1 
        (.I0(s_aresetn),
         .O(SR));
-  LUT5 #(
-    .INIT(32'h22302200)) 
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_2 
-       (.I0(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
-        .I1(present_state[1]),
-        .I2(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I3(present_state[0]),
-        .I4(s_axi_arvalid),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11] ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hF7FF)) 
-    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_3 
-       (.I0(present_state[1]),
+    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_2 
+       (.I0(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
-        .I3(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]_0 ));
+        .I3(present_state[1]),
+        .O(s_axi_arvalid_0));
   LUT6 #(
-    .INIT(64'hFFBAFFFAFFFFFFFF)) 
+    .INIT(64'hFFFFABBBFFFFFFFF)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_1 
-       (.I0(\gaxi_full_sm.S_AXI_RLAST_i_4_n_0 ),
-        .I1(present_state[1]),
-        .I2(\gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 ),
-        .I4(\gaxi_full_sm.outstanding_read_r_reg_0 ),
+       (.I0(\gaxi_full_sm.r_valid_r_reg_1 ),
+        .I1(\gaxi_full_sm.S_AXI_RLAST_i_3_n_0 ),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_2 ),
+        .I4(\gaxi_full_sm.S_AXI_RLAST_i_2_n_0 ),
         .I5(s_aresetn),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1] ));
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_2 
@@ -859,7 +875,7 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I2(s_axi_arvalid),
         .I3(present_state[0]),
         .I4(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_1 ));
+        .O(\s_axi_arburst[1] ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[10]_i_1 
@@ -867,15 +883,26 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
         .I3(ADDRARDADDR[6]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [6]));
+        .O(\s_axi_araddr[11] [6]));
+  LUT6 #(
+    .INIT(64'h03AA00AA03AA03AA)) 
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_1 
+       (.I0(s_axi_arvalid),
+        .I1(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
+        .I2(present_state[1]),
+        .I3(present_state[0]),
+        .I4(s_axi_rready),
+        .I5(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .O(s_axi_arvalid_2));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
-    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_1 
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_2 
        (.I0(s_axi_araddr[11]),
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
         .I3(ADDRARDADDR[7]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [7]));
+        .O(\s_axi_araddr[11] [7]));
   LUT4 #(
     .INIT(16'hFB08)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[4]_i_1 
@@ -883,47 +910,47 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
         .I3(ADDRARDADDR[0]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [0]));
+        .O(\s_axi_araddr[11] [0]));
   LUT6 #(
     .INIT(64'hF4F5B0A0F4E4B0B1)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[5]_i_1 
-       (.I0(\grid.ar_id_r_reg[3] ),
+       (.I0(s_axi_arvalid_1),
         .I1(addr_cnt_enb_r[4]),
         .I2(s_axi_araddr[5]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [1]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [1]));
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [1]),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ),
+        .O(\s_axi_araddr[11] [1]));
   LUT6 #(
     .INIT(64'hF4F5B0A0F4E4B0B1)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[6]_i_1 
-       (.I0(\grid.ar_id_r_reg[3] ),
+       (.I0(s_axi_arvalid_1),
         .I1(addr_cnt_enb_r[5]),
         .I2(s_axi_araddr[6]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [2]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [2]));
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [2]),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ),
+        .O(\s_axi_araddr[11] [2]));
   LUT6 #(
     .INIT(64'hF4F5B0A0F4E4B0B1)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[7]_i_1 
-       (.I0(\grid.ar_id_r_reg[3] ),
+       (.I0(s_axi_arvalid_1),
         .I1(addr_cnt_enb_r[6]),
         .I2(s_axi_araddr[7]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [3]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [3]));
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [3]),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] ),
+        .O(\s_axi_araddr[11] [3]));
   LUT6 #(
     .INIT(64'hF4F5B0A0F4E4B0B1)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_1 
-       (.I0(\grid.ar_id_r_reg[3] ),
+       (.I0(s_axi_arvalid_1),
         .I1(addr_cnt_enb_r[7]),
         .I2(s_axi_araddr[8]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 [4]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] ),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [4]));
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram [4]),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] ),
+        .O(\s_axi_araddr[11] [4]));
   LUT4 #(
     .INIT(16'hFB08)) 
     \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[9]_i_1 
@@ -931,24 +958,24 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
         .I3(ADDRARDADDR[5]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 [5]));
+        .O(\s_axi_araddr[11] [5]));
   LUT6 #(
     .INIT(64'h787B78487848787B)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_1 
-       (.I0(\s_axi_arsize[2] ),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_araddr[0]),
-        .I3(\grid.ar_id_r_reg[3] ),
-        .I4(Q[0]),
+        .I3(s_axi_arvalid_1),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [0]),
         .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0 ),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h47)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2 
        (.I0(s_axi_araddr[0]),
         .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [0]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFB0808FB08FBFB08)) 
@@ -956,36 +983,36 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.I0(s_axi_araddr[1]),
         .I1(s_axi_arvalid),
         .I2(present_state[0]),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ),
-        .I5(Q[1]),
+        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [1]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hB888B8BBB8BBB888)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_1 
-       (.I0(\s_axi_araddr[2]_0 ),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_araddr[2]),
-        .I3(\grid.ar_id_r_reg[3] ),
+        .I3(s_axi_arvalid_1),
         .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0 ),
         .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4_n_0 ),
         .O(D[2]));
   LUT6 #(
     .INIT(64'hFFEFAAEAAA8A0080)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3 
-       (.I0(Q[1]),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [1]),
         .I1(s_axi_araddr[1]),
         .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
         .I3(addr_cnt_enb_r[0]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [1]),
-        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ),
+        .I4(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [1]),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h65666A66)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4 
-       (.I0(Q[2]),
-        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [2]),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [2]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [2]),
         .I2(addr_cnt_enb_r[1]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
         .I4(s_axi_araddr[2]),
@@ -993,10 +1020,10 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
   LUT6 #(
     .INIT(64'hB888B8BBB8BBB888)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_1 
-       (.I0(s_axi_araddr_2_sn_1),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] ),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I2(s_axi_araddr[3]),
-        .I3(\grid.ar_id_r_reg[3] ),
+        .I3(s_axi_arvalid_1),
         .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4_n_0 ),
         .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_4_n_0 ),
         .O(D[3]));
@@ -1007,113 +1034,104 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I1(s_axi_arlen[1]),
         .I2(s_axi_arlen[0]),
         .I3(s_axi_arlen[2]),
-        .I4(s_axi_arlen_6_sn_1),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]_0 ),
         .I5(s_axi_arlen[7]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h65666A66)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_4 
-       (.I0(Q[3]),
-        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [3]),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [3]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [3]),
         .I2(addr_cnt_enb_r[2]),
         .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
         .I4(s_axi_araddr[3]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'h44044444)) 
+    .INIT(32'h44440444)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_5 
        (.I0(present_state[0]),
         .I1(s_axi_arvalid),
-        .I2(s_axi_rvalid),
-        .I3(s_axi_rready),
-        .I4(present_state[1]),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I4(s_axi_rready),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h03AA00AA03AA03AA)) 
+    .INIT(64'hABABABBAABBABABA)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_1 
-       (.I0(s_axi_arvalid),
-        .I1(\gaxi_full_sm.ar_ready_r_i_2_n_0 ),
-        .I2(present_state[1]),
-        .I3(present_state[0]),
-        .I4(s_axi_rready),
-        .I5(s_axi_rvalid),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11] ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAABBBEBEEE)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_2 
-       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3_n_0 ),
-        .I1(Q[4]),
-        .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ),
-        .I4(Q[3]),
-        .I5(\grid.ar_id_r_reg[3] ),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_2_n_0 ),
+        .I1(s_axi_arvalid_1),
+        .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [4]),
+        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [3]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3_n_0 ),
+        .I5(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4_n_0 ),
         .O(D[4]));
   LUT6 #(
-    .INIT(64'hAAAA200820080008)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3 
+    .INIT(64'h2008AAAA00082008)) 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_2 
        (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ),
         .I1(s_axi_arsize[2]),
-        .I2(s_axi_arsize[1]),
-        .I3(s_axi_arsize[0]),
-        .I4(\s_axi_araddr[2]_1 ),
+        .I2(s_axi_arsize[0]),
+        .I3(s_axi_arsize[1]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ),
         .I5(s_axi_araddr[3]),
+        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3 
+       (.I0(s_axi_araddr[3]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
+        .I2(addr_cnt_enb_r[2]),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [3]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFE8E800)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4 
-       (.I0(Q[1]),
-        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ),
-        .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_9_n_0 ),
-        .I4(Q[2]),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [1]),
+        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ),
+        .I2(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ),
+        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5 
-       (.I0(s_axi_araddr[3]),
-        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I2(addr_cnt_enb_r[2]),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [3]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6 
        (.I0(s_axi_araddr[1]),
         .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
         .I2(addr_cnt_enb_r[0]),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [1]),
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [1]),
+        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT4 #(
+    .INIT(16'hA808)) 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7 
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] [0]),
+        .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [0]),
+        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
+        .I3(s_axi_araddr[0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_7_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'hA808)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8 
-       (.I0(Q[0]),
-        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [0]),
-        .I2(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
-        .I3(s_axi_araddr[0]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
     .INIT(16'hFB08)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_9 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8 
        (.I0(s_axi_araddr[2]),
         .I1(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_20_n_0 ),
         .I2(addr_cnt_enb_r[1]),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 [2]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_9_n_0 ));
+        .I3(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 [2]),
+        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_8_n_0 ));
   MUXF7 \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1]_i_1 
        (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0 ),
-        .I1(s_axi_araddr_0_sn_1),
+        .I1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] ),
         .O(D[1]),
         .S(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hF000000080800000)) 
     \gaxi_full_sm.outstanding_read_r_i_1 
-       (.I0(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
-        .I1(s_axi_arvalid),
-        .I2(\gaxi_full_sm.outstanding_read_r_reg_0 ),
+       (.I0(s_axi_arvalid),
+        .I1(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I2(\gaxi_full_sm.r_valid_r_reg_2 ),
         .I3(outstanding_read_r),
         .I4(present_state[1]),
         .I5(present_state[0]),
@@ -1127,14 +1145,14 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .Q(outstanding_read_r),
         .R(SR));
   LUT6 #(
-    .INIT(64'hAEAAFFFFAEAAAEAA)) 
+    .INIT(64'hAAEAFFFFAAEAAAEA)) 
     \gaxi_full_sm.r_valid_r_i_1 
        (.I0(E),
-        .I1(s_axi_arvalid),
-        .I2(present_state[0]),
-        .I3(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I1(\gaxi_full_sm.r_valid_r_i_2_n_0 ),
+        .I2(s_axi_arvalid),
+        .I3(present_state[0]),
         .I4(s_axi_rready),
-        .I5(s_axi_rvalid),
+        .I5(\gaxi_full_sm.r_valid_r_reg_0 ),
         .O(\gaxi_full_sm.r_valid_r_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
@@ -1144,7 +1162,7 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
         .I2(s_axi_arlen[4]),
         .I3(s_axi_arlen[5]),
         .I4(s_axi_arlen[6]),
-        .I5(\gaxi_full_sm.arlen_cntr_reg[3] ),
+        .I5(s_axi_arlen_2_sn_1),
         .O(\gaxi_full_sm.r_valid_r_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -1152,71 +1170,72 @@ module blk_mem_gen_1_blk_mem_axi_read_fsm
        (.C(s_aclk),
         .CE(1'b1),
         .D(\gaxi_full_sm.r_valid_r_i_1_n_0 ),
-        .Q(s_axi_rvalid),
+        .Q(\gaxi_full_sm.r_valid_r_reg_0 ),
         .R(SR));
   LUT6 #(
-    .INIT(64'hBBFBBBBB88088888)) 
+    .INIT(64'hBBBBFBBB88880888)) 
     \grid.S_AXI_RID[0]_i_1 
        (.I0(s_axi_arid[0]),
-        .I1(\grid.ar_id_r_reg[3] ),
-        .I2(s_axi_rvalid),
-        .I3(s_axi_rready),
-        .I4(present_state[1]),
-        .I5(\grid.ar_id_r_reg[3]_0 [0]),
-        .O(\grid.S_AXI_RID_reg[3] [0]));
+        .I1(s_axi_arvalid_1),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I4(s_axi_rready),
+        .I5(\grid.S_AXI_RID_reg[3] [0]),
+        .O(\s_axi_arid[3] [0]));
   LUT6 #(
-    .INIT(64'hBBFBBBBB88088888)) 
+    .INIT(64'hBBBBFBBB88880888)) 
     \grid.S_AXI_RID[1]_i_1 
        (.I0(s_axi_arid[1]),
-        .I1(\grid.ar_id_r_reg[3] ),
-        .I2(s_axi_rvalid),
-        .I3(s_axi_rready),
-        .I4(present_state[1]),
-        .I5(\grid.ar_id_r_reg[3]_0 [1]),
-        .O(\grid.S_AXI_RID_reg[3] [1]));
+        .I1(s_axi_arvalid_1),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I4(s_axi_rready),
+        .I5(\grid.S_AXI_RID_reg[3] [1]),
+        .O(\s_axi_arid[3] [1]));
   LUT6 #(
-    .INIT(64'hBBFBBBBB88088888)) 
+    .INIT(64'hBBBBFBBB88880888)) 
     \grid.S_AXI_RID[2]_i_1 
        (.I0(s_axi_arid[2]),
-        .I1(\grid.ar_id_r_reg[3] ),
-        .I2(s_axi_rvalid),
-        .I3(s_axi_rready),
-        .I4(present_state[1]),
-        .I5(\grid.ar_id_r_reg[3]_0 [2]),
-        .O(\grid.S_AXI_RID_reg[3] [2]));
+        .I1(s_axi_arvalid_1),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I4(s_axi_rready),
+        .I5(\grid.S_AXI_RID_reg[3] [2]),
+        .O(\s_axi_arid[3] [2]));
   LUT6 #(
     .INIT(64'hF300F3F3A2A2AAAA)) 
     \grid.S_AXI_RID[3]_i_1 
        (.I0(s_axi_arvalid),
-        .I1(s_axi_rvalid),
+        .I1(\gaxi_full_sm.r_valid_r_reg_0 ),
         .I2(s_axi_rready),
         .I3(outstanding_read_r),
         .I4(present_state[1]),
         .I5(present_state[0]),
         .O(E));
   LUT6 #(
-    .INIT(64'hBBFBBBBB88088888)) 
+    .INIT(64'hBBBBFBBB88880888)) 
     \grid.S_AXI_RID[3]_i_2 
        (.I0(s_axi_arid[3]),
-        .I1(\grid.ar_id_r_reg[3] ),
-        .I2(s_axi_rvalid),
-        .I3(s_axi_rready),
-        .I4(present_state[1]),
-        .I5(\grid.ar_id_r_reg[3]_0 [3]),
-        .O(\grid.S_AXI_RID_reg[3] [3]));
+        .I1(s_axi_arvalid_1),
+        .I2(present_state[1]),
+        .I3(\gaxi_full_sm.r_valid_r_reg_0 ),
+        .I4(s_axi_rready),
+        .I5(\grid.S_AXI_RID_reg[3] [3]),
+        .O(\s_axi_arid[3] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \grid.ar_id_r[3]_i_1 
        (.I0(s_axi_arvalid),
         .I1(present_state[0]),
-        .O(\grid.ar_id_r_reg[3] ));
+        .O(s_axi_arvalid_1));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_axi_read_wrapper" *) 
 module blk_mem_gen_1_blk_mem_axi_read_wrapper
    (s_axi_arready,
     SS,
-    s_axi_rvalid,
+    \gaxi_full_sm.r_valid_r_reg ,
     s_axi_rlast,
     ENB_I,
     ADDRARDADDR,
@@ -1233,7 +1252,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     s_axi_arburst);
   output s_axi_arready;
   output [0:0]SS;
-  output s_axi_rvalid;
+  output \gaxi_full_sm.r_valid_r_reg ;
   output s_axi_rlast;
   output ENB_I;
   output [7:0]ADDRARDADDR;
@@ -1261,6 +1280,11 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
   wire [11:1]addr_cnt_enb_r;
   wire [3:0]ar_id_r;
   wire [7:0]arlen_cntr;
+  wire axi_read_fsm_n_10;
+  wire axi_read_fsm_n_11;
+  wire axi_read_fsm_n_12;
+  wire axi_read_fsm_n_13;
+  wire axi_read_fsm_n_14;
   wire axi_read_fsm_n_15;
   wire axi_read_fsm_n_16;
   wire axi_read_fsm_n_17;
@@ -1274,9 +1298,9 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
   wire axi_read_fsm_n_25;
   wire axi_read_fsm_n_26;
   wire axi_read_fsm_n_27;
-  wire axi_read_fsm_n_28;
+  wire axi_read_fsm_n_29;
   wire axi_read_fsm_n_30;
-  wire axi_read_fsm_n_31;
+  wire axi_read_fsm_n_32;
   wire axi_read_fsm_n_34;
   wire axi_read_fsm_n_35;
   wire axi_read_fsm_n_36;
@@ -1321,22 +1345,23 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_2_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_6_n_0 ;
-  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[2] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[3] ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0 ;
+  wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[3]_i_1_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[4]_i_1_n_0 ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[3] ;
   wire \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[4] ;
+  wire \gaxi_full_sm.r_valid_r_reg ;
   wire incr_en_r;
-  wire [4:0]next_address_r;
-  wire [3:0]num_of_bytes_c;
   wire p_0_in3_in;
   wire [4:4]p_2_out;
   wire p_2_out_0;
@@ -1352,7 +1377,6 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
   wire [3:0]s_axi_rid;
   wire s_axi_rlast;
   wire s_axi_rready;
-  wire s_axi_rvalid;
 
   LUT3 #(
     .INIT(8'h08)) 
@@ -1371,7 +1395,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5] ),
         .I5(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7] ),
         .O(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_22_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h7FFFFFFF)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_23 
@@ -1381,7 +1405,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I3(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4] ),
         .I4(\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6] ),
         .O(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_24 
@@ -1399,62 +1423,62 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .O(\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_25_n_0 ));
   blk_mem_gen_1_blk_mem_axi_read_fsm axi_read_fsm
        (.ADDRARDADDR(ADDRARDADDR),
-        .D(next_address_r),
-        .E(axi_read_fsm_n_30),
+        .D({axi_read_fsm_n_9,axi_read_fsm_n_10,axi_read_fsm_n_11,axi_read_fsm_n_12,axi_read_fsm_n_13}),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ({\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[11] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4] }),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ({p_0_in3_in,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[3] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[2] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0] }),
+        .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_1 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_21_n_0 ),
+        .E(axi_read_fsm_n_29),
         .ENB_I(ENB_I),
         .ENB_dly_D(ENB_dly_D),
-        .Q({\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[4] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[3] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0] }),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 (axi_read_fsm_n_4),
+        .Q(arlen_cntr),
         .SR(SS),
         .addr_cnt_enb_r({addr_cnt_enb_r[11],addr_cnt_enb_r[8:1]}),
-        .\gaxi_full_sm.arlen_cntr_reg[0] (axi_read_fsm_n_31),
-        .\gaxi_full_sm.arlen_cntr_reg[0]_0 (\gaxi_full_sm.arlen_cntr[3]_i_2_n_0 ),
-        .\gaxi_full_sm.arlen_cntr_reg[3] (axi_read_fsm_n_7),
-        .\gaxi_full_sm.arlen_cntr_reg[3]_0 (\gaxi_full_sm.arlen_cntr[5]_i_3_n_0 ),
-        .\gaxi_full_sm.arlen_cntr_reg[4] (\gaxi_full_sm.arlen_cntr[4]_i_3_n_0 ),
-        .\gaxi_full_sm.arlen_cntr_reg[6] (axi_read_fsm_n_24),
-        .\gaxi_full_sm.arlen_cntr_reg[6]_0 (\gaxi_full_sm.arlen_cntr[7]_i_4_n_0 ),
-        .\gaxi_full_sm.arlen_cntr_reg[7] ({axi_read_fsm_n_16,axi_read_fsm_n_17,axi_read_fsm_n_18,axi_read_fsm_n_19,axi_read_fsm_n_20,axi_read_fsm_n_21,axi_read_fsm_n_22,axi_read_fsm_n_23}),
-        .\gaxi_full_sm.arlen_cntr_reg[7]_0 (arlen_cntr),
-        .\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11] (axi_read_fsm_n_8),
-        .\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]_0 (axi_read_fsm_n_9),
-        .\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1] (axi_read_fsm_n_4),
-        .\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_0 (axi_read_fsm_n_5),
-        .\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]_1 (p_2_out_0),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11] (p_2_out),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0 ({axi_read_fsm_n_34,axi_read_fsm_n_35,axi_read_fsm_n_36,axi_read_fsm_n_37,axi_read_fsm_n_38,axi_read_fsm_n_39,axi_read_fsm_n_40,axi_read_fsm_n_41}),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_1 ({\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[11] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5] ,\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4] }),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_24_n_0 ),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_23_n_0 ),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_22_n_0 ),
-        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_21_n_0 ),
-        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_25_n_0 ),
-        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 ({p_0_in3_in,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[3] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[2] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1] ,\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0] }),
-        .\gaxi_full_sm.outstanding_read_r_reg_0 (axi_read_fsm_n_6),
-        .\grid.S_AXI_RID_reg[3] ({axi_read_fsm_n_25,axi_read_fsm_n_26,axi_read_fsm_n_27,axi_read_fsm_n_28}),
-        .\grid.ar_id_r_reg[3] (axi_read_fsm_n_15),
-        .\grid.ar_id_r_reg[3]_0 (ar_id_r),
+        .\gaxi_full_sm.arlen_cntr_reg[3] (\gaxi_full_sm.arlen_cntr[3]_i_2_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[4] (axi_read_fsm_n_23),
+        .\gaxi_full_sm.arlen_cntr_reg[4]_0 (\gaxi_full_sm.arlen_cntr[4]_i_3_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[5] (\gaxi_full_sm.arlen_cntr[5]_i_2_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[5]_0 (\gaxi_full_sm.arlen_cntr[5]_i_3_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[6] (\gaxi_full_sm.arlen_cntr[6]_i_2_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[7] (\gaxi_full_sm.arlen_cntr[7]_i_3_n_0 ),
+        .\gaxi_full_sm.arlen_cntr_reg[7]_0 (\gaxi_full_sm.arlen_cntr[7]_i_4_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_25_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_24_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_23_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8] (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_22_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] (\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]_0 (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_6_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_2_n_0 ),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] ({\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[4] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[3] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1] ,\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0] }),
+        .\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4]_0 (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ),
+        .\gaxi_full_sm.r_valid_r_reg_0 (\gaxi_full_sm.r_valid_r_reg ),
+        .\gaxi_full_sm.r_valid_r_reg_1 (axi_read_fsm_n_5),
+        .\gaxi_full_sm.r_valid_r_reg_2 (axi_read_fsm_n_6),
+        .\gaxi_full_sm.r_valid_r_reg_3 (axi_read_fsm_n_30),
+        .\grid.S_AXI_RID_reg[3] (ar_id_r),
         .incr_en_r(incr_en_r),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_araddr(s_axi_araddr),
-        .\s_axi_araddr[2]_0 (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0 ),
-        .\s_axi_araddr[2]_1 (\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ),
-        .s_axi_araddr_0_sp_1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0 ),
-        .s_axi_araddr_2_sp_1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_2_n_0 ),
+        .\s_axi_araddr[11] ({axi_read_fsm_n_34,axi_read_fsm_n_35,axi_read_fsm_n_36,axi_read_fsm_n_37,axi_read_fsm_n_38,axi_read_fsm_n_39,axi_read_fsm_n_40,axi_read_fsm_n_41}),
         .s_axi_arburst(s_axi_arburst),
+        .\s_axi_arburst[1] (p_2_out_0),
         .s_axi_arid(s_axi_arid),
+        .\s_axi_arid[3] ({axi_read_fsm_n_24,axi_read_fsm_n_25,axi_read_fsm_n_26,axi_read_fsm_n_27}),
         .s_axi_arlen(s_axi_arlen),
-        .s_axi_arlen_1_sp_1(\gaxi_full_sm.arlen_cntr[7]_i_3_n_0 ),
-        .s_axi_arlen_4_sp_1(\gaxi_full_sm.arlen_cntr[5]_i_2_n_0 ),
-        .s_axi_arlen_5_sp_1(\gaxi_full_sm.arlen_cntr[6]_i_2_n_0 ),
-        .s_axi_arlen_6_sp_1(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_6_n_0 ),
+        .\s_axi_arlen[7] ({axi_read_fsm_n_15,axi_read_fsm_n_16,axi_read_fsm_n_17,axi_read_fsm_n_18,axi_read_fsm_n_19,axi_read_fsm_n_20,axi_read_fsm_n_21,axi_read_fsm_n_22}),
+        .s_axi_arlen_2_sp_1(axi_read_fsm_n_8),
         .s_axi_arready(s_axi_arready),
         .s_axi_arsize(s_axi_arsize),
-        .\s_axi_arsize[2] (num_of_bytes_c[0]),
         .s_axi_arvalid(s_axi_arvalid),
+        .s_axi_arvalid_0(axi_read_fsm_n_7),
+        .s_axi_arvalid_1(axi_read_fsm_n_14),
+        .s_axi_arvalid_2(p_2_out),
+        .s_axi_arvalid_3(axi_read_fsm_n_32),
         .s_axi_rlast(s_axi_rlast),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid));
+        .s_axi_rready(s_axi_rready));
   LUT3 #(
     .INIT(8'h01)) 
     \gaxi_full_sm.arlen_cntr[3]_i_2 
@@ -1462,7 +1486,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I1(arlen_cntr[1]),
         .I2(arlen_cntr[2]),
         .O(\gaxi_full_sm.arlen_cntr[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \gaxi_full_sm.arlen_cntr[4]_i_3 
@@ -1481,7 +1505,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I3(s_axi_arlen[3]),
         .I4(s_axi_arlen[4]),
         .O(\gaxi_full_sm.arlen_cntr[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \gaxi_full_sm.arlen_cntr[5]_i_3 
@@ -1501,11 +1525,11 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I4(s_axi_arlen[1]),
         .I5(s_axi_arlen[5]),
         .O(\gaxi_full_sm.arlen_cntr[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \gaxi_full_sm.arlen_cntr[7]_i_3 
-       (.I0(axi_read_fsm_n_7),
+       (.I0(axi_read_fsm_n_8),
         .I1(s_axi_arlen[6]),
         .I2(s_axi_arlen[5]),
         .I3(s_axi_arlen[4]),
@@ -1514,81 +1538,81 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
   LUT2 #(
     .INIT(4'h2)) 
     \gaxi_full_sm.arlen_cntr[7]_i_4 
-       (.I0(axi_read_fsm_n_24),
+       (.I0(axi_read_fsm_n_23),
         .I1(arlen_cntr[6]),
         .O(\gaxi_full_sm.arlen_cntr[7]_i_4_n_0 ));
   FDSE #(
     .INIT(1'b1)) 
     \gaxi_full_sm.arlen_cntr_reg[0] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_23),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_22),
         .Q(arlen_cntr[0]),
         .S(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[1] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_22),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_21),
         .Q(arlen_cntr[1]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[2] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_21),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_20),
         .Q(arlen_cntr[2]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[3] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_20),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_19),
         .Q(arlen_cntr[3]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[4] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_19),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_18),
         .Q(arlen_cntr[4]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[5] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_18),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_17),
         .Q(arlen_cntr[5]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[6] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_17),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_16),
         .Q(arlen_cntr[6]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.arlen_cntr_reg[7] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_31),
-        .D(axi_read_fsm_n_16),
+        .CE(axi_read_fsm_n_30),
+        .D(axi_read_fsm_n_15),
         .Q(arlen_cntr[7]),
         .R(SS));
   LUT6 #(
-    .INIT(64'hABABABAAAAAAAAAA)) 
+    .INIT(64'hAAAABBBAAAAAAAAA)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1 
        (.I0(p_2_out_0),
-        .I1(axi_read_fsm_n_8),
-        .I2(axi_read_fsm_n_5),
-        .I3(axi_read_fsm_n_9),
-        .I4(axi_read_fsm_n_6),
+        .I1(axi_read_fsm_n_5),
+        .I2(axi_read_fsm_n_7),
+        .I3(axi_read_fsm_n_6),
+        .I4(axi_read_fsm_n_32),
         .I5(addr_cnt_enb_r[11]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1_n_0 ));
   LUT6 #(
@@ -1598,78 +1622,78 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I1(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
         .I2(s_axi_arlen[1]),
         .I3(s_axi_arsize[2]),
-        .I4(s_axi_arsize[1]),
-        .I5(s_axi_arsize[0]),
+        .I4(s_axi_arsize[0]),
+        .I5(s_axi_arsize[1]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000444)) 
+    .INIT(64'h0000000400000044)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1 
        (.I0(s_axi_arlen[2]),
         .I1(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
         .I2(s_axi_arlen[1]),
-        .I3(s_axi_arsize[0]),
+        .I3(s_axi_arsize[2]),
         .I4(s_axi_arsize[1]),
-        .I5(s_axi_arsize[2]),
+        .I5(s_axi_arsize[0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000008000002AA)) 
+    .INIT(64'h00020000000A002A)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1 
        (.I0(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
-        .I1(s_axi_arlen[1]),
-        .I2(s_axi_arsize[0]),
-        .I3(s_axi_arsize[1]),
-        .I4(s_axi_arsize[2]),
+        .I1(s_axi_arsize[0]),
+        .I2(s_axi_arsize[1]),
+        .I3(s_axi_arsize[2]),
+        .I4(s_axi_arlen[1]),
         .I5(s_axi_arlen[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h000000001050D0FF)) 
+    .INIT(64'h03010101070F0101)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1 
-       (.I0(s_axi_arlen[2]),
-        .I1(s_axi_arlen[1]),
-        .I2(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
-        .I3(s_axi_arsize[0]),
-        .I4(s_axi_arsize[1]),
-        .I5(s_axi_arsize[2]),
+       (.I0(s_axi_arsize[0]),
+        .I1(s_axi_arsize[1]),
+        .I2(s_axi_arsize[2]),
+        .I3(s_axi_arlen[1]),
+        .I4(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
+        .I5(s_axi_arlen[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h000001002F00FFFF)) 
+    .INIT(64'h1151115151511171)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1 
-       (.I0(s_axi_arlen[1]),
-        .I1(s_axi_arsize[0]),
-        .I2(s_axi_arlen[2]),
-        .I3(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
-        .I4(s_axi_arsize[1]),
-        .I5(s_axi_arsize[2]),
+       (.I0(s_axi_arsize[2]),
+        .I1(s_axi_arsize[1]),
+        .I2(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
+        .I3(s_axi_arlen[2]),
+        .I4(s_axi_arlen[1]),
+        .I5(s_axi_arsize[0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h5515151557FF1515)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_1 
        (.I0(s_axi_arsize[2]),
-        .I1(s_axi_arsize[1]),
-        .I2(s_axi_arsize[0]),
+        .I1(s_axi_arsize[0]),
+        .I2(s_axi_arsize[1]),
         .I3(s_axi_arlen[1]),
         .I4(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
         .I5(s_axi_arlen[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h57550000FFFFFFFF)) 
+    .INIT(64'h57005500FFFFFFFF)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[7]_i_1 
        (.I0(s_axi_arlen[2]),
-        .I1(s_axi_arsize[0]),
-        .I2(s_axi_arsize[1]),
-        .I3(s_axi_arlen[1]),
-        .I4(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
+        .I1(s_axi_arsize[1]),
+        .I2(s_axi_arsize[0]),
+        .I3(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
+        .I4(s_axi_arlen[1]),
         .I5(s_axi_arsize[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h8AFF8AFF8AFFFFFF)) 
+    .INIT(64'hD0FFD0FFD0FFFFFF)) 
     \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_3 
-       (.I0(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
+       (.I0(s_axi_arlen[2]),
         .I1(s_axi_arlen[1]),
-        .I2(s_axi_arlen[2]),
+        .I2(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_4_n_0 ),
         .I3(s_axi_arsize[2]),
-        .I4(s_axi_arsize[1]),
-        .I5(s_axi_arsize[0]),
+        .I4(s_axi_arsize[0]),
+        .I5(s_axi_arsize[1]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[8]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000010000)) 
@@ -1827,40 +1851,40 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.incr_en_r_reg 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(\gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1_n_0 ),
         .Q(incr_en_r),
         .R(SS));
   LUT5 #(
-    .INIT(32'hA9A9A9AA)) 
+    .INIT(32'hAAA5AAA6)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3 
        (.I0(s_axi_araddr[1]),
-        .I1(s_axi_arsize[2]),
-        .I2(s_axi_arsize[1]),
-        .I3(s_axi_arsize[0]),
+        .I1(s_axi_arsize[0]),
+        .I2(s_axi_arsize[2]),
+        .I3(s_axi_arsize[1]),
         .I4(s_axi_araddr[0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFF03700000FC8)) 
+    .INIT(64'hFFF3F0F7000C0F08)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2 
        (.I0(s_axi_araddr[0]),
         .I1(s_axi_araddr[1]),
-        .I2(s_axi_arsize[0]),
+        .I2(s_axi_arsize[2]),
         .I3(s_axi_arsize[1]),
-        .I4(s_axi_arsize[2]),
+        .I4(s_axi_arsize[0]),
         .I5(s_axi_araddr[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
-    .INIT(32'h5595AA6A)) 
+    .INIT(32'hAA6A5595)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_2 
-       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ),
-        .I1(s_axi_arsize[0]),
-        .I2(s_axi_arsize[1]),
+       (.I0(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ),
+        .I1(s_axi_arsize[1]),
+        .I2(s_axi_arsize[0]),
         .I3(s_axi_arsize[2]),
         .I4(s_axi_araddr[3]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_6 
@@ -1870,21 +1894,21 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
         .I3(s_axi_arlen[6]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[3]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0232023000000000)) 
-    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6 
+    .INIT(64'hFCF5FCF7FFFFFFFF)) 
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5 
        (.I0(s_axi_araddr[1]),
-        .I1(s_axi_arsize[2]),
-        .I2(s_axi_arsize[1]),
-        .I3(s_axi_arsize[0]),
+        .I1(s_axi_arsize[0]),
+        .I2(s_axi_arsize[2]),
+        .I3(s_axi_arsize[1]),
         .I4(s_axi_araddr[0]),
         .I5(s_axi_araddr[2]),
-        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_6_n_0 ));
+        .O(\gaxi_full_sm.gaxifull_mem_slave.next_address_r[4]_i_5_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0] 
        (.C(s_aclk),
         .CE(p_2_out),
-        .D(next_address_r[0]),
+        .D(axi_read_fsm_n_13),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0] ),
         .R(SS));
   FDRE #(
@@ -1892,7 +1916,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1] 
        (.C(s_aclk),
         .CE(p_2_out),
-        .D(next_address_r[1]),
+        .D(axi_read_fsm_n_12),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1] ),
         .R(SS));
   FDRE #(
@@ -1900,7 +1924,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2] 
        (.C(s_aclk),
         .CE(p_2_out),
-        .D(next_address_r[2]),
+        .D(axi_read_fsm_n_11),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[2] ),
         .R(SS));
   FDRE #(
@@ -1908,7 +1932,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[3] 
        (.C(s_aclk),
         .CE(p_2_out),
-        .D(next_address_r[3]),
+        .D(axi_read_fsm_n_10),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[3] ),
         .R(SS));
   FDRE #(
@@ -1916,62 +1940,62 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[4] 
        (.C(s_aclk),
         .CE(p_2_out),
-        .D(next_address_r[4]),
+        .D(axi_read_fsm_n_9),
         .Q(p_0_in3_in),
         .R(SS));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1 
        (.I0(s_axi_arsize[0]),
-        .I1(s_axi_arsize[1]),
-        .I2(s_axi_arsize[2]),
-        .O(num_of_bytes_c[0]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+        .I1(s_axi_arsize[2]),
+        .I2(s_axi_arsize[1]),
+        .O(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
-    .INIT(8'h10)) 
+    .INIT(8'h02)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1 
-       (.I0(s_axi_arsize[2]),
-        .I1(s_axi_arsize[1]),
-        .I2(s_axi_arsize[0]),
+       (.I0(s_axi_arsize[0]),
+        .I1(s_axi_arsize[2]),
+        .I2(s_axi_arsize[1]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1 
-       (.I0(s_axi_arsize[0]),
+       (.I0(s_axi_arsize[2]),
         .I1(s_axi_arsize[1]),
-        .I2(s_axi_arsize[2]),
+        .I2(s_axi_arsize[0]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[3]_i_1 
-       (.I0(s_axi_arsize[0]),
-        .I1(s_axi_arsize[1]),
+       (.I0(s_axi_arsize[1]),
+        .I1(s_axi_arsize[0]),
         .I2(s_axi_arsize[2]),
-        .O(num_of_bytes_c[3]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+        .O(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[4]_i_1 
-       (.I0(s_axi_arsize[0]),
-        .I1(s_axi_arsize[1]),
+       (.I0(s_axi_arsize[1]),
+        .I1(s_axi_arsize[0]),
         .I2(s_axi_arsize[2]),
         .O(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[4]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[0] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
-        .D(num_of_bytes_c[0]),
+        .CE(axi_read_fsm_n_14),
+        .D(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0 ),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0] ),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[1] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0 ),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1] ),
         .R(SS));
@@ -1979,7 +2003,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[2] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0 ),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2] ),
         .R(SS));
@@ -1987,15 +2011,15 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[3] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
-        .D(num_of_bytes_c[3]),
+        .CE(axi_read_fsm_n_14),
+        .D(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[3]_i_1_n_0 ),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[3] ),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[4] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[4]_i_1_n_0 ),
         .Q(\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[4] ),
         .R(SS));
@@ -2003,39 +2027,39 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \grid.S_AXI_RID_reg[0] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_30),
-        .D(axi_read_fsm_n_28),
+        .CE(axi_read_fsm_n_29),
+        .D(axi_read_fsm_n_27),
         .Q(s_axi_rid[0]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \grid.S_AXI_RID_reg[1] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_30),
-        .D(axi_read_fsm_n_27),
+        .CE(axi_read_fsm_n_29),
+        .D(axi_read_fsm_n_26),
         .Q(s_axi_rid[1]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \grid.S_AXI_RID_reg[2] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_30),
-        .D(axi_read_fsm_n_26),
+        .CE(axi_read_fsm_n_29),
+        .D(axi_read_fsm_n_25),
         .Q(s_axi_rid[2]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \grid.S_AXI_RID_reg[3] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_30),
-        .D(axi_read_fsm_n_25),
+        .CE(axi_read_fsm_n_29),
+        .D(axi_read_fsm_n_24),
         .Q(s_axi_rid[3]),
         .R(SS));
   FDRE #(
     .INIT(1'b0)) 
     \grid.ar_id_r_reg[0] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(s_axi_arid[0]),
         .Q(ar_id_r[0]),
         .R(SS));
@@ -2043,7 +2067,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \grid.ar_id_r_reg[1] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(s_axi_arid[1]),
         .Q(ar_id_r[1]),
         .R(SS));
@@ -2051,7 +2075,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \grid.ar_id_r_reg[2] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(s_axi_arid[2]),
         .Q(ar_id_r[2]),
         .R(SS));
@@ -2059,7 +2083,7 @@ module blk_mem_gen_1_blk_mem_axi_read_wrapper
     .INIT(1'b0)) 
     \grid.ar_id_r_reg[3] 
        (.C(s_aclk),
-        .CE(axi_read_fsm_n_15),
+        .CE(axi_read_fsm_n_14),
         .D(s_axi_arid[3]),
         .Q(ar_id_r[3]),
         .R(SS));
@@ -2067,102 +2091,102 @@ endmodule
 
 (* ORIG_REF_NAME = "blk_mem_axi_write_fsm" *) 
 module blk_mem_gen_1_blk_mem_axi_write_fsm
-   (out,
-    s_axi_awready,
+   (s_axi_awready,
     s_axi_wready,
     SR,
-    \gaxif_wlast_gen.awlen_cntr_r_reg[6] ,
-    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ,
-    E,
-    \gaxif_ms_addr_gen.bmg_address_r_reg[4] ,
-    D,
-    \gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ,
-    \gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ,
-    \gaxif_ms_addr_gen.next_address_r_reg[4] ,
-    \gaxif_ms_addr_gen.bmg_address_r_reg[11] ,
-    \gaxif_ms_addr_gen.incr_en_r_reg ,
-    I19,
-    bvalid_c,
+    Q,
     \bvalid_count_r_reg[0] ,
+    s_axi_wvalid_0,
+    E,
+    s_axi_awvalid_0,
+    D,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[5] ,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_0 ,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 ,
+    \s_axi_awaddr[11] ,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ,
+    I17,
+    bvalid_c,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2 ,
     ENA_I,
-    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_0 ,
     \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] ,
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3 ,
     SS,
     s_aclk,
     s_axi_awvalid,
-    s_axi_awburst_1_sp_1,
+    \gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ,
     s_aresetn,
     s_axi_wvalid,
     s_axi_bready,
     s_axi_awlen,
-    \gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ,
-    Q,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[7] ,
+    \bvalid_count_r_reg[0]_0 ,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0 ,
     \gaxif_wlast_gen.awlen_cntr_r_reg[4] ,
     \gaxif_wlast_gen.awlen_cntr_r_reg[3] ,
     \gaxif_wlast_gen.awlen_cntr_r_reg[2] ,
-    \gaxif_wlast_gen.awlen_cntr_r_reg[1] ,
     s_axi_awburst,
-    \gaxif_ms_addr_gen.num_of_bytes_r_reg[4] ,
+    \gaxif_ms_addr_gen.next_address_r_reg[4] ,
     s_axi_awaddr,
-    \gaxif_ms_addr_gen.num_of_bytes_r_reg[3] ,
-    \gaxif_ms_addr_gen.num_of_bytes_r_reg[0] ,
-    \gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_0 ,
+    \gaxif_ms_addr_gen.next_address_r_reg[3] ,
+    \gaxif_ms_addr_gen.next_address_r_reg[2] ,
+    \gaxif_ms_addr_gen.next_address_r_reg[1] ,
     \gaxif_ms_addr_gen.next_address_r_reg[0] ,
-    \gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_1 ,
+    \gaxif_ms_addr_gen.next_address_r_reg[0]_0 ,
     ADDRBWRADDR,
-    \bvalid_count_r_reg[0]_0 ,
-    \bvalid_count_r_reg[2] ,
-    \bvalid_count_r_reg[1] ,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[6] ,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ,
+    \gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ,
     ENA_dly_D,
-    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 );
-  output [0:0]out;
+    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] );
   output s_axi_awready;
   output s_axi_wready;
   output [0:0]SR;
-  output \gaxif_wlast_gen.awlen_cntr_r_reg[6] ;
-  output \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ;
-  output [0:0]E;
-  output [0:0]\gaxif_ms_addr_gen.bmg_address_r_reg[4] ;
-  output [7:0]D;
-  output \gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ;
-  output [0:0]\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ;
-  output [4:0]\gaxif_ms_addr_gen.next_address_r_reg[4] ;
-  output [7:0]\gaxif_ms_addr_gen.bmg_address_r_reg[11] ;
-  output [0:0]\gaxif_ms_addr_gen.incr_en_r_reg ;
-  output I19;
-  output bvalid_c;
+  output [0:0]Q;
   output \bvalid_count_r_reg[0] ;
+  output s_axi_wvalid_0;
+  output [0:0]E;
+  output [0:0]s_axi_awvalid_0;
+  output [7:0]D;
+  output \gaxif_wlast_gen.awlen_cntr_r_reg[5] ;
+  output [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[0]_0 ;
+  output [4:0]\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 ;
+  output [7:0]\s_axi_awaddr[11] ;
+  output [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ;
+  output I17;
+  output bvalid_c;
+  output \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2 ;
   output ENA_I;
-  output \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_0 ;
   output \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] ;
+  output \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3 ;
   input [0:0]SS;
   input s_aclk;
   input s_axi_awvalid;
-  input s_axi_awburst_1_sp_1;
+  input \gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ;
   input s_aresetn;
   input s_axi_wvalid;
   input s_axi_bready;
   input [7:0]s_axi_awlen;
-  input \gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ;
-  input [7:0]Q;
+  input \gaxif_wlast_gen.awlen_cntr_r_reg[7] ;
+  input [7:0]\bvalid_count_r_reg[0]_0 ;
+  input \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0 ;
   input \gaxif_wlast_gen.awlen_cntr_r_reg[4] ;
   input \gaxif_wlast_gen.awlen_cntr_r_reg[3] ;
   input \gaxif_wlast_gen.awlen_cntr_r_reg[2] ;
-  input \gaxif_wlast_gen.awlen_cntr_r_reg[1] ;
   input [1:0]s_axi_awburst;
-  input \gaxif_ms_addr_gen.num_of_bytes_r_reg[4] ;
+  input \gaxif_ms_addr_gen.next_address_r_reg[4] ;
   input [11:0]s_axi_awaddr;
-  input \gaxif_ms_addr_gen.num_of_bytes_r_reg[3] ;
-  input \gaxif_ms_addr_gen.num_of_bytes_r_reg[0] ;
-  input \gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_0 ;
+  input \gaxif_ms_addr_gen.next_address_r_reg[3] ;
+  input \gaxif_ms_addr_gen.next_address_r_reg[2] ;
+  input \gaxif_ms_addr_gen.next_address_r_reg[1] ;
   input [0:0]\gaxif_ms_addr_gen.next_address_r_reg[0] ;
-  input [0:0]\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_1 ;
+  input [0:0]\gaxif_ms_addr_gen.next_address_r_reg[0]_0 ;
   input [7:0]ADDRBWRADDR;
-  input \bvalid_count_r_reg[0]_0 ;
-  input \bvalid_count_r_reg[2] ;
-  input \bvalid_count_r_reg[1] ;
+  input \gaxif_wlast_gen.awlen_cntr_r_reg[6] ;
+  input \gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ;
+  input \gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ;
   input ENA_dly_D;
-  input [1:0]\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 ;
+  input [1:0]\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ;
 
   wire [7:0]ADDRBWRADDR;
   wire [7:0]D;
@@ -2172,61 +2196,60 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
   wire \FSM_sequential_gaxi_full_sm.present_state[0]_i_2_n_0 ;
   wire \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ;
   wire \FSM_sequential_gaxi_full_sm.present_state[0]_i_4_n_0 ;
-  wire I19;
-  wire [7:0]Q;
+  wire [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[0]_0 ;
+  wire [4:0]\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 ;
+  wire \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2 ;
+  wire \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3 ;
+  wire [0:0]\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ;
+  wire I17;
+  wire [0:0]Q;
   wire [0:0]SR;
   wire [0:0]SS;
   wire aw_ready_c;
   wire bvalid_c;
   wire \bvalid_count_r_reg[0] ;
-  wire \bvalid_count_r_reg[0]_0 ;
-  wire \bvalid_count_r_reg[1] ;
-  wire \bvalid_count_r_reg[2] ;
+  wire [7:0]\bvalid_count_r_reg[0]_0 ;
   wire \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] ;
-  wire \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ;
-  wire \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_0 ;
-  wire [1:0]\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 ;
+  wire [1:0]\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ;
   wire \gaxi_full_sm.aw_ready_r_i_3_n_0 ;
-  wire [0:0]\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ;
-  wire [7:0]\gaxif_ms_addr_gen.bmg_address_r_reg[11] ;
-  wire [0:0]\gaxif_ms_addr_gen.bmg_address_r_reg[4] ;
-  wire [0:0]\gaxif_ms_addr_gen.incr_en_r_reg ;
+  wire \gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ;
   wire [0:0]\gaxif_ms_addr_gen.next_address_r_reg[0] ;
-  wire [4:0]\gaxif_ms_addr_gen.next_address_r_reg[4] ;
-  wire \gaxif_ms_addr_gen.num_of_bytes_r_reg[0] ;
-  wire \gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_0 ;
-  wire [0:0]\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_1 ;
-  wire \gaxif_ms_addr_gen.num_of_bytes_r_reg[3] ;
-  wire \gaxif_ms_addr_gen.num_of_bytes_r_reg[4] ;
-  wire \gaxif_wlast_gen.awlen_cntr_r_reg[1] ;
+  wire [0:0]\gaxif_ms_addr_gen.next_address_r_reg[0]_0 ;
+  wire \gaxif_ms_addr_gen.next_address_r_reg[1] ;
+  wire \gaxif_ms_addr_gen.next_address_r_reg[2] ;
+  wire \gaxif_ms_addr_gen.next_address_r_reg[3] ;
+  wire \gaxif_ms_addr_gen.next_address_r_reg[4] ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[2] ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[3] ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[4] ;
+  wire \gaxif_wlast_gen.awlen_cntr_r_reg[5] ;
+  wire \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0 ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[6] ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ;
   wire \gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ;
+  wire \gaxif_wlast_gen.awlen_cntr_r_reg[7] ;
   wire [1:0]next_state;
-  (* RTL_KEEP = "yes" *) wire [0:0]out;
-  (* RTL_KEEP = "yes" *) wire [1:1]present_state;
+  wire [1:1]present_state;
   wire s_aclk;
   wire s_aresetn;
   wire [11:0]s_axi_awaddr;
+  wire [7:0]\s_axi_awaddr[11] ;
   wire [1:0]s_axi_awburst;
-  wire s_axi_awburst_1_sn_1;
   wire [7:0]s_axi_awlen;
   wire s_axi_awready;
   wire s_axi_awvalid;
+  wire [0:0]s_axi_awvalid_0;
   wire s_axi_bready;
   wire s_axi_wready;
   wire s_axi_wvalid;
+  wire s_axi_wvalid_0;
   wire w_ready_c;
 
-  assign s_axi_awburst_1_sn_1 = s_axi_awburst_1_sp_1;
   LUT4 #(
     .INIT(16'hBEAA)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_i_2 
        (.I0(ENA_dly_D),
-        .I1(out),
+        .I1(Q),
         .I2(present_state),
         .I3(s_axi_wvalid),
         .O(ENA_I));
@@ -2237,56 +2260,53 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ),
         .I2(s_axi_wvalid),
         .I3(present_state),
-        .I4(out),
+        .I4(Q),
         .I5(\FSM_sequential_gaxi_full_sm.present_state[0]_i_4_n_0 ),
         .O(next_state[0]));
   LUT5 #(
-    .INIT(32'h5000500C)) 
+    .INIT(32'h55000030)) 
     \FSM_sequential_gaxi_full_sm.present_state[0]_i_2 
        (.I0(s_axi_bready),
-        .I1(s_axi_awvalid),
-        .I2(present_state),
-        .I3(out),
-        .I4(s_axi_wvalid),
+        .I1(s_axi_wvalid),
+        .I2(s_axi_awvalid),
+        .I3(present_state),
+        .I4(Q),
         .O(\FSM_sequential_gaxi_full_sm.present_state[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \FSM_sequential_gaxi_full_sm.present_state[0]_i_3 
-       (.I0(Q[7]),
-        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
-        .I2(Q[6]),
+       (.I0(\bvalid_count_r_reg[0]_0 [7]),
+        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[5] ),
+        .I2(\bvalid_count_r_reg[0]_0 [6]),
         .O(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \FSM_sequential_gaxi_full_sm.present_state[0]_i_4 
-       (.I0(\bvalid_count_r_reg[0]_0 ),
-        .I1(\bvalid_count_r_reg[2] ),
-        .I2(\bvalid_count_r_reg[1] ),
+       (.I0(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
+        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
+        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ),
         .O(\FSM_sequential_gaxi_full_sm.present_state[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h30FA30003AFA3AF0)) 
+    .INIT(64'h32003A38F2C0FAF8)) 
     \FSM_sequential_gaxi_full_sm.present_state[1]_i_1 
        (.I0(s_axi_wvalid),
-        .I1(s_axi_bready),
+        .I1(Q),
         .I2(present_state),
-        .I3(out),
-        .I4(s_axi_awvalid),
-        .I5(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
+        .I3(s_axi_awvalid),
+        .I4(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
+        .I5(s_axi_bready),
         .O(next_state[1]));
   (* FSM_ENCODED_STATES = "os_wr:01,reg_wraddr:10,wr_mem:11,wait_wraddr:00" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_full_sm.present_state_reg[0] 
        (.C(s_aclk),
         .CE(1'b1),
         .D(next_state[0]),
-        .Q(out),
+        .Q(Q),
         .R(SS));
   (* FSM_ENCODED_STATES = "os_wr:01,reg_wraddr:10,wr_mem:11,wait_wraddr:00" *) 
-  (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_gaxi_full_sm.present_state_reg[1] 
@@ -2298,60 +2318,63 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
   LUT6 #(
     .INIT(64'h0000000000000060)) 
     \bvalid_count_r[2]_i_2 
-       (.I0(out),
+       (.I0(Q),
         .I1(present_state),
         .I2(s_axi_wvalid),
-        .I3(Q[6]),
-        .I4(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
-        .I5(Q[7]),
-        .O(\bvalid_count_r_reg[0] ));
+        .I3(\bvalid_count_r_reg[0]_0 [6]),
+        .I4(\gaxif_wlast_gen.awlen_cntr_r_reg[5] ),
+        .I5(\bvalid_count_r_reg[0]_0 [7]),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_2 ));
   LUT2 #(
     .INIT(4'h8)) 
     \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_i_1 
        (.I0(s_axi_awready),
         .I1(s_axi_awvalid),
-        .O(I19));
+        .O(I17));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'h9F60)) 
     \gaxi_bid_gen.bvalid_wr_cnt_r[0]_i_1 
-       (.I0(out),
+       (.I0(Q),
         .I1(present_state),
-        .I2(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
-        .I3(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 [0]),
-        .O(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] ));
+        .I2(s_axi_wvalid_0),
+        .I3(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] [0]),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_3 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'hF77F0880)) 
     \gaxi_bid_gen.bvalid_wr_cnt_r[1]_i_1 
-       (.I0(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 [0]),
-        .I1(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
+       (.I0(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] [0]),
+        .I1(s_axi_wvalid_0),
         .I2(present_state),
-        .I3(out),
-        .I4(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 [1]),
-        .O(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_0 ));
+        .I3(Q),
+        .I4(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] [1]),
+        .O(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \gaxi_bvalid_id_r.bvalid_d1_c_i_1 
-       (.I0(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
+       (.I0(s_axi_wvalid_0),
         .I1(present_state),
-        .I2(out),
+        .I2(Q),
         .O(bvalid_c));
   LUT5 #(
-    .INIT(32'hE8EB282B)) 
+    .INIT(32'hFAA30AA3)) 
     \gaxi_full_sm.aw_ready_r_i_2 
        (.I0(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
-        .I1(present_state),
-        .I2(out),
-        .I3(s_axi_awvalid),
+        .I1(s_axi_awvalid),
+        .I2(present_state),
+        .I3(Q),
         .I4(s_axi_bready),
         .O(aw_ready_c));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hA8AA)) 
     \gaxi_full_sm.aw_ready_r_i_3 
-       (.I0(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
-        .I1(\bvalid_count_r_reg[1] ),
-        .I2(\bvalid_count_r_reg[2] ),
-        .I3(\bvalid_count_r_reg[0]_0 ),
+       (.I0(s_axi_wvalid_0),
+        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ),
+        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
+        .I3(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
         .O(\gaxi_full_sm.aw_ready_r_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -2361,24 +2384,25 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .D(aw_ready_c),
         .Q(s_axi_awready),
         .R(SS));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h080A0FFA)) 
     \gaxi_full_sm.w_ready_r_i_1 
        (.I0(s_axi_awvalid),
         .I1(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
-        .I2(out),
+        .I2(Q),
         .I3(present_state),
-        .I4(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
+        .I4(s_axi_wvalid_0),
         .O(w_ready_c));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \gaxi_full_sm.w_ready_r_i_2 
        (.I0(s_axi_wvalid),
-        .I1(Q[6]),
-        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
-        .I3(Q[7]),
-        .O(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ));
+        .I1(\bvalid_count_r_reg[0]_0 [6]),
+        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[5] ),
+        .I3(\bvalid_count_r_reg[0]_0 [7]),
+        .O(s_axi_wvalid_0));
   FDRE #(
     .INIT(1'b0)) 
     \gaxi_full_sm.w_ready_r_reg 
@@ -2390,32 +2414,33 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
   LUT6 #(
     .INIT(64'hFFBF0000FFFFFFFF)) 
     \gaxif_ms_addr_gen.addr_cnt_enb[8]_i_1 
-       (.I0(out),
+       (.I0(Q),
         .I1(s_axi_awvalid),
-        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
-        .I3(s_axi_awburst_1_sn_1),
-        .I4(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
+        .I2(\bvalid_count_r_reg[0] ),
+        .I3(\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ),
+        .I4(s_axi_wvalid_0),
         .I5(s_aresetn),
         .O(SR));
   LUT6 #(
     .INIT(64'h0000000040440000)) 
     \gaxif_ms_addr_gen.addr_cnt_enb[8]_i_2 
-       (.I0(out),
+       (.I0(Q),
         .I1(s_axi_awvalid),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(present_state),
         .I4(s_axi_awburst[1]),
         .I5(s_axi_awburst[0]),
-        .O(\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] ));
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hFD00FFFF)) 
     \gaxif_ms_addr_gen.addr_cnt_enb[8]_i_4 
-       (.I0(\bvalid_count_r_reg[0]_0 ),
-        .I1(\bvalid_count_r_reg[2] ),
-        .I2(\bvalid_count_r_reg[1] ),
-        .I3(\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] ),
+       (.I0(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
+        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
+        .I2(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ),
+        .I3(s_axi_wvalid_0),
         .I4(present_state),
-        .O(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ));
+        .O(\bvalid_count_r_reg[0] ));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[10]_i_1 
@@ -2423,9 +2448,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[6]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [6]));
+        .O(\s_axi_awaddr[11] [6]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[11]_i_1 
@@ -2433,9 +2458,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[7]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [7]));
+        .O(\s_axi_awaddr[11] [7]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[4]_i_1 
@@ -2443,9 +2468,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[0]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [0]));
+        .O(\s_axi_awaddr[11] [0]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[5]_i_1 
@@ -2453,9 +2478,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[1]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [1]));
+        .O(\s_axi_awaddr[11] [1]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[6]_i_1 
@@ -2463,9 +2488,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[2]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [2]));
+        .O(\s_axi_awaddr[11] [2]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[7]_i_1 
@@ -2473,9 +2498,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[3]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [3]));
+        .O(\s_axi_awaddr[11] [3]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[8]_i_1 
@@ -2483,9 +2508,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[4]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [4]));
+        .O(\s_axi_awaddr[11] [4]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.bmg_address_r[9]_i_1 
@@ -2493,19 +2518,19 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
+        .I4(Q),
         .I5(ADDRBWRADDR[5]),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[11] [5]));
+        .O(\s_axi_awaddr[11] [5]));
   LUT6 #(
     .INIT(64'h0080FFBFFFBF0080)) 
     \gaxif_ms_addr_gen.next_address_r[0]_i_1 
        (.I0(s_axi_awaddr[0]),
-        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
+        .I1(\bvalid_count_r_reg[0] ),
         .I2(s_axi_awvalid),
-        .I3(out),
+        .I3(Q),
         .I4(\gaxif_ms_addr_gen.next_address_r_reg[0] ),
-        .I5(\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_1 ),
-        .O(\gaxif_ms_addr_gen.next_address_r_reg[4] [0]));
+        .I5(\gaxif_ms_addr_gen.next_address_r_reg[0]_0 ),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 [0]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.next_address_r[1]_i_1 
@@ -2513,9 +2538,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_0 ),
-        .O(\gaxif_ms_addr_gen.next_address_r_reg[4] [1]));
+        .I4(Q),
+        .I5(\gaxif_ms_addr_gen.next_address_r_reg[1] ),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 [1]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.next_address_r[2]_i_1 
@@ -2523,9 +2548,9 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_ms_addr_gen.num_of_bytes_r_reg[0] ),
-        .O(\gaxif_ms_addr_gen.next_address_r_reg[4] [2]));
+        .I4(Q),
+        .I5(\gaxif_ms_addr_gen.next_address_r_reg[2] ),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 [2]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
     \gaxif_ms_addr_gen.next_address_r[3]_i_1 
@@ -2533,36 +2558,38 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_ms_addr_gen.num_of_bytes_r_reg[3] ),
-        .O(\gaxif_ms_addr_gen.next_address_r_reg[4] [3]));
+        .I4(Q),
+        .I5(\gaxif_ms_addr_gen.next_address_r_reg[3] ),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 [3]));
   LUT6 #(
     .INIT(64'h0FFA080A080A080A)) 
     \gaxif_ms_addr_gen.next_address_r[4]_i_1 
        (.I0(s_axi_awvalid),
         .I1(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
-        .I2(out),
+        .I2(Q),
         .I3(present_state),
-        .I4(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ),
-        .I5(s_axi_wvalid),
-        .O(\gaxif_ms_addr_gen.bmg_address_r_reg[4] ));
+        .I4(s_axi_wvalid),
+        .I5(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ),
+        .O(s_axi_awvalid_0));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'h8AAA8A8A)) 
     \gaxif_ms_addr_gen.next_address_r[4]_i_2 
-       (.I0(\gaxif_ms_addr_gen.num_of_bytes_r_reg[4] ),
-        .I1(out),
+       (.I0(\gaxif_ms_addr_gen.next_address_r_reg[4] ),
+        .I1(Q),
         .I2(s_axi_awvalid),
         .I3(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I4(present_state),
-        .O(\gaxif_ms_addr_gen.next_address_r_reg[4] [4]));
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 [4]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h00D0)) 
     \gaxif_ms_addr_gen.num_of_bytes_r[4]_i_1 
        (.I0(present_state),
         .I1(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I2(s_axi_awvalid),
-        .I3(out),
-        .O(\gaxif_ms_addr_gen.incr_en_r_reg ));
+        .I3(Q),
+        .O(\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 ));
   LUT6 #(
     .INIT(64'h0000A200FFFFAEFF)) 
     \gaxif_wlast_gen.awlen_cntr_r[0]_i_1 
@@ -2570,18 +2597,18 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(Q[0]),
+        .I4(Q),
+        .I5(\bvalid_count_r_reg[0]_0 [0]),
         .O(D[0]));
   LUT6 #(
     .INIT(64'hFFBF00800080FFBF)) 
     \gaxif_wlast_gen.awlen_cntr_r[1]_i_1 
        (.I0(s_axi_awlen[1]),
-        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
+        .I1(\bvalid_count_r_reg[0] ),
         .I2(s_axi_awvalid),
-        .I3(out),
-        .I4(Q[1]),
-        .I5(Q[0]),
+        .I3(Q),
+        .I4(\bvalid_count_r_reg[0]_0 [1]),
+        .I5(\bvalid_count_r_reg[0]_0 [0]),
         .O(D[1]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
@@ -2590,8 +2617,8 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[1] ),
+        .I4(Q),
+        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[2] ),
         .O(D[2]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
@@ -2600,8 +2627,8 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[2] ),
+        .I4(Q),
+        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[3] ),
         .O(D[3]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
@@ -2610,8 +2637,8 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[3] ),
+        .I4(Q),
+        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[4] ),
         .O(D[4]));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
@@ -2620,36 +2647,36 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[4] ),
+        .I4(Q),
+        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[5]_0 ),
         .O(D[5]));
   LUT6 #(
     .INIT(64'hFFBF00800080FFBF)) 
     \gaxif_wlast_gen.awlen_cntr_r[6]_i_1 
        (.I0(s_axi_awlen[6]),
-        .I1(\gaxif_wlast_gen.awlen_cntr_r_reg[6] ),
+        .I1(\bvalid_count_r_reg[0] ),
         .I2(s_axi_awvalid),
-        .I3(out),
-        .I4(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ),
-        .I5(Q[6]),
+        .I3(Q),
+        .I4(\gaxif_wlast_gen.awlen_cntr_r_reg[5] ),
+        .I5(\bvalid_count_r_reg[0]_0 [6]),
         .O(D[6]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \gaxif_wlast_gen.awlen_cntr_r[6]_i_2 
-       (.I0(Q[5]),
-        .I1(Q[3]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(Q[2]),
-        .I5(Q[4]),
-        .O(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 ));
+       (.I0(\bvalid_count_r_reg[0]_0 [5]),
+        .I1(\bvalid_count_r_reg[0]_0 [3]),
+        .I2(\bvalid_count_r_reg[0]_0 [1]),
+        .I3(\bvalid_count_r_reg[0]_0 [0]),
+        .I4(\bvalid_count_r_reg[0]_0 [2]),
+        .I5(\bvalid_count_r_reg[0]_0 [4]),
+        .O(\gaxif_wlast_gen.awlen_cntr_r_reg[5] ));
   LUT6 #(
-    .INIT(64'h2AFF2AAF2AA22AA2)) 
+    .INIT(64'h4CFF4CCF4CC44CC4)) 
     \gaxif_wlast_gen.awlen_cntr_r[7]_i_1 
-       (.I0(s_axi_wvalid),
-        .I1(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ),
+       (.I0(\FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0 ),
+        .I1(s_axi_wvalid),
         .I2(present_state),
-        .I3(out),
+        .I3(Q),
         .I4(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I5(s_axi_awvalid),
         .O(E));
@@ -2660,8 +2687,8 @@ module blk_mem_gen_1_blk_mem_axi_write_fsm
         .I1(present_state),
         .I2(\gaxi_full_sm.aw_ready_r_i_3_n_0 ),
         .I3(s_axi_awvalid),
-        .I4(out),
-        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 ),
+        .I4(Q),
+        .I5(\gaxif_wlast_gen.awlen_cntr_r_reg[7] ),
         .O(D[7]));
 endmodule
 
@@ -2669,7 +2696,7 @@ endmodule
 module blk_mem_gen_1_blk_mem_axi_write_wrapper
    (s_axi_awready,
     s_axi_wready,
-    s_axi_bvalid,
+    \gaxi_bvalid_id_r.bvalid_r_reg_0 ,
     ADDRBWRADDR,
     ENA_I,
     s_axi_bid,
@@ -2687,7 +2714,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
     s_axi_awid);
   output s_axi_awready;
   output s_axi_wready;
-  output s_axi_bvalid;
+  output \gaxi_bvalid_id_r.bvalid_r_reg_0 ;
   output [7:0]ADDRBWRADDR;
   output ENA_I;
   output [3:0]s_axi_bid;
@@ -2712,8 +2739,8 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
   wire ENA_dly_D;
   wire [0:0]SS;
   wire addr_en_c;
-  wire axi_wr_fsm_n_0;
   wire axi_wr_fsm_n_16;
+  wire axi_wr_fsm_n_2;
   wire axi_wr_fsm_n_23;
   wire axi_wr_fsm_n_24;
   wire axi_wr_fsm_n_25;
@@ -2721,7 +2748,6 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
   wire axi_wr_fsm_n_27;
   wire axi_wr_fsm_n_28;
   wire axi_wr_fsm_n_29;
-  wire axi_wr_fsm_n_3;
   wire axi_wr_fsm_n_30;
   wire axi_wr_fsm_n_32;
   wire axi_wr_fsm_n_34;
@@ -2747,6 +2773,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
   wire \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_2 ;
   wire \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_3 ;
   wire \gaxi_bvalid_id_r.bvalid_r_i_1_n_0 ;
+  wire \gaxi_bvalid_id_r.bvalid_r_reg_0 ;
   wire \gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1_n_0 ;
   wire \gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1_n_0 ;
   wire \gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0 ;
@@ -2786,6 +2813,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
   wire p_0_out;
   wire [3:0]p_1_in;
   wire p_4_out;
+  wire [0:0]present_state;
   wire s_aclk;
   wire s_aresetn;
   wire [11:0]s_axi_awaddr;
@@ -2797,7 +2825,6 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
   wire s_axi_awvalid;
   wire [3:0]s_axi_bid;
   wire s_axi_bready;
-  wire s_axi_bvalid;
   wire s_axi_wready;
   wire s_axi_wvalid;
   wire [1:0]\NLW_gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_DOC_UNCONNECTED ;
@@ -2896,54 +2923,54 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .E(axi_wr_fsm_n_6),
         .ENA_I(ENA_I),
         .ENA_dly_D(ENA_dly_D),
-        .I19(axi_wr_fsm_n_32),
-        .Q(\gaxif_wlast_gen.awlen_cntr_r_reg__0 ),
-        .SR(axi_wr_fsm_n_3),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[0]_0 (p_4_out),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[0]_1 (next_address_r),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[0]_2 (axi_wr_fsm_n_34),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[0]_3 (axi_wr_fsm_n_37),
+        .\FSM_sequential_gaxi_full_sm.present_state_reg[1]_0 (addr_en_c),
+        .I17(axi_wr_fsm_n_32),
+        .Q(present_state),
+        .SR(axi_wr_fsm_n_2),
         .SS(SS),
         .bvalid_c(bvalid_c),
-        .\bvalid_count_r_reg[0] (axi_wr_fsm_n_34),
-        .\bvalid_count_r_reg[0]_0 (\bvalid_count_r_reg_n_0_[0] ),
-        .\bvalid_count_r_reg[1] (\bvalid_count_r_reg_n_0_[1] ),
-        .\bvalid_count_r_reg[2] (\bvalid_count_r_reg_n_0_[2] ),
-        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] (axi_wr_fsm_n_37),
-        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] (axi_wr_fsm_n_5),
-        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_0 (axi_wr_fsm_n_36),
-        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]_1 (bvalid_wr_cnt_r),
-        .\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] (p_4_out),
-        .\gaxif_ms_addr_gen.bmg_address_r_reg[11] ({axi_wr_fsm_n_23,axi_wr_fsm_n_24,axi_wr_fsm_n_25,axi_wr_fsm_n_26,axi_wr_fsm_n_27,axi_wr_fsm_n_28,axi_wr_fsm_n_29,axi_wr_fsm_n_30}),
-        .\gaxif_ms_addr_gen.bmg_address_r_reg[4] (axi_wr_fsm_n_7),
-        .\gaxif_ms_addr_gen.incr_en_r_reg (addr_en_c),
+        .\bvalid_count_r_reg[0] (axi_wr_fsm_n_4),
+        .\bvalid_count_r_reg[0]_0 (\gaxif_wlast_gen.awlen_cntr_r_reg__0 ),
+        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[0] (axi_wr_fsm_n_36),
+        .\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1] (bvalid_wr_cnt_r),
+        .\gaxif_ms_addr_gen.addr_cnt_enb_reg[4] (\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_5_n_0 ),
         .\gaxif_ms_addr_gen.next_address_r_reg[0] (p_1_in[0]),
-        .\gaxif_ms_addr_gen.next_address_r_reg[4] (next_address_r),
-        .\gaxif_ms_addr_gen.num_of_bytes_r_reg[0] (\gaxif_ms_addr_gen.next_address_r[2]_i_2_n_0 ),
-        .\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_0 (\gaxif_ms_addr_gen.next_address_r[1]_i_2_n_0 ),
-        .\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]_1 (\gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0] ),
-        .\gaxif_ms_addr_gen.num_of_bytes_r_reg[3] (\gaxif_ms_addr_gen.next_address_r[3]_i_2_n_0 ),
-        .\gaxif_ms_addr_gen.num_of_bytes_r_reg[4] (\gaxif_ms_addr_gen.next_address_r[4]_i_3_n_0 ),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[1] (\gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0 ),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[2] (\gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0 ),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[3] (\gaxif_wlast_gen.awlen_cntr_r[4]_i_2_n_0 ),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[4] (\gaxif_wlast_gen.awlen_cntr_r[5]_i_2_n_0 ),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[6] (axi_wr_fsm_n_4),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 (axi_wr_fsm_n_16),
-        .\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 (\gaxif_wlast_gen.awlen_cntr_r[7]_i_3_n_0 ),
-        .out(axi_wr_fsm_n_0),
+        .\gaxif_ms_addr_gen.next_address_r_reg[0]_0 (\gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0] ),
+        .\gaxif_ms_addr_gen.next_address_r_reg[1] (\gaxif_ms_addr_gen.next_address_r[1]_i_2_n_0 ),
+        .\gaxif_ms_addr_gen.next_address_r_reg[2] (\gaxif_ms_addr_gen.next_address_r[2]_i_2_n_0 ),
+        .\gaxif_ms_addr_gen.next_address_r_reg[3] (\gaxif_ms_addr_gen.next_address_r[3]_i_2_n_0 ),
+        .\gaxif_ms_addr_gen.next_address_r_reg[4] (\gaxif_ms_addr_gen.next_address_r[4]_i_3_n_0 ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[2] (\gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0 ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[3] (\gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0 ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[4] (\gaxif_wlast_gen.awlen_cntr_r[4]_i_2_n_0 ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[5] (axi_wr_fsm_n_16),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[5]_0 (\gaxif_wlast_gen.awlen_cntr_r[5]_i_2_n_0 ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[6] (\bvalid_count_r_reg_n_0_[0] ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[6]_0 (\bvalid_count_r_reg_n_0_[2] ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[6]_1 (\bvalid_count_r_reg_n_0_[1] ),
+        .\gaxif_wlast_gen.awlen_cntr_r_reg[7] (\gaxif_wlast_gen.awlen_cntr_r[7]_i_3_n_0 ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
+        .\s_axi_awaddr[11] ({axi_wr_fsm_n_23,axi_wr_fsm_n_24,axi_wr_fsm_n_25,axi_wr_fsm_n_26,axi_wr_fsm_n_27,axi_wr_fsm_n_28,axi_wr_fsm_n_29,axi_wr_fsm_n_30}),
         .s_axi_awburst(s_axi_awburst),
-        .s_axi_awburst_1_sp_1(\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_5_n_0 ),
         .s_axi_awlen(s_axi_awlen),
         .s_axi_awready(s_axi_awready),
         .s_axi_awvalid(s_axi_awvalid),
+        .s_axi_awvalid_0(axi_wr_fsm_n_7),
         .s_axi_bready(s_axi_bready),
         .s_axi_wready(s_axi_wready),
-        .s_axi_wvalid(s_axi_wvalid));
+        .s_axi_wvalid(s_axi_wvalid),
+        .s_axi_wvalid_0(axi_wr_fsm_n_5));
   LUT6 #(
     .INIT(64'h959595956A6A6A2A)) 
     \bvalid_count_r[0]_i_1 
        (.I0(axi_wr_fsm_n_34),
-        .I1(s_axi_bvalid),
+        .I1(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .I2(s_axi_bready),
         .I3(\bvalid_count_r_reg_n_0_[2] ),
         .I4(\bvalid_count_r_reg_n_0_[1] ),
@@ -2956,7 +2983,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\bvalid_count_r_reg_n_0_[2] ),
         .I2(\bvalid_count_r_reg_n_0_[0] ),
         .I3(s_axi_bready),
-        .I4(s_axi_bvalid),
+        .I4(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .I5(axi_wr_fsm_n_34),
         .O(\bvalid_count_r[1]_i_1_n_0 ));
   LUT6 #(
@@ -2966,7 +2993,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\bvalid_count_r_reg_n_0_[2] ),
         .I2(\bvalid_count_r_reg_n_0_[0] ),
         .I3(s_axi_bready),
-        .I4(s_axi_bvalid),
+        .I4(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .I5(axi_wr_fsm_n_34),
         .O(\bvalid_count_r[2]_i_1_n_0 ));
   FDRE #(
@@ -3026,6 +3053,10 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .Q(s_axi_bid[3]),
         .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "3" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "3" *) 
   RAM32M #(
     .INIT_A(64'h0000000000000000),
     .INIT_B(64'h0000000000000000),
@@ -3050,7 +3081,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
     .INIT(8'h6A)) 
     \gaxi_bid_gen.bvalid_rd_cnt_r[0]_i_1 
        (.I0(bvalid_rd_cnt_r[0]),
-        .I1(s_axi_bvalid),
+        .I1(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .I2(s_axi_bready),
         .O(CONV_INTEGER[0]));
   LUT4 #(
@@ -3058,7 +3089,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
     \gaxi_bid_gen.bvalid_rd_cnt_r[1]_i_1 
        (.I0(bvalid_rd_cnt_r[1]),
         .I1(s_axi_bready),
-        .I2(s_axi_bvalid),
+        .I2(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .I3(bvalid_rd_cnt_r[0]),
         .O(CONV_INTEGER[1]));
   FDRE #(
@@ -3108,7 +3139,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\bvalid_count_r_reg_n_0_[1] ),
         .I2(\bvalid_count_r_reg_n_0_[2] ),
         .I3(s_axi_bready),
-        .I4(s_axi_bvalid),
+        .I4(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .O(\gaxi_bvalid_id_r.bvalid_r_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -3116,7 +3147,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
        (.C(s_aclk),
         .CE(1'b1),
         .D(\gaxi_bvalid_id_r.bvalid_r_i_1_n_0 ),
-        .Q(s_axi_bvalid),
+        .Q(\gaxi_bvalid_id_r.bvalid_r_reg_0 ),
         .R(SS));
   LUT6 #(
     .INIT(64'h5555755500003000)) 
@@ -3125,7 +3156,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_5_n_0 ),
         .I2(axi_wr_fsm_n_4),
         .I3(s_axi_awvalid),
-        .I4(axi_wr_fsm_n_0),
+        .I4(present_state),
         .I5(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11] ),
         .O(\gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1_n_0 ));
   LUT6 #(
@@ -3149,14 +3180,14 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I5(s_axi_awlen[2]),
         .O(\gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h5557151515FF1515)) 
+    .INIT(64'h5515151557FF1515)) 
     \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_1 
        (.I0(s_axi_awsize[2]),
         .I1(s_axi_awsize[0]),
         .I2(s_axi_awsize[1]),
-        .I3(s_axi_awlen[2]),
+        .I3(s_axi_awlen[1]),
         .I4(\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_6_n_0 ),
-        .I5(s_axi_awlen[1]),
+        .I5(s_axi_awlen[2]),
         .O(\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0008FFFFAAAAFFFF)) 
@@ -3178,7 +3209,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I4(s_axi_awsize[0]),
         .I5(s_axi_awsize[1]),
         .O(\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gaxif_ms_addr_gen.addr_cnt_enb[8]_i_5 
@@ -3210,7 +3241,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .CE(p_4_out),
         .D(\gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1_n_0 ),
         .Q(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[4] ),
-        .R(axi_wr_fsm_n_3));
+        .R(axi_wr_fsm_n_2));
   FDRE #(
     .INIT(1'b0)) 
     \gaxif_ms_addr_gen.addr_cnt_enb_reg[5] 
@@ -3218,7 +3249,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .CE(p_4_out),
         .D(\gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0 ),
         .Q(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[5] ),
-        .R(axi_wr_fsm_n_3));
+        .R(axi_wr_fsm_n_2));
   FDRE #(
     .INIT(1'b0)) 
     \gaxif_ms_addr_gen.addr_cnt_enb_reg[6] 
@@ -3226,7 +3257,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .CE(p_4_out),
         .D(\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_1_n_0 ),
         .Q(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[6] ),
-        .R(axi_wr_fsm_n_3));
+        .R(axi_wr_fsm_n_2));
   FDRE #(
     .INIT(1'b0)) 
     \gaxif_ms_addr_gen.addr_cnt_enb_reg[7] 
@@ -3234,7 +3265,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .CE(p_4_out),
         .D(\gaxif_ms_addr_gen.addr_cnt_enb[7]_i_1_n_0 ),
         .Q(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[7] ),
-        .R(axi_wr_fsm_n_3));
+        .R(axi_wr_fsm_n_2));
   FDRE #(
     .INIT(1'b0)) 
     \gaxif_ms_addr_gen.addr_cnt_enb_reg[8] 
@@ -3242,7 +3273,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .CE(p_4_out),
         .D(\gaxif_ms_addr_gen.addr_cnt_enb[8]_i_3_n_0 ),
         .Q(\gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[8] ),
-        .R(axi_wr_fsm_n_3));
+        .R(axi_wr_fsm_n_2));
   FDRE #(
     .INIT(1'b0)) 
     \gaxif_ms_addr_gen.bmg_address_r_reg[10] 
@@ -3307,7 +3338,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .D(axi_wr_fsm_n_25),
         .Q(bmg_address_r[9]),
         .R(SS));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gaxif_ms_addr_gen.incr_en_r_i_1 
@@ -3340,7 +3371,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I4(\gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[2] ),
         .I5(p_1_in[2]),
         .O(\gaxif_ms_addr_gen.next_address_r[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \gaxif_ms_addr_gen.next_address_r[3]_i_2 
@@ -3348,7 +3379,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[3] ),
         .I2(p_1_in[3]),
         .O(\gaxif_ms_addr_gen.next_address_r[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'h566A)) 
     \gaxif_ms_addr_gen.next_address_r[4]_i_3 
@@ -3407,7 +3438,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .D(next_address_r[4]),
         .Q(p_0_in5_in),
         .R(SS));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1 
@@ -3422,7 +3453,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(s_axi_awsize[1]),
         .I2(s_axi_awsize[2]),
         .O(num_of_bytes_c[1]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gaxif_ms_addr_gen.num_of_bytes_r[2]_i_1 
@@ -3430,7 +3461,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(s_axi_awsize[2]),
         .I2(s_axi_awsize[0]),
         .O(num_of_bytes_c[2]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \gaxif_ms_addr_gen.num_of_bytes_r[3]_i_1 
@@ -3438,7 +3469,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(s_axi_awsize[0]),
         .I2(s_axi_awsize[2]),
         .O(num_of_bytes_c[3]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \gaxif_ms_addr_gen.num_of_bytes_r[4]_i_2 
@@ -3493,7 +3524,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I1(\gaxif_wlast_gen.awlen_cntr_r_reg__0 [0]),
         .I2(\gaxif_wlast_gen.awlen_cntr_r_reg__0 [2]),
         .O(\gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gaxif_wlast_gen.awlen_cntr_r[3]_i_2 
@@ -3502,7 +3533,7 @@ module blk_mem_gen_1_blk_mem_axi_write_wrapper
         .I2(\gaxif_wlast_gen.awlen_cntr_r_reg__0 [1]),
         .I3(\gaxif_wlast_gen.awlen_cntr_r_reg__0 [3]),
         .O(\gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \gaxif_wlast_gen.awlen_cntr_r[4]_i_2 
@@ -4505,16 +4536,17 @@ endmodule
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "blk_mem_gen_1.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "1" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
-(* C_READ_DEPTH_A = "256" *) (* C_READ_DEPTH_B = "256" *) (* C_READ_WIDTH_A = "128" *) 
-(* C_READ_WIDTH_B = "128" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 
-(* C_RST_PRIORITY_A = "CE" *) (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) 
-(* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "1" *) (* C_USE_BYTE_WEB = "1" *) 
-(* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
-(* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "16" *) (* C_WEB_WIDTH = "16" *) 
-(* C_WRITE_DEPTH_A = "256" *) (* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
-(* C_WRITE_MODE_B = "READ_FIRST" *) (* C_WRITE_WIDTH_A = "128" *) (* C_WRITE_WIDTH_B = "128" *) 
-(* C_XDEVICEFAMILY = "kintex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module blk_mem_gen_1_blk_mem_gen_v8_4_1
+(* C_READ_DEPTH_A = "256" *) (* C_READ_DEPTH_B = "256" *) (* C_READ_LATENCY_A = "1" *) 
+(* C_READ_LATENCY_B = "1" *) (* C_READ_WIDTH_A = "128" *) (* C_READ_WIDTH_B = "128" *) 
+(* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) (* C_RST_PRIORITY_A = "CE" *) 
+(* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) (* C_USE_BRAM_BLOCK = "0" *) 
+(* C_USE_BYTE_WEA = "1" *) (* C_USE_BYTE_WEB = "1" *) (* C_USE_DEFAULT_DATA = "0" *) 
+(* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) (* C_USE_URAM = "0" *) 
+(* C_WEA_WIDTH = "16" *) (* C_WEB_WIDTH = "16" *) (* C_WRITE_DEPTH_A = "256" *) 
+(* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "READ_FIRST" *) (* C_WRITE_MODE_B = "READ_FIRST" *) 
+(* C_WRITE_WIDTH_A = "128" *) (* C_WRITE_WIDTH_B = "128" *) (* C_XDEVICEFAMILY = "kintex7" *) 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module blk_mem_gen_1_blk_mem_gen_v8_4_2
    (clka,
     rsta,
     ena,
@@ -4956,8 +4988,10 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  blk_mem_gen_1_blk_mem_gen_v8_4_1_synth inst_blk_mem_gen
-       (.rsta_busy(rsta_busy),
+  blk_mem_gen_1_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
+       (.\gaxi_bvalid_id_r.bvalid_r_reg (s_axi_bvalid),
+        .\gaxi_full_sm.r_valid_r_reg (s_axi_rvalid),
+        .rsta_busy(rsta_busy),
         .rstb_busy(rstb_busy),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
@@ -4977,25 +5011,23 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bid(s_axi_bid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid(s_axi_bvalid),
         .s_axi_rdata(s_axi_rdata),
         .s_axi_rid(s_axi_rid),
         .s_axi_rlast(s_axi_rlast),
         .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wready(s_axi_wready),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
-module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
-   (s_axi_rvalid,
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
+module blk_mem_gen_1_blk_mem_gen_v8_4_2_synth
+   (\gaxi_full_sm.r_valid_r_reg ,
     s_axi_rdata,
     s_axi_awready,
     s_axi_wready,
-    s_axi_bvalid,
+    \gaxi_bvalid_id_r.bvalid_r_reg ,
     rsta_busy,
     rstb_busy,
     s_axi_arready,
@@ -5009,8 +5041,8 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
     s_axi_rready,
     s_axi_arlen,
     s_axi_arsize,
-    s_axi_araddr,
     s_axi_awsize,
+    s_axi_araddr,
     s_axi_wdata,
     s_axi_wstrb,
     s_axi_bready,
@@ -5021,11 +5053,11 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
     s_axi_awburst,
     s_axi_awaddr,
     s_axi_arburst);
-  output s_axi_rvalid;
+  output \gaxi_full_sm.r_valid_r_reg ;
   output [127:0]s_axi_rdata;
   output s_axi_awready;
   output s_axi_wready;
-  output s_axi_bvalid;
+  output \gaxi_bvalid_id_r.bvalid_r_reg ;
   output rsta_busy;
   output rstb_busy;
   output s_axi_arready;
@@ -5039,8 +5071,8 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
   input s_axi_rready;
   input [7:0]s_axi_arlen;
   input [2:0]s_axi_arsize;
-  input [11:0]s_axi_araddr;
   input [2:0]s_axi_awsize;
+  input [11:0]s_axi_araddr;
   input [127:0]s_axi_wdata;
   input [15:0]s_axi_wstrb;
   input s_axi_bready;
@@ -5052,6 +5084,8 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
   input [11:0]s_axi_awaddr;
   input [1:0]s_axi_arburst;
 
+  wire \gaxi_bvalid_id_r.bvalid_r_reg ;
+  wire \gaxi_full_sm.r_valid_r_reg ;
   wire rsta_busy;
   wire rstb_busy;
   wire s_aclk;
@@ -5075,12 +5109,10 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
   wire s_axi_awvalid;
   wire [3:0]s_axi_bid;
   wire s_axi_bready;
-  wire s_axi_bvalid;
   wire [127:0]s_axi_rdata;
   wire [3:0]s_axi_rid;
   wire s_axi_rlast;
   wire s_axi_rready;
-  wire s_axi_rvalid;
   wire [127:0]s_axi_wdata;
   wire s_axi_wready;
   wire [15:0]s_axi_wstrb;
@@ -5109,6 +5141,7 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
         .ENB_I(\valid.cstr/ramloop[1].ram.r/ENB_I ),
         .ENB_dly_D(\valid.cstr/ramloop[0].ram.r/ENB_dly_D ),
         .SS(s_aresetn_a_c),
+        .\gaxi_full_sm.r_valid_r_reg (\gaxi_full_sm.r_valid_r_reg ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_araddr(s_axi_araddr),
@@ -5120,13 +5153,13 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
         .s_axi_arvalid(s_axi_arvalid),
         .s_axi_rid(s_axi_rid),
         .s_axi_rlast(s_axi_rlast),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid));
+        .s_axi_rready(s_axi_rready));
   blk_mem_gen_1_blk_mem_axi_write_wrapper \gnbram.gaxibmg.axi_wr_fsm 
        (.ADDRBWRADDR(s_axi_awaddr_out_c),
         .ENA_I(\valid.cstr/ramloop[1].ram.r/ENA_I ),
         .ENA_dly_D(\valid.cstr/ramloop[0].ram.r/ENA_dly_D ),
         .SS(s_aresetn_a_c),
+        .\gaxi_bvalid_id_r.bvalid_r_reg_0 (\gaxi_bvalid_id_r.bvalid_r_reg ),
         .s_aclk(s_aclk),
         .s_aresetn(s_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
@@ -5138,7 +5171,6 @@ module blk_mem_gen_1_blk_mem_gen_v8_4_1_synth
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bid(s_axi_bid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid(s_axi_bvalid),
         .s_axi_wready(s_axi_wready),
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
