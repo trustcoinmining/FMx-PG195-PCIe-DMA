@@ -6,6 +6,9 @@ PCI-e XDMA ProgramGuide pre-synthesized for FM2x Board. Xilinx PG195 Ported.
 
 PCI-e PROM and PCI-e Application Tutorial for FM2, port from Xilinx pg195 tutorial
 
+## bitstream files link::
+
+https://github.com/trustcoinmining/FMx-PG195-PCIe-DMA/blob/master/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep.bit
 
 ## Here is PCI-e usage examples for FM2 board.
 
