@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k410tffg900-2" LaunchTime="1551764600">
+<GenRun Id="synth_1" LaunchPart="xc7k410tffg900-2" LaunchTime="1551780916">
   <File Type="PA-TCL" Name="xilinx_dma_pcie_ep.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="xilinx_dma_pcie_ep_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="xilinx_dma_pcie_ep_reports.tcl"/>
@@ -58,9 +58,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Mar  5 14:51:40 2019
+| Date         : Tue Mar  5 19:18:27 2019
 | Host         : vr-2 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file xdma_0_utilization_synth.rpt -pb xdma_0_utilization_synth.pb
 | Design       : xdma_0
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 19255 |     0 |    254200 |  7.57 |
-|   LUT as Logic             | 17130 |     0 |    254200 |  6.74 |
-|   LUT as Memory            |  2125 |     0 |     90600 |  2.35 |
-|     LUT as Distributed RAM |  2061 |     0 |           |       |
+| Slice LUTs*                | 24472 |     0 |    254200 |  9.63 |
+|   LUT as Logic             | 21710 |     0 |    254200 |  8.54 |
+|   LUT as Memory            |  2762 |     0 |     90600 |  3.05 |
+|     LUT as Distributed RAM |  2698 |     0 |           |       |
 |     LUT as Shift Register  |    64 |     0 |           |       |
-| Slice Registers            | 21617 |     0 |    508400 |  4.25 |
-|   Register as Flip Flop    | 21617 |     0 |    508400 |  4.25 |
+| Slice Registers            | 26904 |     0 |    508400 |  5.29 |
+|   Register as Flip Flop    | 26904 |     0 |    508400 |  5.29 |
 |   Register as Latch        |     0 |     0 |    508400 |  0.00 |
-| F7 Muxes                   |   234 |     0 |    127100 |  0.18 |
-| F8 Muxes                   |    11 |     0 |     63550 |  0.02 |
+| F7 Muxes                   |   338 |     0 |    127100 |  0.27 |
+| F8 Muxes                   |    28 |     0 |     63550 |  0.04 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 76    |          Yes |           - |          Set |
+| 94    |          Yes |           - |          Set |
 | 61    |          Yes |           - |        Reset |
-| 190   |          Yes |         Set |            - |
-| 21290 |          Yes |       Reset |            - |
+| 266   |          Yes |         Set |            - |
+| 26483 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,9 +69,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    | 40.5 |     0 |       795 |  5.09 |
-|   RAMB36/FIFO*    |   40 |     0 |       795 |  5.03 |
-|     RAMB36E1 only |   40 |       |           |       |
+| Block RAM Tile    | 38.5 |     0 |       795 |  4.84 |
+|   RAMB36/FIFO*    |   38 |     0 |       795 |  4.78 |
+|     RAMB36E1 only |   38 |       |           |       |
 |   RAMB18          |    1 |     0 |      1590 |  0.06 |
 |     RAMB18E1 only |    1 |       |           |       |
 +-------------------+------+-------+-----------+-------+
@@ -121,7 +121,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    5 |     0 |        32 | 15.63 |
+| BUFGCTRL   |    6 |     0 |        32 | 18.75 |
 | BUFIO      |    0 |     0 |        40 |  0.00 |
 | MMCME2_ADV |    1 |     0 |        10 | 10.00 |
 | PLLE2_ADV  |    0 |     0 |        10 |  0.00 |
@@ -155,27 +155,27 @@ Table of Contents
 +---------------+-------+----------------------+
 |    Ref Name   |  Used |  Functional Category |
 +---------------+-------+----------------------+
-| FDRE          | 21290 |         Flop & Latch |
-| LUT6          |  6557 |                  LUT |
-| LUT3          |  4213 |                  LUT |
-| LUT5          |  4064 |                  LUT |
-| RAMD32        |  3046 |   Distributed Memory |
-| LUT4          |  2550 |                  LUT |
-| LUT2          |  1932 |                  LUT |
-| RAMS32        |   994 |   Distributed Memory |
-| CARRY4        |   607 |           CarryLogic |
-| LUT1          |   594 |                  LUT |
-| MUXF7         |   234 |                MuxFx |
-| FDSE          |   190 |         Flop & Latch |
-| FDPE          |    76 |         Flop & Latch |
+| FDRE          | 26483 |         Flop & Latch |
+| LUT6          |  8327 |                  LUT |
+| LUT3          |  5520 |                  LUT |
+| LUT5          |  4705 |                  LUT |
+| RAMD32        |  3944 |   Distributed Memory |
+| LUT4          |  3746 |                  LUT |
+| LUT2          |  2453 |                  LUT |
+| RAMS32        |  1281 |   Distributed Memory |
+| CARRY4        |   956 |           CarryLogic |
+| LUT1          |   781 |                  LUT |
+| MUXF7         |   338 |                MuxFx |
+| FDSE          |   266 |         Flop & Latch |
+| FDPE          |    94 |         Flop & Latch |
 | FDCE          |    61 |         Flop & Latch |
 | SRLC32E       |    56 |   Distributed Memory |
-| RAMB36E1      |    40 |         Block Memory |
-| MUXF8         |    11 |                MuxFx |
+| RAMB36E1      |    38 |         Block Memory |
+| MUXF8         |    28 |                MuxFx |
 | RAMS64E       |     9 |   Distributed Memory |
 | SRL16E        |     8 |   Distributed Memory |
 | GTXE2_CHANNEL |     8 |                   IO |
-| BUFG          |     4 |                Clock |
+| BUFG          |     5 |                Clock |
 | GTXE2_COMMON  |     2 |                   IO |
 | RAMB18E1      |     1 |         Block Memory |
 | PCIE_2_1      |     1 | Specialized Resource |

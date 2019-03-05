@@ -67,6 +67,7 @@ xdma_0 your_instance_name (
   .usr_irq_req(usr_irq_req),                                      // input wire [0 : 0] usr_irq_req
   .usr_irq_ack(usr_irq_ack),                                      // output wire [0 : 0] usr_irq_ack
   .msi_enable(msi_enable),                                        // output wire msi_enable
+  .msix_enable(msix_enable),                                      // output wire msix_enable
   .msi_vector_width(msi_vector_width),                            // output wire [2 : 0] msi_vector_width
   .m_axi_awready(m_axi_awready),                                  // input wire m_axi_awready
   .m_axi_wready(m_axi_wready),                                    // input wire m_axi_wready

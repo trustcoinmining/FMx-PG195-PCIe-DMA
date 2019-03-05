@@ -33,15 +33,15 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci
+set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/synth/xdma_0_pcie2_ip_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_1/xdma_v4_1_2_blk_mem_64_reg_be_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_v4_1_2_blk_mem_64_noreg_be_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl.xdc]
 set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg.xdc]
-set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc]
-set_property used_in_implementation false [get_files -all d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

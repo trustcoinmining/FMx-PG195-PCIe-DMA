@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar  5 14:51:53 2019
-# Process ID: 42268
+# Start of session at: Tue Mar  5 19:18:42 2019
+# Process ID: 9660
 # Current directory: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1
 # Command line: vivado.exe -log xilinx_dma_pcie_ep.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xilinx_dma_pcie_ep.tcl
 # Log file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.vds
@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 33592 
+INFO: Helper process launched with PID 46472 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 496.258 ; gain = 103.078
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 495.730 ; gain = 102.781
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'xilinx_dma_pcie_ep' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:57]
 	Parameter PL_LINK_CAP_MAX_LINK_WIDTH bound to: 8 - type: integer 
@@ -56,8 +56,9 @@ INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (2#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
-INFO: [Synth 8-6157] synthesizing module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/xdma_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xdma_0' (3#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/xdma_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/xdma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xdma_0' (3#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/xdma_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xdma_0_i' of module 'xdma_0' requires 111 connections, but only 110 given [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:272]
 INFO: [Synth 8-6157] synthesizing module 'xdma_app' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:57]
 	Parameter TCQ bound to: 1 - type: integer 
 	Parameter C_M_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -74,11 +75,11 @@ INFO: [Synth 8-6157] synthesizing module 'xdma_app' [D:/Documents/FPGA-Miner/xil
 	Parameter C_S_KEEP_WIDTH bound to: 4 - type: integer 
 	Parameter C_M_KEEP_WIDTH bound to: 4 - type: integer 
 	Parameter C_XDMA_NUM_CHNL bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/blk_mem_gen_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'blk_mem_axiLM_inst' of module 'blk_mem_gen_0' requires 21 connections, but only 19 given [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:194]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (5#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (5#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/realtime/blk_mem_gen_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'blk_mem_xdma_inst' of module 'blk_mem_gen_1' requires 33 connections, but only 31 given [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:216]
 WARNING: [Synth 8-350] instance 'blk_mem_gen_bypass_inst' of module 'blk_mem_gen_1' requires 33 connections, but only 31 given [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:251]
 INFO: [Synth 8-6155] done synthesizing module 'xdma_app' (6#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:57]
@@ -148,7 +149,7 @@ WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[34]
 WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[33]
 WARNING: [Synth 8-3331] design xdma_app has unconnected port s_axi_araddr[32]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.090 ; gain = 158.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 551.594 ; gain = 158.645
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -161,24 +162,24 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.090 ; gain = 158.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 551.594 ; gain = 158.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 552.090 ; gain = 158.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 551.594 ; gain = 158.645
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k410tffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
-Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
-Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
-Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
-Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
-Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
-Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
-Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-42268-vr-2/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
+Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
+Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_xdma_inst'
+Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
+Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
+Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
+Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'xdma_app_i/blk_mem_axiLM_inst'
+Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
+Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/.Xil/Vivado-9660-vr-2/xdma_0/xdma_0/xdma_0_in_context.xdc] for cell 'xdma_0_i'
 Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]
 Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/imports/imports/xilinx_xdma_pcie_x0y0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc].
@@ -200,27 +201,27 @@ Finished Parsing XDC File [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xilinx_dma_pcie_ep_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/xilinx_dma_pcie_ep_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.750 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.750 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.430 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 914.430 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_axiLM_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_gen_bypass_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_xdma_inst' at clock pin 's_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 914.750 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 914.750 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_axiLM_inst' at clock pin 's_aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_gen_bypass_inst' at clock pin 's_aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'xdma_app_i/blk_mem_xdma_inst' at clock pin 's_aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 914.430 ; gain = 521.250
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 914.750 ; gain = 521.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k410tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 914.430 ; gain = 521.250
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 914.750 ; gain = 521.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -230,10 +231,10 @@ Applied set_property DONT_TOUCH = true for xdma_app_i/blk_mem_xdma_inst. (constr
 Applied set_property DONT_TOUCH = true for xdma_app_i/blk_mem_axiLM_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xdma_0_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 914.430 ; gain = 521.250
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 914.750 ; gain = 521.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 914.430 ; gain = 521.250
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 914.750 ; gain = 521.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,7 +270,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 914.430 ; gain = 521.250
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 914.750 ; gain = 521.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -283,13 +284,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'xdma_0_i/axi_aclk' to pin 'xdma_0_i/bbstub_axi_aclk/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 940.102 ; gain = 546.922
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 936.539 ; gain = 543.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 940.250 ; gain = 547.070
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 936.613 ; gain = 543.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,7 +302,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -325,7 +326,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -338,7 +339,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,25 +351,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -400,29 +401,29 @@ Report Instance Areas:
 +------+-------------+---------+------+
 |      |Instance     |Module   |Cells |
 +------+-------------+---------+------+
-|1     |top          |         |  1199|
+|1     |top          |         |  1200|
 |2     |  xdma_app_i |xdma_app |   339|
 +------+-------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 950.125 ; gain = 556.945
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 950.125 ; gain = 194.605
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 950.125 ; gain = 556.945
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 946.805 ; gain = 190.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 946.805 ; gain = 553.855
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 969.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 967.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 84 Warnings, 1 Critical Warnings and 0 Errors encountered.
+27 Infos, 85 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 969.961 ; gain = 582.590
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 969.961 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 967.508 ; gain = 579.555
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 967.508 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file xilinx_dma_pcie_ep_utilization_synth.rpt -pb xilinx_dma_pcie_ep_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  5 14:52:26 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  5 19:19:18 2019...

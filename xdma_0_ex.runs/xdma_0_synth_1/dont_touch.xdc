@@ -19,6 +19,18 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==pcie2_fifo_gene
 # IP: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==pcie2_fifo_generator_tgt_brdg || ORIG_REF_NAME==pcie2_fifo_generator_tgt_brdg} -quiet] -quiet
 
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
 # XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==xdma_0_pcie2_ip || ORIG_REF_NAME==xdma_0_pcie2_ip} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -33,18 +45,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==pcie2_fifo_generator_tgt_brdg || ORIG_REF_NAME==pcie2_fifo_generator_tgt_brdg} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci
 # IP: The module: 'xdma_0' is the root of the design. Do not add the DONT_TOUCH constraint.
@@ -64,6 +64,18 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # IP: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==pcie2_fifo_generator_tgt_brdg || ORIG_REF_NAME==pcie2_fifo_generator_tgt_brdg} -quiet] -quiet
 
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
 # XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==xdma_0_pcie2_ip || ORIG_REF_NAME==xdma_0_pcie2_ip} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -78,15 +90,3 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==pcie2_fifo_generator_tgt_brdg || ORIG_REF_NAME==pcie2_fifo_generator_tgt_brdg} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/synth/xdma_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'xdma_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet

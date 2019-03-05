@@ -1,7 +1,7 @@
 `ifndef IF_PCIE_DMA_GIC_SV
 `define IF_PCIE_DMA_GIC_SV
 interface dma_pcie_gic_if();
-    logic [2:0] interrupt;
+    logic [3:0] interrupt;
 modport m (
     output interrupt
 );

@@ -75,7 +75,7 @@
 
    //signal arid_dependencySM_cs : arid_dependencySM_STATES;
    //signal arid_dependencySM_ns : arid_dependencySM_STATES;
-   module xdma_v4_1_1_BufferMem
+   module xdma_v4_1_2_BufferMem
    #(
      parameter TCQ = 1,
      parameter BUF_DATAWIDTH = 256,
@@ -132,7 +132,7 @@
 
   endmodule // BufferMem
 
-  module xdma_v4_1_1_GenericFIFO1R2W
+  module xdma_v4_1_2_GenericFIFO1R2W
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -276,7 +276,7 @@
         almost_full_ff <= 1'b0;
    end
    endmodule
-  module xdma_v4_1_1_GenericFIFO
+  module xdma_v4_1_2_GenericFIFO
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -420,7 +420,7 @@
    end
    endmodule
 
-  module xdma_v4_1_1_GenericFIFOAsyncNoHead
+  module xdma_v4_1_2_GenericFIFOAsyncNoHead
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -568,7 +568,7 @@
    end
    endmodule
 
-  module xdma_v4_1_1_GenericFIFOAsync
+  module xdma_v4_1_2_GenericFIFOAsync
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -736,7 +736,7 @@
 
    endmodule
 
-  module xdma_v4_1_1_GenericFIFOHead
+  module xdma_v4_1_2_GenericFIFOHead
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -924,7 +924,7 @@
 
    endmodule
 
-  module xdma_v4_1_1_GenericFIFOHead2
+  module xdma_v4_1_2_GenericFIFOHead2
     #(parameter BUF_DATAWIDTH = 256,
       parameter BUF_WE = BUF_DATAWIDTH/8,
       parameter BUF_DEPTH = 512,
@@ -1123,7 +1123,7 @@
    endmodule
 
 /*
-module xdma_v4_1_1_GenericBRAMFIFOHead #(
+module xdma_v4_1_2_GenericBRAMFIFOHead #(
     parameter TCQ = 0,
     parameter BUF_DATAWIDTH = 256,
     parameter BUF_WE = BUF_DATAWIDTH/8,
