@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar  5 19:19:26 2019
-# Process ID: 47344
+# Start of session at: Tue Mar  5 21:54:04 2019
+# Process ID: 6436
 # Current directory: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2
 # Command line: vivado.exe -log xilinx_dma_pcie_ep.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source xilinx_dma_pcie_ep.tcl -notrace
 # Log file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep.vdi
@@ -17,10 +17,10 @@ CRITICAL WARNING: [Board 49-56] Problem parsing board file - C:/Xilinx/Vivado/20
 Command: link_design -top xilinx_dma_pcie_ep -part xc7k410tffg900-2
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-47344-vr-2/xdma_0/xdma_0.dcp' for cell 'xdma_0_i'
-INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-47344-vr-2/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'xdma_app_i/blk_mem_axiLM_inst'
-INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-47344-vr-2/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
-INFO: [Netlist 29-17] Analyzing 2097 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-6436-vr-2/xdma_0/xdma_0.dcp' for cell 'xdma_0_i'
+INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-6436-vr-2/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'xdma_app_i/blk_mem_axiLM_inst'
+INFO: [Project 1-454] Reading design checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/.Xil/Vivado-6436-vr-2/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'xdma_app_i/blk_mem_gen_bypass_inst'
+INFO: [Netlist 29-17] Analyzing 1130 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xc7k410tffg900-2
@@ -30,9 +30,6 @@ Finished Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-
 Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
 Finished Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
 Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc:140]
-INFO: [Timing 38-2] Deriving generated clocks [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc:140]
-create_generated_clock: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1659.273 ; gain = 668.469
 Finished Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
 Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
 Finished Parsing XDC File [d:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
@@ -85,18 +82,16 @@ Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_
 Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1660.539 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1557.566 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 728 instances were transformed.
-  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 50 instances
-  RAM16X1S => RAM32X1S (RAMS32): 13 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 636 instances
-  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 20 instances
+  A total of 495 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 454 instances
   RAM64X1S => RAM64X1S (RAMS64E): 9 instances
 
-12 Infos, 13 Warnings, 13 Critical Warnings and 0 Errors encountered.
+10 Infos, 13 Warnings, 13 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1660.539 ; gain = 1270.801
+link_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1557.566 ; gain = 1168.422
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
@@ -107,63 +102,171 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1660.539 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1557.566 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1b074f55b
+Ending Cache Timing Information Task | Checksum: 1273f4c9f
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1660.539 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1557.566 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arburst[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arburst[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awburst[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awburst[1] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awburst[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.incr_en_r_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awburst[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.incr_en_r_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_5
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_5
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_5
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[2]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[2]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/s_axi_awsize[2] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_wr_fsm/gaxif_ms_addr_gen.num_of_bytes_r[2]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[3] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[5]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[1] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[5]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[0] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[5]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[2] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[5]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[4] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[5] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[3] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[6] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[2] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[6] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[7]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[3] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[7]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[5] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[7]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[4] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[7]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.S_AXI_RLAST_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.S_AXI_RLAST_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[2] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.S_AXI_RLAST_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.S_AXI_RLAST_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.ar_ready_r_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[4] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.ar_ready_r_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[5] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.ar_ready_r_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[3] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.ar_ready_r_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[6] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.ar_ready_r_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[2]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[3] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[3]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[4] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[4]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[4] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[5]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[5] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[5]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[6] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[6]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.arlen_cntr[7]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arburst[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arburst[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[1] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[0] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[2] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arlen[7] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arid[0] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/grid.S_AXI_RID[0]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arid[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/grid.S_AXI_RID[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arid[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/grid.S_AXI_RID[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/s_axi_arid[3] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/axi_read_fsm/grid.S_AXI_RID[3]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[0] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[3] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[4] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[5] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.arlen_cntr[6]_i_2
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[2] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[1] is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[1] is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arlen[2] is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[2] is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[0] is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1
+WARNING: [Opt 31-155] Driverless net xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/s_axi_arsize[1] is driving LUT input pin I5 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1
+INFO: [Common 17-14] Message 'Opt 31-155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Opt 31-138] Pushed 6 inverter(s) to 34 load pin(s).
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[0]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[1]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[2]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[3]
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1b18e8948
+Phase 1 Retarget | Checksum: 1ecad66cf
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1716.699 ; gain = 3.781
-INFO: [Opt 31-389] Phase Retarget created 274 cells and removed 687 cells
-INFO: [Opt 31-1021] In phase Retarget, 35 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1609.203 ; gain = 2.246
+INFO: [Opt 31-389] Phase Retarget created 89 cells and removed 285 cells
+INFO: [Opt 31-1021] In phase Retarget, 30 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 25 inverter(s) to 25 load pin(s).
-Phase 2 Constant propagation | Checksum: 14c08c19f
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[0]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[1]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[2]
+CRITICAL WARNING: [Opt 31-430] Found a FDRE that its data pin is undriven. Driver is required to prevent unexpected behavior:xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/grid.ar_id_r_reg[3]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1144cdd6b
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1716.699 ; gain = 3.781
-INFO: [Opt 31-389] Phase Constant propagation created 520 cells and removed 885 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 15 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1609.203 ; gain = 2.246
+INFO: [Opt 31-389] Phase Constant propagation created 261 cells and removed 490 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 17 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1d4722794
+Phase 3 Sweep | Checksum: 181a666c6
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1716.699 ; gain = 3.781
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 4716 cells
-INFO: [Opt 31-1021] In phase Sweep, 77 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1609.203 ; gain = 2.246
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2202 cells
+INFO: [Opt 31-1021] In phase Sweep, 81 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz_BUFG_inst to drive 0 load(s) on clock net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz_BUFG
 INFO: [Opt 31-194] Inserted BUFG xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz_BUFG_inst to drive 0 load(s) on clock net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz_BUFG
 INFO: [Opt 31-194] Inserted BUFG xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_BUFG_inst to drive 0 load(s) on clock net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_BUFG
-INFO: [Opt 31-194] Inserted BUFG xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2_BUFG_inst to drive 0 load(s) on clock net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2_BUFG
-INFO: [Opt 31-193] Inserted 4 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 15ed7f2d9
+INFO: [Opt 31-193] Inserted 3 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 192e8996e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1716.699 ; gain = 3.781
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1609.203 ; gain = 2.246
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 122f2c2c6
+Phase 5 Shift Register Optimization | Checksum: fc5f515a
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1716.699 ; gain = 3.781
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1609.203 ; gain = 2.246
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: d58bcbf1
+Phase 6 Post Processing Netlist | Checksum: 6b835ccb
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1716.699 ; gain = 3.781
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1609.203 ; gain = 2.246
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 23 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 24 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -171,592 +274,22 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             274  |             687  |                                             35  |
-|  Constant propagation         |             520  |             885  |                                             15  |
-|  Sweep                        |               0  |            4716  |                                             77  |
+|  Retarget                     |              89  |             285  |                                             30  |
+|  Constant propagation         |             261  |             490  |                                             17  |
+|  Sweep                        |               0  |            2202  |                                             81  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                             23  |
+|  Post Processing Netlist      |               0  |               0  |                                             24  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1716.699 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1b3b4321b
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1716.699 ; gain = 3.781
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.773 | TNS=-5.051 |
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 4 BRAM(s) out of a total of 36 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 16 newly gated: 37 Total Ports: 72
-Ending PowerOpt Patch Enables Task | Checksum: 11b13888a
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.483 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 11b13888a
-
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:18 . Memory (MB): peak = 2271.102 ; gain = 554.402
-
-Starting Final Cleanup Task
-
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 16cf45d78
-
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 16cf45d78
-
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 16cf45d78
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1609.203 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-44 Infos, 13 Warnings, 13 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:05 ; elapsed = 00:00:47 . Memory (MB): peak = 2271.102 ; gain = 610.563
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_drc -file xilinx_dma_pcie_ep_drc_opted.rpt -pb xilinx_dma_pcie_ep_drc_opted.pb -rpx xilinx_dma_pcie_ep_drc_opted.rpx
-Command: report_drc -file xilinx_dma_pcie_ep_drc_opted.rpt -pb xilinx_dma_pcie_ep_drc_opted.pb -rpx xilinx_dma_pcie_ep_drc_opted.rpx
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_drc_opted.rpt.
-report_drc completed successfully
-Command: place_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-Running DRC as a precondition to command place_design
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2 has an input control pin xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2/ENBWREN (net: xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2_ENBWREN_cooolgate_en_sig_12) which is driven by a register (xdma_0_i/inst/udma_wrapper/dma_top/dma_enable.vul_dma/pcie_dsc_rst_3ff_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3 has an input control pin xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3/ENBWREN (net: xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3_ENBWREN_cooolgate_en_sig_13) which is driven by a register (xdma_0_i/inst/udma_wrapper/dma_top/dma_enable.vul_dma/pcie_dsc_rst_3ff_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[10] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[11] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[5]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[12] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[6]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[13] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[7]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[14] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[8]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[6] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[0]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[7] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[1]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[8] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[2]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[9] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[3]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[10] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[11] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[5]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[12] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[6]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[13] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[7]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[14] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[8]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[6] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[0]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[7] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[1]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[8] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[2]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[9] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[3]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_27) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 22 Warnings
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-
-Starting Placer Task
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
-
-Phase 1 Placer Initialization
-
-Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a8661388
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 84904edc
-
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 12b2709d0
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 12b2709d0
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 12b2709d0
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 2 Global Placement
-
-Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 12ceb8fa5
-
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 2.2 Physical Synthesis In Placer
-WARNING: [Physopt 32-894] Found a constraint with the -through option on pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/s_aresetn or the net immediately connecting to the pin. This constraint will block optimizations for this and all downstream leaf pins.
-INFO: [Physopt 32-76] Pass 1. Identified 2 candidate nets for fanout optimization.
-INFO: [Physopt 32-81] Processed net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out. Replicated 9 times.
-WARNING: [Physopt 32-894] Found a constraint with the -through option on pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/s_aresetn or the net immediately connecting to the pin. This constraint will block optimizations for this and all downstream leaf pins.
-INFO: [Physopt 32-81] Processed net xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_reset.pipe_reset_i/cpllreset. Replicated 10 times.
-INFO: [Physopt 32-232] Optimized 2 nets. Created 19 new instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 19 new cells, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Physopt 32-46] Identified 1 candidate net for critical-cell optimization.
-INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
-INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-949] No candidate nets found for HD net replication
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Summary of Physical Synthesis Optimizations
-============================================
-
-
-----------------------------------------------------------------------------------------------------------------------------------------
-|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
-----------------------------------------------------------------------------------------------------------------------------------------
-|  Very High Fanout              |           19  |              0  |                     2  |           0  |           1  |  00:00:02  |
-|  Critical Cell                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                         |           19  |              0  |                     2  |           0  |           6  |  00:00:02  |
-----------------------------------------------------------------------------------------------------------------------------------------
-
-
-Phase 2.2 Physical Synthesis In Placer | Checksum: 1d569f85c
-
-Time (s): cpu = 00:01:25 ; elapsed = 00:01:03 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 2 Global Placement | Checksum: e4b87d82
-
-Time (s): cpu = 00:01:27 ; elapsed = 00:01:05 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3 Detail Placement
-
-Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: e4b87d82
-
-Time (s): cpu = 00:01:27 ; elapsed = 00:01:05 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10bd816f3
-
-Time (s): cpu = 00:01:38 ; elapsed = 00:01:12 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1228559a1
-
-Time (s): cpu = 00:01:38 ; elapsed = 00:01:13 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: bdebdb7a
-
-Time (s): cpu = 00:01:38 ; elapsed = 00:01:13 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: cfc097e0
-
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:18 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 1ab78aaed
-
-Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1bc5a57ed
-
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:36 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 209647025
-
-Time (s): cpu = 00:02:05 ; elapsed = 00:01:36 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1ad9e47c7
-
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:43 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1ad9e47c7
-
-Time (s): cpu = 00:02:16 ; elapsed = 00:01:43 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 4 Post Placement Optimization and Clean-Up
-
-Phase 4.1 Post Commit Optimization
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-
-Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1a29c8355
-
-Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-33] Processed net xdma_0_i/inst/udma_wrapper/dma_top/dma_pcie_req/dma_pcie_rc/u_dma_rc_mem_pfch/user_rst_n_3ff_reg[0], BUFG insertion was skipped due to placement/routing conflicts.
-INFO: [Place 46-46] BUFG insertion identified 1 candidate nets, 0 success, 0 bufg driver replicated, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1a29c8355
-
-Time (s): cpu = 00:02:29 ; elapsed = 00:01:52 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.281. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1b691ed93
-
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:12 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1b691ed93
-
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:12 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1b691ed93
-
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:12 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1b691ed93
-
-Time (s): cpu = 00:02:54 ; elapsed = 00:02:12 . Memory (MB): peak = 2271.102 ; gain = 0.000
-
-Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1d5df228f
-
-Time (s): cpu = 00:02:54 ; elapsed = 00:02:13 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d5df228f
-
-Time (s): cpu = 00:02:54 ; elapsed = 00:02:13 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Ending Placer Task | Checksum: 149cc6881
-
-Time (s): cpu = 00:02:54 ; elapsed = 00:02:13 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Common 17-83] Releasing license: Implementation
-80 Infos, 37 Warnings, 13 Critical Warnings and 0 Errors encountered.
-place_design completed successfully
-place_design: Time (s): cpu = 00:02:58 ; elapsed = 00:02:16 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_io -file xilinx_dma_pcie_ep_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 2271.102 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_utilization -file xilinx_dma_pcie_ep_utilization_placed.rpt -pb xilinx_dma_pcie_ep_utilization_placed.pb
-INFO: [runtcl-4] Executing : report_control_sets -verbose -file xilinx_dma_pcie_ep_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.171 . Memory (MB): peak = 2271.102 ; gain = 0.000
-Command: route_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
-Running DRC as a precondition to command route_design
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-
-
-Starting Routing Task
-INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 8d9a150b ConstDB: 0 ShapeSum: bc325376 RouteDB: 0
-
-Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 106f77b48
-
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:38 . Memory (MB): peak = 2335.188 ; gain = 64.086
-Post Restoration Checksum: NetGraph: be88cbf7 NumContArr: 486eaf51 Constraints: 0 Timing: 0
-
-Phase 2 Router Initialization
-
-Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 106f77b48
-
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:38 . Memory (MB): peak = 2359.246 ; gain = 88.145
-
-Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 106f77b48
-
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:38 . Memory (MB): peak = 2367.887 ; gain = 96.785
-
-Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 106f77b48
-
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 2367.887 ; gain = 96.785
- Number of Nodes with overlaps = 0
-
-Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1bebf2e32
-
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:50 . Memory (MB): peak = 2426.988 ; gain = 155.887
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.209  | TNS=0.000  | WHS=-0.476 | THS=-2998.879|
-
-Phase 2 Router Initialization | Checksum: 1a661add1
-
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:55 . Memory (MB): peak = 2435.617 ; gain = 164.516
-
-Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1eb2bdbd1
-
-Time (s): cpu = 00:01:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2440.734 ; gain = 169.633
-
-Phase 4 Rip-up And Reroute
-
-Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 4920
- Number of Nodes with overlaps = 457
- Number of Nodes with overlaps = 99
- Number of Nodes with overlaps = 40
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.072 | TNS=-0.135 | WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: f997a263
-
-Time (s): cpu = 00:02:17 ; elapsed = 00:01:31 . Memory (MB): peak = 2446.434 ; gain = 175.332
-
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 61
- Number of Nodes with overlaps = 19
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.000  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 1ca848959
-
-Time (s): cpu = 00:02:32 ; elapsed = 00:01:45 . Memory (MB): peak = 2447.469 ; gain = 176.367
-
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 60
- Number of Nodes with overlaps = 22
- Number of Nodes with overlaps = 15
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.004  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: de1ede02
-
-Time (s): cpu = 00:02:51 ; elapsed = 00:02:05 . Memory (MB): peak = 2468.594 ; gain = 197.492
-Phase 4 Rip-up And Reroute | Checksum: de1ede02
-
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 5 Delay and Skew Optimization
-
-Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: de1ede02
-
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: de1ede02
-
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2468.594 ; gain = 197.492
-Phase 5 Delay and Skew Optimization | Checksum: de1ede02
-
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:05 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 6 Post Hold Fix
-
-Phase 6.1 Hold Fix Iter
-
-Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 135d4195c
-
-Time (s): cpu = 00:02:55 ; elapsed = 00:02:07 . Memory (MB): peak = 2468.594 ; gain = 197.492
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.090  | TNS=0.000  | WHS=-0.005 | THS=-0.005 |
-
-Phase 6.1 Hold Fix Iter | Checksum: fa732a29
-
-Time (s): cpu = 00:02:55 ; elapsed = 00:02:08 . Memory (MB): peak = 2468.594 ; gain = 197.492
-Phase 6 Post Hold Fix | Checksum: 17877349f
-
-Time (s): cpu = 00:02:56 ; elapsed = 00:02:08 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 7 Route finalize
-
-Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.31272 %
-  Global Horizontal Routing Utilization  = 2.66803 %
-  Routable Net Status*
-  *Does not include unroutable nets such as driverless and loadless.
-  Run report_route_status for detailed report.
-  Number of Failed Nets               = 0
-  Number of Unrouted Nets             = 0
-  Number of Partially Routed Nets     = 0
-  Number of Node Overlaps             = 0
-
-Phase 7 Route finalize | Checksum: b4cba52e
-
-Time (s): cpu = 00:02:56 ; elapsed = 00:02:08 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 8 Verifying routed nets
-
- Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: b4cba52e
-
-Time (s): cpu = 00:02:56 ; elapsed = 00:02:08 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 9 Depositing Routes
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y7/GTNORTHREFCLK0
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i/qpll_wrapper_i/gtx_common.gtxe2_common_i/GTREFCLK0 to physical pin GTXE2_COMMON_X0Y1/GTNORTHREFCLK0
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[1].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y6/GTNORTHREFCLK0
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[2].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y5/GTNORTHREFCLK0
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[3].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y4/GTNORTHREFCLK0
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[4].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y3/GTREFCLK1
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[4].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i/qpll_wrapper_i/gtx_common.gtxe2_common_i/GTREFCLK0 to physical pin GTXE2_COMMON_X0Y0/GTREFCLK1
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[5].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y2/GTREFCLK1
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[6].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y1/GTREFCLK1
-INFO: [Route 35-467] Router swapped GT pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[7].gt_wrapper_i/gtx_channel.gtxe2_channel_i/GTREFCLK0 to physical pin GTXE2_CHANNEL_X0Y0/GTREFCLK1
-Phase 9 Depositing Routes | Checksum: 65cbbb30
-
-Time (s): cpu = 00:03:00 ; elapsed = 00:02:13 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Phase 10 Post Router Timing
-
-Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 4baf36d7
-
-Time (s): cpu = 00:03:03 ; elapsed = 00:02:14 . Memory (MB): peak = 2468.594 ; gain = 197.492
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.048  | TNS=0.000  | WHS=0.022  | THS=0.000  |
-
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 4baf36d7
-
-Time (s): cpu = 00:03:03 ; elapsed = 00:02:15 . Memory (MB): peak = 2468.594 ; gain = 197.492
-INFO: [Route 35-16] Router Completed Successfully
-
-Time (s): cpu = 00:03:03 ; elapsed = 00:02:15 . Memory (MB): peak = 2468.594 ; gain = 197.492
-
-Routing Is Done.
-INFO: [Common 17-83] Releasing license: Implementation
-109 Infos, 37 Warnings, 13 Critical Warnings and 0 Errors encountered.
-route_design completed successfully
-route_design: Time (s): cpu = 00:03:09 ; elapsed = 00:02:18 . Memory (MB): peak = 2468.594 ; gain = 197.492
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2468.594 ; gain = 0.000
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2468.594 ; gain = 0.000
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2468.594 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2468.594 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_drc -file xilinx_dma_pcie_ep_drc_routed.rpt -pb xilinx_dma_pcie_ep_drc_routed.pb -rpx xilinx_dma_pcie_ep_drc_routed.rpx
-Command: report_drc -file xilinx_dma_pcie_ep_drc_routed.rpt -pb xilinx_dma_pcie_ep_drc_routed.pb -rpx xilinx_dma_pcie_ep_drc_routed.rpx
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_drc_routed.rpt.
-report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2468.594 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_methodology -file xilinx_dma_pcie_ep_methodology_drc_routed.rpt -pb xilinx_dma_pcie_ep_methodology_drc_routed.pb -rpx xilinx_dma_pcie_ep_methodology_drc_routed.rpx
-Command: report_methodology -file xilinx_dma_pcie_ep_methodology_drc_routed.rpt -pb xilinx_dma_pcie_ep_methodology_drc_routed.pb -rpx xilinx_dma_pcie_ep_methodology_drc_routed.rpx
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/impl_2/xilinx_dma_pcie_ep_methodology_drc_routed.rpt.
-report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 2649.133 ; gain = 180.539
-INFO: [runtcl-4] Executing : report_power -file xilinx_dma_pcie_ep_power_routed.rpt -pb xilinx_dma_pcie_ep_power_summary_routed.pb -rpx xilinx_dma_pcie_ep_power_routed.rpx
-Command: report_power -file xilinx_dma_pcie_ep_power_routed.rpt -pb xilinx_dma_pcie_ep_power_summary_routed.pb -rpx xilinx_dma_pcie_ep_power_routed.rpx
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
-Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-121 Infos, 38 Warnings, 13 Critical Warnings and 0 Errors encountered.
-report_power completed successfully
-report_power: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2720.629 ; gain = 71.496
-INFO: [runtcl-4] Executing : report_route_status -file xilinx_dma_pcie_ep_route_status.rpt -pb xilinx_dma_pcie_ep_route_status.pb
-INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file xilinx_dma_pcie_ep_timing_summary_routed.rpt -pb xilinx_dma_pcie_ep_timing_summary_routed.pb -rpx xilinx_dma_pcie_ep_timing_summary_routed.rpx -warn_on_violation 
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-INFO: [runtcl-4] Executing : report_incremental_reuse -file xilinx_dma_pcie_ep_incremental_reuse_routed.rpt
-INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
-INFO: [runtcl-4] Executing : report_clock_utilization -file xilinx_dma_pcie_ep_clock_utilization_routed.rpt
-INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file xilinx_dma_pcie_ep_bus_skew_routed.rpt -pb xilinx_dma_pcie_ep_bus_skew_routed.pb -rpx xilinx_dma_pcie_ep_bus_skew_routed.rpx
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-Command: write_bitstream -force xilinx_dma_pcie_ep.bit -bin_file
-Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2 has an input control pin xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2/ENBWREN (net: xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_2_ENBWREN_cooolgate_en_sig_12) which is driven by a register (xdma_0_i/inst/udma_wrapper/dma_top/dma_enable.vul_dma/pcie_dsc_rst_3ff_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3 has an input control pin xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3/ENBWREN (net: xdma_0_i/inst/ram_top/C2H_PCIE_DSC_CPLD_RAM/the_bram_reg_3_ENBWREN_cooolgate_en_sig_13) which is driven by a register (xdma_0_i/inst/udma_wrapper/dma_top/dma_enable.vul_dma/pcie_dsc_rst_3ff_reg_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[10] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[11] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[5]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[12] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[6]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[13] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[7]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[14] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[8]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[6] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[0]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[7] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[1]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[8] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[2]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[9] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[0].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[3]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[10] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[11] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[5]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[12] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[6]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[13] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[7]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[14] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[8]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[6] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[0]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[7] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[1]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[8] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[2]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ADDRARDADDR[9] (net: xdma_0_i/inst/ram_top/MASTER_READ_BRAM/genblk1[1].u_buffermem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[3]) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_27) which is driven by a register (xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/user_reset_out_reg_replica_2) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 17 net(s) have no routable loads. The problem bus(es) and/or net(s) are xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/rd_rst_reg[1], xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/rd_rst_reg[1], xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/store_ltssm, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/wr_rst_reg[0], xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/wr_rst_reg[0]... and (the first 15 of 17 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 23 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./xilinx_dma_pcie_ep.bit...
-Writing bitstream ./xilinx_dma_pcie_ep.bin...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Common 17-83] Releasing license: Implementation
-139 Infos, 61 Warnings, 13 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:58 ; elapsed = 00:00:51 . Memory (MB): peak = 3403.184 ; gain = 649.977
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  5 19:27:36 2019...
+34 Infos, 113 Warnings, 21 Critical Warnings and 1 Errors encountered.
+opt_design failed
+ERROR: [Opt 31-67] Problem: A LUT2 cell in the design is missing a connection on input pin I0, which is used by the LUT equation. This pin has either been left unconnected in the design or the connection was removed due to the trimming of unused logic. The LUT cell name is: xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1.
+Resolution: Please review the preceding OPT INFO messages that detail what has been trimmed in the design to determine if the removal of unused logic is causing this error. If opt_design is being specified directly, it will need to be rerun with opt_design -verbose to generate detailed INFO messages about trimming.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  5 21:54:56 2019...

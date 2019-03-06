@@ -154,22 +154,3 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force xilinx_dma_pcie_ep.mmi }
-  write_bitstream -force xilinx_dma_pcie_ep.bit -bin_file
-  catch {write_debug_probes -quiet -force xilinx_dma_pcie_ep}
-  catch {file copy -force xilinx_dma_pcie_ep.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-

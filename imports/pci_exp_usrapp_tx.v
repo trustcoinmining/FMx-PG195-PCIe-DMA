@@ -105,7 +105,7 @@ parameter    Tcq = 1;
 localparam   [15:0] DMA_BYTE_CNT = 16'h0080;
 
 localparam   [3:0] LINK_CAP_MAX_LINK_WIDTH_EP = 4'h8;
-localparam   [2:0] LINK_CAP_MAX_LINK_SPEED_EP = 3'h1;
+localparam   [2:0] LINK_CAP_MAX_LINK_SPEED_EP = 3'h2;
                                
 localparam   [3:0] MAX_LINK_SPEED = (LINK_CAP_MAX_LINK_SPEED_EP==3'h4) ? 4'h3 : ((LINK_CAP_MAX_LINK_SPEED_EP==3'h2) ? 4'h2 : 4'h1);
 
@@ -4612,7 +4612,7 @@ task COMPARE_DATA_H2C;
 
         //Calculate number of beats for payload on XDMA
 		
-    case (board.EP.C_DATA_WIDTH)    
+    case (board.C_DATA_WIDTH)    
 		64:		data_beat_count = ((payload_bytes % 32'h8) == 0) ? (payload_bytes/32'h8) : ((payload_bytes/32'h8)+32'h1); 
 		128:	data_beat_count = ((payload_bytes % 32'h10) == 0) ? (payload_bytes/32'h10) : ((payload_bytes/32'h10)+32'h1); 
 		256:	data_beat_count = ((payload_bytes % 32'h20) == 0) ? (payload_bytes/32'h20) : ((payload_bytes/32'h20)+32'h1); 
@@ -4636,7 +4636,7 @@ task COMPARE_DATA_H2C;
 				@ (negedge board.EP.user_clk);							//samples data wvalid and negedge of user_clk
 
             		if ( board.EP.m_axi_wready ) begin			//check for wready is high before sampling data
-						case (board.EP.C_DATA_WIDTH)
+						case (board.C_DATA_WIDTH)
 						64: READ_DATA[i] = {((board.EP.m_axi_wstrb[7] == 1'b1) ? board.EP.m_axi_wdata[63:56] : 8'h00),
 											((board.EP.m_axi_wstrb[6] == 1'b1) ? board.EP.m_axi_wdata[55:48] : 8'h00),
 											((board.EP.m_axi_wstrb[5] == 1'b1) ? board.EP.m_axi_wdata[47:40] : 8'h00),
@@ -4705,7 +4705,7 @@ task COMPARE_DATA_H2C;
 
 		k = 0;
 
-		case (board.EP.C_DATA_WIDTH)
+		case (board.C_DATA_WIDTH)
 
             64: 
                 begin

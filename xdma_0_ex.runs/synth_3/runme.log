@@ -1,0 +1,124 @@
+
+*** Running vivado
+    with args -log xilinx_dma_pcie_ep.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xilinx_dma_pcie_ep.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xilinx_dma_pcie_ep.tcl -notrace
+WARNING: [Board 49-69] Validation failed for board file C:/Xilinx/Vivado/2018.3/data/boards/board_files/k410tFM2/1.0/board.xml:
+ Pin Map file does not provide LOC constraints for PHY_TXD0COMP : xilinx.com:k410tfm2:part0:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - C:/Xilinx/Vivado/2018.3/data/boards/board_files/k410tFM2/1.0/board.xml
+Command: synth_design -top xilinx_dma_pcie_ep -part xc7k410tffg900-2 -control_set_opt_threshold 16 -assert
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16548 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 496.676 ; gain = 103.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'xilinx_dma_pcie_ep' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:57]
+	Parameter PL_LINK_CAP_MAX_LINK_WIDTH bound to: 8 - type: integer 
+	Parameter PL_SIM_FAST_LINK_TRAINING bound to: FALSE - type: string 
+	Parameter PL_LINK_CAP_MAX_LINK_SPEED bound to: 1 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter EXT_PIPE_SIM bound to: FALSE - type: string 
+	Parameter C_ROOT_PORT bound to: FALSE - type: string 
+	Parameter C_DEVICE_NUMBER bound to: 0 - type: integer 
+	Parameter AXIS_CCIX_RX_TDATA_WIDTH bound to: 256 - type: integer 
+	Parameter AXIS_CCIX_TX_TDATA_WIDTH bound to: 256 - type: integer 
+	Parameter AXIS_CCIX_RX_TUSER_WIDTH bound to: 46 - type: integer 
+	Parameter AXIS_CCIX_TX_TUSER_WIDTH bound to: 46 - type: integer 
+	Parameter USER_CLK_FREQ bound to: 4 - type: integer 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_NUM_USR_IRQ bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20561]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (1#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20561]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (2#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
+INFO: [Synth 8-6157] synthesizing module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_3/.Xil/Vivado-15464-vr-2/realtime/xdma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xdma_0' (3#1) [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_3/.Xil/Vivado-15464-vr-2/realtime/xdma_0_stub.v:6]
+ERROR: [Synth 8-448] named port connection 'm_axi_awid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:290]
+ERROR: [Synth 8-448] named port connection 'm_axi_awaddr' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:291]
+ERROR: [Synth 8-448] named port connection 'm_axi_awlen' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:292]
+ERROR: [Synth 8-448] named port connection 'm_axi_awsize' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:293]
+ERROR: [Synth 8-448] named port connection 'm_axi_awburst' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:294]
+ERROR: [Synth 8-448] named port connection 'm_axi_awprot' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:295]
+ERROR: [Synth 8-448] named port connection 'm_axi_awvalid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:296]
+ERROR: [Synth 8-448] named port connection 'm_axi_awready' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:297]
+ERROR: [Synth 8-448] named port connection 'm_axi_awlock' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:298]
+ERROR: [Synth 8-448] named port connection 'm_axi_awcache' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:299]
+ERROR: [Synth 8-448] named port connection 'm_axi_wdata' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:300]
+ERROR: [Synth 8-448] named port connection 'm_axi_wstrb' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:301]
+ERROR: [Synth 8-448] named port connection 'm_axi_wlast' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:302]
+ERROR: [Synth 8-448] named port connection 'm_axi_wvalid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:303]
+ERROR: [Synth 8-448] named port connection 'm_axi_wready' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:304]
+ERROR: [Synth 8-448] named port connection 'm_axi_bid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:305]
+ERROR: [Synth 8-448] named port connection 'm_axi_bresp' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:306]
+ERROR: [Synth 8-448] named port connection 'm_axi_bvalid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:307]
+ERROR: [Synth 8-448] named port connection 'm_axi_bready' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:308]
+ERROR: [Synth 8-448] named port connection 'm_axi_arid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:309]
+ERROR: [Synth 8-448] named port connection 'm_axi_araddr' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:310]
+ERROR: [Synth 8-448] named port connection 'm_axi_arlen' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:311]
+ERROR: [Synth 8-448] named port connection 'm_axi_arsize' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:312]
+ERROR: [Synth 8-448] named port connection 'm_axi_arburst' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:313]
+ERROR: [Synth 8-448] named port connection 'm_axi_arprot' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:314]
+ERROR: [Synth 8-448] named port connection 'm_axi_arvalid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:315]
+ERROR: [Synth 8-448] named port connection 'm_axi_arready' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:316]
+ERROR: [Synth 8-448] named port connection 'm_axi_arlock' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:317]
+ERROR: [Synth 8-448] named port connection 'm_axi_arcache' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:318]
+ERROR: [Synth 8-448] named port connection 'm_axi_rid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:319]
+ERROR: [Synth 8-448] named port connection 'm_axi_rdata' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:320]
+ERROR: [Synth 8-448] named port connection 'm_axi_rresp' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:321]
+ERROR: [Synth 8-448] named port connection 'm_axi_rlast' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:322]
+ERROR: [Synth 8-448] named port connection 'm_axi_rvalid' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:323]
+ERROR: [Synth 8-448] named port connection 'm_axi_rready' does not exist for instance 'xdma_0_i' of module 'xdma_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:324]
+WARNING: [Synth 8-350] instance 'xdma_0_i' of module 'xdma_0' requires 145 connections, but only 75 given [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:272]
+INFO: [Synth 8-6157] synthesizing module 'xdma_app' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:57]
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter PL_LINK_CAP_MAX_LINK_WIDTH bound to: 8 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S_AXIS_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_RQ_USER_WIDTH bound to: 62 - type: integer 
+	Parameter C_S_AXIS_CQP_USER_WIDTH bound to: 88 - type: integer 
+	Parameter C_M_AXIS_RC_USER_WIDTH bound to: 75 - type: integer 
+	Parameter C_S_AXIS_CC_USER_WIDTH bound to: 33 - type: integer 
+	Parameter C_S_KEEP_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_KEEP_WIDTH bound to: 4 - type: integer 
+	Parameter C_XDMA_NUM_CHNL bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_3/.Xil/Vivado-15464-vr-2/realtime/blk_mem_gen_0_stub.v:6]
+ERROR: [Synth 8-6156] failed synthesizing module 'blk_mem_gen_0' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/synth_3/.Xil/Vivado-15464-vr-2/realtime/blk_mem_gen_0_stub.v:6]
+ERROR: [Synth 8-6156] failed synthesizing module 'xdma_app' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xdma_app.v:57]
+ERROR: [Synth 8-6156] failed synthesizing module 'xilinx_dma_pcie_ep' [D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/imports/xilinx_dma_pcie_ep.sv:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 553.113 ; gain = 159.758
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 2 Warnings, 1 Critical Warnings and 39 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 20:59:37 2019...

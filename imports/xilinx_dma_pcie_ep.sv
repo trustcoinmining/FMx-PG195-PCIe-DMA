@@ -58,7 +58,7 @@ module xilinx_dma_pcie_ep #
   (
    parameter PL_LINK_CAP_MAX_LINK_WIDTH          = 8,            // 1- X1; 2 - X2; 4 - X4; 8 - X8
    parameter PL_SIM_FAST_LINK_TRAINING           = "FALSE",      // Simulation Speedup
-   parameter PL_LINK_CAP_MAX_LINK_SPEED          = 1,             // 1- GEN1; 2 - GEN2; 4 - GEN3
+   parameter PL_LINK_CAP_MAX_LINK_SPEED          = 2,             // 1- GEN1; 2 - GEN2; 4 - GEN3
    parameter C_DATA_WIDTH                        = 128 ,
    parameter EXT_PIPE_SIM                        = "FALSE",  // This Parameter has effect on selecting Enable External PIPE Interface in GUI.
    parameter C_ROOT_PORT                         = "FALSE",      // PCIe block is in root port mode
@@ -126,6 +126,7 @@ module xilinx_dma_pcie_ep #
   //----------------------------------------------------------------------------------------------------------------//
 
     wire                                    sys_clk;
+    wire                                    sys_clk_gt;
     wire                                    sys_rst_n_c;
 
   // User Clock LED Heartbeat
@@ -254,6 +255,31 @@ module xilinx_dma_pcie_ep #
     wire [2:0]    msi_vector_width;
     wire          msi_enable;
 
+      // AXI streaming ports
+    wire [C_DATA_WIDTH-1:0]	m_axis_h2c_tdata_0;
+    wire 			m_axis_h2c_tlast_0;
+    wire 			m_axis_h2c_tvalid_0;
+    wire 			m_axis_h2c_tready_0;
+    wire [C_DATA_WIDTH/8-1:0]	m_axis_h2c_tkeep_0;
+    wire [C_DATA_WIDTH-1:0]	m_axis_h2c_tdata_1;
+    wire 			m_axis_h2c_tlast_1;
+    wire 			m_axis_h2c_tvalid_1;
+    wire 			m_axis_h2c_tready_1;
+    wire [C_DATA_WIDTH/8-1:0]	m_axis_h2c_tkeep_1;
+    wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_0; 
+    wire s_axis_c2h_tlast_0;
+    wire s_axis_c2h_tvalid_0;
+    wire s_axis_c2h_tready_0;
+    wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_0; 
+    wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_1; 
+    wire s_axis_c2h_tlast_1;
+    wire s_axis_c2h_tvalid_1;
+    wire s_axis_c2h_tready_1;
+    wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_1; 
+
+    wire [3:0]                  leds;
+
+ wire free_run_clock;
     
   wire [5:0]                          cfg_ltssm_state;
 
@@ -286,42 +312,6 @@ module xilinx_dma_pcie_ep #
       .pci_exp_rxp     ( pci_exp_rxp ),
 
 
-       // AXI MM Interface
-      .m_axi_awid      (m_axi_awid  ),
-      .m_axi_awaddr    (m_axi_awaddr),
-      .m_axi_awlen     (m_axi_awlen),
-      .m_axi_awsize    (m_axi_awsize),
-      .m_axi_awburst   (m_axi_awburst),
-      .m_axi_awprot    (m_axi_awprot),
-      .m_axi_awvalid   (m_axi_awvalid),
-      .m_axi_awready   (m_axi_awready),
-      .m_axi_awlock    (m_axi_awlock),
-      .m_axi_awcache   (m_axi_awcache),
-      .m_axi_wdata     (m_axi_wdata),
-      .m_axi_wstrb     (m_axi_wstrb),
-      .m_axi_wlast     (m_axi_wlast),
-      .m_axi_wvalid    (m_axi_wvalid),
-      .m_axi_wready    (m_axi_wready),
-      .m_axi_bid       (m_axi_bid),
-      .m_axi_bresp     (m_axi_bresp),
-      .m_axi_bvalid    (m_axi_bvalid),
-      .m_axi_bready    (m_axi_bready),
-      .m_axi_arid      (m_axi_arid),
-      .m_axi_araddr    (m_axi_araddr),
-      .m_axi_arlen     (m_axi_arlen),
-      .m_axi_arsize    (m_axi_arsize),
-      .m_axi_arburst   (m_axi_arburst),
-      .m_axi_arprot    (m_axi_arprot),
-      .m_axi_arvalid   (m_axi_arvalid),
-      .m_axi_arready   (m_axi_arready),
-      .m_axi_arlock    (m_axi_arlock),
-      .m_axi_arcache   (m_axi_arcache),
-      .m_axi_rid       (m_axi_rid),
-      .m_axi_rdata     (m_axi_rdata),
-      .m_axi_rresp     (m_axi_rresp),
-      .m_axi_rlast     (m_axi_rlast),
-      .m_axi_rvalid    (m_axi_rvalid),
-      .m_axi_rready    (m_axi_rready),
        // CQ Bypass ports
       .m_axib_awid      (m_axib_awid),
       .m_axib_awaddr    (m_axib_awaddr),
@@ -358,6 +348,29 @@ module xilinx_dma_pcie_ep #
       .m_axib_rlast     (m_axib_rlast),
       .m_axib_rvalid    (m_axib_rvalid),
       .m_axib_rready    (m_axib_rready),
+
+      // AXI streaming ports
+      .s_axis_c2h_tdata_0(s_axis_c2h_tdata_0),  
+      .s_axis_c2h_tlast_0(s_axis_c2h_tlast_0),
+      .s_axis_c2h_tvalid_0(s_axis_c2h_tvalid_0), 
+      .s_axis_c2h_tready_0(s_axis_c2h_tready_0),
+      .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),
+      .s_axis_c2h_tdata_1(s_axis_c2h_tdata_1),
+      .s_axis_c2h_tlast_1(s_axis_c2h_tlast_1),
+      .s_axis_c2h_tvalid_1(s_axis_c2h_tvalid_1),
+      .s_axis_c2h_tready_1(s_axis_c2h_tready_1),
+      .s_axis_c2h_tkeep_1(s_axis_c2h_tkeep_1),
+      .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),
+      .m_axis_h2c_tlast_0(m_axis_h2c_tlast_0),
+      .m_axis_h2c_tvalid_0(m_axis_h2c_tvalid_0),
+      .m_axis_h2c_tready_0(m_axis_h2c_tready_0),
+      .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),
+      .m_axis_h2c_tdata_1(m_axis_h2c_tdata_1),
+      .m_axis_h2c_tlast_1(m_axis_h2c_tlast_1),
+      .m_axis_h2c_tvalid_1(m_axis_h2c_tvalid_1),
+      .m_axis_h2c_tready_1(m_axis_h2c_tready_1),
+      .m_axis_h2c_tkeep_1(m_axis_h2c_tkeep_1),
+
       // LITE interface   
       //-- AXI Master Write Address Channel
       .m_axil_awaddr    (m_axil_awaddr),
@@ -391,6 +404,7 @@ module xilinx_dma_pcie_ep #
       .usr_irq_ack       (usr_irq_ack),
       .msi_enable        (msi_enable),
       .msi_vector_width  (msi_vector_width),
+      .msix_enable        (),
 
 
      // Config managemnet interface
@@ -406,10 +420,11 @@ module xilinx_dma_pcie_ep #
 
 
 
-
       //-- AXI Global
       .axi_aclk        ( user_clk ),
       .axi_aresetn     ( user_resetn ),
+  
+
 
 
 
@@ -443,37 +458,27 @@ module xilinx_dma_pcie_ep #
       .s_axil_rready  (m_axil_rready),
 
 
-
-      // AXI Memory Mapped interface
-      .s_axi_awid      (m_axi_awid),
-      .s_axi_awaddr    (m_axi_awaddr),
-      .s_axi_awlen     (m_axi_awlen),
-      .s_axi_awsize    (m_axi_awsize),
-      .s_axi_awburst   (m_axi_awburst),
-      .s_axi_awvalid   (m_axi_awvalid),
-      .s_axi_awready   (m_axi_awready),
-      .s_axi_wdata     (m_axi_wdata),
-      .s_axi_wstrb     (m_axi_wstrb),
-      .s_axi_wlast     (m_axi_wlast),
-      .s_axi_wvalid    (m_axi_wvalid),
-      .s_axi_wready    (m_axi_wready),
-      .s_axi_bid       (m_axi_bid),
-      .s_axi_bresp     (m_axi_bresp),
-      .s_axi_bvalid    (m_axi_bvalid),
-      .s_axi_bready    (m_axi_bready),
-      .s_axi_arid      (m_axi_arid),
-      .s_axi_araddr    (m_axi_araddr),
-      .s_axi_arlen     (m_axi_arlen),
-      .s_axi_arsize    (m_axi_arsize),
-      .s_axi_arburst   (m_axi_arburst),
-      .s_axi_arvalid   (m_axi_arvalid),
-      .s_axi_arready   (m_axi_arready),
-      .s_axi_rid       (m_axi_rid),
-      .s_axi_rdata     (m_axi_rdata),
-      .s_axi_rresp     (m_axi_rresp),
-      .s_axi_rlast     (m_axi_rlast),
-      .s_axi_rvalid    (m_axi_rvalid),
-      .s_axi_rready    (m_axi_rready),
+      // AXI streaming ports
+      .s_axis_c2h_tdata_0(s_axis_c2h_tdata_0),  
+      .s_axis_c2h_tlast_0(s_axis_c2h_tlast_0),
+      .s_axis_c2h_tvalid_0(s_axis_c2h_tvalid_0), 
+      .s_axis_c2h_tready_0(s_axis_c2h_tready_0),
+      .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),
+      .s_axis_c2h_tdata_1(s_axis_c2h_tdata_1),
+      .s_axis_c2h_tlast_1(s_axis_c2h_tlast_1),
+      .s_axis_c2h_tvalid_1(s_axis_c2h_tvalid_1),
+      .s_axis_c2h_tready_1(s_axis_c2h_tready_1),
+      .s_axis_c2h_tkeep_1(s_axis_c2h_tkeep_1),
+      .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),
+      .m_axis_h2c_tlast_0(m_axis_h2c_tlast_0),
+      .m_axis_h2c_tvalid_0(m_axis_h2c_tvalid_0),
+      .m_axis_h2c_tready_0(m_axis_h2c_tready_0),
+      .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),
+      .m_axis_h2c_tdata_1(m_axis_h2c_tdata_1),
+      .m_axis_h2c_tlast_1(m_axis_h2c_tlast_1),
+      .m_axis_h2c_tvalid_1(m_axis_h2c_tvalid_1),
+      .m_axis_h2c_tready_1(m_axis_h2c_tready_1),
+      .m_axis_h2c_tkeep_1(m_axis_h2c_tkeep_1),
 
       // AXI stream interface for the CQ forwarding
       .s_axib_awid      (m_axib_awid),

@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar  5 14:44:26 2019
-# Process ID: 55276
-# Current directory: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_1_synth_1
+# Start of session at: Wed Mar  6 21:20:21 2019
+# Process ID: 17156
+# Current directory: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1
 # Command line: vivado.exe -log blk_mem_gen_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_1.tcl
-# Log file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1.vds
-# Journal file: D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_1_synth_1\vivado.jou
+# Log file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1.vds
+# Journal file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_1.tcl -notrace

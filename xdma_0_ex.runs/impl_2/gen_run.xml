@@ -1,69 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7k410tffg900-2" LaunchTime="1551780916">
-  <File Type="BITSTR-BMM" Name="xilinx_dma_pcie_ep_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="xilinx_dma_pcie_ep_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="xilinx_dma_pcie_ep_power_routed.rpt"/>
+<GenRun Id="impl_2" LaunchPart="xc7k410tffg900-2" LaunchTime="1551790399">
   <File Type="PA-TCL" Name="xilinx_dma_pcie_ep.tcl"/>
-  <File Type="OPT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="xilinx_dma_pcie_ep_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="xilinx_dma_pcie_ep_power_summary_routed.pb"/>
+  <File Type="BITSTR-BMM" Name="xilinx_dma_pcie_ep_bd.bmm"/>
   <File Type="REPORTS-TCL" Name="xilinx_dma_pcie_ep_reports.tcl"/>
-  <File Type="OPT-DRC" Name="xilinx_dma_pcie_ep_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="xilinx_dma_pcie_ep_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="xilinx_dma_pcie_ep.hwdef"/>
   <File Type="PWROPT-DCP" Name="xilinx_dma_pcie_ep_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="xilinx_dma_pcie_ep_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="xilinx_dma_pcie_ep_placed.dcp"/>
-  <File Type="PLACE-IO" Name="xilinx_dma_pcie_ep_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="xilinx_dma_pcie_ep_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="xilinx_dma_pcie_ep_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="xilinx_dma_pcie_ep_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="xilinx_dma_pcie_ep_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="xilinx_dma_pcie_ep_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="xilinx_dma_pcie_ep_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="xilinx_dma_pcie_ep.bgn"/>
-  <File Type="PLACE-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="xilinx_dma_pcie_ep_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="xilinx_dma_pcie_ep.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="xilinx_dma_pcie_ep_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="xilinx_dma_pcie_ep_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="xilinx_dma_pcie_ep.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="xilinx_dma_pcie_ep_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="xilinx_dma_pcie_ep_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="xilinx_dma_pcie_ep_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="xilinx_dma_pcie_ep_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="xilinx_dma_pcie_ep_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="xilinx_dma_pcie_ep.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="xilinx_dma_pcie_ep_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="xilinx_dma_pcie_ep.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="xilinx_dma_pcie_ep_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="xilinx_dma_pcie_ep_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="xilinx_dma_pcie_ep.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="xilinx_dma_pcie_ep_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="xilinx_dma_pcie_ep_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="xilinx_dma_pcie_ep_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="xilinx_dma_pcie_ep_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="xilinx_dma_pcie_ep_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="xilinx_dma_pcie_ep_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="xilinx_dma_pcie_ep_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="xilinx_dma_pcie_ep_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="xilinx_dma_pcie_ep_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="xilinx_dma_pcie_ep_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="xilinx_dma_pcie_ep_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="xilinx_dma_pcie_ep_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="xilinx_dma_pcie_ep_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="xilinx_dma_pcie_ep_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="xilinx_dma_pcie_ep_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="xilinx_dma_pcie_ep_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="xilinx_dma_pcie_ep_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="xilinx_dma_pcie_ep_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="xilinx_dma_pcie_ep_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="xilinx_dma_pcie_ep.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="xilinx_dma_pcie_ep_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="xilinx_dma_pcie_ep.rbt"/>
   <File Type="BITSTR-NKY" Name="xilinx_dma_pcie_ep.nky"/>
   <File Type="BG-DRC" Name="xilinx_dma_pcie_ep.drc"/>
@@ -132,6 +91,6 @@
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="xdma_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="xdma_0"/>
 </GenRun>

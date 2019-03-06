@@ -70,6 +70,7 @@
 ###############################################################################
 # User Time Names / User Time Groups / Time Specs
 ###############################################################################
+set_property DONT_TOUCH true [get_cell xdma_app_i/blk_mem_axiLM_inst/U0/inst_blk_mem_gen/gnbram.gaxibmg.axi_rd_sm/gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1]
 
 ###############################################################################
 # User Physical Constraints

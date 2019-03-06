@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Mar  5 14:45:51 2019
+-- Date        : Tue Mar  5 21:16:43 2019
 -- Host        : vr-2 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Documents/FPGA-Miner/xilinx-study/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top blk_mem_gen_0 -prefix
+--               blk_mem_gen_0_ blk_mem_gen_0_sim_netlist.vhdl
 -- Design      : blk_mem_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,254 +17,357 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_read_fsm is
   port (
     s_axi_arready : out STD_LOGIC;
-    \gaxi_lite_sm.r_valid_r_reg_0\ : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_full_sm.r_valid_r_reg_0\ : out STD_LOGIC;
+    s_axi_rlast : out STD_LOGIC;
+    s_aresetn_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_full_sm.r_valid_r_reg_1\ : out STD_LOGIC;
+    \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\ : out STD_LOGIC;
+    s_axi_arvalid_0 : out STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[7]\ : out STD_LOGIC;
+    s_axi_arlen_1_sp_1 : out STD_LOGIC;
+    s_axi_arlen_2_sp_1 : out STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \s_axi_arlen[7]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \gaxi_full_sm.arlen_cntr_reg[4]\ : out STD_LOGIC;
+    \s_axi_arid[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     ENB_I : out STD_LOGIC;
-    ADDRBWRADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \FSM_sequential_gaxi_full_sm.present_state_reg[1]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axi_arvalid_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \s_axi_arburst[1]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    ADDRBWRADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
     s_aclk : in STD_LOGIC;
-    ENB_dly_D : in STD_LOGIC;
-    s_axi_arvalid : in STD_LOGIC;
+    s_aresetn : in STD_LOGIC;
+    s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_rready : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1]\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[6]\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[3]\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[4]_0\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[4]_1\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[5]\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[7]_1\ : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[7]_2\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]_0\ : in STD_LOGIC;
+    s_axi_arid : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \grid.S_AXI_RID_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    ENB_dly_D : in STD_LOGIC;
+    \gaxi_full_sm.arlen_cntr_reg[0]\ : in STD_LOGIC;
+    s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    addr_cnt_enb_r : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4]\ : in STD_LOGIC;
+    \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[3]\ : in STD_LOGIC;
+    incr_en_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_axi_read_fsm : entity is "blk_mem_axi_read_fsm";
 end blk_mem_gen_0_blk_mem_axi_read_fsm;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_read_fsm is
+  signal \^addrbwraddr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\ : STD_LOGIC;
+  signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \FSM_sequential_gaxi_full_sm.present_state[1]_i_2__0_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_gaxi_full_sm.present_state[1]_i_4_n_0\ : STD_LOGIC;
+  signal \^fsm_sequential_gaxi_full_sm.present_state_reg[1]_0\ : STD_LOGIC;
+  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal ar_ready_c : STD_LOGIC;
-  signal \gaxi_lite_sm.outstanding_read_r_i_1_n_0\ : STD_LOGIC;
-  signal \gaxi_lite_sm.r_valid_r_i_1_n_0\ : STD_LOGIC;
-  signal \^gaxi_lite_sm.r_valid_r_reg_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.S_AXI_RLAST_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.ar_ready_r_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.ar_ready_r_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.ar_ready_r_i_4_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.ar_ready_r_i_5_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[2]_i_2_n_0\ : STD_LOGIC;
+  signal \^gaxi_full_sm.arlen_cntr_reg[4]\ : STD_LOGIC;
+  signal \^gaxi_full_sm.arlen_cntr_reg[7]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_4_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.outstanding_read_r_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.r_valid_r_i_1_n_0\ : STD_LOGIC;
+  signal \^gaxi_full_sm.r_valid_r_reg_0\ : STD_LOGIC;
+  signal \^gaxi_full_sm.r_valid_r_reg_1\ : STD_LOGIC;
   signal next_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal outstanding_read_r : STD_LOGIC;
-  signal p_0_in : STD_LOGIC;
-  signal pipeline_full_c10_out : STD_LOGIC;
   signal present_state : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal s_axi_arlen_1_sn_1 : STD_LOGIC;
+  signal s_axi_arlen_2_sn_1 : STD_LOGIC;
+  signal \^s_axi_arvalid_0\ : STD_LOGIC;
+  signal \^s_axi_rlast\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_14\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \gaxi_lite_sm.present_state[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \FSM_sequential_gaxi_full_sm.present_state[1]_i_2__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_sequential_gaxi_full_sm.present_state[1]_i_4\ : label is "soft_lutpair6";
+  attribute FSM_ENCODED_STATES : string;
+  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_full_sm.present_state_reg[0]\ : label is "wait_rdaddr:00,os_rd:11,rd_mem:01,reg_rdaddr:10";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_full_sm.present_state_reg[1]\ : label is "wait_rdaddr:00,os_rd:11,rd_mem:01,reg_rdaddr:10";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.S_AXI_RLAST_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.ar_ready_r_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.ar_ready_r_i_4\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.ar_ready_r_i_5\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.arlen_cntr[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.arlen_cntr[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_4\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_5\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[2]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_4\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \grid.ar_id_r[3]_i_1\ : label is "soft_lutpair1";
 begin
-  \gaxi_lite_sm.r_valid_r_reg_0\ <= \^gaxi_lite_sm.r_valid_r_reg_0\;
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_10\: unisim.vcomponents.LUT3
+  ADDRBWRADDR(9 downto 0) <= \^addrbwraddr\(9 downto 0);
+  E(0) <= \^e\(0);
+  \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\ <= \^fsm_sequential_gaxi_full_sm.present_state_reg[1]_0\;
+  SR(0) <= \^sr\(0);
+  \gaxi_full_sm.arlen_cntr_reg[4]\ <= \^gaxi_full_sm.arlen_cntr_reg[4]\;
+  \gaxi_full_sm.arlen_cntr_reg[7]\ <= \^gaxi_full_sm.arlen_cntr_reg[7]\;
+  \gaxi_full_sm.r_valid_r_reg_0\ <= \^gaxi_full_sm.r_valid_r_reg_0\;
+  \gaxi_full_sm.r_valid_r_reg_1\ <= \^gaxi_full_sm.r_valid_r_reg_1\;
+  s_axi_arlen_1_sp_1 <= s_axi_arlen_1_sn_1;
+  s_axi_arlen_2_sp_1 <= s_axi_arlen_2_sn_1;
+  s_axi_arvalid_0 <= \^s_axi_arvalid_0\;
+  s_axi_rlast <= \^s_axi_rlast\;
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AC"
+      INIT => X"EA45EF40EF40EF40"
     )
         port map (
-      I0 => Q(3),
-      I1 => s_axi_araddr(3),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(3)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_11\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(2),
-      I1 => s_axi_araddr(2),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(2)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_12\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => s_axi_araddr(1),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(1)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_13\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(0),
-      I1 => s_axi_araddr(0),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(0)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_14\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I1 => s_axi_rready,
-      O => pipeline_full_c10_out
+      I0 => addr_cnt_enb_r(6),
+      I1 => s_axi_araddr(11),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(9),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(8),
+      O => \^addrbwraddr\(9)
     );
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_15\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"45440000"
+      INIT => X"EA45EF40"
     )
         port map (
-      I0 => present_state(0),
-      I1 => outstanding_read_r,
-      I2 => s_axi_rready,
-      I3 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I4 => present_state(1),
-      O => p_0_in
+      I0 => addr_cnt_enb_r(6),
+      I1 => s_axi_araddr(10),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(8),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\,
+      O => \^addrbwraddr\(8)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_16\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EA45EF40"
+    )
+        port map (
+      I0 => addr_cnt_enb_r(6),
+      I1 => s_axi_araddr(9),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(7),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9]\,
+      O => \^addrbwraddr\(7)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_17\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EA45EF40EF40EF40"
+    )
+        port map (
+      I0 => addr_cnt_enb_r(6),
+      I1 => s_axi_araddr(8),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(6),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(5),
+      O => \^addrbwraddr\(6)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EF40EA45EF40EF40"
+    )
+        port map (
+      I0 => addr_cnt_enb_r(6),
+      I1 => s_axi_araddr(7),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(5),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(4),
+      O => \^addrbwraddr\(5)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_19\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EFEA4045"
+    )
+        port map (
+      I0 => addr_cnt_enb_r(5),
+      I1 => s_axi_araddr(6),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(4),
+      O => \^addrbwraddr\(4)
     );
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAEAAAEAEFEAEAE"
+      INIT => X"AAAEFFEEAAAEAFEE"
     )
         port map (
       I0 => ENB_dly_D,
       I1 => s_axi_arvalid,
       I2 => present_state(1),
-      I3 => pipeline_full_c10_out,
-      I4 => outstanding_read_r,
-      I5 => present_state(0),
+      I3 => present_state(0),
+      I4 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24_n_0\,
+      I5 => outstanding_read_r,
       O => ENB_I
     );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_4\: unisim.vcomponents.LUT3
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_20\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AC"
+      INIT => X"EF40EA45"
     )
         port map (
-      I0 => Q(9),
-      I1 => s_axi_araddr(9),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(9)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_5\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(8),
-      I1 => s_axi_araddr(8),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(8)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(7),
-      I1 => s_axi_araddr(7),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(7)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_7\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(6),
-      I1 => s_axi_araddr(6),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(6)
-    );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_8\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => Q(5),
+      I0 => addr_cnt_enb_r(4),
       I1 => s_axi_araddr(5),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(5)
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(3),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5]\,
+      O => \^addrbwraddr\(3)
     );
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_9\: unisim.vcomponents.LUT3
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_21\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AC"
+      INIT => X"EF40EA45"
     )
         port map (
-      I0 => Q(4),
+      I0 => addr_cnt_enb_r(3),
       I1 => s_axi_araddr(4),
-      I2 => p_0_in,
-      O => ADDRBWRADDR(4)
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(2),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4]\,
+      O => \^addrbwraddr\(2)
     );
-\gaxi_lite_sm.ar_ready_r_i_1\: unisim.vcomponents.LUT6
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_22\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"05FF012205FF0177"
+      INIT => X"EF40EA45"
     )
         port map (
-      I0 => present_state(0),
-      I1 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I2 => outstanding_read_r,
-      I3 => present_state(1),
-      I4 => s_axi_rready,
-      I5 => s_axi_arvalid,
-      O => ar_ready_c
+      I0 => addr_cnt_enb_r(2),
+      I1 => s_axi_araddr(3),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(1),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[3]\,
+      O => \^addrbwraddr\(1)
     );
-\gaxi_lite_sm.ar_ready_r_reg\: unisim.vcomponents.FDRE
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_23\: unisim.vcomponents.LUT6
     generic map(
-      INIT => '0'
+      INIT => X"EA45EF40EF40EF40"
     )
         port map (
-      C => s_aclk,
-      CE => '1',
-      D => ar_ready_c,
-      Q => s_axi_arready,
-      R => SR(0)
+      I0 => addr_cnt_enb_r(1),
+      I1 => s_axi_araddr(2),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(0),
+      I4 => incr_en_r,
+      I5 => Q(2),
+      O => \^addrbwraddr\(0)
     );
-\gaxi_lite_sm.araddr_reg[9]_i_1\: unisim.vcomponents.LUT2
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
-      I0 => s_axi_arvalid,
-      I1 => present_state(1),
-      O => E(0)
-    );
-\gaxi_lite_sm.outstanding_read_r_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00002C2000000000"
-    )
-        port map (
-      I0 => s_axi_arvalid,
-      I1 => present_state(1),
-      I2 => present_state(0),
-      I3 => outstanding_read_r,
-      I4 => s_axi_rready,
-      I5 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      O => \gaxi_lite_sm.outstanding_read_r_i_1_n_0\
-    );
-\gaxi_lite_sm.outstanding_read_r_reg\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_aclk,
-      CE => '1',
-      D => \gaxi_lite_sm.outstanding_read_r_i_1_n_0\,
-      Q => outstanding_read_r,
-      R => SR(0)
-    );
-\gaxi_lite_sm.present_state[0]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"000088A8"
-    )
-        port map (
-      I0 => s_axi_arvalid,
+      I0 => \^gaxi_full_sm.r_valid_r_reg_0\,
       I1 => s_axi_rready,
-      I2 => present_state(0),
-      I3 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I4 => present_state(1),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"4500FFFF"
+    )
+        port map (
+      I0 => outstanding_read_r,
+      I1 => s_axi_rready,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => present_state(1),
+      I4 => present_state(0),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state[0]_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5151515100005100"
+    )
+        port map (
+      I0 => \^gaxi_full_sm.arlen_cntr_reg[7]\,
+      I1 => \gaxi_full_sm.ar_ready_r_i_5_n_0\,
+      I2 => \gaxi_full_sm.ar_ready_r_i_4_n_0\,
+      I3 => s_axi_arvalid,
+      I4 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I5 => \gaxi_full_sm.ar_ready_r_i_2_n_0\,
       O => next_state(0)
     );
-\gaxi_lite_sm.present_state[1]_i_1\: unisim.vcomponents.LUT6
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4400440054F554A0"
+      INIT => X"FFFFFFFFFFFF0D8D"
+    )
+        port map (
+      I0 => s_axi_arvalid,
+      I1 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2__0_n_0\,
+      I3 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0\,
+      I4 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_4_n_0\,
+      I5 => \^gaxi_full_sm.arlen_cntr_reg[7]\,
+      O => next_state(1)
+    );
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_2__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"DDDDFFDF"
+    )
+        port map (
+      I0 => present_state(1),
+      I1 => present_state(0),
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => s_axi_arvalid,
+      O => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2__0_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
     )
         port map (
       I0 => present_state(0),
-      I1 => outstanding_read_r,
-      I2 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I3 => present_state(1),
-      I4 => s_axi_arvalid,
-      I5 => s_axi_rready,
-      O => next_state(1)
+      I1 => present_state(1),
+      O => \FSM_sequential_gaxi_full_sm.present_state[1]_i_3_n_0\
     );
-\gaxi_lite_sm.present_state_reg[0]\: unisim.vcomponents.FDRE
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"F2000000"
+    )
+        port map (
+      I0 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I1 => s_axi_rready,
+      I2 => outstanding_read_r,
+      I3 => present_state(1),
+      I4 => present_state(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state[1]_i_4_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -273,9 +376,9 @@ begin
       CE => '1',
       D => next_state(0),
       Q => present_state(0),
-      R => SR(0)
+      R => \^sr\(0)
     );
-\gaxi_lite_sm.present_state_reg[1]\: unisim.vcomponents.FDRE
+\FSM_sequential_gaxi_full_sm.present_state_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -284,31 +387,722 @@ begin
       CE => '1',
       D => next_state(1),
       Q => present_state(1),
-      R => SR(0)
+      R => \^sr\(0)
     );
-\gaxi_lite_sm.r_valid_r_i_1\: unisim.vcomponents.LUT6
+\gaxi_full_sm.S_AXI_RLAST_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000BABAF030AAAA"
+      INIT => X"FFFE00FE"
+    )
+        port map (
+      I0 => \^gaxi_full_sm.arlen_cntr_reg[7]\,
+      I1 => s_axi_arlen_1_sn_1,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_1\,
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24_n_0\,
+      I4 => \^s_axi_rlast\,
+      O => \gaxi_full_sm.S_AXI_RLAST_i_1_n_0\
+    );
+\gaxi_full_sm.S_AXI_RLAST_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000100000000"
+    )
+        port map (
+      I0 => s_axi_arlen(1),
+      I1 => s_axi_arlen(0),
+      I2 => s_axi_arlen(2),
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\,
+      I4 => s_axi_arlen(7),
+      I5 => \^s_axi_arvalid_0\,
+      O => s_axi_arlen_1_sn_1
+    );
+\gaxi_full_sm.S_AXI_RLAST_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"D0000000"
+    )
+        port map (
+      I0 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I1 => s_axi_rready,
+      I2 => outstanding_read_r,
+      I3 => present_state(1),
+      I4 => present_state(0),
+      O => \^gaxi_full_sm.r_valid_r_reg_1\
+    );
+\gaxi_full_sm.S_AXI_RLAST_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxi_full_sm.S_AXI_RLAST_i_1_n_0\,
+      Q => \^s_axi_rlast\,
+      R => \^sr\(0)
+    );
+\gaxi_full_sm.ar_ready_r_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFF45FF4545"
+    )
+        port map (
+      I0 => \gaxi_full_sm.ar_ready_r_i_2_n_0\,
+      I1 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I2 => s_axi_arvalid,
+      I3 => \gaxi_full_sm.ar_ready_r_i_4_n_0\,
+      I4 => \gaxi_full_sm.ar_ready_r_i_5_n_0\,
+      I5 => \^gaxi_full_sm.arlen_cntr_reg[7]\,
+      O => ar_ready_c
+    );
+\gaxi_full_sm.ar_ready_r_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"CCCCFECE"
     )
         port map (
       I0 => s_axi_arvalid,
-      I1 => s_axi_rready,
-      I2 => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      I3 => outstanding_read_r,
-      I4 => present_state(1),
-      I5 => present_state(0),
-      O => \gaxi_lite_sm.r_valid_r_i_1_n_0\
+      I1 => present_state(0),
+      I2 => present_state(1),
+      I3 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I4 => s_axi_rready,
+      O => \gaxi_full_sm.ar_ready_r_i_2_n_0\
     );
-\gaxi_lite_sm.r_valid_r_reg\: unisim.vcomponents.FDRE
+\gaxi_full_sm.ar_ready_r_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => s_axi_arlen(7),
+      I1 => s_axi_arlen(4),
+      I2 => s_axi_arlen(5),
+      I3 => s_axi_arlen(3),
+      I4 => s_axi_arlen(6),
+      I5 => s_axi_arlen_2_sn_1,
+      O => \gaxi_full_sm.ar_ready_r_i_3_n_0\
+    );
+\gaxi_full_sm.ar_ready_r_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"BA"
+    )
+        port map (
+      I0 => outstanding_read_r,
+      I1 => s_axi_rready,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      O => \gaxi_full_sm.ar_ready_r_i_4_n_0\
+    );
+\gaxi_full_sm.ar_ready_r_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => present_state(0),
+      I1 => present_state(1),
+      O => \gaxi_full_sm.ar_ready_r_i_5_n_0\
+    );
+\gaxi_full_sm.ar_ready_r_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000010000000"
+    )
+        port map (
+      I0 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(7),
+      I1 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(6),
+      I2 => \^gaxi_full_sm.arlen_cntr_reg[4]\,
+      I3 => s_axi_rready,
+      I4 => present_state(0),
+      I5 => present_state(1),
+      O => \^gaxi_full_sm.arlen_cntr_reg[7]\
+    );
+\gaxi_full_sm.ar_ready_r_reg\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => s_aclk,
       CE => '1',
-      D => \gaxi_lite_sm.r_valid_r_i_1_n_0\,
-      Q => \^gaxi_lite_sm.r_valid_r_reg_0\,
-      R => SR(0)
+      D => ar_ready_c,
+      Q => s_axi_arready,
+      R => \^sr\(0)
+    );
+\gaxi_full_sm.arlen_cntr[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00FF2F0D"
+    )
+        port map (
+      I0 => s_axi_arvalid,
+      I1 => present_state(0),
+      I2 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(0),
+      I3 => s_axi_arlen(0),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      O => \s_axi_arlen[7]\(0)
+    );
+\gaxi_full_sm.arlen_cntr[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B4B7B484B484B4B7"
+    )
+        port map (
+      I0 => s_axi_arlen(0),
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_arlen(1),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(1),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(0),
+      O => \s_axi_arlen[7]\(1)
+    );
+\gaxi_full_sm.arlen_cntr[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"E1FFE100"
+    )
+        port map (
+      I0 => s_axi_arlen(1),
+      I1 => s_axi_arlen(0),
+      I2 => s_axi_arlen(2),
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I4 => \gaxi_full_sm.arlen_cntr[2]_i_2_n_0\,
+      O => \s_axi_arlen[7]\(2)
+    );
+\gaxi_full_sm.arlen_cntr[2]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FB08FB08FB0808FB"
+    )
+        port map (
+      I0 => s_axi_arlen(2),
+      I1 => s_axi_arvalid,
+      I2 => present_state(0),
+      I3 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(2),
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(0),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(1),
+      O => \gaxi_full_sm.arlen_cntr[2]_i_2_n_0\
+    );
+\gaxi_full_sm.arlen_cntr[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B484B4B7B4B7B484"
+    )
+        port map (
+      I0 => s_axi_arlen_2_sn_1,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_arlen(3),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(3),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[3]\,
+      O => \s_axi_arlen[7]\(3)
+    );
+\gaxi_full_sm.arlen_cntr[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7848787B787B7848"
+    )
+        port map (
+      I0 => \gaxi_full_sm.arlen_cntr_reg[4]_0\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_arlen(4),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(4),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[4]_1\,
+      O => \s_axi_arlen[7]\(4)
+    );
+\gaxi_full_sm.arlen_cntr[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BF40BF4FBF40B040"
+    )
+        port map (
+      I0 => s_axi_arlen(4),
+      I1 => \gaxi_full_sm.arlen_cntr_reg[4]_0\,
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I3 => s_axi_arlen(5),
+      I4 => \^s_axi_arvalid_0\,
+      I5 => \gaxi_full_sm.arlen_cntr_reg[5]\,
+      O => \s_axi_arlen[7]\(5)
+    );
+\gaxi_full_sm.arlen_cntr[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7848787B787B7848"
+    )
+        port map (
+      I0 => \gaxi_full_sm.arlen_cntr_reg[6]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_arlen(6),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(6),
+      I5 => \^gaxi_full_sm.arlen_cntr_reg[4]\,
+      O => \s_axi_arlen[7]\(6)
+    );
+\gaxi_full_sm.arlen_cntr[6]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(4),
+      I1 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(2),
+      I2 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(1),
+      I3 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(0),
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(3),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(5),
+      O => \^gaxi_full_sm.arlen_cntr_reg[4]\
+    );
+\gaxi_full_sm.arlen_cntr[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF7737FFFF4404"
+    )
+        port map (
+      I0 => present_state(1),
+      I1 => present_state(0),
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[0]\,
+      I5 => s_axi_arvalid,
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[1]_1\(0)
+    );
+\gaxi_full_sm.arlen_cntr[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B080B0B3B0B3B080"
+    )
+        port map (
+      I0 => \gaxi_full_sm.arlen_cntr_reg[7]_1\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_arlen(7),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.arlen_cntr_reg[7]_0\(7),
+      I5 => \gaxi_full_sm.arlen_cntr_reg[7]_2\,
+      O => \s_axi_arlen[7]\(7)
+    );
+\gaxi_full_sm.aw_ready_r_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => s_aresetn,
+      O => \^sr\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFBAAAFFFFFFFF"
+    )
+        port map (
+      I0 => \^gaxi_full_sm.r_valid_r_reg_1\,
+      I1 => \^fsm_sequential_gaxi_full_sm.present_state_reg[1]_0\,
+      I2 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \^gaxi_full_sm.arlen_cntr_reg[7]\,
+      I5 => s_aresetn,
+      O => s_aresetn_0(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2020202020202000"
+    )
+        port map (
+      I0 => s_axi_arburst(1),
+      I1 => s_axi_arburst(0),
+      I2 => \^s_axi_arvalid_0\,
+      I3 => s_axi_arlen_2_sn_1,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\,
+      I5 => s_axi_arlen(7),
+      O => \s_axi_arburst[1]\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => present_state(1),
+      I1 => s_axi_rready,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      O => \^fsm_sequential_gaxi_full_sm.present_state_reg[1]_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => s_axi_arlen(2),
+      I1 => s_axi_arlen(0),
+      I2 => s_axi_arlen(1),
+      O => s_axi_arlen_2_sn_1
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => s_axi_arlen(4),
+      I1 => s_axi_arlen(5),
+      I2 => s_axi_arlen(3),
+      I3 => s_axi_arlen(6),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4E4B0B1F4F5B0A0"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(6),
+      I2 => s_axi_araddr(10),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(8),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(8)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AAAA3033AAAA"
+    )
+        port map (
+      I0 => s_axi_arvalid,
+      I1 => \gaxi_full_sm.arlen_cntr_reg[0]\,
+      I2 => s_axi_rready,
+      I3 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I4 => present_state(0),
+      I5 => present_state(1),
+      O => s_axi_arvalid_1(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4E4B0B1F4F5B0A0"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(6),
+      I2 => s_axi_araddr(11),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(9),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(9)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => s_axi_araddr(2),
+      I1 => s_axi_arvalid,
+      I2 => present_state(0),
+      I3 => \^addrbwraddr\(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4F5B0A0F4E4B0B1"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(2),
+      I2 => s_axi_araddr(3),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(1),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[3]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(1)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4F5B0A0F4E4B0B1"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(3),
+      I2 => s_axi_araddr(4),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(2),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(2)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4F5B0A0F4E4B0B1"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(4),
+      I2 => s_axi_araddr(5),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(3),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(3)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4F5F4E4B0A0B0B1"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(5),
+      I2 => s_axi_araddr(6),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(4),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(4)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4E4B0B1F4F5B0A0"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(6),
+      I2 => s_axi_araddr(7),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(5),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(5)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4E4B0B1F4F5B0A0"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(6),
+      I2 => s_axi_araddr(8),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(6),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(6)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F4E4B0B1F4F5B0A0"
+    )
+        port map (
+      I0 => \^s_axi_arvalid_0\,
+      I1 => addr_cnt_enb_r(6),
+      I2 => s_axi_araddr(9),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(7),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(7)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"787B78487848787B"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]\(0),
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_araddr(0),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(0),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0\,
+      O => D(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"47"
+    )
+        port map (
+      I0 => s_axi_araddr(0),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I2 => Q(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[0]_i_2_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B4B7B484B484B4B7"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\,
+      I2 => s_axi_araddr(1),
+      I3 => \^s_axi_arvalid_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4_n_0\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_4_n_0\,
+      O => D(1)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAAAAAAAA8"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5_n_0\,
+      I1 => s_axi_arlen(1),
+      I2 => s_axi_arlen(0),
+      I3 => s_axi_arlen(2),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\,
+      I5 => s_axi_arlen(7),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_3_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"5655A6AA"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(1),
+      I1 => s_axi_araddr(1),
+      I2 => addr_cnt_enb_r(0),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I4 => Q(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_4_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAABEEEBBBE"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(2),
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(1),
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4_n_0\,
+      I5 => \^s_axi_arvalid_0\,
+      O => D(2)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000FE00"
+    )
+        port map (
+      I0 => s_axi_arlen(7),
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_6_n_0\,
+      I2 => s_axi_arlen_2_sn_1,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]_0\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_2_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AEA2"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I2 => addr_cnt_enb_r(0),
+      I3 => s_axi_araddr(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_3_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"1DFF"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_29_n_0\,
+      I2 => s_axi_araddr(0),
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_4_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"44044444"
+    )
+        port map (
+      I0 => present_state(0),
+      I1 => s_axi_arvalid,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => present_state(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_5_n_0\
+    );
+\gaxi_full_sm.outstanding_read_r_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F000000080800000"
+    )
+        port map (
+      I0 => s_axi_arvalid,
+      I1 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_24_n_0\,
+      I3 => outstanding_read_r,
+      I4 => present_state(1),
+      I5 => present_state(0),
+      O => \gaxi_full_sm.outstanding_read_r_i_1_n_0\
+    );
+\gaxi_full_sm.outstanding_read_r_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxi_full_sm.outstanding_read_r_i_1_n_0\,
+      Q => outstanding_read_r,
+      R => \^sr\(0)
+    );
+\gaxi_full_sm.r_valid_r_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AEAAFFFFAEAAAEAA"
+    )
+        port map (
+      I0 => \^e\(0),
+      I1 => s_axi_arvalid,
+      I2 => present_state(0),
+      I3 => \gaxi_full_sm.ar_ready_r_i_3_n_0\,
+      I4 => s_axi_rready,
+      I5 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      O => \gaxi_full_sm.r_valid_r_i_1_n_0\
+    );
+\gaxi_full_sm.r_valid_r_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxi_full_sm.r_valid_r_i_1_n_0\,
+      Q => \^gaxi_full_sm.r_valid_r_reg_0\,
+      R => \^sr\(0)
+    );
+\grid.S_AXI_RID[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFBBBBB88088888"
+    )
+        port map (
+      I0 => s_axi_arid(0),
+      I1 => \^s_axi_arvalid_0\,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => present_state(1),
+      I5 => \grid.S_AXI_RID_reg[3]\(0),
+      O => \s_axi_arid[3]\(0)
+    );
+\grid.S_AXI_RID[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFBBBBB88088888"
+    )
+        port map (
+      I0 => s_axi_arid(1),
+      I1 => \^s_axi_arvalid_0\,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => present_state(1),
+      I5 => \grid.S_AXI_RID_reg[3]\(1),
+      O => \s_axi_arid[3]\(1)
+    );
+\grid.S_AXI_RID[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFBBBBB88088888"
+    )
+        port map (
+      I0 => s_axi_arid(2),
+      I1 => \^s_axi_arvalid_0\,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => present_state(1),
+      I5 => \grid.S_AXI_RID_reg[3]\(2),
+      O => \s_axi_arid[3]\(2)
+    );
+\grid.S_AXI_RID[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8ACFCFFF8A00CF00"
+    )
+        port map (
+      I0 => outstanding_read_r,
+      I1 => s_axi_rready,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => present_state(0),
+      I4 => present_state(1),
+      I5 => s_axi_arvalid,
+      O => \^e\(0)
+    );
+\grid.S_AXI_RID[3]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFBBBBB88088888"
+    )
+        port map (
+      I0 => s_axi_arid(3),
+      I1 => \^s_axi_arvalid_0\,
+      I2 => \^gaxi_full_sm.r_valid_r_reg_0\,
+      I3 => s_axi_rready,
+      I4 => present_state(1),
+      I5 => \grid.S_AXI_RID_reg[3]\(3),
+      O => \s_axi_arid[3]\(3)
+    );
+\grid.ar_id_r[3]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => s_axi_arvalid,
+      I1 => present_state(0),
+      O => \^s_axi_arvalid_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -318,82 +1112,164 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_write_fsm is
   port (
     s_axi_awready : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wready : out STD_LOGIC;
-    ENA_I : out STD_LOGIC;
-    s_axi_wr_en_c : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_0\ : out STD_LOGIC;
+    \bvalid_count_r_reg[0]\ : out STD_LOGIC;
+    s_axi_wvalid_0 : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 0 to 0 );
+    bvalid_c : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \bvalid_count_r_reg[1]\ : out STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \gaxif_wlast_gen.awlen_cntr_r_reg[5]\ : out STD_LOGIC;
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \s_axi_awaddr[11]\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    I17 : out STD_LOGIC;
+    ENA_I : out STD_LOGIC;
+    s_axi_wvalid_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]\ : out STD_LOGIC;
+    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]_0\ : out STD_LOGIC;
+    SS : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_aclk : in STD_LOGIC;
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    ENA_dly_D : in STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg\ : in STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg_0\ : in STD_LOGIC;
-    \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\ : in STD_LOGIC;
+    \gaxif_ms_addr_gen.addr_cnt_enb_reg[2]\ : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg_1\ : in STD_LOGIC
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \gaxif_wlast_gen.awlen_cntr_r_reg[7]\ : in STD_LOGIC;
+    \gaxi_bvalid_id_r.bvalid_d1_c_reg\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0\ : in STD_LOGIC;
+    \gaxif_wlast_gen.awlen_cntr_r_reg[4]\ : in STD_LOGIC;
+    \gaxif_wlast_gen.awlen_cntr_r_reg[3]\ : in STD_LOGIC;
+    \gaxif_wlast_gen.awlen_cntr_r_reg[2]\ : in STD_LOGIC;
+    s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \gaxif_ms_addr_gen.next_address_r_reg[2]\ : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    \gaxif_ms_addr_gen.next_address_r_reg[1]\ : in STD_LOGIC;
+    \gaxif_ms_addr_gen.next_address_r_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxif_ms_addr_gen.next_address_r_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxif_ms_addr_gen.bmg_address_r_reg[11]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \gaxif_ms_addr_gen.bmg_address_r_reg[11]_0\ : in STD_LOGIC;
+    ADDRARDADDR : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3\ : in STD_LOGIC;
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_4\ : in STD_LOGIC;
+    \FSM_sequential_gaxi_full_sm.present_state_reg[0]_5\ : in STD_LOGIC;
+    ENA_dly_D : in STD_LOGIC;
+    \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_axi_write_fsm : entity is "blk_mem_axi_write_fsm";
 end blk_mem_gen_0_blk_mem_axi_write_fsm;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_write_fsm is
-  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \FSM_sequential_gaxi_full_sm.present_state[0]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0\ : STD_LOGIC;
+  signal \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\ : STD_LOGIC;
+  signal \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\ : STD_LOGIC;
+  signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aw_ready_c : STD_LOGIC;
-  signal \bready_timeout_c__1\ : STD_LOGIC;
+  signal \^bvalid_c\ : STD_LOGIC;
+  signal \^bvalid_count_r_reg[0]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.bmg_address_r[11]_i_2_n_0\ : STD_LOGIC;
+  signal \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\ : STD_LOGIC;
   signal next_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal present_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \^s_axi_wr_en_c\ : STD_LOGIC;
+  signal present_state : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^s_axi_awready\ : STD_LOGIC;
+  signal \^s_axi_wvalid_0\ : STD_LOGIC;
   signal w_ready_c : STD_LOGIC;
-  attribute FSM_ENCODED_STATES : string;
-  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_lite_sm.present_state_reg[0]\ : label is "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00";
-  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_lite_sm.present_state_reg[1]\ : label is "reg_wraddr:01,os_wr:10,wr_mem:11,wait_wraddr:00";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT[9]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \gaxi_lite_sm.w_ready_r_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \FSM_sequential_gaxi_full_sm.present_state[1]_i_2\ : label is "soft_lutpair18";
+  attribute FSM_ENCODED_STATES : string;
+  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_full_sm.present_state_reg[0]\ : label is "os_wr:01,reg_wraddr:10,wr_mem:11,wait_wraddr:00";
+  attribute FSM_ENCODED_STATES of \FSM_sequential_gaxi_full_sm.present_state_reg[1]\ : label is "os_wr:01,reg_wraddr:10,wr_mem:11,wait_wraddr:00";
+  attribute SOFT_HLUTNM of \gaxi_bid_gen.bvalid_wr_cnt_r[0]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \gaxi_bid_gen.bvalid_wr_cnt_r[1]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.w_ready_r_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_4\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.next_address_r[2]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.num_of_bytes_r[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \gaxif_wlast_gen.awlen_cntr_r[7]_i_1\ : label is "soft_lutpair17";
 begin
-  SR(0) <= \^sr\(0);
-  s_axi_wr_en_c <= \^s_axi_wr_en_c\;
+  \FSM_sequential_gaxi_full_sm.present_state_reg[0]_0\ <= \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\;
+  Q(0) <= \^q\(0);
+  bvalid_c <= \^bvalid_c\;
+  \bvalid_count_r_reg[0]\ <= \^bvalid_count_r_reg[0]\;
+  \gaxif_wlast_gen.awlen_cntr_r_reg[5]\ <= \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\;
+  s_axi_awready <= \^s_axi_awready\;
+  s_axi_wvalid_0 <= \^s_axi_wvalid_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BAEA"
+      INIT => X"AEEA"
     )
         port map (
       I0 => ENA_dly_D,
-      I1 => present_state(0),
-      I2 => s_axi_wvalid,
-      I3 => present_state(1),
+      I1 => s_axi_wvalid,
+      I2 => \^q\(0),
+      I3 => present_state(0),
       O => ENA_I
     );
-\FSM_sequential_gaxi_lite_sm.present_state[0]_i_1\: unisim.vcomponents.LUT6
+\FSM_sequential_gaxi_full_sm.present_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00A0A888FFA0A888"
+      INIT => X"AAAABAAABFAFAAAA"
+    )
+        port map (
+      I0 => \FSM_sequential_gaxi_full_sm.present_state[0]_i_2_n_0\,
+      I1 => \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0\,
+      I2 => s_axi_wvalid,
+      I3 => \^bvalid_count_r_reg[0]\,
+      I4 => present_state(0),
+      I5 => \^q\(0),
+      O => next_state(0)
+    );
+\FSM_sequential_gaxi_full_sm.present_state[0]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"55000030"
+    )
+        port map (
+      I0 => s_axi_bready,
+      I1 => s_axi_wvalid,
+      I2 => s_axi_awvalid,
+      I3 => present_state(0),
+      I4 => \^q\(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state[0]_i_2_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state[0]_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7),
+      I1 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I2 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      O => \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0022F3A0FF22F3A0"
     )
         port map (
       I0 => s_axi_wvalid,
-      I1 => s_axi_awvalid,
-      I2 => \bready_timeout_c__1\,
-      I3 => present_state(0),
-      I4 => present_state(1),
-      I5 => s_axi_bready,
-      O => next_state(0)
-    );
-\FSM_sequential_gaxi_lite_sm.present_state[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2230EEFC88FC88FC"
-    )
-        port map (
-      I0 => \bready_timeout_c__1\,
-      I1 => present_state(1),
+      I1 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
       I2 => s_axi_awvalid,
-      I3 => s_axi_wvalid,
-      I4 => s_axi_bready,
-      I5 => present_state(0),
+      I3 => \^q\(0),
+      I4 => present_state(0),
+      I5 => s_axi_bready,
       O => next_state(1)
     );
-\FSM_sequential_gaxi_lite_sm.present_state_reg[0]\: unisim.vcomponents.FDRE
+\FSM_sequential_gaxi_full_sm.present_state[1]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000100"
+    )
+        port map (
+      I0 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7),
+      I1 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I2 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      I3 => s_axi_wvalid,
+      I4 => \^bvalid_count_r_reg[0]\,
+      O => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\
+    );
+\FSM_sequential_gaxi_full_sm.present_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -402,9 +1278,9 @@ begin
       CE => '1',
       D => next_state(0),
       Q => present_state(0),
-      R => \^sr\(0)
+      R => SS(0)
     );
-\FSM_sequential_gaxi_lite_sm.present_state_reg[1]\: unisim.vcomponents.FDRE
+\FSM_sequential_gaxi_full_sm.present_state_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -412,75 +1288,87 @@ begin
       C => s_aclk,
       CE => '1',
       D => next_state(1),
-      Q => present_state(1),
-      R => \^sr\(0)
+      Q => \^q\(0),
+      R => SS(0)
     );
-\gaxi_bvalid_noid_r.bvalid_r_i_1\: unisim.vcomponents.LUT5
+\gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFFBFF00"
+      INIT => X"8"
     )
         port map (
-      I0 => \gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      I1 => s_axi_bready,
-      I2 => \gaxi_bvalid_noid_r.bvalid_r_reg\,
-      I3 => \^s_axi_wr_en_c\,
-      I4 => \gaxi_bvalid_noid_r.bvalid_r_reg_1\,
-      O => \bvalid_count_r_reg[1]\
+      I0 => \^s_axi_awready\,
+      I1 => s_axi_awvalid,
+      O => I17
     );
-\gaxi_bvalid_noid_r.bvalid_r_i_2\: unisim.vcomponents.LUT3
+\gaxi_bid_gen.bvalid_wr_cnt_r[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"48"
+      INIT => X"6"
     )
         port map (
-      I0 => present_state(1),
-      I1 => s_axi_wvalid,
+      I0 => \^bvalid_c\,
+      I1 => \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\(0),
+      O => \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]_0\
+    );
+\gaxi_bid_gen.bvalid_wr_cnt_r[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\(0),
+      I1 => \^bvalid_c\,
+      I2 => \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\(1),
+      O => \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]\
+    );
+\gaxi_bvalid_id_r.bvalid_d1_c_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000028"
+    )
+        port map (
+      I0 => s_axi_wvalid,
+      I1 => \^q\(0),
       I2 => present_state(0),
-      O => \^s_axi_wr_en_c\
+      I3 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      I4 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I5 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7),
+      O => \^bvalid_c\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT[9]_i_1\: unisim.vcomponents.LUT5
+\gaxi_bvalid_id_r.bvalid_d1_c_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00004F00"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \bready_timeout_c__1\,
-      I1 => s_axi_wvalid,
-      I2 => present_state(0),
-      I3 => s_axi_awvalid,
-      I4 => present_state(1),
-      O => E(0)
+      I0 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(5),
+      I1 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(3),
+      I2 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(1),
+      I3 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(0),
+      I4 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(2),
+      I5 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(4),
+      O => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\
     );
-\gaxi_lite_sm.aw_ready_r_i_1\: unisim.vcomponents.LUT1
+\gaxi_full_sm.aw_ready_r_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1"
+      INIT => X"F4444444F44444FF"
     )
         port map (
-      I0 => s_aresetn,
-      O => \^sr\(0)
-    );
-\gaxi_lite_sm.aw_ready_r_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CC0FCC550F550055"
-    )
-        port map (
-      I0 => s_axi_awvalid,
-      I1 => s_axi_bready,
-      I2 => \bready_timeout_c__1\,
-      I3 => present_state(1),
-      I4 => s_axi_wvalid,
-      I5 => present_state(0),
+      I0 => \^bvalid_count_r_reg[0]\,
+      I1 => \^bvalid_c\,
+      I2 => s_axi_bready,
+      I3 => present_state(0),
+      I4 => \^q\(0),
+      I5 => s_axi_awvalid,
       O => aw_ready_c
     );
-\gaxi_lite_sm.aw_ready_r_i_3\: unisim.vcomponents.LUT3
+\gaxi_full_sm.aw_ready_r_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"10"
+      INIT => X"02"
     )
         port map (
-      I0 => \gaxi_bvalid_noid_r.bvalid_r_reg\,
-      I1 => \gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      I2 => \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\,
-      O => \bready_timeout_c__1\
+      I0 => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3\,
+      I1 => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_4\,
+      I2 => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_5\,
+      O => \^bvalid_count_r_reg[0]\
     );
-\gaxi_lite_sm.aw_ready_r_reg\: unisim.vcomponents.FDRE
+\gaxi_full_sm.aw_ready_r_reg\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -488,22 +1376,33 @@ begin
       C => s_aclk,
       CE => '1',
       D => aw_ready_c,
-      Q => s_axi_awready,
-      R => \^sr\(0)
+      Q => \^s_axi_awready\,
+      R => SS(0)
     );
-\gaxi_lite_sm.w_ready_r_i_1\: unisim.vcomponents.LUT5
+\gaxi_full_sm.w_ready_r_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"11117F00"
+      INIT => X"000F2FAA"
     )
         port map (
-      I0 => present_state(0),
-      I1 => s_axi_wvalid,
-      I2 => \bready_timeout_c__1\,
-      I3 => s_axi_awvalid,
-      I4 => present_state(1),
+      I0 => s_axi_awvalid,
+      I1 => \^bvalid_count_r_reg[0]\,
+      I2 => \^s_axi_wvalid_0\,
+      I3 => \^q\(0),
+      I4 => present_state(0),
       O => w_ready_c
     );
-\gaxi_lite_sm.w_ready_r_reg\: unisim.vcomponents.FDRE
+\gaxi_full_sm.w_ready_r_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0002"
+    )
+        port map (
+      I0 => s_axi_wvalid,
+      I1 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      I2 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I3 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7),
+      O => \^s_axi_wvalid_0\
+    );
+\gaxi_full_sm.w_ready_r_reg\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
@@ -512,7 +1411,363 @@ begin
       CE => '1',
       D => w_ready_c,
       Q => s_axi_wready,
-      R => \^sr\(0)
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F0F0E0A0FFFFFFFF"
+    )
+        port map (
+      I0 => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\,
+      I1 => \^bvalid_count_r_reg[0]\,
+      I2 => \^s_axi_wvalid_0\,
+      I3 => \^q\(0),
+      I4 => \gaxif_ms_addr_gen.addr_cnt_enb_reg[2]\,
+      I5 => s_aresetn,
+      O => SR(0)
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000040440000"
+    )
+        port map (
+      I0 => present_state(0),
+      I1 => s_axi_awvalid,
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => \^q\(0),
+      I4 => s_axi_awburst(1),
+      I5 => s_axi_awburst(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_1\(0)
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => present_state(0),
+      I1 => s_axi_awvalid,
+      O => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\
+    );
+\gaxif_ms_addr_gen.bmg_address_r[10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(10),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(8),
+      O => \s_axi_awaddr[11]\(8)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"08FBFB08FB08FB08"
+    )
+        port map (
+      I0 => s_axi_awaddr(11),
+      I1 => \gaxif_ms_addr_gen.bmg_address_r[11]_i_2_n_0\,
+      I2 => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\,
+      I3 => \gaxif_ms_addr_gen.bmg_address_r_reg[11]\(1),
+      I4 => \gaxif_ms_addr_gen.bmg_address_r_reg[11]_0\,
+      I5 => \gaxif_ms_addr_gen.bmg_address_r_reg[11]\(0),
+      O => \s_axi_awaddr[11]\(9)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[11]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000004FFFFFFFF"
+    )
+        port map (
+      I0 => \^bvalid_count_r_reg[0]\,
+      I1 => s_axi_wvalid,
+      I2 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      I3 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I4 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7),
+      I5 => \^q\(0),
+      O => \gaxif_ms_addr_gen.bmg_address_r[11]_i_2_n_0\
+    );
+\gaxif_ms_addr_gen.bmg_address_r[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(2),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(0),
+      O => \s_axi_awaddr[11]\(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(3),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(1),
+      O => \s_axi_awaddr[11]\(1)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(4),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(2),
+      O => \s_axi_awaddr[11]\(2)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(5),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(3),
+      O => \s_axi_awaddr[11]\(3)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(6),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(4),
+      O => \s_axi_awaddr[11]\(4)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(7),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(5),
+      O => \s_axi_awaddr[11]\(5)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(8),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(6),
+      O => \s_axi_awaddr[11]\(6)
+    );
+\gaxif_ms_addr_gen.bmg_address_r[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(9),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => ADDRARDADDR(7),
+      O => \s_axi_awaddr[11]\(7)
+    );
+\gaxif_ms_addr_gen.next_address_r[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00A2FFAEFFAE00A2"
+    )
+        port map (
+      I0 => s_axi_awaddr(0),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\,
+      I4 => \gaxif_ms_addr_gen.next_address_r_reg[0]\(0),
+      I5 => \gaxif_ms_addr_gen.next_address_r_reg[0]_0\(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2\(0)
+    );
+\gaxif_ms_addr_gen.next_address_r[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awaddr(1),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_ms_addr_gen.next_address_r_reg[1]\,
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2\(1)
+    );
+\gaxif_ms_addr_gen.next_address_r[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0FFA002A000A000A"
+    )
+        port map (
+      I0 => s_axi_awvalid,
+      I1 => \^bvalid_count_r_reg[0]\,
+      I2 => \^q\(0),
+      I3 => present_state(0),
+      I4 => \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0\,
+      I5 => s_axi_wvalid,
+      O => E(0)
+    );
+\gaxif_ms_addr_gen.next_address_r[2]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"8AAA8A8A"
+    )
+        port map (
+      I0 => \gaxif_ms_addr_gen.next_address_r_reg[2]\,
+      I1 => present_state(0),
+      I2 => s_axi_awvalid,
+      I3 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I4 => \^q\(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2\(2)
+    );
+\gaxif_ms_addr_gen.num_of_bytes_r[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"00D0"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I2 => s_axi_awvalid,
+      I3 => present_state(0),
+      O => \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000A200FFFFAEFF"
+    )
+        port map (
+      I0 => s_axi_awlen(0),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(0),
+      O => D(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFAE00A200A2FFAE"
+    )
+        port map (
+      I0 => s_axi_awlen(1),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\,
+      I4 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(1),
+      I5 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(0),
+      O => D(1)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awlen(2),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg[2]\,
+      O => D(2)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awlen(3),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg[3]\,
+      O => D(3)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awlen(4),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg[4]\,
+      O => D(4)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awlen(5),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0\,
+      O => D(5)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFAE00A200A2FFAE"
+    )
+        port map (
+      I0 => s_axi_awlen(6),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => \^fsm_sequential_gaxi_full_sm.present_state_reg[0]_0\,
+      I4 => \^gaxif_wlast_gen.awlen_cntr_r_reg[5]\,
+      I5 => \gaxi_bvalid_id_r.bvalid_d1_c_reg\(6),
+      O => D(6)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[7]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"2AAF2AA2"
+    )
+        port map (
+      I0 => s_axi_wvalid,
+      I1 => \FSM_sequential_gaxi_full_sm.present_state[0]_i_3_n_0\,
+      I2 => present_state(0),
+      I3 => \^q\(0),
+      I4 => s_axi_awvalid,
+      O => s_axi_wvalid_1(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAEFF0000A200"
+    )
+        port map (
+      I0 => s_axi_awlen(7),
+      I1 => \^q\(0),
+      I2 => \FSM_sequential_gaxi_full_sm.present_state[1]_i_2_n_0\,
+      I3 => s_axi_awvalid,
+      I4 => present_state(0),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg[7]\,
+      O => D(7)
     );
 end STRUCTURE;
 library IEEE;
@@ -522,19 +1777,17 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_gen_prim_wrapper is
   port (
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \SAFETY_CKT_GEN.POR_A_reg\ : out STD_LOGIC;
+    ram_rstram_b : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     ENA_I : in STD_LOGIC;
     ENB_I : in STD_LOGIC;
     POR_A : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    ADDRARDADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ADDRBWRADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end blk_mem_gen_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_wrapper is
@@ -542,7 +1795,7 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_wrapper is
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_73\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_74\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
-  signal \^safety_ckt_gen.por_a_reg\ : STD_LOGIC;
+  signal \^ram_rstram_b\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
@@ -554,7 +1807,7 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_wrapper is
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-  \SAFETY_CKT_GEN.POR_A_reg\ <= \^safety_ckt_gen.por_a_reg\;
+  ram_rstram_b <= \^ram_rstram_b\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
@@ -735,7 +1988,7 @@ begin
     )
         port map (
       ADDRARDADDR(15) => '1',
-      ADDRARDADDR(14 downto 5) => Q(9 downto 0),
+      ADDRARDADDR(14 downto 5) => ADDRARDADDR(9 downto 0),
       ADDRARDADDR(4 downto 0) => B"11111",
       ADDRBWRADDR(15) => '1',
       ADDRBWRADDR(14 downto 5) => ADDRBWRADDR(9 downto 0),
@@ -767,7 +2020,7 @@ begin
       REGCEAREGCE => '0',
       REGCEB => '0',
       RSTRAMARSTRAM => POR_A,
-      RSTRAMB => \^safety_ckt_gen.por_a_reg\,
+      RSTRAMB => \^ram_rstram_b\,
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
@@ -781,7 +2034,7 @@ begin
         port map (
       I0 => POR_A,
       I1 => s_aresetn,
-      O => \^safety_ckt_gen.por_a_reg\
+      O => \^ram_rstram_b\
     );
 end STRUCTURE;
 library IEEE;
@@ -791,148 +2044,1024 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_read_wrapper is
   port (
     s_axi_arready : out STD_LOGIC;
-    \gaxi_lite_sm.r_valid_r_reg\ : out STD_LOGIC;
+    SS : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gaxi_full_sm.r_valid_r_reg\ : out STD_LOGIC;
+    s_axi_rlast : out STD_LOGIC;
     ENB_I : out STD_LOGIC;
     ADDRBWRADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axi_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_aclk : in STD_LOGIC;
-    ENB_dly_D : in STD_LOGIC;
-    s_axi_arvalid : in STD_LOGIC;
+    s_aresetn : in STD_LOGIC;
+    s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_rready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arid : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    ENB_dly_D : in STD_LOGIC;
+    s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_axi_read_wrapper : entity is "blk_mem_axi_read_wrapper";
 end blk_mem_gen_0_blk_mem_axi_read_wrapper;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_read_wrapper is
-  signal addr_en_c : STD_LOGIC;
-  signal araddr_reg : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_30_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_31_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_32_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_34_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_35_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_36_n_0\ : STD_LOGIC;
+  signal \^ss\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal addr_cnt_enb_r : STD_LOGIC_VECTOR ( 11 downto 1 );
+  signal ar_id_r : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal arlen_cntr : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal axi_read_fsm_n_10 : STD_LOGIC;
+  signal axi_read_fsm_n_11 : STD_LOGIC;
+  signal axi_read_fsm_n_12 : STD_LOGIC;
+  signal axi_read_fsm_n_13 : STD_LOGIC;
+  signal axi_read_fsm_n_14 : STD_LOGIC;
+  signal axi_read_fsm_n_15 : STD_LOGIC;
+  signal axi_read_fsm_n_16 : STD_LOGIC;
+  signal axi_read_fsm_n_17 : STD_LOGIC;
+  signal axi_read_fsm_n_18 : STD_LOGIC;
+  signal axi_read_fsm_n_19 : STD_LOGIC;
+  signal axi_read_fsm_n_20 : STD_LOGIC;
+  signal axi_read_fsm_n_21 : STD_LOGIC;
+  signal axi_read_fsm_n_22 : STD_LOGIC;
+  signal axi_read_fsm_n_23 : STD_LOGIC;
+  signal axi_read_fsm_n_24 : STD_LOGIC;
+  signal axi_read_fsm_n_25 : STD_LOGIC;
+  signal axi_read_fsm_n_26 : STD_LOGIC;
+  signal axi_read_fsm_n_28 : STD_LOGIC;
+  signal axi_read_fsm_n_29 : STD_LOGIC;
+  signal axi_read_fsm_n_30 : STD_LOGIC;
+  signal axi_read_fsm_n_32 : STD_LOGIC;
+  signal axi_read_fsm_n_33 : STD_LOGIC;
+  signal axi_read_fsm_n_34 : STD_LOGIC;
+  signal axi_read_fsm_n_35 : STD_LOGIC;
+  signal axi_read_fsm_n_36 : STD_LOGIC;
+  signal axi_read_fsm_n_37 : STD_LOGIC;
+  signal axi_read_fsm_n_38 : STD_LOGIC;
+  signal axi_read_fsm_n_39 : STD_LOGIC;
+  signal axi_read_fsm_n_4 : STD_LOGIC;
+  signal axi_read_fsm_n_40 : STD_LOGIC;
+  signal axi_read_fsm_n_41 : STD_LOGIC;
+  signal axi_read_fsm_n_5 : STD_LOGIC;
+  signal axi_read_fsm_n_6 : STD_LOGIC;
+  signal axi_read_fsm_n_7 : STD_LOGIC;
+  signal axi_read_fsm_n_8 : STD_LOGIC;
+  signal axi_read_fsm_n_9 : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[3]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[4]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[5]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[5]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[6]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[7]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.arlen_cntr[7]_i_4_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_4_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[11]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1]\ : STD_LOGIC;
+  signal \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2]\ : STD_LOGIC;
+  signal incr_en_r : STD_LOGIC;
+  signal p_0_in3_in : STD_LOGIC;
+  signal p_2_out : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_30\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_31\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_32\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_34\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_35\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.arlen_cntr[3]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.arlen_cntr[4]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.arlen_cntr[7]_i_4\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_3\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_2\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1\ : label is "soft_lutpair15";
 begin
+  SS(0) <= \^ss\(0);
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_30\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"08000000"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_30_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_31\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0800"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_31_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_32\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_32_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      I2 => incr_en_r,
+      I3 => p_0_in3_in,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_34\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\,
+      I1 => p_0_in3_in,
+      I2 => incr_en_r,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_34_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_35\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      I1 => incr_en_r,
+      I2 => p_0_in3_in,
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_35_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_36\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"7F"
+    )
+        port map (
+      I0 => p_0_in3_in,
+      I1 => incr_en_r,
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_36_n_0\
+    );
 axi_read_fsm: entity work.blk_mem_gen_0_blk_mem_axi_read_fsm
      port map (
       ADDRBWRADDR(9 downto 0) => ADDRBWRADDR(9 downto 0),
-      E(0) => addr_en_c,
+      D(2) => axi_read_fsm_n_11,
+      D(1) => axi_read_fsm_n_12,
+      D(0) => axi_read_fsm_n_13,
+      E(0) => axi_read_fsm_n_28,
       ENB_I => ENB_I,
       ENB_dly_D => ENB_dly_D,
-      Q(9 downto 0) => araddr_reg(9 downto 0),
-      SR(0) => SR(0),
-      \gaxi_lite_sm.r_valid_r_reg_0\ => \gaxi_lite_sm.r_valid_r_reg\,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\ => axi_read_fsm_n_6,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[1]_1\(0) => axi_read_fsm_n_29,
+      Q(2) => p_0_in3_in,
+      Q(1) => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1]\,
+      Q(0) => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0]\,
+      SR(0) => \^ss\(0),
+      addr_cnt_enb_r(6) => addr_cnt_enb_r(11),
+      addr_cnt_enb_r(5 downto 0) => addr_cnt_enb_r(6 downto 1),
+      \gaxi_full_sm.arlen_cntr_reg[0]\ => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_3_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[3]\ => \gaxi_full_sm.arlen_cntr[3]_i_2_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[4]\ => axi_read_fsm_n_22,
+      \gaxi_full_sm.arlen_cntr_reg[4]_0\ => \gaxi_full_sm.arlen_cntr[5]_i_2_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[4]_1\ => \gaxi_full_sm.arlen_cntr[4]_i_2_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[5]\ => \gaxi_full_sm.arlen_cntr[5]_i_3_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[6]\ => \gaxi_full_sm.arlen_cntr[6]_i_2_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[7]\ => axi_read_fsm_n_8,
+      \gaxi_full_sm.arlen_cntr_reg[7]_0\(7 downto 0) => arlen_cntr(7 downto 0),
+      \gaxi_full_sm.arlen_cntr_reg[7]_1\ => \gaxi_full_sm.arlen_cntr[7]_i_3_n_0\,
+      \gaxi_full_sm.arlen_cntr_reg[7]_2\ => \gaxi_full_sm.arlen_cntr[7]_i_4_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(9) => axi_read_fsm_n_32,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(8) => axi_read_fsm_n_33,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(7) => axi_read_fsm_n_34,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(6) => axi_read_fsm_n_35,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(5) => axi_read_fsm_n_36,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(4) => axi_read_fsm_n_37,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(3) => axi_read_fsm_n_38,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(2) => axi_read_fsm_n_39,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(1) => axi_read_fsm_n_40,
+      \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\(0) => axi_read_fsm_n_41,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_30_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(9) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[11]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(8) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(7) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(6) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(5) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(4) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(3) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(2) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(1) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\(0) => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]_0\ => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_4_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[3]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_36_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_35_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_34_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_32_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8]\ => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_2_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9]\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_31_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]\(0) => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1]\ => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(2) => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2]\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(1) => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1]\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\(0) => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0]\,
+      \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]_0\ => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6_n_0\,
+      \gaxi_full_sm.r_valid_r_reg_0\ => \gaxi_full_sm.r_valid_r_reg\,
+      \gaxi_full_sm.r_valid_r_reg_1\ => axi_read_fsm_n_5,
+      \grid.S_AXI_RID_reg[3]\(3 downto 0) => ar_id_r(3 downto 0),
+      incr_en_r => incr_en_r,
       s_aclk => s_aclk,
-      s_axi_araddr(9 downto 0) => s_axi_araddr(9 downto 0),
+      s_aresetn => s_aresetn,
+      s_aresetn_0(0) => axi_read_fsm_n_4,
+      s_axi_araddr(11 downto 0) => s_axi_araddr(11 downto 0),
+      s_axi_arburst(1 downto 0) => s_axi_arburst(1 downto 0),
+      \s_axi_arburst[1]\(0) => p_2_out,
+      s_axi_arid(3 downto 0) => s_axi_arid(3 downto 0),
+      \s_axi_arid[3]\(3) => axi_read_fsm_n_23,
+      \s_axi_arid[3]\(2) => axi_read_fsm_n_24,
+      \s_axi_arid[3]\(1) => axi_read_fsm_n_25,
+      \s_axi_arid[3]\(0) => axi_read_fsm_n_26,
+      s_axi_arlen(7 downto 0) => s_axi_arlen(7 downto 0),
+      \s_axi_arlen[7]\(7) => axi_read_fsm_n_14,
+      \s_axi_arlen[7]\(6) => axi_read_fsm_n_15,
+      \s_axi_arlen[7]\(5) => axi_read_fsm_n_16,
+      \s_axi_arlen[7]\(4) => axi_read_fsm_n_17,
+      \s_axi_arlen[7]\(3) => axi_read_fsm_n_18,
+      \s_axi_arlen[7]\(2) => axi_read_fsm_n_19,
+      \s_axi_arlen[7]\(1) => axi_read_fsm_n_20,
+      \s_axi_arlen[7]\(0) => axi_read_fsm_n_21,
+      s_axi_arlen_1_sp_1 => axi_read_fsm_n_9,
+      s_axi_arlen_2_sp_1 => axi_read_fsm_n_10,
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
+      s_axi_arvalid_0 => axi_read_fsm_n_7,
+      s_axi_arvalid_1(0) => axi_read_fsm_n_30,
+      s_axi_rlast => s_axi_rlast,
       s_axi_rready => s_axi_rready
     );
-\gaxi_lite_sm.araddr_reg_reg[0]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[3]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => '0'
+      INIT => X"01"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(0),
-      Q => araddr_reg(0),
-      R => SR(0)
+      I0 => arlen_cntr(0),
+      I1 => arlen_cntr(1),
+      I2 => arlen_cntr(2),
+      O => \gaxi_full_sm.arlen_cntr[3]_i_2_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[1]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[4]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => '0'
+      INIT => X"0001"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(1),
-      Q => araddr_reg(1),
-      R => SR(0)
+      I0 => arlen_cntr(2),
+      I1 => arlen_cntr(1),
+      I2 => arlen_cntr(0),
+      I3 => arlen_cntr(3),
+      O => \gaxi_full_sm.arlen_cntr[4]_i_2_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[2]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[5]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => '0'
+      INIT => X"0001"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(2),
-      Q => araddr_reg(2),
-      R => SR(0)
+      I0 => s_axi_arlen(3),
+      I1 => s_axi_arlen(1),
+      I2 => s_axi_arlen(0),
+      I3 => s_axi_arlen(2),
+      O => \gaxi_full_sm.arlen_cntr[5]_i_2_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[3]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[5]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => '0'
+      INIT => X"AAAAAAAAAAAAAAA9"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(3),
-      Q => araddr_reg(3),
-      R => SR(0)
+      I0 => arlen_cntr(5),
+      I1 => arlen_cntr(4),
+      I2 => arlen_cntr(2),
+      I3 => arlen_cntr(1),
+      I4 => arlen_cntr(0),
+      I5 => arlen_cntr(3),
+      O => \gaxi_full_sm.arlen_cntr[5]_i_3_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[4]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[6]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => '0'
+      INIT => X"0000000000000001"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(4),
-      Q => araddr_reg(4),
-      R => SR(0)
+      I0 => s_axi_arlen(2),
+      I1 => s_axi_arlen(0),
+      I2 => s_axi_arlen(1),
+      I3 => s_axi_arlen(3),
+      I4 => s_axi_arlen(4),
+      I5 => s_axi_arlen(5),
+      O => \gaxi_full_sm.arlen_cntr[6]_i_2_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[5]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[7]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => '0'
+      INIT => X"FFFFFFFE"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(5),
-      Q => araddr_reg(5),
-      R => SR(0)
+      I0 => axi_read_fsm_n_10,
+      I1 => s_axi_arlen(6),
+      I2 => s_axi_arlen(3),
+      I3 => s_axi_arlen(5),
+      I4 => s_axi_arlen(4),
+      O => \gaxi_full_sm.arlen_cntr[7]_i_3_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[6]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr[7]_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => '0'
+      INIT => X"2"
     )
         port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(6),
-      Q => araddr_reg(6),
-      R => SR(0)
+      I0 => axi_read_fsm_n_22,
+      I1 => arlen_cntr(6),
+      O => \gaxi_full_sm.arlen_cntr[7]_i_4_n_0\
     );
-\gaxi_lite_sm.araddr_reg_reg[7]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr_reg[0]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(7),
-      Q => araddr_reg(7),
-      R => SR(0)
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_21,
+      Q => arlen_cntr(0),
+      S => \^ss\(0)
     );
-\gaxi_lite_sm.araddr_reg_reg[8]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(8),
-      Q => araddr_reg(8),
-      R => SR(0)
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_20,
+      Q => arlen_cntr(1),
+      R => \^ss\(0)
     );
-\gaxi_lite_sm.araddr_reg_reg[9]\: unisim.vcomponents.FDRE
+\gaxi_full_sm.arlen_cntr_reg[2]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_araddr(9),
-      Q => araddr_reg(9),
-      R => SR(0)
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_19,
+      Q => arlen_cntr(2),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.arlen_cntr_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_18,
+      Q => arlen_cntr(3),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.arlen_cntr_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_17,
+      Q => arlen_cntr(4),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.arlen_cntr_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_16,
+      Q => arlen_cntr(5),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.arlen_cntr_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_15,
+      Q => arlen_cntr(6),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.arlen_cntr_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_29,
+      D => axi_read_fsm_n_14,
+      Q => arlen_cntr(7),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAABABBAAAAAAAA"
+    )
+        port map (
+      I0 => p_2_out,
+      I1 => axi_read_fsm_n_5,
+      I2 => axi_read_fsm_n_6,
+      I3 => axi_read_fsm_n_9,
+      I4 => axi_read_fsm_n_8,
+      I5 => addr_cnt_enb_r(11),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => s_axi_arlen(2),
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      I2 => s_axi_arlen(1),
+      I3 => s_axi_arsize(2),
+      I4 => s_axi_arsize(0),
+      I5 => s_axi_arsize(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000111"
+    )
+        port map (
+      I0 => s_axi_arlen(2),
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      I2 => s_axi_arlen(1),
+      I3 => s_axi_arsize(0),
+      I4 => s_axi_arsize(2),
+      I5 => s_axi_arsize(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000010003000B"
+    )
+        port map (
+      I0 => s_axi_arlen(1),
+      I1 => s_axi_arlen(2),
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      I3 => s_axi_arsize(2),
+      I4 => s_axi_arsize(0),
+      I5 => s_axi_arsize(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00101111001F113F"
+    )
+        port map (
+      I0 => s_axi_arsize(1),
+      I1 => s_axi_arsize(2),
+      I2 => s_axi_arlen(1),
+      I3 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      I4 => s_axi_arsize(0),
+      I5 => s_axi_arlen(2),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000F000F020FFFFF"
+    )
+        port map (
+      I0 => s_axi_arlen(1),
+      I1 => s_axi_arsize(0),
+      I2 => s_axi_arsize(2),
+      I3 => s_axi_arsize(1),
+      I4 => s_axi_arlen(2),
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1515FFFF151515FF"
+    )
+        port map (
+      I0 => s_axi_arsize(2),
+      I1 => s_axi_arsize(1),
+      I2 => s_axi_arsize(0),
+      I3 => s_axi_arlen(2),
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\,
+      I5 => s_axi_arlen(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_3_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFEFFFF"
+    )
+        port map (
+      I0 => s_axi_arlen(6),
+      I1 => s_axi_arlen(3),
+      I2 => s_axi_arlen(5),
+      I3 => s_axi_arlen(4),
+      I4 => s_axi_arlen(0),
+      I5 => s_axi_arlen(7),
+      O => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_7_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[11]_i_1_n_0\,
+      Q => addr_cnt_enb_r(11),
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[1]_i_1_n_0\,
+      Q => addr_cnt_enb_r(1),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[2]_i_1_n_0\,
+      Q => addr_cnt_enb_r(2),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[3]_i_1_n_0\,
+      Q => addr_cnt_enb_r(3),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[4]_i_1_n_0\,
+      Q => addr_cnt_enb_r(4),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[5]_i_1_n_0\,
+      Q => addr_cnt_enb_r(5),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_2_out,
+      D => \gaxi_full_sm.gaxifull_mem_slave.addr_cnt_enb_r[6]_i_3_n_0\,
+      Q => addr_cnt_enb_r(6),
+      R => axi_read_fsm_n_4
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0008"
+    )
+        port map (
+      I0 => s_axi_rready,
+      I1 => axi_read_fsm_n_22,
+      I2 => arlen_cntr(6),
+      I3 => arlen_cntr(7),
+      O => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_3_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0080000000000000"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10]\,
+      I1 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\,
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      I4 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      I5 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[11]_i_4_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_33_n_0\,
+      I2 => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      O => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r[8]_i_2_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_33,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[10]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_32,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[11]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_41,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[2]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_40,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[3]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_39,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[4]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_38,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[5]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_37,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[6]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_36,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[7]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_35,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[8]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_34,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.bmg_address_r_reg_n_0_[9]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => s_axi_arburst(1),
+      I1 => s_axi_arburst(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.incr_en_r_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => \gaxi_full_sm.gaxifull_mem_slave.incr_en_r_i_1_n_0\,
+      Q => incr_en_r,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FCFD"
+    )
+        port map (
+      I0 => s_axi_araddr(0),
+      I1 => s_axi_arsize(2),
+      I2 => s_axi_arsize(1),
+      I3 => s_axi_arsize(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[1]_i_2_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF0FF57"
+    )
+        port map (
+      I0 => s_axi_araddr(1),
+      I1 => s_axi_araddr(0),
+      I2 => s_axi_arsize(0),
+      I3 => s_axi_arsize(2),
+      I4 => s_axi_arsize(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.next_address_r[2]_i_6_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_13,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[0]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_12,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg_n_0_[1]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.next_address_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_30,
+      D => axi_read_fsm_n_11,
+      Q => p_0_in3_in,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => s_axi_arsize(2),
+      I1 => s_axi_arsize(0),
+      I2 => s_axi_arsize(1),
+      O => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => s_axi_arsize(0),
+      I1 => s_axi_arsize(1),
+      I2 => s_axi_arsize(2),
+      O => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => s_axi_arsize(1),
+      I1 => s_axi_arsize(2),
+      I2 => s_axi_arsize(0),
+      O => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0\
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[0]_i_1_n_0\,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[0]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[1]_i_1_n_0\,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[1]\,
+      R => \^ss\(0)
+    );
+\gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r[2]_i_1_n_0\,
+      Q => \gaxi_full_sm.gaxifull_mem_slave.num_of_bytes_r_reg_n_0_[2]\,
+      R => \^ss\(0)
+    );
+\grid.S_AXI_RID_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_28,
+      D => axi_read_fsm_n_26,
+      Q => s_axi_rid(0),
+      R => \^ss\(0)
+    );
+\grid.S_AXI_RID_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_28,
+      D => axi_read_fsm_n_25,
+      Q => s_axi_rid(1),
+      R => \^ss\(0)
+    );
+\grid.S_AXI_RID_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_28,
+      D => axi_read_fsm_n_24,
+      Q => s_axi_rid(2),
+      R => \^ss\(0)
+    );
+\grid.S_AXI_RID_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_28,
+      D => axi_read_fsm_n_23,
+      Q => s_axi_rid(3),
+      R => \^ss\(0)
+    );
+\grid.ar_id_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => s_axi_arid(0),
+      Q => ar_id_r(0),
+      R => \^ss\(0)
+    );
+\grid.ar_id_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => s_axi_arid(1),
+      Q => ar_id_r(1),
+      R => \^ss\(0)
+    );
+\grid.ar_id_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => s_axi_arid(2),
+      Q => ar_id_r(2),
+      R => \^ss\(0)
+    );
+\grid.ar_id_r_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_read_fsm_n_7,
+      D => s_axi_arid(3),
+      Q => ar_id_r(3),
+      R => \^ss\(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -942,95 +3071,388 @@ use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_axi_write_wrapper is
   port (
     s_axi_awready : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wready : out STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg_0\ : out STD_LOGIC;
+    \gaxi_bvalid_id_r.bvalid_r_reg_0\ : out STD_LOGIC;
+    ADDRARDADDR : out STD_LOGIC_VECTOR ( 9 downto 0 );
     ENA_I : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    s_axi_bid : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    SS : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_aclk : in STD_LOGIC;
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    ENA_dly_D : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    ENA_dly_D : in STD_LOGIC;
+    s_axi_awid : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_axi_write_wrapper : entity is "blk_mem_axi_write_wrapper";
 end blk_mem_gen_0_blk_mem_axi_write_wrapper;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_axi_write_wrapper is
-  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^addrardaddr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal CONV_INTEGER : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_25_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_27_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_28_n_0\ : STD_LOGIC;
   signal addr_en_c : STD_LOGIC;
-  signal axi_wr_fsm_n_6 : STD_LOGIC;
+  signal axi_wr_fsm_n_17 : STD_LOGIC;
+  signal axi_wr_fsm_n_2 : STD_LOGIC;
+  signal axi_wr_fsm_n_22 : STD_LOGIC;
+  signal axi_wr_fsm_n_23 : STD_LOGIC;
+  signal axi_wr_fsm_n_24 : STD_LOGIC;
+  signal axi_wr_fsm_n_25 : STD_LOGIC;
+  signal axi_wr_fsm_n_26 : STD_LOGIC;
+  signal axi_wr_fsm_n_27 : STD_LOGIC;
+  signal axi_wr_fsm_n_28 : STD_LOGIC;
+  signal axi_wr_fsm_n_29 : STD_LOGIC;
+  signal axi_wr_fsm_n_3 : STD_LOGIC;
+  signal axi_wr_fsm_n_30 : STD_LOGIC;
+  signal axi_wr_fsm_n_31 : STD_LOGIC;
+  signal axi_wr_fsm_n_33 : STD_LOGIC;
+  signal axi_wr_fsm_n_35 : STD_LOGIC;
+  signal axi_wr_fsm_n_36 : STD_LOGIC;
+  signal axi_wr_fsm_n_37 : STD_LOGIC;
+  signal axi_wr_fsm_n_4 : STD_LOGIC;
+  signal axi_wr_fsm_n_5 : STD_LOGIC;
+  signal axi_wr_fsm_n_8 : STD_LOGIC;
+  signal bmg_address_r : STD_LOGIC_VECTOR ( 11 downto 2 );
+  signal bvalid_c : STD_LOGIC;
   signal \bvalid_count_r[0]_i_1_n_0\ : STD_LOGIC;
   signal \bvalid_count_r[1]_i_1_n_0\ : STD_LOGIC;
   signal \bvalid_count_r[2]_i_1_n_0\ : STD_LOGIC;
   signal \bvalid_count_r_reg_n_0_[0]\ : STD_LOGIC;
   signal \bvalid_count_r_reg_n_0_[1]\ : STD_LOGIC;
   signal \bvalid_count_r_reg_n_0_[2]\ : STD_LOGIC;
-  signal \^gaxi_bvalid_noid_r.bvalid_r_reg_0\ : STD_LOGIC;
-  signal s_axi_wr_en_c : STD_LOGIC;
+  signal bvalid_d1_c : STD_LOGIC;
+  signal bvalid_rd_cnt_r : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal bvalid_wr_cnt_r : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_0\ : STD_LOGIC;
+  signal \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_1\ : STD_LOGIC;
+  signal \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_2\ : STD_LOGIC;
+  signal \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_3\ : STD_LOGIC;
+  signal \gaxi_bvalid_id_r.bvalid_r_i_1_n_0\ : STD_LOGIC;
+  signal \^gaxi_bvalid_id_r.bvalid_r_reg_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[2]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[3]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[2]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[3]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[4]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[5]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[6]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.next_address_r[1]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.next_address_r[2]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[1]\ : STD_LOGIC;
+  signal \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[2]\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r[4]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r[5]_i_2_n_0\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r[7]_i_3_n_0\ : STD_LOGIC;
+  signal \gaxif_wlast_gen.awlen_cntr_r_reg__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal incr_en_r : STD_LOGIC;
+  signal next_address_r : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal num_of_bytes_c : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal p_0_in : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal p_0_in5_in : STD_LOGIC;
+  signal p_0_out : STD_LOGIC;
+  signal p_1_in : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal p_4_out : STD_LOGIC;
+  signal present_state : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal \NLW_gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_DOC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  attribute METHODOLOGY_DRC_VIOS : string;
+  attribute METHODOLOGY_DRC_VIOS of \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\ : label is "";
+  attribute ram_addr_begin : integer;
+  attribute ram_addr_begin of \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\ : label is 0;
+  attribute ram_addr_end : integer;
+  attribute ram_addr_end of \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\ : label is 3;
+  attribute ram_slice_begin : integer;
+  attribute ram_slice_begin of \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\ : label is 0;
+  attribute ram_slice_end : integer;
+  attribute ram_slice_end of \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\ : label is 3;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.incr_en_r_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.next_address_r[1]_i_2\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.next_address_r[2]_i_3\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \gaxif_ms_addr_gen.num_of_bytes_r[2]_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \gaxif_wlast_gen.awlen_cntr_r[3]_i_2\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \gaxif_wlast_gen.awlen_cntr_r[4]_i_2\ : label is "soft_lutpair20";
 begin
-  SR(0) <= \^sr\(0);
-  \gaxi_bvalid_noid_r.bvalid_r_reg_0\ <= \^gaxi_bvalid_noid_r.bvalid_r_reg_0\;
+  ADDRARDADDR(9 downto 0) <= \^addrardaddr\(9 downto 0);
+  \gaxi_bvalid_id_r.bvalid_r_reg_0\ <= \^gaxi_bvalid_id_r.bvalid_r_reg_0\;
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_10\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A9"
+    )
+        port map (
+      I0 => bmg_address_r(5),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_28_n_0\,
+      I2 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[5]\,
+      O => \^addrardaddr\(3)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAA6AAAAAAA"
+    )
+        port map (
+      I0 => bmg_address_r(4),
+      I1 => bmg_address_r(2),
+      I2 => incr_en_r,
+      I3 => p_0_in5_in,
+      I4 => bmg_address_r(3),
+      I5 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[4]\,
+      O => \^addrardaddr\(2)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_12\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAA6AAA"
+    )
+        port map (
+      I0 => bmg_address_r(3),
+      I1 => p_0_in5_in,
+      I2 => incr_en_r,
+      I3 => bmg_address_r(2),
+      I4 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[3]\,
+      O => \^addrardaddr\(1)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_13\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AA6A"
+    )
+        port map (
+      I0 => bmg_address_r(2),
+      I1 => incr_en_r,
+      I2 => p_0_in5_in,
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[2]\,
+      O => \^addrardaddr\(0)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000080000000000"
+    )
+        port map (
+      I0 => bmg_address_r(9),
+      I1 => bmg_address_r(8),
+      I2 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      I3 => bmg_address_r(6),
+      I4 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I5 => bmg_address_r(7),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_25_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => bmg_address_r(4),
+      I1 => bmg_address_r(2),
+      I2 => incr_en_r,
+      I3 => p_0_in5_in,
+      I4 => bmg_address_r(3),
+      I5 => bmg_address_r(5),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_27\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      I1 => bmg_address_r(6),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_27_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_28\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => bmg_address_r(3),
+      I1 => p_0_in5_in,
+      I2 => incr_en_r,
+      I3 => bmg_address_r(2),
+      I4 => bmg_address_r(4),
+      O => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_28_n_0\
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"6A"
+    )
+        port map (
+      I0 => bmg_address_r(11),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_25_n_0\,
+      I2 => bmg_address_r(10),
+      O => \^addrardaddr\(9)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAA6AAAAAAAAAAAA"
+    )
+        port map (
+      I0 => bmg_address_r(10),
+      I1 => bmg_address_r(7),
+      I2 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_27_n_0\,
+      I4 => bmg_address_r(8),
+      I5 => bmg_address_r(9),
+      O => \^addrardaddr\(8)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFDFFFFF00200000"
+    )
+        port map (
+      I0 => bmg_address_r(7),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I2 => bmg_address_r(6),
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      I4 => bmg_address_r(8),
+      I5 => bmg_address_r(9),
+      O => \^addrardaddr\(7)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AA9AAAAA"
+    )
+        port map (
+      I0 => bmg_address_r(8),
+      I1 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      I2 => bmg_address_r(6),
+      I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I4 => bmg_address_r(7),
+      O => \^addrardaddr\(6)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AA9A"
+    )
+        port map (
+      I0 => bmg_address_r(7),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I2 => bmg_address_r(6),
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      O => \^addrardaddr\(5)
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_9\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A9"
+    )
+        port map (
+      I0 => bmg_address_r(6),
+      I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_26_n_0\,
+      I2 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[6]\,
+      O => \^addrardaddr\(4)
+    );
 axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
      port map (
-      E(0) => addr_en_c,
+      ADDRARDADDR(8 downto 0) => \^addrardaddr\(8 downto 0),
+      D(7 downto 0) => p_0_in(7 downto 0),
+      E(0) => axi_wr_fsm_n_8,
       ENA_I => ENA_I,
       ENA_dly_D => ENA_dly_D,
-      SR(0) => \^sr\(0),
-      \bvalid_count_r_reg[1]\ => axi_wr_fsm_n_6,
-      \gaxi_bvalid_noid_r.bvalid_r_reg\ => \bvalid_count_r_reg_n_0_[2]\,
-      \gaxi_bvalid_noid_r.bvalid_r_reg_0\ => \bvalid_count_r_reg_n_0_[1]\,
-      \gaxi_bvalid_noid_r.bvalid_r_reg_1\ => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      \gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\ => \bvalid_count_r_reg_n_0_[0]\,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_0\ => axi_wr_fsm_n_3,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_1\(0) => p_4_out,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_2\(2 downto 0) => next_address_r(2 downto 0),
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_3\ => \bvalid_count_r_reg_n_0_[0]\,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_4\ => \bvalid_count_r_reg_n_0_[2]\,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[0]_5\ => \bvalid_count_r_reg_n_0_[1]\,
+      \FSM_sequential_gaxi_full_sm.present_state_reg[1]_0\(0) => addr_en_c,
+      I17 => axi_wr_fsm_n_33,
+      Q(0) => present_state(1),
+      SR(0) => axi_wr_fsm_n_2,
+      SS(0) => SS(0),
+      bvalid_c => bvalid_c,
+      \bvalid_count_r_reg[0]\ => axi_wr_fsm_n_4,
+      \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]\ => axi_wr_fsm_n_36,
+      \gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]_0\ => axi_wr_fsm_n_37,
+      \gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\(1 downto 0) => bvalid_wr_cnt_r(1 downto 0),
+      \gaxi_bvalid_id_r.bvalid_d1_c_reg\(7 downto 0) => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(7 downto 0),
+      \gaxif_ms_addr_gen.addr_cnt_enb_reg[2]\ => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5_n_0\,
+      \gaxif_ms_addr_gen.bmg_address_r_reg[11]\(1 downto 0) => bmg_address_r(11 downto 10),
+      \gaxif_ms_addr_gen.bmg_address_r_reg[11]_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_25_n_0\,
+      \gaxif_ms_addr_gen.next_address_r_reg[0]\(0) => p_1_in(0),
+      \gaxif_ms_addr_gen.next_address_r_reg[0]_0\(0) => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0]\,
+      \gaxif_ms_addr_gen.next_address_r_reg[1]\ => \gaxif_ms_addr_gen.next_address_r[1]_i_2_n_0\,
+      \gaxif_ms_addr_gen.next_address_r_reg[2]\ => \gaxif_ms_addr_gen.next_address_r[2]_i_3_n_0\,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[2]\ => \gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0\,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[3]\ => \gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0\,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[4]\ => \gaxif_wlast_gen.awlen_cntr_r[4]_i_2_n_0\,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[5]\ => axi_wr_fsm_n_17,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[5]_0\ => \gaxif_wlast_gen.awlen_cntr_r[5]_i_2_n_0\,
+      \gaxif_wlast_gen.awlen_cntr_r_reg[7]\ => \gaxif_wlast_gen.awlen_cntr_r[7]_i_3_n_0\,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
+      s_axi_awaddr(11 downto 0) => s_axi_awaddr(11 downto 0),
+      \s_axi_awaddr[11]\(9) => axi_wr_fsm_n_22,
+      \s_axi_awaddr[11]\(8) => axi_wr_fsm_n_23,
+      \s_axi_awaddr[11]\(7) => axi_wr_fsm_n_24,
+      \s_axi_awaddr[11]\(6) => axi_wr_fsm_n_25,
+      \s_axi_awaddr[11]\(5) => axi_wr_fsm_n_26,
+      \s_axi_awaddr[11]\(4) => axi_wr_fsm_n_27,
+      \s_axi_awaddr[11]\(3) => axi_wr_fsm_n_28,
+      \s_axi_awaddr[11]\(2) => axi_wr_fsm_n_29,
+      \s_axi_awaddr[11]\(1) => axi_wr_fsm_n_30,
+      \s_axi_awaddr[11]\(0) => axi_wr_fsm_n_31,
+      s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
+      s_axi_awlen(7 downto 0) => s_axi_awlen(7 downto 0),
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
-      s_axi_wr_en_c => s_axi_wr_en_c,
       s_axi_wready => s_axi_wready,
-      s_axi_wvalid => s_axi_wvalid
+      s_axi_wvalid => s_axi_wvalid,
+      s_axi_wvalid_0 => axi_wr_fsm_n_5,
+      s_axi_wvalid_1(0) => axi_wr_fsm_n_35
     );
 \bvalid_count_r[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"959595956A6A6A2A"
     )
         port map (
-      I0 => s_axi_wr_en_c,
-      I1 => s_axi_bready,
-      I2 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      I3 => \bvalid_count_r_reg_n_0_[1]\,
-      I4 => \bvalid_count_r_reg_n_0_[2]\,
+      I0 => bvalid_c,
+      I1 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      I2 => s_axi_bready,
+      I3 => \bvalid_count_r_reg_n_0_[2]\,
+      I4 => \bvalid_count_r_reg_n_0_[1]\,
       I5 => \bvalid_count_r_reg_n_0_[0]\,
       O => \bvalid_count_r[0]_i_1_n_0\
     );
 \bvalid_count_r[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F03C3C3CC2F0F0F0"
+      INIT => X"AA5A5A5AA4AAAAAA"
     )
         port map (
-      I0 => \bvalid_count_r_reg_n_0_[2]\,
-      I1 => \bvalid_count_r_reg_n_0_[0]\,
-      I2 => \bvalid_count_r_reg_n_0_[1]\,
-      I3 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      I4 => s_axi_bready,
-      I5 => s_axi_wr_en_c,
+      I0 => \bvalid_count_r_reg_n_0_[1]\,
+      I1 => \bvalid_count_r_reg_n_0_[2]\,
+      I2 => \bvalid_count_r_reg_n_0_[0]\,
+      I3 => s_axi_bready,
+      I4 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      I5 => bvalid_c,
       O => \bvalid_count_r[1]_i_1_n_0\
     );
 \bvalid_count_r[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA6A6A6AA8AAAAAA"
+      INIT => X"CC6C6C6CC8CCCCCC"
     )
         port map (
-      I0 => \bvalid_count_r_reg_n_0_[2]\,
-      I1 => \bvalid_count_r_reg_n_0_[0]\,
-      I2 => \bvalid_count_r_reg_n_0_[1]\,
-      I3 => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      I4 => s_axi_bready,
-      I5 => s_axi_wr_en_c,
+      I0 => \bvalid_count_r_reg_n_0_[1]\,
+      I1 => \bvalid_count_r_reg_n_0_[2]\,
+      I2 => \bvalid_count_r_reg_n_0_[0]\,
+      I3 => s_axi_bready,
+      I4 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      I5 => bvalid_c,
       O => \bvalid_count_r[2]_i_1_n_0\
     );
 \bvalid_count_r_reg[0]\: unisim.vcomponents.FDRE
@@ -1042,7 +3464,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       CE => '1',
       D => \bvalid_count_r[0]_i_1_n_0\,
       Q => \bvalid_count_r_reg_n_0_[0]\,
-      R => \^sr\(0)
+      R => SS(0)
     );
 \bvalid_count_r_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -1053,7 +3475,7 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       CE => '1',
       D => \bvalid_count_r[1]_i_1_n_0\,
       Q => \bvalid_count_r_reg_n_0_[1]\,
-      R => \^sr\(0)
+      R => SS(0)
     );
 \bvalid_count_r_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -1064,98 +3486,738 @@ axi_wr_fsm: entity work.blk_mem_gen_0_blk_mem_axi_write_fsm
       CE => '1',
       D => \bvalid_count_r[2]_i_1_n_0\,
       Q => \bvalid_count_r_reg_n_0_[2]\,
-      R => \^sr\(0)
+      R => SS(0)
     );
-\gaxi_bvalid_noid_r.bvalid_r_reg\: unisim.vcomponents.FDRE
+\gaxi_bid_gen.S_AXI_BID_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => s_aresetn,
+      D => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_1\,
+      Q => s_axi_bid(0),
+      R => '0'
+    );
+\gaxi_bid_gen.S_AXI_BID_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => s_aresetn,
+      D => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_0\,
+      Q => s_axi_bid(1),
+      R => '0'
+    );
+\gaxi_bid_gen.S_AXI_BID_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => s_aresetn,
+      D => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_3\,
+      Q => s_axi_bid(2),
+      R => '0'
+    );
+\gaxi_bid_gen.S_AXI_BID_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => s_aresetn,
+      D => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_2\,
+      Q => s_axi_bid(3),
+      R => '0'
+    );
+\gaxi_bid_gen.axi_bid_array_reg_0_3_0_3\: unisim.vcomponents.RAM32M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(4 downto 2) => B"000",
+      ADDRA(1 downto 0) => CONV_INTEGER(1 downto 0),
+      ADDRB(4 downto 2) => B"000",
+      ADDRB(1 downto 0) => CONV_INTEGER(1 downto 0),
+      ADDRC(4 downto 2) => B"000",
+      ADDRC(1 downto 0) => CONV_INTEGER(1 downto 0),
+      ADDRD(4 downto 2) => B"000",
+      ADDRD(1 downto 0) => bvalid_wr_cnt_r(1 downto 0),
+      DIA(1 downto 0) => s_axi_awid(1 downto 0),
+      DIB(1 downto 0) => s_axi_awid(3 downto 2),
+      DIC(1 downto 0) => B"00",
+      DID(1 downto 0) => B"00",
+      DOA(1) => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_0\,
+      DOA(0) => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_1\,
+      DOB(1) => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_2\,
+      DOB(0) => \gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_n_3\,
+      DOC(1 downto 0) => \NLW_gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_DOC_UNCONNECTED\(1 downto 0),
+      DOD(1 downto 0) => \NLW_gaxi_bid_gen.axi_bid_array_reg_0_3_0_3_DOD_UNCONNECTED\(1 downto 0),
+      WCLK => s_aclk,
+      WE => axi_wr_fsm_n_33
+    );
+\gaxi_bid_gen.bvalid_rd_cnt_r[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"6A"
+    )
+        port map (
+      I0 => bvalid_rd_cnt_r(0),
+      I1 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      I2 => s_axi_bready,
+      O => CONV_INTEGER(0)
+    );
+\gaxi_bid_gen.bvalid_rd_cnt_r[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6AAA"
+    )
+        port map (
+      I0 => bvalid_rd_cnt_r(1),
+      I1 => s_axi_bready,
+      I2 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      I3 => bvalid_rd_cnt_r(0),
+      O => CONV_INTEGER(1)
+    );
+\gaxi_bid_gen.bvalid_rd_cnt_r_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => s_aclk,
       CE => '1',
-      D => axi_wr_fsm_n_6,
-      Q => \^gaxi_bvalid_noid_r.bvalid_r_reg_0\,
-      R => \^sr\(0)
+      D => CONV_INTEGER(0),
+      Q => bvalid_rd_cnt_r(0),
+      R => SS(0)
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+\gaxi_bid_gen.bvalid_rd_cnt_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => CONV_INTEGER(1),
+      Q => bvalid_rd_cnt_r(1),
+      R => SS(0)
+    );
+\gaxi_bid_gen.bvalid_wr_cnt_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => axi_wr_fsm_n_37,
+      Q => bvalid_wr_cnt_r(0),
+      R => SS(0)
+    );
+\gaxi_bid_gen.bvalid_wr_cnt_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => axi_wr_fsm_n_36,
+      Q => bvalid_wr_cnt_r(1),
+      R => SS(0)
+    );
+\gaxi_bvalid_id_r.bvalid_d1_c_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => bvalid_c,
+      Q => bvalid_d1_c,
+      R => SS(0)
+    );
+\gaxi_bvalid_id_r.bvalid_r_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FEFFAAAA"
+    )
+        port map (
+      I0 => bvalid_d1_c,
+      I1 => \bvalid_count_r_reg_n_0_[1]\,
+      I2 => \bvalid_count_r_reg_n_0_[2]\,
+      I3 => s_axi_bready,
+      I4 => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      O => \gaxi_bvalid_id_r.bvalid_r_i_1_n_0\
+    );
+\gaxi_bvalid_id_r.bvalid_r_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxi_bvalid_id_r.bvalid_r_i_1_n_0\,
+      Q => \^gaxi_bvalid_id_r.bvalid_r_reg_0\,
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F1F5F00001151"
+    )
+        port map (
+      I0 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5_n_0\,
+      I1 => present_state(1),
+      I2 => axi_wr_fsm_n_5,
+      I3 => axi_wr_fsm_n_4,
+      I4 => axi_wr_fsm_n_3,
+      I5 => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000111"
+    )
+        port map (
+      I0 => s_axi_awlen(2),
+      I1 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\,
+      I2 => s_axi_awlen(1),
+      I3 => s_axi_awsize(0),
+      I4 => s_axi_awsize(1),
+      I5 => s_axi_awsize(2),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[2]_i_1_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0001000000110013"
+    )
+        port map (
+      I0 => s_axi_awsize(1),
+      I1 => s_axi_awsize(2),
+      I2 => s_axi_awsize(0),
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\,
+      I4 => s_axi_awlen(1),
+      I5 => s_axi_awlen(2),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[3]_i_1_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0005000501053F37"
+    )
+        port map (
+      I0 => s_axi_awlen(2),
+      I1 => s_axi_awsize(0),
+      I2 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\,
+      I3 => s_axi_awlen(1),
+      I4 => s_axi_awsize(1),
+      I5 => s_axi_awsize(2),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00553377005533F7"
+    )
+        port map (
+      I0 => s_axi_awlen(2),
+      I1 => s_axi_awsize(1),
+      I2 => s_axi_awlen(1),
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\,
+      I4 => s_axi_awsize(2),
+      I5 => s_axi_awsize(0),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F533F700F5FFFF"
+    )
+        port map (
+      I0 => s_axi_awlen(2),
+      I1 => s_axi_awsize(1),
+      I2 => s_axi_awlen(1),
+      I3 => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\,
+      I4 => s_axi_awsize(2),
+      I5 => s_axi_awsize(0),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_3_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => s_axi_awburst(0),
+      I1 => s_axi_awburst(1),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_5_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFEFFFFFFFF"
+    )
+        port map (
+      I0 => s_axi_awlen(5),
+      I1 => s_axi_awlen(6),
+      I2 => s_axi_awlen(7),
+      I3 => s_axi_awlen(4),
+      I4 => s_axi_awlen(3),
+      I5 => s_axi_awlen(0),
+      O => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_6_n_0\
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => '1',
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[11]_i_1_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[11]\,
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_4_out,
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[2]_i_1_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[2]\,
+      R => axi_wr_fsm_n_2
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_4_out,
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[3]_i_1_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[3]\,
+      R => axi_wr_fsm_n_2
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_4_out,
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[4]_i_1_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[4]\,
+      R => axi_wr_fsm_n_2
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_4_out,
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[5]_i_1_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[5]\,
+      R => axi_wr_fsm_n_2
+    );
+\gaxif_ms_addr_gen.addr_cnt_enb_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => p_4_out,
+      D => \gaxif_ms_addr_gen.addr_cnt_enb[6]_i_3_n_0\,
+      Q => \gaxif_ms_addr_gen.addr_cnt_enb_reg_n_0_[6]\,
+      R => axi_wr_fsm_n_2
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_23,
+      Q => bmg_address_r(10),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_22,
+      Q => bmg_address_r(11),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_31,
+      Q => bmg_address_r(2),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_30,
+      Q => bmg_address_r(3),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_29,
+      Q => bmg_address_r(4),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_28,
+      Q => bmg_address_r(5),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_27,
+      Q => bmg_address_r(6),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_26,
+      Q => bmg_address_r(7),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_25,
+      Q => bmg_address_r(8),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.bmg_address_r_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => axi_wr_fsm_n_24,
+      Q => bmg_address_r(9),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.incr_en_r_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => s_axi_awburst(1),
+      I1 => s_axi_awburst(0),
+      O => p_0_out
+    );
+\gaxif_ms_addr_gen.incr_en_r_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_aclk,
       CE => addr_en_c,
-      D => s_axi_awaddr(0),
-      Q => Q(0),
-      R => \^sr\(0)
+      D => p_0_out,
+      Q => incr_en_r,
+      R => SS(0)
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+\gaxif_ms_addr_gen.next_address_r[1]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8778"
+    )
+        port map (
+      I0 => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0]\,
+      I1 => p_1_in(0),
+      I2 => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[1]\,
+      I3 => p_1_in(1),
+      O => \gaxif_ms_addr_gen.next_address_r[1]_i_2_n_0\
+    );
+\gaxif_ms_addr_gen.next_address_r[2]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"566A6A6A"
+    )
+        port map (
+      I0 => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[2]\,
+      I1 => p_1_in(1),
+      I2 => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[1]\,
+      I3 => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0]\,
+      I4 => p_1_in(0),
+      O => \gaxif_ms_addr_gen.next_address_r[2]_i_3_n_0\
+    );
+\gaxif_ms_addr_gen.next_address_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => next_address_r(0),
+      Q => p_1_in(0),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.next_address_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => next_address_r(1),
+      Q => p_1_in(1),
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.next_address_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_8,
+      D => next_address_r(2),
+      Q => p_0_in5_in,
+      R => SS(0)
+    );
+\gaxif_ms_addr_gen.num_of_bytes_r[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => s_axi_awsize(0),
+      I1 => s_axi_awsize(2),
+      I2 => s_axi_awsize(1),
+      O => num_of_bytes_c(0)
+    );
+\gaxif_ms_addr_gen.num_of_bytes_r[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => s_axi_awsize(0),
+      I1 => s_axi_awsize(2),
+      I2 => s_axi_awsize(1),
+      O => num_of_bytes_c(1)
+    );
+\gaxif_ms_addr_gen.num_of_bytes_r[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"02"
+    )
+        port map (
+      I0 => s_axi_awsize(1),
+      I1 => s_axi_awsize(0),
+      I2 => s_axi_awsize(2),
+      O => num_of_bytes_c(2)
+    );
+\gaxif_ms_addr_gen.num_of_bytes_r_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_aclk,
       CE => addr_en_c,
-      D => s_axi_awaddr(1),
-      Q => Q(1),
-      R => \^sr\(0)
+      D => num_of_bytes_c(0),
+      Q => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[0]\,
+      R => SS(0)
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[2]\: unisim.vcomponents.FDRE
-     port map (
+\gaxif_ms_addr_gen.num_of_bytes_r_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_aclk,
       CE => addr_en_c,
-      D => s_axi_awaddr(2),
-      Q => Q(2),
-      R => \^sr\(0)
+      D => num_of_bytes_c(1),
+      Q => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[1]\,
+      R => SS(0)
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[3]\: unisim.vcomponents.FDRE
-     port map (
+\gaxif_ms_addr_gen.num_of_bytes_r_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => s_aclk,
       CE => addr_en_c,
-      D => s_axi_awaddr(3),
-      Q => Q(3),
-      R => \^sr\(0)
+      D => num_of_bytes_c(2),
+      Q => \gaxif_ms_addr_gen.num_of_bytes_r_reg_n_0_[2]\,
+      R => SS(0)
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(4),
-      Q => Q(4),
-      R => \^sr\(0)
+\gaxif_wlast_gen.awlen_cntr_r[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E1"
+    )
+        port map (
+      I0 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(1),
+      I1 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(0),
+      I2 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(2),
+      O => \gaxif_wlast_gen.awlen_cntr_r[2]_i_2_n_0\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(5),
-      Q => Q(5),
-      R => \^sr\(0)
+\gaxif_wlast_gen.awlen_cntr_r[3]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FE01"
+    )
+        port map (
+      I0 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(2),
+      I1 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(0),
+      I2 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(1),
+      I3 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(3),
+      O => \gaxif_wlast_gen.awlen_cntr_r[3]_i_2_n_0\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(6),
-      Q => Q(6),
-      R => \^sr\(0)
+\gaxif_wlast_gen.awlen_cntr_r[4]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFE0001"
+    )
+        port map (
+      I0 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(3),
+      I1 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(1),
+      I2 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(0),
+      I3 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(2),
+      I4 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(4),
+      O => \gaxif_wlast_gen.awlen_cntr_r[4]_i_2_n_0\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(7),
-      Q => Q(7),
-      R => \^sr\(0)
+\gaxif_wlast_gen.awlen_cntr_r[5]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE00000001"
+    )
+        port map (
+      I0 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(4),
+      I1 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(2),
+      I2 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(0),
+      I3 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(1),
+      I4 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(3),
+      I5 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(5),
+      O => \gaxif_wlast_gen.awlen_cntr_r[5]_i_2_n_0\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(8),
-      Q => Q(8),
-      R => \^sr\(0)
+\gaxif_wlast_gen.awlen_cntr_r[7]_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E1"
+    )
+        port map (
+      I0 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(6),
+      I1 => axi_wr_fsm_n_17,
+      I2 => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(7),
+      O => \gaxif_wlast_gen.awlen_cntr_r[7]_i_3_n_0\
     );
-\gaxi_lite_addr_gen.S_AXI_AWADDR_OUT_reg[9]\: unisim.vcomponents.FDRE
-     port map (
+\gaxif_wlast_gen.awlen_cntr_r_reg[0]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
       C => s_aclk,
-      CE => addr_en_c,
-      D => s_axi_awaddr(9),
-      Q => Q(9),
-      R => \^sr\(0)
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(0),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(0),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[1]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(1),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(1),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[2]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(2),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(2),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[3]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(3),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(3),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[4]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(4),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(4),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[5]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(5),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(5),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[6]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(6),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(6),
+      S => SS(0)
+    );
+\gaxif_wlast_gen.awlen_cntr_r_reg[7]\: unisim.vcomponents.FDSE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => s_aclk,
+      CE => axi_wr_fsm_n_35,
+      D => p_0_in(7),
+      Q => \gaxif_wlast_gen.awlen_cntr_r_reg__0\(7),
+      S => SS(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -1172,14 +4234,12 @@ entity blk_mem_gen_0_blk_mem_gen_prim_width is
     s_aclk : in STD_LOGIC;
     ENA_I : in STD_LOGIC;
     ENB_I : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    ADDRARDADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ADDRBWRADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end blk_mem_gen_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_width is
@@ -1188,12 +4248,11 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_prim_width is
   signal ENB_dly : STD_LOGIC;
   signal \^enb_dly_d\ : STD_LOGIC;
   signal POR_A : STD_LOGIC;
+  signal RSTA_SHFT_REG : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\ : STD_LOGIC;
-  signal \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\ : STD_LOGIC;
-  signal p_0_in : STD_LOGIC_VECTOR ( 1 to 1 );
   signal p_3_out : STD_LOGIC;
-  signal \prim_noinit.ram_n_32\ : STD_LOGIC;
   signal ram_rstram_a_busy : STD_LOGIC;
+  signal ram_rstram_b : STD_LOGIC;
   signal ram_rstram_b_busy : STD_LOGIC;
   attribute srl_bus_name : string;
   attribute srl_bus_name of \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\ : label is "U0/\inst_blk_mem_gen/gnbram.gaxibmg.axi_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg ";
@@ -1242,7 +4301,7 @@ begin
         port map (
       C => s_aclk,
       CE => '1',
-      D => \prim_noinit.ram_n_32\,
+      D => ram_rstram_b,
       Q => ENB_dly,
       R => '0'
     );
@@ -1251,8 +4310,8 @@ begin
       INIT => X"6"
     )
         port map (
-      I0 => p_0_in(1),
-      I1 => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\,
+      I0 => RSTA_SHFT_REG(0),
+      I1 => RSTA_SHFT_REG(4),
       O => p_3_out
     );
 \SAFETY_CKT_GEN.POR_A_reg\: unisim.vcomponents.FDRE
@@ -1292,7 +4351,7 @@ begin
       C => s_aclk,
       CE => '1',
       D => '1',
-      Q => p_0_in(1),
+      Q => RSTA_SHFT_REG(0),
       R => '0'
     );
 \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\: unisim.vcomponents.SRL16E
@@ -1306,7 +4365,7 @@ begin
       A3 => '0',
       CE => '1',
       CLK => s_aclk,
-      D => p_0_in(1),
+      D => RSTA_SHFT_REG(0),
       Q => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\
     );
 \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]\: unisim.vcomponents.FDRE
@@ -1317,7 +4376,7 @@ begin
       C => s_aclk,
       CE => '1',
       D => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\,
-      Q => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg_n_0_[4]\,
+      Q => RSTA_SHFT_REG(4),
       R => '0'
     );
 \SAFETY_CKT_GEN.nSPRAM_RST_BUSY.RSTB_BUSY_NO_REG.RSTB_BUSY_i_1\: unisim.vcomponents.LUT4
@@ -1341,12 +4400,12 @@ begin
     );
 \prim_noinit.ram\: entity work.blk_mem_gen_0_blk_mem_gen_prim_wrapper
      port map (
+      ADDRARDADDR(9 downto 0) => ADDRARDADDR(9 downto 0),
       ADDRBWRADDR(9 downto 0) => ADDRBWRADDR(9 downto 0),
       ENA_I => ENA_I,
       ENB_I => ENB_I,
       POR_A => POR_A,
-      Q(9 downto 0) => Q(9 downto 0),
-      \SAFETY_CKT_GEN.POR_A_reg\ => \prim_noinit.ram_n_32\,
+      ram_rstram_b => ram_rstram_b,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
       s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
@@ -1368,26 +4427,24 @@ entity blk_mem_gen_0_blk_mem_gen_generic_cstr is
     s_aclk : in STD_LOGIC;
     ENA_I : in STD_LOGIC;
     ENB_I : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    ADDRARDADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ADDRBWRADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end blk_mem_gen_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_generic_cstr is
 begin
 \ramloop[0].ram.r\: entity work.blk_mem_gen_0_blk_mem_gen_prim_width
      port map (
+      ADDRARDADDR(9 downto 0) => ADDRARDADDR(9 downto 0),
       ADDRBWRADDR(9 downto 0) => ADDRBWRADDR(9 downto 0),
       ENA_I => ENA_I,
       ENA_dly_D => ENA_dly_D,
       ENB_I => ENB_I,
       ENB_dly_D => ENB_dly_D,
-      Q(9 downto 0) => Q(9 downto 0),
       rsta_busy => rsta_busy,
       rstb_busy => rstb_busy,
       s_aclk => s_aclk,
@@ -1411,26 +4468,24 @@ entity blk_mem_gen_0_blk_mem_gen_top is
     s_aclk : in STD_LOGIC;
     ENA_I : in STD_LOGIC;
     ENB_I : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    ADDRARDADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ADDRBWRADDR : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end blk_mem_gen_0_blk_mem_gen_top;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_top is
 begin
 \valid.cstr\: entity work.blk_mem_gen_0_blk_mem_gen_generic_cstr
      port map (
+      ADDRARDADDR(9 downto 0) => ADDRARDADDR(9 downto 0),
       ADDRBWRADDR(9 downto 0) => ADDRBWRADDR(9 downto 0),
       ENA_I => ENA_I,
       ENA_dly_D => ENA_dly_D,
       ENB_I => ENB_I,
       ENB_dly_D => ENB_dly_D,
-      Q(9 downto 0) => Q(9 downto 0),
       rsta_busy => rsta_busy,
       rstb_busy => rstb_busy,
       s_aclk => s_aclk,
@@ -1446,28 +4501,37 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity blk_mem_gen_0_blk_mem_gen_v8_4_2_synth is
   port (
+    \gaxi_full_sm.r_valid_r_reg\ : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awready : out STD_LOGIC;
     s_axi_wready : out STD_LOGIC;
-    \gaxi_bvalid_noid_r.bvalid_r_reg\ : out STD_LOGIC;
+    \gaxi_bvalid_id_r.bvalid_r_reg\ : out STD_LOGIC;
     rsta_busy : out STD_LOGIC;
     rstb_busy : out STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
-    \gaxi_lite_sm.r_valid_r_reg\ : out STD_LOGIC;
+    s_axi_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_bid : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_rlast : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
+    s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_rready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_bready : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    s_axi_arid : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_awid : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wvalid : in STD_LOGIC;
     s_axi_awvalid : in STD_LOGIC;
+    s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
-    s_axi_rready : in STD_LOGIC
+    s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
 end blk_mem_gen_0_blk_mem_gen_v8_4_2_synth;
 
 architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_2_synth is
@@ -1481,12 +4545,12 @@ architecture STRUCTURE of blk_mem_gen_0_blk_mem_gen_v8_4_2_synth is
 begin
 \gnbram.gaxibmg.axi_blk_mem_gen\: entity work.blk_mem_gen_0_blk_mem_gen_top
      port map (
+      ADDRARDADDR(9 downto 0) => s_axi_awaddr_out_c(9 downto 0),
       ADDRBWRADDR(9 downto 0) => s_axi_araddr_out_c(9 downto 0),
       ENA_I => \valid.cstr/ramloop[0].ram.r/ENA_I\,
       ENA_dly_D => \valid.cstr/ramloop[0].ram.r/ENA_dly_D\,
       ENB_I => \valid.cstr/ramloop[0].ram.r/ENB_I\,
       ENB_dly_D => \valid.cstr/ramloop[0].ram.r/ENB_dly_D\,
-      Q(9 downto 0) => s_axi_awaddr_out_c(9 downto 0),
       rsta_busy => rsta_busy,
       rstb_busy => rstb_busy,
       s_aclk => s_aclk,
@@ -1500,26 +4564,38 @@ begin
       ADDRBWRADDR(9 downto 0) => s_axi_araddr_out_c(9 downto 0),
       ENB_I => \valid.cstr/ramloop[0].ram.r/ENB_I\,
       ENB_dly_D => \valid.cstr/ramloop[0].ram.r/ENB_dly_D\,
-      SR(0) => s_aresetn_a_c,
-      \gaxi_lite_sm.r_valid_r_reg\ => \gaxi_lite_sm.r_valid_r_reg\,
+      SS(0) => s_aresetn_a_c,
+      \gaxi_full_sm.r_valid_r_reg\ => \gaxi_full_sm.r_valid_r_reg\,
       s_aclk => s_aclk,
-      s_axi_araddr(9 downto 0) => s_axi_araddr(9 downto 0),
+      s_aresetn => s_aresetn,
+      s_axi_araddr(11 downto 0) => s_axi_araddr(11 downto 0),
+      s_axi_arburst(1 downto 0) => s_axi_arburst(1 downto 0),
+      s_axi_arid(3 downto 0) => s_axi_arid(3 downto 0),
+      s_axi_arlen(7 downto 0) => s_axi_arlen(7 downto 0),
       s_axi_arready => s_axi_arready,
+      s_axi_arsize(2 downto 0) => s_axi_arsize(2 downto 0),
       s_axi_arvalid => s_axi_arvalid,
+      s_axi_rid(3 downto 0) => s_axi_rid(3 downto 0),
+      s_axi_rlast => s_axi_rlast,
       s_axi_rready => s_axi_rready
     );
 \gnbram.gaxibmg.axi_wr_fsm\: entity work.blk_mem_gen_0_blk_mem_axi_write_wrapper
      port map (
+      ADDRARDADDR(9 downto 0) => s_axi_awaddr_out_c(9 downto 0),
       ENA_I => \valid.cstr/ramloop[0].ram.r/ENA_I\,
       ENA_dly_D => \valid.cstr/ramloop[0].ram.r/ENA_dly_D\,
-      Q(9 downto 0) => s_axi_awaddr_out_c(9 downto 0),
-      SR(0) => s_aresetn_a_c,
-      \gaxi_bvalid_noid_r.bvalid_r_reg_0\ => \gaxi_bvalid_noid_r.bvalid_r_reg\,
+      SS(0) => s_aresetn_a_c,
+      \gaxi_bvalid_id_r.bvalid_r_reg_0\ => \gaxi_bvalid_id_r.bvalid_r_reg\,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
-      s_axi_awaddr(9 downto 0) => s_axi_awaddr(9 downto 0),
+      s_axi_awaddr(11 downto 0) => s_axi_awaddr(11 downto 0),
+      s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
+      s_axi_awid(3 downto 0) => s_axi_awid(3 downto 0),
+      s_axi_awlen(7 downto 0) => s_axi_awlen(7 downto 0),
       s_axi_awready => s_axi_awready,
+      s_axi_awsize(2 downto 0) => s_axi_awsize(2 downto 0),
       s_axi_awvalid => s_axi_awvalid,
+      s_axi_bid(3 downto 0) => s_axi_bid(3 downto 0),
       s_axi_bready => s_axi_bready,
       s_axi_wready => s_axi_wready,
       s_axi_wvalid => s_axi_wvalid
@@ -1606,7 +4682,7 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_2 is
   attribute C_AXI_SLAVE_TYPE : integer;
   attribute C_AXI_SLAVE_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
+  attribute C_AXI_TYPE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_BYTE_SIZE : integer;
   attribute C_BYTE_SIZE of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 8;
   attribute C_COMMON_CLK : integer;
@@ -1646,7 +4722,7 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_2 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "kintex7";
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 0;
+  attribute C_HAS_AXI_ID of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_ENB : integer;
@@ -1745,8 +4821,6 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_WIDTH_B of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "kintex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of blk_mem_gen_0_blk_mem_gen_v8_4_2 : entity is "yes";
 end blk_mem_gen_0_blk_mem_gen_v8_4_2;
@@ -1829,10 +4903,6 @@ begin
   rdaddrecc(2) <= \<const0>\;
   rdaddrecc(1) <= \<const0>\;
   rdaddrecc(0) <= \<const0>\;
-  s_axi_bid(3) <= \<const0>\;
-  s_axi_bid(2) <= \<const0>\;
-  s_axi_bid(1) <= \<const0>\;
-  s_axi_bid(0) <= \<const0>\;
   s_axi_bresp(1) <= \<const0>\;
   s_axi_bresp(0) <= \<const0>\;
   s_axi_dbiterr <= \<const0>\;
@@ -1846,11 +4916,6 @@ begin
   s_axi_rdaddrecc(2) <= \<const0>\;
   s_axi_rdaddrecc(1) <= \<const0>\;
   s_axi_rdaddrecc(0) <= \<const0>\;
-  s_axi_rid(3) <= \<const0>\;
-  s_axi_rid(2) <= \<const0>\;
-  s_axi_rid(1) <= \<const0>\;
-  s_axi_rid(0) <= \<const0>\;
-  s_axi_rlast <= \<const0>\;
   s_axi_rresp(1) <= \<const0>\;
   s_axi_rresp(0) <= \<const0>\;
   s_axi_sbiterr <= \<const0>\;
@@ -1861,20 +4926,31 @@ GND: unisim.vcomponents.GND
     );
 inst_blk_mem_gen: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2_synth
      port map (
-      \gaxi_bvalid_noid_r.bvalid_r_reg\ => s_axi_bvalid,
-      \gaxi_lite_sm.r_valid_r_reg\ => s_axi_rvalid,
+      \gaxi_bvalid_id_r.bvalid_r_reg\ => s_axi_bvalid,
+      \gaxi_full_sm.r_valid_r_reg\ => s_axi_rvalid,
       rsta_busy => rsta_busy,
       rstb_busy => rstb_busy,
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
-      s_axi_araddr(9 downto 0) => s_axi_araddr(11 downto 2),
+      s_axi_araddr(11 downto 0) => s_axi_araddr(11 downto 0),
+      s_axi_arburst(1 downto 0) => s_axi_arburst(1 downto 0),
+      s_axi_arid(3 downto 0) => s_axi_arid(3 downto 0),
+      s_axi_arlen(7 downto 0) => s_axi_arlen(7 downto 0),
       s_axi_arready => s_axi_arready,
+      s_axi_arsize(2 downto 0) => s_axi_arsize(2 downto 0),
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_awaddr(9 downto 0) => s_axi_awaddr(11 downto 2),
+      s_axi_awaddr(11 downto 0) => s_axi_awaddr(11 downto 0),
+      s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
+      s_axi_awid(3 downto 0) => s_axi_awid(3 downto 0),
+      s_axi_awlen(7 downto 0) => s_axi_awlen(7 downto 0),
       s_axi_awready => s_axi_awready,
+      s_axi_awsize(2 downto 0) => s_axi_awsize(2 downto 0),
       s_axi_awvalid => s_axi_awvalid,
+      s_axi_bid(3 downto 0) => s_axi_bid(3 downto 0),
       s_axi_bready => s_axi_bready,
       s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
+      s_axi_rid(3 downto 0) => s_axi_rid(3 downto 0),
+      s_axi_rlast => s_axi_rlast,
       s_axi_rready => s_axi_rready,
       s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
       s_axi_wready => s_axi_wready,
@@ -1892,21 +4968,33 @@ entity blk_mem_gen_0 is
     rstb_busy : out STD_LOGIC;
     s_aclk : in STD_LOGIC;
     s_aresetn : in STD_LOGIC;
+    s_axi_awid : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wlast : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
     s_axi_wready : out STD_LOGIC;
+    s_axi_bid : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
+    s_axi_arid : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
+    s_axi_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rlast : out STD_LOGIC;
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC
   );
@@ -1923,15 +5011,12 @@ end blk_mem_gen_0;
 architecture STRUCTURE of blk_mem_gen_0 is
   signal NLW_U0_dbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_dbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_s_axi_rlast_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_douta_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal NLW_U0_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute C_ADDRA_WIDTH : integer;
   attribute C_ADDRA_WIDTH of U0 : label is 10;
   attribute C_ADDRB_WIDTH : integer;
@@ -1943,7 +5028,7 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute C_AXI_SLAVE_TYPE : integer;
   attribute C_AXI_SLAVE_TYPE of U0 : label is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of U0 : label is 0;
+  attribute C_AXI_TYPE of U0 : label is 1;
   attribute C_BYTE_SIZE : integer;
   attribute C_BYTE_SIZE of U0 : label is 8;
   attribute C_COMMON_CLK : integer;
@@ -1983,7 +5068,7 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "kintex7";
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of U0 : label is 0;
+  attribute C_HAS_AXI_ID of U0 : label is 1;
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of U0 : label is 1;
   attribute C_HAS_ENB : integer;
@@ -2089,24 +5174,36 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute x_interface_parameter of s_aclk : signal is "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI, ASSOCIATED_RESET s_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
   attribute x_interface_info of s_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.ARESETN RST";
   attribute x_interface_parameter of s_aresetn : signal is "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARREADY";
-  attribute x_interface_info of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARVALID";
-  attribute x_interface_info of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWREADY";
-  attribute x_interface_info of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWVALID";
-  attribute x_interface_info of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI BREADY";
-  attribute x_interface_info of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI BVALID";
-  attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RREADY";
-  attribute x_interface_info of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RVALID";
-  attribute x_interface_info of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WREADY";
-  attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WVALID";
-  attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI ARADDR";
-  attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME AXILite_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI BRESP";
-  attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RDATA";
-  attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI RRESP";
-  attribute x_interface_info of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WDATA";
-  attribute x_interface_info of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXILite_SLAVE_S_AXI WSTRB";
+  attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARREADY";
+  attribute x_interface_info of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARVALID";
+  attribute x_interface_info of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWREADY";
+  attribute x_interface_info of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWVALID";
+  attribute x_interface_info of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI BREADY";
+  attribute x_interface_info of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI BVALID";
+  attribute x_interface_info of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RLAST";
+  attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RREADY";
+  attribute x_interface_info of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RVALID";
+  attribute x_interface_info of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WLAST";
+  attribute x_interface_info of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WREADY";
+  attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WVALID";
+  attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARADDR";
+  attribute x_interface_info of s_axi_arburst : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARBURST";
+  attribute x_interface_info of s_axi_arid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARID";
+  attribute x_interface_info of s_axi_arlen : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARLEN";
+  attribute x_interface_info of s_axi_arsize : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI ARSIZE";
+  attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWADDR";
+  attribute x_interface_info of s_axi_awburst : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWBURST";
+  attribute x_interface_info of s_axi_awid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWID";
+  attribute x_interface_parameter of s_axi_awid : signal is "XIL_INTERFACENAME AXI_SLAVE_S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_info of s_axi_awlen : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWLEN";
+  attribute x_interface_info of s_axi_awsize : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWSIZE";
+  attribute x_interface_info of s_axi_bid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI BID";
+  attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI BRESP";
+  attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RDATA";
+  attribute x_interface_info of s_axi_rid : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RID";
+  attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RRESP";
+  attribute x_interface_info of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WDATA";
+  attribute x_interface_info of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WSTRB";
 begin
 U0: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2
      port map (
@@ -2135,20 +5232,20 @@ U0: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2
       s_aclk => s_aclk,
       s_aresetn => s_aresetn,
       s_axi_araddr(31 downto 0) => s_axi_araddr(31 downto 0),
-      s_axi_arburst(1 downto 0) => B"00",
-      s_axi_arid(3 downto 0) => B"0000",
-      s_axi_arlen(7 downto 0) => B"00000000",
+      s_axi_arburst(1 downto 0) => s_axi_arburst(1 downto 0),
+      s_axi_arid(3 downto 0) => s_axi_arid(3 downto 0),
+      s_axi_arlen(7 downto 0) => s_axi_arlen(7 downto 0),
       s_axi_arready => s_axi_arready,
-      s_axi_arsize(2 downto 0) => B"000",
+      s_axi_arsize(2 downto 0) => s_axi_arsize(2 downto 0),
       s_axi_arvalid => s_axi_arvalid,
       s_axi_awaddr(31 downto 0) => s_axi_awaddr(31 downto 0),
-      s_axi_awburst(1 downto 0) => B"00",
-      s_axi_awid(3 downto 0) => B"0000",
-      s_axi_awlen(7 downto 0) => B"00000000",
+      s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
+      s_axi_awid(3 downto 0) => s_axi_awid(3 downto 0),
+      s_axi_awlen(7 downto 0) => s_axi_awlen(7 downto 0),
       s_axi_awready => s_axi_awready,
-      s_axi_awsize(2 downto 0) => B"000",
+      s_axi_awsize(2 downto 0) => s_axi_awsize(2 downto 0),
       s_axi_awvalid => s_axi_awvalid,
-      s_axi_bid(3 downto 0) => NLW_U0_s_axi_bid_UNCONNECTED(3 downto 0),
+      s_axi_bid(3 downto 0) => s_axi_bid(3 downto 0),
       s_axi_bready => s_axi_bready,
       s_axi_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
       s_axi_bvalid => s_axi_bvalid,
@@ -2157,14 +5254,14 @@ U0: entity work.blk_mem_gen_0_blk_mem_gen_v8_4_2
       s_axi_injectsbiterr => '0',
       s_axi_rdaddrecc(9 downto 0) => NLW_U0_s_axi_rdaddrecc_UNCONNECTED(9 downto 0),
       s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
-      s_axi_rid(3 downto 0) => NLW_U0_s_axi_rid_UNCONNECTED(3 downto 0),
-      s_axi_rlast => NLW_U0_s_axi_rlast_UNCONNECTED,
+      s_axi_rid(3 downto 0) => s_axi_rid(3 downto 0),
+      s_axi_rlast => s_axi_rlast,
       s_axi_rready => s_axi_rready,
       s_axi_rresp(1 downto 0) => s_axi_rresp(1 downto 0),
       s_axi_rvalid => s_axi_rvalid,
       s_axi_sbiterr => NLW_U0_s_axi_sbiterr_UNCONNECTED,
       s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
-      s_axi_wlast => '0',
+      s_axi_wlast => s_axi_wlast,
       s_axi_wready => s_axi_wready,
       s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
       s_axi_wvalid => s_axi_wvalid,

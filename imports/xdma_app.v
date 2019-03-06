@@ -69,7 +69,7 @@ module xdma_app #(
   parameter C_S_AXIS_CC_USER_WIDTH      = ((C_DATA_WIDTH == 512) ?  81 : 33),
   parameter C_S_KEEP_WIDTH              = C_S_AXI_DATA_WIDTH / 32,
   parameter C_M_KEEP_WIDTH              = (C_M_AXI_DATA_WIDTH / 32),
-  parameter C_XDMA_NUM_CHNL             = 1
+  parameter C_XDMA_NUM_CHNL             = 2
 )
 (
 
@@ -95,36 +95,28 @@ module xdma_app #(
 
 //VU9P_TUL_EX_String= FALSE
 
-  // AXI Memory Mapped interface
-  input  wire  [C_M_AXI_ID_WIDTH-1:0] s_axi_awid,
-  input  wire  [64-1:0] s_axi_awaddr,
-  input  wire   [7:0] s_axi_awlen,
-  input  wire   [2:0] s_axi_awsize,
-  input  wire   [1:0] s_axi_awburst,
-  input  wire         s_axi_awvalid,
-  output wire         s_axi_awready,
-  input  wire [C_M_AXI_DATA_WIDTH-1:0]        s_axi_wdata,
-  input  wire [(C_M_AXI_DATA_WIDTH/8)-1:0]    s_axi_wstrb,
-  input  wire         s_axi_wlast,
-  input  wire         s_axi_wvalid,
-  output wire         s_axi_wready,
-  output wire [C_M_AXI_ID_WIDTH-1:0]          s_axi_bid,
-  output wire   [1:0] s_axi_bresp,
-  output wire         s_axi_bvalid,
-  input  wire         s_axi_bready,
-  input  wire [C_M_AXI_ID_WIDTH-1:0]          s_axi_arid,
-  input  wire  [64-1:0] s_axi_araddr,
-  input  wire   [7:0] s_axi_arlen,
-  input  wire   [2:0] s_axi_arsize,
-  input  wire   [1:0] s_axi_arburst,
-  input  wire         s_axi_arvalid,
-  output wire         s_axi_arready,
-  output wire   [C_M_AXI_ID_WIDTH-1:0]        s_axi_rid,
-  output wire   [C_M_AXI_DATA_WIDTH-1:0]      s_axi_rdata,
-  output wire   [1:0] s_axi_rresp,
-  output wire         s_axi_rlast,
-  output wire         s_axi_rvalid,
-  input  wire         s_axi_rready,
+
+      // AXI streaming ports
+    output wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_0,  
+    output wire s_axis_c2h_tlast_0,
+    output wire s_axis_c2h_tvalid_0,
+    input  wire s_axis_c2h_tready_0,
+    output wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_0,
+    output wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_1,
+    output wire s_axis_c2h_tlast_1,
+    output wire s_axis_c2h_tvalid_1,
+    input  wire s_axis_c2h_tready_1,
+    output wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_1,
+    input  wire [C_DATA_WIDTH-1:0] m_axis_h2c_tdata_0,
+    input  wire m_axis_h2c_tlast_0,
+    input  wire m_axis_h2c_tvalid_0,
+    output wire m_axis_h2c_tready_0,
+    input  wire [C_DATA_WIDTH/8-1:0] m_axis_h2c_tkeep_0,
+    input  wire [C_DATA_WIDTH-1:0] m_axis_h2c_tdata_1,
+    input  wire m_axis_h2c_tlast_1,
+    input  wire m_axis_h2c_tvalid_1,
+    output wire m_axis_h2c_tready_1,
+    input  wire [C_DATA_WIDTH/8-1:0] m_axis_h2c_tkeep_1,
 
   // AXI stream interface for the CQ forwarding
   input  wire  [C_M_AXI_ID_WIDTH-1:0]  s_axib_awid,
@@ -171,7 +163,6 @@ module xdma_app #(
   reg  [25:0]     user_clk_heartbeat;
 
 
-
   // The sys_rst_n input is active low based on the core configuration
   assign sys_resetn = sys_rst_n;
 
@@ -189,6 +180,18 @@ module xdma_app #(
   assign leds[1] = user_resetn;
   assign leds[2] = user_lnk_up;
   assign leds[3] = user_clk_heartbeat[25];
+
+      // AXI streaming ports
+      assign s_axis_c2h_tdata_0 =  m_axis_h2c_tdata_0;   
+      assign s_axis_c2h_tlast_0 =  m_axis_h2c_tlast_0;   
+      assign s_axis_c2h_tvalid_0 =  m_axis_h2c_tvalid_0;   
+      assign s_axis_c2h_tkeep_0 =  m_axis_h2c_tkeep_0;  
+      assign m_axis_h2c_tready_0 = s_axis_c2h_tready_0;
+      assign s_axis_c2h_tdata_1 =  m_axis_h2c_tdata_1;   
+      assign s_axis_c2h_tlast_1 =  m_axis_h2c_tlast_1;  
+      assign s_axis_c2h_tvalid_1 =  m_axis_h2c_tvalid_1;   
+      assign s_axis_c2h_tkeep_1 =  m_axis_h2c_tkeep_1;  
+      assign m_axis_h2c_tready_1 = s_axis_c2h_tready_1;
 
   // Block ram for the AXI Lite interface
   blk_mem_gen_0 blk_mem_axiLM_inst (
@@ -212,40 +215,6 @@ module xdma_app #(
     .s_axi_rvalid  (s_axil_rvalid),
     .s_axi_rready  (s_axil_rready)
   );
-	  // Block ram for the AXI interface
-	  blk_mem_gen_1 blk_mem_xdma_inst(
-	    .s_aclk          (user_clk),
-	    .s_aresetn       (user_resetn),
-	    .s_axi_awid      (s_axi_awid),
-	    .s_axi_awaddr    (s_axi_awaddr[31:0]),
-	    .s_axi_awlen     (s_axi_awlen),
-	    .s_axi_awsize    (s_axi_awsize),
-	    .s_axi_awburst   (s_axi_awburst),
-	    .s_axi_awvalid   (s_axi_awvalid),
-	    .s_axi_awready   (s_axi_awready),
-	    .s_axi_wdata     (s_axi_wdata),
-	    .s_axi_wstrb     (s_axi_wstrb),
-	    .s_axi_wlast     (s_axi_wlast),
-	    .s_axi_wvalid    (s_axi_wvalid),
-	    .s_axi_wready    (s_axi_wready),
-	    .s_axi_bid       (s_axi_bid),
-	    .s_axi_bresp     (s_axi_bresp),
-	    .s_axi_bvalid    (s_axi_bvalid),
-	    .s_axi_bready    (s_axi_bready),
-	    .s_axi_arid      (s_axi_arid),
-	    .s_axi_araddr    (s_axi_araddr[31:0]),
-	    .s_axi_arlen     (s_axi_arlen),
-	    .s_axi_arsize    (s_axi_arsize),
-	    .s_axi_arburst   (s_axi_arburst),
-	    .s_axi_arvalid   (s_axi_arvalid),
-	    .s_axi_arready   (s_axi_arready),
-	    .s_axi_rid       (s_axi_rid),
-	    .s_axi_rdata     (s_axi_rdata),
-	    .s_axi_rresp     (s_axi_rresp),
-	    .s_axi_rlast     (s_axi_rlast),
-	    .s_axi_rvalid    (s_axi_rvalid),
-	    .s_axi_rready    (s_axi_rready)
-	  );
 
   // AXI stream interface for the CQ forwarding
   blk_mem_gen_1 blk_mem_gen_bypass_inst(

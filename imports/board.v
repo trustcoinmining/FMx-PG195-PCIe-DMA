@@ -74,13 +74,20 @@ module board;
 
   parameter          REF_CLK_FREQ       = 0 ;      // 0 - 100 MHz, 1 - 125 MHz,  2 - 250 MHz
 
+  parameter C_DATA_WIDTH                        = 128 ;
+  parameter          DRP_CLK_FREQ       = 0; // 0 - 100 MHz, 1 - 125 MHz, 3 - 300 MHz
+//
+  localparam         DRP_CLK_HALF_CYCLE = (DRP_CLK_FREQ == 0) ? 5000 :
+                                          (DRP_CLK_FREQ == 1) ? 4000 :
+                                          (DRP_CLK_FREQ == 2) ? 2000 : 
+                                          (DRP_CLK_FREQ == 3) ? 1666 : 0;
 
 
 
   localparam         REF_CLK_HALF_CYCLE = (REF_CLK_FREQ == 0) ? 5000 :
                                           (REF_CLK_FREQ == 1) ? 4000 :
                                           (REF_CLK_FREQ == 2) ? 2000 : 0;
-  localparam   [2:0] PF0_DEV_CAP_MAX_PAYLOAD_SIZE = 3'b010;
+  localparam   [2:0] PF0_DEV_CAP_MAX_PAYLOAD_SIZE = 3'b001;
   `ifdef LINKWIDTH
   localparam   [4:0] LINK_WIDTH = 5'd`LINKWIDTH;
   `else
@@ -89,8 +96,11 @@ module board;
   `ifdef LINKSPEED
   localparam   [2:0] LINK_SPEED = 3'h`LINKSPEED;
   `else
-  localparam   [2:0] LINK_SPEED = 3'h1;
+  localparam   [2:0] LINK_SPEED = 3'h2;
   `endif
+
+
+
 
 
 
@@ -184,6 +194,8 @@ module board;
     .sys_rst_n(sys_rst_n),
 
   
+
+
     // PCI-Express Serial Interface
     .pci_exp_txn(ep_pci_exp_txn),
     .pci_exp_txp(ep_pci_exp_txp),

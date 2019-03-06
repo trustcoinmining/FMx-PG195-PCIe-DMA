@@ -209,7 +209,51 @@ module xdma_0_pcie2_ip (
   cfg_aer_ecrc_gen_en,
   cfg_vc_tcvc_map,
   sys_clk,
-  sys_rst_n
+  sys_rst_n,
+  pipe_txprbssel,
+  pipe_rxprbssel,
+  pipe_txprbsforceerr,
+  pipe_rxprbscntreset,
+  pipe_loopback,
+  pipe_rxprbserr,
+  pipe_txinhibit,
+  pipe_rst_fsm,
+  pipe_qrst_fsm,
+  pipe_rate_fsm,
+  pipe_sync_fsm_tx,
+  pipe_sync_fsm_rx,
+  pipe_drp_fsm,
+  pipe_rst_idle,
+  pipe_qrst_idle,
+  pipe_rate_idle,
+  pipe_eyescandataerror,
+  pipe_rxstatus,
+  pipe_dmonitorout,
+  pipe_cpll_lock,
+  pipe_qpll_lock,
+  pipe_rxpmaresetdone,
+  pipe_rxbufstatus,
+  pipe_txphaligndone,
+  pipe_txphinitdone,
+  pipe_txdlysresetdone,
+  pipe_rxphaligndone,
+  pipe_rxdlysresetdone,
+  pipe_rxsyncdone,
+  pipe_rxdisperr,
+  pipe_rxnotintable,
+  pipe_rxcommadet,
+  gt_ch_drp_rdy,
+  pipe_debug_0,
+  pipe_debug_1,
+  pipe_debug_2,
+  pipe_debug_3,
+  pipe_debug_4,
+  pipe_debug_5,
+  pipe_debug_6,
+  pipe_debug_7,
+  pipe_debug_8,
+  pipe_debug_9,
+  pipe_debug
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt txp" *)
@@ -528,6 +572,94 @@ input wire sys_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.sys_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.sys_rst_n RST" *)
 input wire sys_rst_n;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txprbssel" *)
+input wire [2 : 0] pipe_txprbssel;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxprbssel" *)
+input wire [2 : 0] pipe_rxprbssel;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txprbsforceerr" *)
+input wire pipe_txprbsforceerr;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxprbscntreset" *)
+input wire pipe_rxprbscntreset;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug loopback" *)
+input wire [2 : 0] pipe_loopback;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxprbserr" *)
+output wire [7 : 0] pipe_rxprbserr;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txinhibit" *)
+input wire [7 : 0] pipe_txinhibit;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rst_fsm" *)
+output wire [4 : 0] pipe_rst_fsm;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug qrst_fsm" *)
+output wire [11 : 0] pipe_qrst_fsm;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rate_fsm" *)
+output wire [39 : 0] pipe_rate_fsm;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug sync_fsm_tx" *)
+output wire [47 : 0] pipe_sync_fsm_tx;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug sync_fsm_rx" *)
+output wire [55 : 0] pipe_sync_fsm_rx;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug drp_fsm" *)
+output wire [55 : 0] pipe_drp_fsm;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rst_idle" *)
+output wire pipe_rst_idle;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug qrst_idle" *)
+output wire pipe_qrst_idle;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rate_idle" *)
+output wire pipe_rate_idle;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug eyescandataerror" *)
+output wire [7 : 0] pipe_eyescandataerror;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxstatus" *)
+output wire [23 : 0] pipe_rxstatus;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug dmonitorout" *)
+output wire [119 : 0] pipe_dmonitorout;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug cpll_lock" *)
+output wire [7 : 0] pipe_cpll_lock;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug qpll_lock" *)
+output wire [1 : 0] pipe_qpll_lock;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxpmaresetdone" *)
+output wire [7 : 0] pipe_rxpmaresetdone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxbufstatus" *)
+output wire [23 : 0] pipe_rxbufstatus;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txphaligndone" *)
+output wire [7 : 0] pipe_txphaligndone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txphinitdone" *)
+output wire [7 : 0] pipe_txphinitdone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug txdlysresetdone" *)
+output wire [7 : 0] pipe_txdlysresetdone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxphaligndone" *)
+output wire [7 : 0] pipe_rxphaligndone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxdlysresetdone" *)
+output wire [7 : 0] pipe_rxdlysresetdone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxsyncdone" *)
+output wire [7 : 0] pipe_rxsyncdone;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxdisperr" *)
+output wire [63 : 0] pipe_rxdisperr;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxnotintable" *)
+output wire [63 : 0] pipe_rxnotintable;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug rxcommadet" *)
+output wire [7 : 0] pipe_rxcommadet;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug gt_ch_drp_rdy" *)
+output wire [7 : 0] gt_ch_drp_rdy;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_0" *)
+output wire [7 : 0] pipe_debug_0;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_1" *)
+output wire [7 : 0] pipe_debug_1;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_2" *)
+output wire [7 : 0] pipe_debug_2;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_3" *)
+output wire [7 : 0] pipe_debug_3;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_4" *)
+output wire [7 : 0] pipe_debug_4;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_5" *)
+output wire [7 : 0] pipe_debug_5;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_6" *)
+output wire [7 : 0] pipe_debug_6;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_7" *)
+output wire [7 : 0] pipe_debug_7;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_8" *)
+output wire [7 : 0] pipe_debug_8;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug_9" *)
+output wire [7 : 0] pipe_debug_9;
+(* X_INTERFACE_INFO = "xilinx.com:display_pcie_7x:transceiver_debug:1.0 transceiver_debug debug" *)
+output wire [31 : 0] pipe_debug;
 
   xdma_0_pcie2_ip_pcie2_top #(
     .c_component_name("xdma_0_pcie2_ip"),
@@ -540,17 +672,17 @@ input wire sys_rst_n;
     .c_gen1(1'B1),
     .pci_exp_int_freq(3),
     .c_pcie_fast_config(0),
-    .bar_0("FFC00004"),
-    .bar_1("FFFFFFFF"),
-    .bar_2("FFFF0004"),
-    .bar_3("FFFFFFFF"),
-    .bar_4("FFC00004"),
-    .bar_5("FFFFFFFF"),
+    .bar_0("FFC00000"),
+    .bar_1("FFFF0000"),
+    .bar_2("FFC00000"),
+    .bar_3("00000000"),
+    .bar_4("00000000"),
+    .bar_5("00000000"),
     .xrom_bar("00000000"),
     .cost_table(1),
     .ven_id("10EE"),
     .dev_id("7024"),
-    .rev_id("00"),
+    .rev_id("01"),
     .subsys_ven_id("10EE"),
     .subsys_id("0007"),
     .class_code("058000"),
@@ -614,9 +746,9 @@ input wire sys_rst_n;
     .c_pcie_cap_next_ptr("9C"),
     .c_msix_table_size("01E"),
     .c_msix_table_offset("00008000"),
-    .c_msix_table_bir("2"),
+    .c_msix_table_bir("1"),
     .c_msix_pba_offset("00008FE0"),
-    .c_msix_pba_bir("2"),
+    .c_msix_pba_bir("1"),
     .dsi("0"),
     .c_dsi_bool("FALSE"),
     .d1_sup("0"),
@@ -728,7 +860,7 @@ input wire sys_rst_n;
     .PCIE_EXT_CLK("FALSE"),
     .PCIE_EXT_GT_COMMON("FALSE"),
     .EXT_CH_GT_DRP("FALSE"),
-    .TRANSCEIVER_CTRL_STATUS_PORTS("FALSE"),
+    .TRANSCEIVER_CTRL_STATUS_PORTS("TRUE"),
     .SHARED_LOGIC_IN_CORE("FALSE"),
     .ERR_REPORTING_IF("TRUE"),
     .PL_INTERFACE("TRUE"),
@@ -957,50 +1089,50 @@ input wire sys_rst_n;
     .qpll_drp_ovrd(),
     .qpll_drp_gen3(),
     .qpll_drp_start(),
-    .pipe_txprbssel(3'B0),
-    .pipe_rxprbssel(3'B0),
-    .pipe_txprbsforceerr(1'B0),
-    .pipe_rxprbscntreset(1'B0),
-    .pipe_loopback(3'B0),
-    .pipe_rxprbserr(),
-    .pipe_txinhibit(8'B0),
-    .pipe_rst_fsm(),
-    .pipe_qrst_fsm(),
-    .pipe_rate_fsm(),
-    .pipe_sync_fsm_tx(),
-    .pipe_sync_fsm_rx(),
-    .pipe_drp_fsm(),
-    .pipe_rst_idle(),
-    .pipe_qrst_idle(),
-    .pipe_rate_idle(),
-    .pipe_eyescandataerror(),
-    .pipe_rxstatus(),
-    .pipe_dmonitorout(),
-    .pipe_cpll_lock(),
-    .pipe_qpll_lock(),
-    .pipe_rxpmaresetdone(),
-    .pipe_rxbufstatus(),
-    .pipe_txphaligndone(),
-    .pipe_txphinitdone(),
-    .pipe_txdlysresetdone(),
-    .pipe_rxphaligndone(),
-    .pipe_rxdlysresetdone(),
-    .pipe_rxsyncdone(),
-    .pipe_rxdisperr(),
-    .pipe_rxnotintable(),
-    .pipe_rxcommadet(),
-    .gt_ch_drp_rdy(),
-    .pipe_debug_0(),
-    .pipe_debug_1(),
-    .pipe_debug_2(),
-    .pipe_debug_3(),
-    .pipe_debug_4(),
-    .pipe_debug_5(),
-    .pipe_debug_6(),
-    .pipe_debug_7(),
-    .pipe_debug_8(),
-    .pipe_debug_9(),
-    .pipe_debug(),
+    .pipe_txprbssel(pipe_txprbssel),
+    .pipe_rxprbssel(pipe_rxprbssel),
+    .pipe_txprbsforceerr(pipe_txprbsforceerr),
+    .pipe_rxprbscntreset(pipe_rxprbscntreset),
+    .pipe_loopback(pipe_loopback),
+    .pipe_rxprbserr(pipe_rxprbserr),
+    .pipe_txinhibit(pipe_txinhibit),
+    .pipe_rst_fsm(pipe_rst_fsm),
+    .pipe_qrst_fsm(pipe_qrst_fsm),
+    .pipe_rate_fsm(pipe_rate_fsm),
+    .pipe_sync_fsm_tx(pipe_sync_fsm_tx),
+    .pipe_sync_fsm_rx(pipe_sync_fsm_rx),
+    .pipe_drp_fsm(pipe_drp_fsm),
+    .pipe_rst_idle(pipe_rst_idle),
+    .pipe_qrst_idle(pipe_qrst_idle),
+    .pipe_rate_idle(pipe_rate_idle),
+    .pipe_eyescandataerror(pipe_eyescandataerror),
+    .pipe_rxstatus(pipe_rxstatus),
+    .pipe_dmonitorout(pipe_dmonitorout),
+    .pipe_cpll_lock(pipe_cpll_lock),
+    .pipe_qpll_lock(pipe_qpll_lock),
+    .pipe_rxpmaresetdone(pipe_rxpmaresetdone),
+    .pipe_rxbufstatus(pipe_rxbufstatus),
+    .pipe_txphaligndone(pipe_txphaligndone),
+    .pipe_txphinitdone(pipe_txphinitdone),
+    .pipe_txdlysresetdone(pipe_txdlysresetdone),
+    .pipe_rxphaligndone(pipe_rxphaligndone),
+    .pipe_rxdlysresetdone(pipe_rxdlysresetdone),
+    .pipe_rxsyncdone(pipe_rxsyncdone),
+    .pipe_rxdisperr(pipe_rxdisperr),
+    .pipe_rxnotintable(pipe_rxnotintable),
+    .pipe_rxcommadet(pipe_rxcommadet),
+    .gt_ch_drp_rdy(gt_ch_drp_rdy),
+    .pipe_debug_0(pipe_debug_0),
+    .pipe_debug_1(pipe_debug_1),
+    .pipe_debug_2(pipe_debug_2),
+    .pipe_debug_3(pipe_debug_3),
+    .pipe_debug_4(pipe_debug_4),
+    .pipe_debug_5(pipe_debug_5),
+    .pipe_debug_6(pipe_debug_6),
+    .pipe_debug_7(pipe_debug_7),
+    .pipe_debug_8(pipe_debug_8),
+    .pipe_debug_9(pipe_debug_9),
+    .pipe_debug(pipe_debug),
     .ext_ch_gt_drpclk(),
     .ext_ch_gt_drpaddr(72'B0),
     .ext_ch_gt_drpen(8'B0),
