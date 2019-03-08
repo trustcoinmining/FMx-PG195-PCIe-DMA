@@ -57,10 +57,10 @@ COMPONENT xdma_0
     sys_clk : IN STD_LOGIC;
     sys_rst_n : IN STD_LOGIC;
     user_lnk_up : OUT STD_LOGIC;
-    pci_exp_txp : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    pci_exp_txn : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    pci_exp_rxp : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    pci_exp_rxn : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    pci_exp_txp : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pci_exp_txn : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pci_exp_rxp : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pci_exp_rxn : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     cfg_subsys_vend_id : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     cfg_vend_id : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     cfg_dev_id_pf0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -110,8 +110,8 @@ COMPONENT xdma_0
     m_axib_awready : IN STD_LOGIC;
     m_axib_awlock : OUT STD_LOGIC;
     m_axib_awcache : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    m_axib_wdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
-    m_axib_wstrb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    m_axib_wdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+    m_axib_wstrb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axib_wlast : OUT STD_LOGIC;
     m_axib_wvalid : OUT STD_LOGIC;
     m_axib_wready : IN STD_LOGIC;
@@ -130,31 +130,65 @@ COMPONENT xdma_0
     m_axib_arlock : OUT STD_LOGIC;
     m_axib_arcache : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     m_axib_rid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    m_axib_rdata : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
+    m_axib_rdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
     m_axib_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axib_rlast : IN STD_LOGIC;
     m_axib_rvalid : IN STD_LOGIC;
     m_axib_rready : OUT STD_LOGIC;
-    s_axis_c2h_tdata_0 : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
+    s_axis_c2h_tdata_0 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
     s_axis_c2h_tlast_0 : IN STD_LOGIC;
     s_axis_c2h_tvalid_0 : IN STD_LOGIC;
     s_axis_c2h_tready_0 : OUT STD_LOGIC;
-    s_axis_c2h_tkeep_0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    m_axis_h2c_tdata_0 : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
+    s_axis_c2h_tkeep_0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    m_axis_h2c_tdata_0 : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
     m_axis_h2c_tlast_0 : OUT STD_LOGIC;
     m_axis_h2c_tvalid_0 : OUT STD_LOGIC;
     m_axis_h2c_tready_0 : IN STD_LOGIC;
-    m_axis_h2c_tkeep_0 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    s_axis_c2h_tdata_1 : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    s_axis_c2h_tlast_1 : IN STD_LOGIC;
-    s_axis_c2h_tvalid_1 : IN STD_LOGIC;
-    s_axis_c2h_tready_1 : OUT STD_LOGIC;
-    s_axis_c2h_tkeep_1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    m_axis_h2c_tdata_1 : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
-    m_axis_h2c_tlast_1 : OUT STD_LOGIC;
-    m_axis_h2c_tvalid_1 : OUT STD_LOGIC;
-    m_axis_h2c_tready_1 : IN STD_LOGIC;
-    m_axis_h2c_tkeep_1 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    m_axis_h2c_tkeep_0 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    pipe_txprbssel : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    pipe_rxprbssel : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    pipe_txprbsforceerr : IN STD_LOGIC;
+    pipe_rxprbscntreset : IN STD_LOGIC;
+    pipe_loopback : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    pipe_rxprbserr : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_txinhibit : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rst_fsm : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+    pipe_qrst_fsm : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    pipe_rate_fsm : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+    pipe_sync_fsm_tx : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    pipe_sync_fsm_rx : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+    pipe_drp_fsm : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+    pipe_rst_idle : OUT STD_LOGIC;
+    pipe_qrst_idle : OUT STD_LOGIC;
+    pipe_rate_idle : OUT STD_LOGIC;
+    pipe_eyescandataerror : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxstatus : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    pipe_dmonitorout : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+    pipe_cpll_lock : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_qpll_lock : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxpmaresetdone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxbufstatus : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    pipe_txphaligndone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_txphinitdone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_txdlysresetdone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxphaligndone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxdlysresetdone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxsyncdone : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_rxdisperr : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    pipe_rxnotintable : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    pipe_rxcommadet : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gt_ch_drp_rdy : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_2 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_3 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_4 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_5 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_6 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_7 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_8 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug_9 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pipe_debug : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -256,16 +290,50 @@ your_instance_name : xdma_0
     m_axis_h2c_tvalid_0 => m_axis_h2c_tvalid_0,
     m_axis_h2c_tready_0 => m_axis_h2c_tready_0,
     m_axis_h2c_tkeep_0 => m_axis_h2c_tkeep_0,
-    s_axis_c2h_tdata_1 => s_axis_c2h_tdata_1,
-    s_axis_c2h_tlast_1 => s_axis_c2h_tlast_1,
-    s_axis_c2h_tvalid_1 => s_axis_c2h_tvalid_1,
-    s_axis_c2h_tready_1 => s_axis_c2h_tready_1,
-    s_axis_c2h_tkeep_1 => s_axis_c2h_tkeep_1,
-    m_axis_h2c_tdata_1 => m_axis_h2c_tdata_1,
-    m_axis_h2c_tlast_1 => m_axis_h2c_tlast_1,
-    m_axis_h2c_tvalid_1 => m_axis_h2c_tvalid_1,
-    m_axis_h2c_tready_1 => m_axis_h2c_tready_1,
-    m_axis_h2c_tkeep_1 => m_axis_h2c_tkeep_1
+    pipe_txprbssel => pipe_txprbssel,
+    pipe_rxprbssel => pipe_rxprbssel,
+    pipe_txprbsforceerr => pipe_txprbsforceerr,
+    pipe_rxprbscntreset => pipe_rxprbscntreset,
+    pipe_loopback => pipe_loopback,
+    pipe_rxprbserr => pipe_rxprbserr,
+    pipe_txinhibit => pipe_txinhibit,
+    pipe_rst_fsm => pipe_rst_fsm,
+    pipe_qrst_fsm => pipe_qrst_fsm,
+    pipe_rate_fsm => pipe_rate_fsm,
+    pipe_sync_fsm_tx => pipe_sync_fsm_tx,
+    pipe_sync_fsm_rx => pipe_sync_fsm_rx,
+    pipe_drp_fsm => pipe_drp_fsm,
+    pipe_rst_idle => pipe_rst_idle,
+    pipe_qrst_idle => pipe_qrst_idle,
+    pipe_rate_idle => pipe_rate_idle,
+    pipe_eyescandataerror => pipe_eyescandataerror,
+    pipe_rxstatus => pipe_rxstatus,
+    pipe_dmonitorout => pipe_dmonitorout,
+    pipe_cpll_lock => pipe_cpll_lock,
+    pipe_qpll_lock => pipe_qpll_lock,
+    pipe_rxpmaresetdone => pipe_rxpmaresetdone,
+    pipe_rxbufstatus => pipe_rxbufstatus,
+    pipe_txphaligndone => pipe_txphaligndone,
+    pipe_txphinitdone => pipe_txphinitdone,
+    pipe_txdlysresetdone => pipe_txdlysresetdone,
+    pipe_rxphaligndone => pipe_rxphaligndone,
+    pipe_rxdlysresetdone => pipe_rxdlysresetdone,
+    pipe_rxsyncdone => pipe_rxsyncdone,
+    pipe_rxdisperr => pipe_rxdisperr,
+    pipe_rxnotintable => pipe_rxnotintable,
+    pipe_rxcommadet => pipe_rxcommadet,
+    gt_ch_drp_rdy => gt_ch_drp_rdy,
+    pipe_debug_0 => pipe_debug_0,
+    pipe_debug_1 => pipe_debug_1,
+    pipe_debug_2 => pipe_debug_2,
+    pipe_debug_3 => pipe_debug_3,
+    pipe_debug_4 => pipe_debug_4,
+    pipe_debug_5 => pipe_debug_5,
+    pipe_debug_6 => pipe_debug_6,
+    pipe_debug_7 => pipe_debug_7,
+    pipe_debug_8 => pipe_debug_8,
+    pipe_debug_9 => pipe_debug_9,
+    pipe_debug => pipe_debug
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

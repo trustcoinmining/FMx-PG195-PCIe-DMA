@@ -63,7 +63,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RX.TDATA_NUM_BYTES">16</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RX.TDATA_NUM_BYTES">8</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -238,7 +238,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_TX.TDATA_NUM_BYTES">16</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_TX.TDATA_NUM_BYTES">8</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2590,7 +2590,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.transceiver_debug" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.transceiver_debug" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -3330,7 +3330,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cdf14b1b</spirit:value>
+            <spirit:value>9:92d0471a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3346,11 +3346,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 06 12:06:54 UTC 2019</spirit:value>
+            <spirit:value>Fri Mar 08 11:21:55 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f611785</spirit:value>
+            <spirit:value>9:b9ed990c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3366,11 +3366,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 06 12:06:54 UTC 2019</spirit:value>
+            <spirit:value>Fri Mar 08 11:21:55 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f611785</spirit:value>
+            <spirit:value>9:b9ed990c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3386,11 +3386,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 06 12:06:54 UTC 2019</spirit:value>
+            <spirit:value>Fri Mar 08 11:21:55 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b4dc0911</spirit:value>
+            <spirit:value>9:ad0728ee</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3406,11 +3406,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 06 12:06:55 UTC 2019</spirit:value>
+            <spirit:value>Fri Mar 08 11:21:55 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b4dc0911</spirit:value>
+            <spirit:value>9:ad0728ee</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3421,7 +3421,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3438,7 +3438,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3455,7 +3455,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3472,7 +3472,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3529,7 +3529,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3725,7 +3725,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3798,7 +3798,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3960,7 +3960,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3984,7 +3984,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -4157,7 +4157,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) - 1)">127</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -4174,7 +4174,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) / 8) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) / 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -4257,7 +4257,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) - 1)">127</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -4274,7 +4274,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) / 8) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) / 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8038,7 +8038,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txprbssel" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txprbssel" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8065,7 +8065,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbssel" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbssel" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8088,7 +8088,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txprbsforceerr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txprbsforceerr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8111,7 +8111,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbscntreset" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbscntreset" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8138,7 +8138,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_loopback" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_loopback" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8148,7 +8148,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8162,7 +8162,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbserr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxprbserr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8172,7 +8172,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8189,7 +8189,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txinhibit" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txinhibit" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8213,7 +8213,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rst_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rst_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8237,7 +8237,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qrst_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qrst_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8247,7 +8247,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 5) - 1)">39</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 5) - 1)">4</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8261,7 +8261,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rate_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rate_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8271,7 +8271,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 6) - 1)">47</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 6) - 1)">5</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8285,7 +8285,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_sync_fsm_tx" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_sync_fsm_tx" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8295,7 +8295,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 7) - 1)">55</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 7) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8309,7 +8309,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_sync_fsm_rx" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_sync_fsm_rx" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8319,7 +8319,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 7) - 1)">55</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 7) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8333,7 +8333,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_drp_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_drp_fsm" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8353,7 +8353,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rst_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rst_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8373,7 +8373,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qrst_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qrst_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8393,7 +8393,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rate_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rate_idle" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8403,7 +8403,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8417,7 +8417,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_eyescandataerror" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_eyescandataerror" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8427,7 +8427,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 3) - 1)">23</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 3) - 1)">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8441,7 +8441,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8451,7 +8451,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 15) - 1)">119</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 15) - 1)">14</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8465,7 +8465,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_dmonitorout" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_dmonitorout" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8475,7 +8475,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8489,7 +8489,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_cpll_lock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_cpll_lock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8499,7 +8499,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) / 8)+1) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) / 8)+1) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8513,7 +8513,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qpll_lock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_qpll_lock" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8523,7 +8523,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8537,7 +8537,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxpmaresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxpmaresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8547,7 +8547,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 3) - 1)">23</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 3) - 1)">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8561,7 +8561,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxbufstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxbufstatus" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8571,7 +8571,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8585,7 +8585,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txphaligndone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txphaligndone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8595,7 +8595,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8609,7 +8609,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txphinitdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txphinitdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8619,7 +8619,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8633,7 +8633,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txdlysresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_txdlysresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8643,7 +8643,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8657,7 +8657,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxphaligndone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxphaligndone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8667,7 +8667,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8681,7 +8681,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxdlysresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxdlysresetdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8691,7 +8691,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8705,7 +8705,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxsyncdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxsyncdone" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8715,7 +8715,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 8) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8729,7 +8729,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxdisperr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxdisperr" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8739,7 +8739,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 8) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8753,7 +8753,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxnotintable" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxnotintable" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8763,7 +8763,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;))) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8777,7 +8777,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxcommadet" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_rxcommadet" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8787,7 +8787,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8801,7 +8801,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt_ch_drp_rdy" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt_ch_drp_rdy" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8811,7 +8811,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8825,7 +8825,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8835,7 +8835,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8849,7 +8849,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_1" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8859,7 +8859,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8873,7 +8873,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_2" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_2" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8883,7 +8883,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8897,7 +8897,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_3" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_3" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8907,7 +8907,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8921,7 +8921,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8931,7 +8931,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8945,7 +8945,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_5" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_5" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8955,7 +8955,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8969,7 +8969,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_6" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_6" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8979,7 +8979,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -8993,7 +8993,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_7" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_7" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9003,7 +9003,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9017,7 +9017,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_8" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_8" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9027,7 +9027,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9041,7 +9041,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_9" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_9" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9065,7 +9065,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9095,7 +9095,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 9) - 1)">71</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 9) - 1)">8</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9122,7 +9122,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9149,7 +9149,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 16) - 1)">127</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 16) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9176,7 +9176,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9203,7 +9203,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 16) - 1)">127</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) * 16) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9227,7 +9227,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -9896,19 +9896,19 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>max_lnk_wdt</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_wdt">001000</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_wdt">000001</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>max_lnk_spd</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_spd">2</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_spd">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>c_gen1</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gen1">true</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gen1">false</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>pci_exp_int_freq</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pci_exp_int_freq">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pci_exp_int_freq">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>c_pcie_fast_config</spirit:name>
@@ -9916,7 +9916,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_0</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFC00000</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFF00000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_1</spirit:name>
@@ -9924,7 +9924,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_2</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_2">FFC00000</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_2">FFF00000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_3</spirit:name>
@@ -9952,7 +9952,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>dev_id</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dev_id">7018</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dev_id">7024</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>rev_id</spirit:name>
@@ -9984,11 +9984,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>mps</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.mps">001</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.mps">010</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>cmps</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.cmps">1</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.cmps">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ext_tag_fld_sup</spirit:name>
@@ -10044,11 +10044,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_tx_last_tlp</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_tx_last_tlp">28</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_tx_last_tlp">29</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_rx_ram_limit</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_rx_ram_limit">3FF</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_rx_ram_limit">7FF</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_fc_ph</spirit:name>
@@ -10056,7 +10056,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_fc_pd</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_fc_pd">181</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_fc_pd">437</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_fc_nph</spirit:name>
@@ -10072,7 +10072,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_fc_cpld</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_fc_cpld">205</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_fc_cpld">461</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_cpl_inf</spirit:name>
@@ -10088,7 +10088,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_trgt_lnk_spd</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_trgt_lnk_spd">2</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_trgt_lnk_spd">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_hw_auton_spd_disable</spirit:name>
@@ -10645,12 +10645,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>LINK_CAP_MAX_LINK_WIDTH</spirit:name>
         <spirit:displayName>Link Cap Max Link Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DATA_WIDTH</spirit:name>
         <spirit:displayName>C Data Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_WIDTH">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_WIDTH">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>PIPE_SIM</spirit:name>
@@ -10670,7 +10670,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>TRANSCEIVER_CTRL_STATUS_PORTS</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>SHARED_LOGIC_IN_CORE</spirit:name>
@@ -10715,7 +10715,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>KEEP_WIDTH</spirit:name>
         <spirit:displayName>Keep Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.KEEP_WIDTH" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) div 8)">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.KEEP_WIDTH" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) div 8)">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>PCIE_ASYNC_EN</spirit:name>
@@ -10760,10 +10760,6 @@
       <spirit:enumeration>3</spirit:enumeration>
       <spirit:enumeration>4</spirit:enumeration>
       <spirit:enumeration>5</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_6b979ebc</spirit:name>
-      <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_6e3ded9c</spirit:name>
@@ -10839,6 +10835,12 @@
     <spirit:choice>
       <spirit:name>choice_list_c3d223d9</spirit:name>
       <spirit:enumeration>Memory</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ce4d0c9f</spirit:name>
+      <spirit:enumeration>62.5</spirit:enumeration>
+      <spirit:enumeration>125</spirit:enumeration>
+      <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_d1e1a340</spirit:name>
@@ -10926,6 +10928,13 @@
       <spirit:enumeration spirit:text="No limit">No_limit</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_pairs_3f2631bf</spirit:name>
+      <spirit:enumeration spirit:text="128 bytes">128_bytes</spirit:enumeration>
+      <spirit:enumeration spirit:text="256 bytes">256_bytes</spirit:enumeration>
+      <spirit:enumeration spirit:text="512 bytes">512_bytes</spirit:enumeration>
+      <spirit:enumeration spirit:text="1024 bytes">1024_bytes</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_pairs_4da2f4f7</spirit:name>
       <spirit:enumeration spirit:text="No function number bits used">No_function_number_bits_used</spirit:enumeration>
       <spirit:enumeration spirit:text="First MSB of function number used">First_MSB_of_function_number_used</spirit:enumeration>
@@ -10955,6 +10964,10 @@
       <spirit:enumeration spirit:text="Disabled">Disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="32-bit Addressing">32-bit_Addressing</spirit:enumeration>
       <spirit:enumeration spirit:text="64-bit Addressing">64-bit_Addressing</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_8568ef9f</spirit:name>
+      <spirit:enumeration spirit:text="64 bit">64_bit</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_8d857fe8</spirit:name>
@@ -11022,19 +11035,10 @@
       <spirit:enumeration spirit:text="Root Port of PCI Express Root Complex">Root_Port_of_PCI_Express_Root_Complex</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_dce95f24</spirit:name>
-      <spirit:enumeration spirit:text="128 bit">128_bit</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_pairs_fad60d76</spirit:name>
       <spirit:enumeration spirit:text="BAR 0">BAR_0</spirit:enumeration>
       <spirit:enumeration spirit:text="BAR 1">BAR_1</spirit:enumeration>
       <spirit:enumeration spirit:text="BAR 2">BAR_2</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_pairs_fb6cd8be</spirit:name>
-      <spirit:enumeration spirit:text="128 bytes">128_bytes</spirit:enumeration>
-      <spirit:enumeration spirit:text="256 bytes">256_bytes</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
@@ -11483,19 +11487,19 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Maximum_Link_Width</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Maximum_Link_Width" spirit:choiceRef="choice_list_55451da8" spirit:order="103">X8</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Maximum_Link_Width" spirit:choiceRef="choice_list_55451da8" spirit:order="103">X1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Link_Speed</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Link_Speed" spirit:choiceRef="choice_pairs_d06c0498" spirit:order="104">5.0_GT/s</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Link_Speed" spirit:choiceRef="choice_pairs_d06c0498" spirit:order="104">2.5_GT/s</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Interface_Width</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Interface_Width" spirit:choiceRef="choice_pairs_dce95f24" spirit:order="105">128_bit</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Interface_Width" spirit:choiceRef="choice_pairs_8568ef9f" spirit:order="105">64_bit</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>User_Clk_Freq</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.User_Clk_Freq" spirit:choiceRef="choice_list_6b979ebc" spirit:order="106">250</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.User_Clk_Freq" spirit:choiceRef="choice_list_ce4d0c9f" spirit:order="106">125</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Enabled</spirit:name>
@@ -11519,7 +11523,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Size</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="206">4</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="206">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar1_Enabled</spirit:name>
@@ -11567,7 +11571,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar2_Size</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar2_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="218">4</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar2_Size" spirit:choiceRef="choice_list_c15e8c67" spirit:order="218">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar3_Enabled</spirit:name>
@@ -11663,7 +11667,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Device_ID</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Device_ID" spirit:order="302">7018</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Device_ID" spirit:order="302">7024</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Revision_ID</spirit:name>
@@ -11707,7 +11711,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Max_Payload_Size</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Max_Payload_Size" spirit:choiceRef="choice_pairs_fb6cd8be" spirit:order="402">256_bytes</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Max_Payload_Size" spirit:choiceRef="choice_pairs_3f2631bf" spirit:order="402">512_bytes</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Extended_Tag_Field</spirit:name>
@@ -11759,7 +11763,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Trgt_Link_Speed</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Trgt_Link_Speed" spirit:choiceRef="choice_pairs_067d6dc7" spirit:order="513">4&apos;h2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Trgt_Link_Speed" spirit:choiceRef="choice_pairs_067d6dc7" spirit:order="513">4&apos;h1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Hw_Auton_Spd_Disable</spirit:name>
@@ -12359,7 +12363,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>en_transceiver_status_ports</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.en_transceiver_status_ports" spirit:order="2049">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.en_transceiver_status_ports" spirit:order="2049">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>shared_logic_in_core</spirit:name>

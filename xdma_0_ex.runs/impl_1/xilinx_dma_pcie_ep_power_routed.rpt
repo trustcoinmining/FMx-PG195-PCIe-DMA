@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Mar  6 21:41:57 2019
+| Date             : Fri Mar  8 20:40:41 2019
 | Host             : vr-2 running 64-bit major release  (build 9200)
 | Command          : report_power -file xilinx_dma_pcie_ep_power_routed.rpt -pb xilinx_dma_pcie_ep_power_summary_routed.pb -rpx xilinx_dma_pcie_ep_power_routed.rpx
 | Design           : xilinx_dma_pcie_ep
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.746        |
+| Total On-Chip Power (W)  | 0.844        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.515        |
-| Device Static (W)        | 0.231        |
+| Dynamic (W)              | 0.641        |
+| Device Static (W)        | 0.203        |
 | Effective TJA (C/W)      | 1.8          |
-| Max Ambient (C)          | 78.4         |
-| Junction Temperature (C) | 31.6         |
+| Max Ambient (C)          | 83.5         |
+| Junction Temperature (C) | 26.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.281 |       11 |       --- |             --- |
-| Slice Logic              |     0.132 |    53825 |       --- |             --- |
-|   LUT as Logic           |     0.111 |    20758 |    254200 |            8.17 |
-|   Register               |     0.008 |    23584 |    508400 |            4.64 |
-|   LUT as Distributed RAM |     0.006 |     2019 |     90600 |            2.23 |
-|   CARRY4                 |     0.006 |      911 |     63550 |            1.43 |
-|   F7/F8 Muxes            |    <0.001 |      330 |    254200 |            0.13 |
-|   LUT as Shift Register  |    <0.001 |      106 |     90600 |            0.12 |
-|   Others                 |     0.000 |      528 |       --- |             --- |
-| Signals                  |     0.188 |    41293 |       --- |             --- |
-| Block RAM                |     0.217 |     35.5 |       795 |            4.47 |
-| MMCM                     |     0.109 |        1 |        10 |           10.00 |
+| Clocks                   |     0.075 |        7 |       --- |             --- |
+| Slice Logic              |     0.041 |    28955 |       --- |             --- |
+|   LUT as Logic           |     0.035 |    10910 |    254200 |            4.29 |
+|   Register               |     0.002 |    12685 |    508400 |            2.50 |
+|   LUT as Distributed RAM |     0.002 |     1277 |     90600 |            1.41 |
+|   CARRY4                 |     0.001 |      481 |     63550 |            0.76 |
+|   F7/F8 Muxes            |    <0.001 |      132 |    254200 |            0.05 |
+|   LUT as Shift Register  |    <0.001 |       33 |     90600 |            0.04 |
+|   Others                 |     0.000 |      329 |       --- |             --- |
+| Signals                  |     0.051 |    21509 |       --- |             --- |
+| Block RAM                |     0.064 |     23.5 |       795 |            2.96 |
+| MMCM                     |     0.107 |        1 |        10 |           10.00 |
 | I/O                      |     0.000 |        1 |       500 |            0.20 |
-| GTX                      |     2.506 |        8 |        16 |           50.00 |
-| Hard IPs                 |     0.082 |        1 |       --- |             --- |
-|   PCIE                   |     0.082 |        1 |         1 |          100.00 |
-| Static Power             |     0.231 |          |           |                 |
-| Total                    |     3.746 |          |           |                 |
+| GTX                      |     0.277 |        1 |        16 |            6.25 |
+| Hard IPs                 |     0.025 |        1 |       --- |             --- |
+|   PCIE                   |     0.025 |        1 |         1 |          100.00 |
+| Static Power             |     0.203 |          |           |                 |
+| Total                    |     0.844 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,8 +79,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.301 |       1.183 |      0.118 |
-| Vccaux    |       1.800 |     0.093 |       0.059 |      0.034 |
+| Vccint    |       1.000 |     0.368 |       0.273 |      0.095 |
+| Vccaux    |       1.800 |     0.092 |       0.059 |      0.033 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -88,10 +88,10 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.013 |       0.009 |      0.004 |
-| MGTAVcc   |       1.000 |     1.280 |       1.274 |      0.005 |
-| MGTAVtt   |       1.200 |     0.759 |       0.754 |      0.005 |
-| MGTVccaux |       1.800 |     0.021 |       0.021 |      0.000 |
+| Vccbram   |       1.000 |     0.006 |       0.003 |      0.003 |
+| MGTAVcc   |       1.000 |     0.131 |       0.127 |      0.004 |
+| MGTAVtt   |       1.200 |     0.099 |       0.094 |      0.005 |
+| MGTVccaux |       1.800 |     0.010 |       0.010 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
@@ -133,19 +133,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| Clock               | Domain                                                                                                                                 | Constraint (ns) |
-+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| clk_125mhz_mux_x0y0 | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_RXUSRCLK    |             4.0 |
-| clk_125mhz_x0y0     | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz      |             8.0 |
-| clk_250mhz_mux_x0y0 | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_RXUSRCLK    |             4.0 |
-| clk_250mhz_x0y0     | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz      |             4.0 |
-| mmcm_fb             | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb         |            10.0 |
-| sys_clk             | sys_clk_p                                                                                                                              |            10.0 |
-| txoutclk_x0y0       | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/pipe_txoutclk_out |            10.0 |
-| userclk1            | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1        |             2.0 |
-| userclk2            | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk2        |             4.0 |
-+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
++---------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock         | Domain                                                                                                                                 | Constraint (ns) |
++---------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk_125mhz    | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz      |             8.0 |
+| clk_250mhz    | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz      |             4.0 |
+| mmcm_fb       | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb         |            10.0 |
+| sys_clk       | sys_clk_p                                                                                                                              |            10.0 |
+| txoutclk_x0y0 | xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/pipe_txoutclk_out |            10.0 |
++---------------+----------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -157,17 +153,17 @@ Table of Contents
 +---------------------------------------+-----------+
 | Name                                  | Power (W) |
 +---------------------------------------+-----------+
-| xilinx_dma_pcie_ep                    |     3.515 |
-|   xdma_0_i                            |     3.503 |
-|     inst                              |     3.503 |
-|       ram_top                         |     0.099 |
-|       udma_wrapper                    |     0.511 |
-|       xdma_0_pcie2_to_pcie3_wrapper_i |     2.892 |
-|   xdma_app_i                          |     0.012 |
-|     blk_mem_axiLM_inst                |     0.002 |
-|       U0                              |     0.002 |
-|     blk_mem_gen_bypass_inst           |     0.011 |
-|       U0                              |     0.011 |
+| xilinx_dma_pcie_ep                    |     0.641 |
+|   xdma_0_i                            |     0.636 |
+|     inst                              |     0.636 |
+|       ram_top                         |     0.021 |
+|       udma_wrapper                    |     0.155 |
+|       xdma_0_pcie2_to_pcie3_wrapper_i |     0.459 |
+|   xdma_app_i                          |     0.005 |
+|     blk_mem_axiLM_inst                |     0.001 |
+|       U0                              |     0.001 |
+|     blk_mem_gen_bypass_inst           |     0.004 |
+|       U0                              |     0.004 |
 +---------------------------------------+-----------+
 
 

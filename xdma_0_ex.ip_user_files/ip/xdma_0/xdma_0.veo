@@ -58,10 +58,10 @@ xdma_0 your_instance_name (
   .sys_clk(sys_clk),                                              // input wire sys_clk
   .sys_rst_n(sys_rst_n),                                          // input wire sys_rst_n
   .user_lnk_up(user_lnk_up),                                      // output wire user_lnk_up
-  .pci_exp_txp(pci_exp_txp),                                      // output wire [7 : 0] pci_exp_txp
-  .pci_exp_txn(pci_exp_txn),                                      // output wire [7 : 0] pci_exp_txn
-  .pci_exp_rxp(pci_exp_rxp),                                      // input wire [7 : 0] pci_exp_rxp
-  .pci_exp_rxn(pci_exp_rxn),                                      // input wire [7 : 0] pci_exp_rxn
+  .pci_exp_txp(pci_exp_txp),                                      // output wire [0 : 0] pci_exp_txp
+  .pci_exp_txn(pci_exp_txn),                                      // output wire [0 : 0] pci_exp_txn
+  .pci_exp_rxp(pci_exp_rxp),                                      // input wire [0 : 0] pci_exp_rxp
+  .pci_exp_rxn(pci_exp_rxn),                                      // input wire [0 : 0] pci_exp_rxn
   .cfg_subsys_vend_id(cfg_subsys_vend_id),                        // input wire [15 : 0] cfg_subsys_vend_id
   .cfg_vend_id(cfg_vend_id),                                      // input wire [15 : 0] cfg_vend_id
   .cfg_dev_id_pf0(cfg_dev_id_pf0),                                // input wire [15 : 0] cfg_dev_id_pf0
@@ -111,8 +111,8 @@ xdma_0 your_instance_name (
   .m_axib_awready(m_axib_awready),                                // input wire m_axib_awready
   .m_axib_awlock(m_axib_awlock),                                  // output wire m_axib_awlock
   .m_axib_awcache(m_axib_awcache),                                // output wire [3 : 0] m_axib_awcache
-  .m_axib_wdata(m_axib_wdata),                                    // output wire [127 : 0] m_axib_wdata
-  .m_axib_wstrb(m_axib_wstrb),                                    // output wire [15 : 0] m_axib_wstrb
+  .m_axib_wdata(m_axib_wdata),                                    // output wire [63 : 0] m_axib_wdata
+  .m_axib_wstrb(m_axib_wstrb),                                    // output wire [7 : 0] m_axib_wstrb
   .m_axib_wlast(m_axib_wlast),                                    // output wire m_axib_wlast
   .m_axib_wvalid(m_axib_wvalid),                                  // output wire m_axib_wvalid
   .m_axib_wready(m_axib_wready),                                  // input wire m_axib_wready
@@ -131,31 +131,65 @@ xdma_0 your_instance_name (
   .m_axib_arlock(m_axib_arlock),                                  // output wire m_axib_arlock
   .m_axib_arcache(m_axib_arcache),                                // output wire [3 : 0] m_axib_arcache
   .m_axib_rid(m_axib_rid),                                        // input wire [3 : 0] m_axib_rid
-  .m_axib_rdata(m_axib_rdata),                                    // input wire [127 : 0] m_axib_rdata
+  .m_axib_rdata(m_axib_rdata),                                    // input wire [63 : 0] m_axib_rdata
   .m_axib_rresp(m_axib_rresp),                                    // input wire [1 : 0] m_axib_rresp
   .m_axib_rlast(m_axib_rlast),                                    // input wire m_axib_rlast
   .m_axib_rvalid(m_axib_rvalid),                                  // input wire m_axib_rvalid
   .m_axib_rready(m_axib_rready),                                  // output wire m_axib_rready
-  .s_axis_c2h_tdata_0(s_axis_c2h_tdata_0),                        // input wire [127 : 0] s_axis_c2h_tdata_0
+  .s_axis_c2h_tdata_0(s_axis_c2h_tdata_0),                        // input wire [63 : 0] s_axis_c2h_tdata_0
   .s_axis_c2h_tlast_0(s_axis_c2h_tlast_0),                        // input wire s_axis_c2h_tlast_0
   .s_axis_c2h_tvalid_0(s_axis_c2h_tvalid_0),                      // input wire s_axis_c2h_tvalid_0
   .s_axis_c2h_tready_0(s_axis_c2h_tready_0),                      // output wire s_axis_c2h_tready_0
-  .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),                        // input wire [15 : 0] s_axis_c2h_tkeep_0
-  .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),                        // output wire [127 : 0] m_axis_h2c_tdata_0
+  .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),                        // input wire [7 : 0] s_axis_c2h_tkeep_0
+  .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),                        // output wire [63 : 0] m_axis_h2c_tdata_0
   .m_axis_h2c_tlast_0(m_axis_h2c_tlast_0),                        // output wire m_axis_h2c_tlast_0
   .m_axis_h2c_tvalid_0(m_axis_h2c_tvalid_0),                      // output wire m_axis_h2c_tvalid_0
   .m_axis_h2c_tready_0(m_axis_h2c_tready_0),                      // input wire m_axis_h2c_tready_0
-  .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),                        // output wire [15 : 0] m_axis_h2c_tkeep_0
-  .s_axis_c2h_tdata_1(s_axis_c2h_tdata_1),                        // input wire [127 : 0] s_axis_c2h_tdata_1
-  .s_axis_c2h_tlast_1(s_axis_c2h_tlast_1),                        // input wire s_axis_c2h_tlast_1
-  .s_axis_c2h_tvalid_1(s_axis_c2h_tvalid_1),                      // input wire s_axis_c2h_tvalid_1
-  .s_axis_c2h_tready_1(s_axis_c2h_tready_1),                      // output wire s_axis_c2h_tready_1
-  .s_axis_c2h_tkeep_1(s_axis_c2h_tkeep_1),                        // input wire [15 : 0] s_axis_c2h_tkeep_1
-  .m_axis_h2c_tdata_1(m_axis_h2c_tdata_1),                        // output wire [127 : 0] m_axis_h2c_tdata_1
-  .m_axis_h2c_tlast_1(m_axis_h2c_tlast_1),                        // output wire m_axis_h2c_tlast_1
-  .m_axis_h2c_tvalid_1(m_axis_h2c_tvalid_1),                      // output wire m_axis_h2c_tvalid_1
-  .m_axis_h2c_tready_1(m_axis_h2c_tready_1),                      // input wire m_axis_h2c_tready_1
-  .m_axis_h2c_tkeep_1(m_axis_h2c_tkeep_1)                        // output wire [15 : 0] m_axis_h2c_tkeep_1
+  .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),                        // output wire [7 : 0] m_axis_h2c_tkeep_0
+  .pipe_txprbssel(pipe_txprbssel),                                // input wire [2 : 0] pipe_txprbssel
+  .pipe_rxprbssel(pipe_rxprbssel),                                // input wire [2 : 0] pipe_rxprbssel
+  .pipe_txprbsforceerr(pipe_txprbsforceerr),                      // input wire pipe_txprbsforceerr
+  .pipe_rxprbscntreset(pipe_rxprbscntreset),                      // input wire pipe_rxprbscntreset
+  .pipe_loopback(pipe_loopback),                                  // input wire [2 : 0] pipe_loopback
+  .pipe_rxprbserr(pipe_rxprbserr),                                // output wire [0 : 0] pipe_rxprbserr
+  .pipe_txinhibit(pipe_txinhibit),                                // input wire [0 : 0] pipe_txinhibit
+  .pipe_rst_fsm(pipe_rst_fsm),                                    // output wire [4 : 0] pipe_rst_fsm
+  .pipe_qrst_fsm(pipe_qrst_fsm),                                  // output wire [11 : 0] pipe_qrst_fsm
+  .pipe_rate_fsm(pipe_rate_fsm),                                  // output wire [4 : 0] pipe_rate_fsm
+  .pipe_sync_fsm_tx(pipe_sync_fsm_tx),                            // output wire [5 : 0] pipe_sync_fsm_tx
+  .pipe_sync_fsm_rx(pipe_sync_fsm_rx),                            // output wire [6 : 0] pipe_sync_fsm_rx
+  .pipe_drp_fsm(pipe_drp_fsm),                                    // output wire [6 : 0] pipe_drp_fsm
+  .pipe_rst_idle(pipe_rst_idle),                                  // output wire pipe_rst_idle
+  .pipe_qrst_idle(pipe_qrst_idle),                                // output wire pipe_qrst_idle
+  .pipe_rate_idle(pipe_rate_idle),                                // output wire pipe_rate_idle
+  .pipe_eyescandataerror(pipe_eyescandataerror),                  // output wire [0 : 0] pipe_eyescandataerror
+  .pipe_rxstatus(pipe_rxstatus),                                  // output wire [2 : 0] pipe_rxstatus
+  .pipe_dmonitorout(pipe_dmonitorout),                            // output wire [14 : 0] pipe_dmonitorout
+  .pipe_cpll_lock(pipe_cpll_lock),                                // output wire [0 : 0] pipe_cpll_lock
+  .pipe_qpll_lock(pipe_qpll_lock),                                // output wire [0 : 0] pipe_qpll_lock
+  .pipe_rxpmaresetdone(pipe_rxpmaresetdone),                      // output wire [0 : 0] pipe_rxpmaresetdone
+  .pipe_rxbufstatus(pipe_rxbufstatus),                            // output wire [2 : 0] pipe_rxbufstatus
+  .pipe_txphaligndone(pipe_txphaligndone),                        // output wire [0 : 0] pipe_txphaligndone
+  .pipe_txphinitdone(pipe_txphinitdone),                          // output wire [0 : 0] pipe_txphinitdone
+  .pipe_txdlysresetdone(pipe_txdlysresetdone),                    // output wire [0 : 0] pipe_txdlysresetdone
+  .pipe_rxphaligndone(pipe_rxphaligndone),                        // output wire [0 : 0] pipe_rxphaligndone
+  .pipe_rxdlysresetdone(pipe_rxdlysresetdone),                    // output wire [0 : 0] pipe_rxdlysresetdone
+  .pipe_rxsyncdone(pipe_rxsyncdone),                              // output wire [0 : 0] pipe_rxsyncdone
+  .pipe_rxdisperr(pipe_rxdisperr),                                // output wire [7 : 0] pipe_rxdisperr
+  .pipe_rxnotintable(pipe_rxnotintable),                          // output wire [7 : 0] pipe_rxnotintable
+  .pipe_rxcommadet(pipe_rxcommadet),                              // output wire [0 : 0] pipe_rxcommadet
+  .gt_ch_drp_rdy(gt_ch_drp_rdy),                                  // output wire [0 : 0] gt_ch_drp_rdy
+  .pipe_debug_0(pipe_debug_0),                                    // output wire [0 : 0] pipe_debug_0
+  .pipe_debug_1(pipe_debug_1),                                    // output wire [0 : 0] pipe_debug_1
+  .pipe_debug_2(pipe_debug_2),                                    // output wire [0 : 0] pipe_debug_2
+  .pipe_debug_3(pipe_debug_3),                                    // output wire [0 : 0] pipe_debug_3
+  .pipe_debug_4(pipe_debug_4),                                    // output wire [0 : 0] pipe_debug_4
+  .pipe_debug_5(pipe_debug_5),                                    // output wire [0 : 0] pipe_debug_5
+  .pipe_debug_6(pipe_debug_6),                                    // output wire [0 : 0] pipe_debug_6
+  .pipe_debug_7(pipe_debug_7),                                    // output wire [0 : 0] pipe_debug_7
+  .pipe_debug_8(pipe_debug_8),                                    // output wire [0 : 0] pipe_debug_8
+  .pipe_debug_9(pipe_debug_9),                                    // output wire [0 : 0] pipe_debug_9
+  .pipe_debug(pipe_debug)                                        // output wire [31 : 0] pipe_debug
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

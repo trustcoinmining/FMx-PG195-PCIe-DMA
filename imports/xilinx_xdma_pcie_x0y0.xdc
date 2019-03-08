@@ -54,8 +54,8 @@
 ##-----------------------------------------------------------------------------
 ###############################################################################
 # User Configuration 
-# Link Width   - x8
-# Link Speed   - gen2
+# Link Width   - x1
+# Link Speed   - gen1
 # Family       - kintex7
 # Part         - xc7k410t
 # Package      - ffg900

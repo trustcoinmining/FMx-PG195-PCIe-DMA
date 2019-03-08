@@ -272,6 +272,53 @@ module xdma_0_pcie2_to_pcie3_wrapper #(
   input  wire [2:0]   cfg_ds_function_number,
   input  wire [7:0]   cfg_ds_port_number,
 
+  //--------------------------------------------------------------------------------------//
+  //  Transceiver Debug And Status Ports                                                  //
+  //--------------------------------------------------------------------------------------//
+  input  wire [2:0]   pipe_txprbssel,
+  input  wire [2:0]   pipe_rxprbssel,
+  input  wire         pipe_txprbsforceerr,
+  input  wire         pipe_rxprbscntreset,
+  input  wire [2:0]   pipe_loopback,
+  output wire [0:0]   pipe_rxprbserr,
+  input  wire [0:0]   pipe_txinhibit,
+  output wire [4:0]   pipe_rst_fsm,
+  output wire [11:0]  pipe_qrst_fsm,
+  output wire [4:0]   pipe_rate_fsm,
+  output wire [5:0]   pipe_sync_fsm_tx,
+  output wire [6:0]   pipe_sync_fsm_rx,
+  output wire [6:0]   pipe_drp_fsm,
+  output wire         pipe_rst_idle,
+  output wire         pipe_qrst_idle,
+  output wire         pipe_rate_idle,
+  output wire [0:0]   pipe_eyescandataerror,
+  output wire [2:0]   pipe_rxstatus,
+  output wire [14:0]  pipe_dmonitorout,
+  output wire [0:0]   pipe_cpll_lock,
+  output wire [0:0]   pipe_qpll_lock,
+  output wire [0:0]   pipe_rxpmaresetdone,
+  output wire [2:0]   pipe_rxbufstatus,
+  output wire [0:0]   pipe_txphaligndone,
+  output wire [0:0]   pipe_txphinitdone,
+  output wire [0:0]   pipe_txdlysresetdone,
+  output wire [0:0]   pipe_rxphaligndone,
+  output wire [0:0]   pipe_rxdlysresetdone,
+  output wire [0:0]   pipe_rxsyncdone,
+  output wire [7:0]   pipe_rxdisperr,
+  output wire [7:0]   pipe_rxnotintable,
+  output wire [0:0]   pipe_rxcommadet,
+  output wire [0:0]   gt_ch_drp_rdy,
+  output wire [0:0]   pipe_debug_0,
+  output wire [0:0]   pipe_debug_1,
+  output wire [0:0]   pipe_debug_2,
+  output wire [0:0]   pipe_debug_3,
+  output wire [0:0]   pipe_debug_4,
+  output wire [0:0]   pipe_debug_5,
+  output wire [0:0]   pipe_debug_6,
+  output wire [0:0]   pipe_debug_7,
+  output wire [0:0]   pipe_debug_8,
+  output wire [0:0]   pipe_debug_9,
+  output wire [31:0]  pipe_debug,
 
 
 
@@ -505,6 +552,54 @@ module xdma_0_pcie2_to_pcie3_wrapper #(
 
 
 
+  //--------------------------------------------------------------------------------------//
+  // Transceiver Control Status and debug ports                                           //
+  //--------------------------------------------------------------------------------------//
+  wire [2:0]                                 g2ip_pipe_txprbssel;
+  wire [2:0]                                 g2ip_pipe_rxprbssel;
+  wire                                       g2ip_pipe_txprbsforceerr;
+  wire                                       g2ip_pipe_rxprbscntreset;
+  wire [2:0]                                 g2ip_pipe_loopback;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_gt_ch_drp_rdy;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_rxprbserr;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_txinhibit;
+  wire [4:0]                                 g2ip_pipe_rst_fsm;
+  wire [11:0]                                g2ip_pipe_qrst_fsm;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*5)-1:0]  g2ip_pipe_rate_fsm;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*6)-1:0]  g2ip_pipe_sync_fsm_tx;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*7)-1:0]  g2ip_pipe_sync_fsm_rx;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*7)-1:0]  g2ip_pipe_drp_fsm;
+  wire                                       g2ip_pipe_rst_idle;
+  wire                                       g2ip_pipe_qrst_idle;
+  wire                                       g2ip_pipe_rate_idle;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_eyescandataerror;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*3)-1:0]  g2ip_pipe_rxstatus;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*15)-1:0] g2ip_pipe_dmonitorout;
+
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_cpll_lock;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH-1)>>2:0] g2ip_pipe_qpll_lock;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_rxpmaresetdone;     
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*3)-1:0]  g2ip_pipe_rxbufstatus;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_txphaligndone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_txphinitdone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_txdlysresetdone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_rxphaligndone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_rxdlysresetdone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_rxsyncdone;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*8)-1:0]  g2ip_pipe_rxdisperr;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH*8)-1:0]  g2ip_pipe_rxnotintable;
+  wire [(PL_LINK_CAP_MAX_LINK_WIDTH)-1:0]    g2ip_pipe_rxcommadet;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_0;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_1;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_2;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_3;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_4;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_5;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_6;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_7;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_8;
+  wire [PL_LINK_CAP_MAX_LINK_WIDTH-1:0]      g2ip_pipe_debug_9;
+  wire [31:0]                                g2ip_pipe_debug;
 
 
   // AXI-S RX Interface DMA CPL <-> RX Demux
@@ -854,6 +949,54 @@ module xdma_0_pcie2_to_pcie3_wrapper #(
 
 
 
+   //-------------------------------------------------------------------------------------//
+   // Transceiver Control Status and debug ports                                          //
+   //-------------------------------------------------------------------------------------//
+   .g2ip_pipe_txprbssel                    ( g2ip_pipe_txprbssel        ),
+   .g2ip_pipe_rxprbssel                    ( g2ip_pipe_rxprbssel        ),
+   .g2ip_pipe_txprbsforceerr               ( g2ip_pipe_txprbsforceerr   ),
+   .g2ip_pipe_rxprbscntreset               ( g2ip_pipe_rxprbscntreset   ),
+   .g2ip_pipe_loopback                     ( g2ip_pipe_loopback         ),
+   .g2ip_gt_ch_drp_rdy                     ( g2ip_gt_ch_drp_rdy         ),
+   .g2ip_pipe_rxprbserr                    ( g2ip_pipe_rxprbserr        ),
+   .g2ip_pipe_txinhibit                    ( g2ip_pipe_txinhibit        ),
+   .g2ip_pipe_rst_fsm                      ( g2ip_pipe_rst_fsm          ),
+   .g2ip_pipe_qrst_fsm                     ( g2ip_pipe_qrst_fsm         ),
+   .g2ip_pipe_rate_fsm                     ( g2ip_pipe_rate_fsm         ),
+   .g2ip_pipe_sync_fsm_tx                  ( g2ip_pipe_sync_fsm_tx      ),
+   .g2ip_pipe_sync_fsm_rx                  ( g2ip_pipe_sync_fsm_rx      ),
+   .g2ip_pipe_drp_fsm                      ( g2ip_pipe_drp_fsm          ),
+   .g2ip_pipe_rst_idle                     ( g2ip_pipe_rst_idle         ),
+   .g2ip_pipe_qrst_idle                    ( g2ip_pipe_qrst_idle        ),
+   .g2ip_pipe_rate_idle                    ( g2ip_pipe_rate_idle        ),
+   .g2ip_pipe_eyescandataerror             ( g2ip_pipe_eyescandataerror ),
+   .g2ip_pipe_rxstatus                     ( g2ip_pipe_rxstatus         ),
+   .g2ip_pipe_dmonitorout                  ( g2ip_pipe_dmonitorout      ),
+
+   .g2ip_pipe_cpll_lock                    ( g2ip_pipe_cpll_lock        ),  
+   .g2ip_pipe_qpll_lock                    ( g2ip_pipe_qpll_lock        ),     
+   .g2ip_pipe_rxpmaresetdone               ( g2ip_pipe_rxpmaresetdone   ),         
+   .g2ip_pipe_rxbufstatus                  ( g2ip_pipe_rxbufstatus      ),            
+   .g2ip_pipe_txphaligndone                ( g2ip_pipe_txphaligndone    ),           
+   .g2ip_pipe_txphinitdone                 ( g2ip_pipe_txphinitdone     ),            
+   .g2ip_pipe_txdlysresetdone              ( g2ip_pipe_txdlysresetdone  ),        
+   .g2ip_pipe_rxphaligndone                ( g2ip_pipe_rxphaligndone    ),           
+   .g2ip_pipe_rxdlysresetdone              ( g2ip_pipe_rxdlysresetdone  ),         
+   .g2ip_pipe_rxsyncdone                   ( g2ip_pipe_rxsyncdone       ),            
+   .g2ip_pipe_rxdisperr                    ( g2ip_pipe_rxdisperr        ),          
+   .g2ip_pipe_rxnotintable                 ( g2ip_pipe_rxnotintable     ),          
+   .g2ip_pipe_rxcommadet                   ( g2ip_pipe_rxcommadet       ),               
+   .g2ip_pipe_debug_0                      ( g2ip_pipe_debug_0          ),
+   .g2ip_pipe_debug_1                      ( g2ip_pipe_debug_1          ),
+   .g2ip_pipe_debug_2                      ( g2ip_pipe_debug_2          ),
+   .g2ip_pipe_debug_3                      ( g2ip_pipe_debug_3          ),
+   .g2ip_pipe_debug_4                      ( g2ip_pipe_debug_4          ),
+   .g2ip_pipe_debug_5                      ( g2ip_pipe_debug_5          ),
+   .g2ip_pipe_debug_6                      ( g2ip_pipe_debug_6          ),
+   .g2ip_pipe_debug_7                      ( g2ip_pipe_debug_7          ),
+   .g2ip_pipe_debug_8                      ( g2ip_pipe_debug_8          ),
+   .g2ip_pipe_debug_9                      ( g2ip_pipe_debug_9          ),
+   .g2ip_pipe_debug                        ( g2ip_pipe_debug            ),
 
 
 //--------------------------------------------------------------------------------//
@@ -997,6 +1140,53 @@ module xdma_0_pcie2_to_pcie3_wrapper #(
    .cfg_ds_function_number            ( cfg_ds_function_number            ),
    .cfg_ds_port_number                ( cfg_ds_port_number                ),
 
+  //--------------------------------------------------------------------------------------//
+  //  Transceiver Debug And Status Ports                                                  //
+  //--------------------------------------------------------------------------------------//
+   .pipe_txprbssel                    ( pipe_txprbssel                    ),
+   .pipe_rxprbssel                    ( pipe_rxprbssel                    ),
+   .pipe_txprbsforceerr               ( pipe_txprbsforceerr               ),
+   .pipe_rxprbscntreset               ( pipe_rxprbscntreset               ),
+   .pipe_loopback                     ( pipe_loopback                     ),
+   .pipe_rxprbserr                    ( pipe_rxprbserr                    ),
+   .pipe_txinhibit                    ( pipe_txinhibit                    ),
+   .pipe_rst_fsm                      ( pipe_rst_fsm                      ),
+   .pipe_qrst_fsm                     ( pipe_qrst_fsm                     ),
+   .pipe_rate_fsm                     ( pipe_rate_fsm                     ),
+   .pipe_sync_fsm_tx                  ( pipe_sync_fsm_tx                  ),
+   .pipe_sync_fsm_rx                  ( pipe_sync_fsm_rx                  ),
+   .pipe_drp_fsm                      ( pipe_drp_fsm                      ),
+   .pipe_rst_idle                     ( pipe_rst_idle                     ),
+   .pipe_qrst_idle                    ( pipe_qrst_idle                    ),
+   .pipe_rate_idle                    ( pipe_rate_idle                    ),
+   .pipe_eyescandataerror             ( pipe_eyescandataerror             ),
+   .pipe_rxstatus                     ( pipe_rxstatus                     ),
+   .pipe_dmonitorout                  ( pipe_dmonitorout                  ),
+   .pipe_cpll_lock                    ( pipe_cpll_lock                    ),
+   .pipe_qpll_lock                    ( pipe_qpll_lock                    ),
+   .pipe_rxpmaresetdone               ( pipe_rxpmaresetdone               ),
+   .pipe_rxbufstatus                  ( pipe_rxbufstatus                  ),
+   .pipe_txphaligndone                ( pipe_txphaligndone                ),
+   .pipe_txphinitdone                 ( pipe_txphinitdone                 ),
+   .pipe_txdlysresetdone              ( pipe_txdlysresetdone              ),
+   .pipe_rxphaligndone                ( pipe_rxphaligndone                ),
+   .pipe_rxdlysresetdone              ( pipe_rxdlysresetdone              ),
+   .pipe_rxsyncdone                   ( pipe_rxsyncdone                   ),
+   .pipe_rxdisperr                    ( pipe_rxdisperr                    ),
+   .pipe_rxnotintable                 ( pipe_rxnotintable                 ),
+   .pipe_rxcommadet                   ( pipe_rxcommadet                   ),
+   .gt_ch_drp_rdy                     ( gt_ch_drp_rdy                     ),
+   .pipe_debug_0                      ( pipe_debug_0                      ),
+   .pipe_debug_1                      ( pipe_debug_1                      ),
+   .pipe_debug_2                      ( pipe_debug_2                      ),
+   .pipe_debug_3                      ( pipe_debug_3                      ),
+   .pipe_debug_4                      ( pipe_debug_4                      ),
+   .pipe_debug_5                      ( pipe_debug_5                      ),
+   .pipe_debug_6                      ( pipe_debug_6                      ),
+   .pipe_debug_7                      ( pipe_debug_7                      ),
+   .pipe_debug_8                      ( pipe_debug_8                      ),
+   .pipe_debug_9                      ( pipe_debug_9                      ),
+   .pipe_debug                        ( pipe_debug                        ),
 
 
 
@@ -1234,6 +1424,54 @@ module xdma_0_pcie2_to_pcie3_wrapper #(
 
 
 
+   //-------------------------------------------------------------------------------------//
+   // Transceiver Control Status and debug ports                                          //
+   //-------------------------------------------------------------------------------------//
+   .pipe_txprbssel                     ( g2ip_pipe_txprbssel        ),
+   .pipe_rxprbssel                     ( g2ip_pipe_rxprbssel        ),
+   .pipe_txprbsforceerr                ( g2ip_pipe_txprbsforceerr   ),
+   .pipe_rxprbscntreset                ( g2ip_pipe_rxprbscntreset   ),
+   .pipe_loopback                      ( g2ip_pipe_loopback         ),
+   .gt_ch_drp_rdy                      ( g2ip_gt_ch_drp_rdy         ),
+   .pipe_rxprbserr                     ( g2ip_pipe_rxprbserr        ),
+   .pipe_txinhibit                     ( g2ip_pipe_txinhibit        ),
+   .pipe_rst_fsm                       ( g2ip_pipe_rst_fsm          ),
+   .pipe_qrst_fsm                      ( g2ip_pipe_qrst_fsm         ),
+   .pipe_rate_fsm                      ( g2ip_pipe_rate_fsm         ),
+   .pipe_sync_fsm_tx                   ( g2ip_pipe_sync_fsm_tx      ),
+   .pipe_sync_fsm_rx                   ( g2ip_pipe_sync_fsm_rx      ),
+   .pipe_drp_fsm                       ( g2ip_pipe_drp_fsm          ),
+   .pipe_rst_idle                      ( g2ip_pipe_rst_idle         ),
+   .pipe_qrst_idle                     ( g2ip_pipe_qrst_idle        ),
+   .pipe_rate_idle                     ( g2ip_pipe_rate_idle        ),
+   .pipe_eyescandataerror              ( g2ip_pipe_eyescandataerror ),
+   .pipe_rxstatus                      ( g2ip_pipe_rxstatus         ),
+   .pipe_dmonitorout                   ( g2ip_pipe_dmonitorout      ),
+
+   .pipe_cpll_lock                     ( g2ip_pipe_cpll_lock        ),  
+   .pipe_qpll_lock                     ( g2ip_pipe_qpll_lock        ),     
+   .pipe_rxpmaresetdone                ( g2ip_pipe_rxpmaresetdone   ),         
+   .pipe_rxbufstatus                   ( g2ip_pipe_rxbufstatus      ),            
+   .pipe_txphaligndone                 ( g2ip_pipe_txphaligndone    ),           
+   .pipe_txphinitdone                  ( g2ip_pipe_txphinitdone     ),            
+   .pipe_txdlysresetdone               ( g2ip_pipe_txdlysresetdone  ),        
+   .pipe_rxphaligndone                 ( g2ip_pipe_rxphaligndone    ),           
+   .pipe_rxdlysresetdone               ( g2ip_pipe_rxdlysresetdone  ),         
+   .pipe_rxsyncdone                    ( g2ip_pipe_rxsyncdone       ),            
+   .pipe_rxdisperr                     ( g2ip_pipe_rxdisperr        ),          
+   .pipe_rxnotintable                  ( g2ip_pipe_rxnotintable     ),          
+   .pipe_rxcommadet                    ( g2ip_pipe_rxcommadet       ),               
+   .pipe_debug_0                       ( g2ip_pipe_debug_0          ),
+   .pipe_debug_1                       ( g2ip_pipe_debug_1          ),
+   .pipe_debug_2                       ( g2ip_pipe_debug_2          ),
+   .pipe_debug_3                       ( g2ip_pipe_debug_3          ),
+   .pipe_debug_4                       ( g2ip_pipe_debug_4          ),
+   .pipe_debug_5                       ( g2ip_pipe_debug_5          ),
+   .pipe_debug_6                       ( g2ip_pipe_debug_6          ),
+   .pipe_debug_7                       ( g2ip_pipe_debug_7          ),
+   .pipe_debug_8                       ( g2ip_pipe_debug_8          ),
+   .pipe_debug_9                       ( g2ip_pipe_debug_9          ),
+   .pipe_debug                         ( g2ip_pipe_debug            ),
 
 
    //-------------------------------------------------------------------------------------//

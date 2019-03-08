@@ -112,9 +112,9 @@ input wire s_axi_awvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI AWREADY" *)
 output wire s_axi_awready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WDATA" *)
-input wire [127 : 0] s_axi_wdata;
+input wire [63 : 0] s_axi_wdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WSTRB" *)
-input wire [15 : 0] s_axi_wstrb;
+input wire [7 : 0] s_axi_wstrb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WLAST" *)
 input wire s_axi_wlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI WVALID" *)
@@ -146,15 +146,15 @@ output wire s_axi_arready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RID" *)
 output wire [3 : 0] s_axi_rid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RDATA" *)
-output wire [127 : 0] s_axi_rdata;
+output wire [63 : 0] s_axi_rdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RRESP" *)
 output wire [1 : 0] s_axi_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RLAST" *)
 output wire s_axi_rlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RVALID" *)
 output wire s_axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_SLAVE_S_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE\
- 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_SLAVE_S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE \
+0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_SLAVE_S_AXI RREADY" *)
 input wire s_axi_rready;
 
@@ -186,13 +186,13 @@ input wire s_axi_rready;
     .C_HAS_ENA(1),
     .C_HAS_REGCEA(0),
     .C_USE_BYTE_WEA(1),
-    .C_WEA_WIDTH(16),
+    .C_WEA_WIDTH(8),
     .C_WRITE_MODE_A("READ_FIRST"),
-    .C_WRITE_WIDTH_A(128),
-    .C_READ_WIDTH_A(128),
-    .C_WRITE_DEPTH_A(256),
-    .C_READ_DEPTH_A(256),
-    .C_ADDRA_WIDTH(8),
+    .C_WRITE_WIDTH_A(64),
+    .C_READ_WIDTH_A(64),
+    .C_WRITE_DEPTH_A(512),
+    .C_READ_DEPTH_A(512),
+    .C_ADDRA_WIDTH(9),
     .C_HAS_RSTB(1),
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
@@ -200,13 +200,13 @@ input wire s_axi_rready;
     .C_HAS_ENB(1),
     .C_HAS_REGCEB(0),
     .C_USE_BYTE_WEB(1),
-    .C_WEB_WIDTH(16),
+    .C_WEB_WIDTH(8),
     .C_WRITE_MODE_B("READ_FIRST"),
-    .C_WRITE_WIDTH_B(128),
-    .C_READ_WIDTH_B(128),
-    .C_WRITE_DEPTH_B(256),
-    .C_READ_DEPTH_B(256),
-    .C_ADDRB_WIDTH(8),
+    .C_WRITE_WIDTH_B(64),
+    .C_READ_WIDTH_B(64),
+    .C_WRITE_DEPTH_B(512),
+    .C_READ_DEPTH_B(512),
+    .C_ADDRB_WIDTH(9),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
     .C_HAS_MUX_OUTPUT_REGS_A(0),
@@ -231,25 +231,25 @@ input wire s_axi_rready;
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(1),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_COUNT_36K_BRAM("2"),
+    .C_COUNT_36K_BRAM("1"),
     .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     14.71285 mW")
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     7.356425 mW")
   ) inst (
     .clka(1'D0),
     .rsta(1'D0),
     .ena(1'D0),
     .regcea(1'D0),
-    .wea(16'B0),
-    .addra(8'B0),
-    .dina(128'B0),
+    .wea(8'B0),
+    .addra(9'B0),
+    .dina(64'B0),
     .douta(),
     .clkb(1'D0),
     .rstb(1'D0),
     .enb(1'D0),
     .regceb(1'D0),
-    .web(16'B0),
-    .addrb(8'B0),
-    .dinb(128'B0),
+    .web(8'B0),
+    .addrb(9'B0),
+    .dinb(64'B0),
     .doutb(),
     .injectsbiterr(1'D0),
     .injectdbiterr(1'D0),

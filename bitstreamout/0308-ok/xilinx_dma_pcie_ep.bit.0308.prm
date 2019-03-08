@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x00F2471B    Mar  8 20:41:25 2019    D:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.runs/impl_1/xilinx_dma_pcie_ep.bit

@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Mar  6 21:34:20 2019
-# Process ID: 15524
-# Current directory: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/impl_1
+# Start of session at: Fri Mar  8 20:37:07 2019
+# Process ID: 20964
+# Current directory: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.runs/impl_1
 # Command line: vivado.exe -log xilinx_dma_pcie_ep.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source xilinx_dma_pcie_ep.tcl -notrace
-# Log file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/impl_1/xilinx_dma_pcie_ep.vdi
-# Journal file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/impl_1\vivado.jou
+# Log file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.runs/impl_1/xilinx_dma_pcie_ep.vdi
+# Journal file: d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source xilinx_dma_pcie_ep.tcl -notrace

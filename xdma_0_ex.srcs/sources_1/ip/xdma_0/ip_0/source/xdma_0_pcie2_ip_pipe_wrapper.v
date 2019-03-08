@@ -188,11 +188,11 @@ module xdma_0_pcie2_ip_pipe_wrapper #
     parameter PCIE_RXSYNC_MODE              = 0,            // PCIe RX sync mode
     parameter PCIE_CHAN_BOND                = 0,            // PCIe channel bonding mode
     parameter PCIE_CHAN_BOND_EN             = "TRUE",       // PCIe channel bonding enable for Gen1/Gen2 only
-    parameter PCIE_LANE                     = 8,            // PCIe number of lanes
-    parameter PCIE_LINK_SPEED               = 2,            // PCIe link speed 
+    parameter PCIE_LANE                     = 1,            // PCIe number of lanes
+    parameter PCIE_LINK_SPEED               = 1,            // PCIe link speed 
     parameter PCIE_REFCLK_FREQ              = 0,            // PCIe reference clock frequency
-    parameter PCIE_USERCLK1_FREQ            = 5,            // PCIe user clock 1 frequency
-    parameter PCIE_USERCLK2_FREQ            = 4,            // PCIe user clock 2 frequency
+    parameter PCIE_USERCLK1_FREQ            = 3,            // PCIe user clock 1 frequency
+    parameter PCIE_USERCLK2_FREQ            = 3,            // PCIe user clock 2 frequency
     parameter PCIE_TX_EIDLE_ASSERT_DELAY    = 3'd2,         // PCIe TX electrical idle assert delay
     parameter PCIE_RXEQ_MODE_GEN3           = 1,            // PCIe RX equalization mode
     parameter PCIE_OOBCLK_MODE              = 1,            // PCIe OOB clock mode

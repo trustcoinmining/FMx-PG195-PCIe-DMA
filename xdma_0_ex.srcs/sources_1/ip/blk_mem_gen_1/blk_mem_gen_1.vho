@@ -65,8 +65,8 @@ COMPONENT blk_mem_gen_1
     s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_awvalid : IN STD_LOGIC;
     s_axi_awready : OUT STD_LOGIC;
-    s_axi_wdata : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    s_axi_wstrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axi_wdata : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    s_axi_wstrb : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_wlast : IN STD_LOGIC;
     s_axi_wvalid : IN STD_LOGIC;
     s_axi_wready : OUT STD_LOGIC;
@@ -82,7 +82,7 @@ COMPONENT blk_mem_gen_1
     s_axi_arvalid : IN STD_LOGIC;
     s_axi_arready : OUT STD_LOGIC;
     s_axi_rid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    s_axi_rdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
+    s_axi_rdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rlast : OUT STD_LOGIC;
     s_axi_rvalid : OUT STD_LOGIC;

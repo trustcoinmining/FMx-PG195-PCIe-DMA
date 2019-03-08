@@ -66,8 +66,8 @@ blk_mem_gen_1 your_instance_name (
   .s_axi_awburst(s_axi_awburst),  // input wire [1 : 0] s_axi_awburst
   .s_axi_awvalid(s_axi_awvalid),  // input wire s_axi_awvalid
   .s_axi_awready(s_axi_awready),  // output wire s_axi_awready
-  .s_axi_wdata(s_axi_wdata),      // input wire [127 : 0] s_axi_wdata
-  .s_axi_wstrb(s_axi_wstrb),      // input wire [15 : 0] s_axi_wstrb
+  .s_axi_wdata(s_axi_wdata),      // input wire [63 : 0] s_axi_wdata
+  .s_axi_wstrb(s_axi_wstrb),      // input wire [7 : 0] s_axi_wstrb
   .s_axi_wlast(s_axi_wlast),      // input wire s_axi_wlast
   .s_axi_wvalid(s_axi_wvalid),    // input wire s_axi_wvalid
   .s_axi_wready(s_axi_wready),    // output wire s_axi_wready
@@ -83,7 +83,7 @@ blk_mem_gen_1 your_instance_name (
   .s_axi_arvalid(s_axi_arvalid),  // input wire s_axi_arvalid
   .s_axi_arready(s_axi_arready),  // output wire s_axi_arready
   .s_axi_rid(s_axi_rid),          // output wire [3 : 0] s_axi_rid
-  .s_axi_rdata(s_axi_rdata),      // output wire [127 : 0] s_axi_rdata
+  .s_axi_rdata(s_axi_rdata),      // output wire [63 : 0] s_axi_rdata
   .s_axi_rresp(s_axi_rresp),      // output wire [1 : 0] s_axi_rresp
   .s_axi_rlast(s_axi_rlast),      // output wire s_axi_rlast
   .s_axi_rvalid(s_axi_rvalid),    // output wire s_axi_rvalid

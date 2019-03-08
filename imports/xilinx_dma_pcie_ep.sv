@@ -56,10 +56,10 @@
 
 module xilinx_dma_pcie_ep #
   (
-   parameter PL_LINK_CAP_MAX_LINK_WIDTH          = 8,            // 1- X1; 2 - X2; 4 - X4; 8 - X8
+   parameter PL_LINK_CAP_MAX_LINK_WIDTH          = 1,            // 1- X1; 2 - X2; 4 - X4; 8 - X8
    parameter PL_SIM_FAST_LINK_TRAINING           = "FALSE",      // Simulation Speedup
-   parameter PL_LINK_CAP_MAX_LINK_SPEED          = 2,             // 1- GEN1; 2 - GEN2; 4 - GEN3
-   parameter C_DATA_WIDTH                        = 128 ,
+   parameter PL_LINK_CAP_MAX_LINK_SPEED          = 1,             // 1- GEN1; 2 - GEN2; 4 - GEN3
+   parameter C_DATA_WIDTH                        = 64 ,
    parameter EXT_PIPE_SIM                        = "FALSE",  // This Parameter has effect on selecting Enable External PIPE Interface in GUI.
    parameter C_ROOT_PORT                         = "FALSE",      // PCIe block is in root port mode
    parameter C_DEVICE_NUMBER                     = 0,            // Device number for Root Port configurations only
@@ -261,21 +261,11 @@ module xilinx_dma_pcie_ep #
     wire 			m_axis_h2c_tvalid_0;
     wire 			m_axis_h2c_tready_0;
     wire [C_DATA_WIDTH/8-1:0]	m_axis_h2c_tkeep_0;
-    wire [C_DATA_WIDTH-1:0]	m_axis_h2c_tdata_1;
-    wire 			m_axis_h2c_tlast_1;
-    wire 			m_axis_h2c_tvalid_1;
-    wire 			m_axis_h2c_tready_1;
-    wire [C_DATA_WIDTH/8-1:0]	m_axis_h2c_tkeep_1;
     wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_0; 
     wire s_axis_c2h_tlast_0;
     wire s_axis_c2h_tvalid_0;
     wire s_axis_c2h_tready_0;
     wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_0; 
-    wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_1; 
-    wire s_axis_c2h_tlast_1;
-    wire s_axis_c2h_tvalid_1;
-    wire s_axis_c2h_tready_1;
-    wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_1; 
 
     wire [3:0]                  leds;
 
@@ -355,21 +345,11 @@ module xilinx_dma_pcie_ep #
       .s_axis_c2h_tvalid_0(s_axis_c2h_tvalid_0), 
       .s_axis_c2h_tready_0(s_axis_c2h_tready_0),
       .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),
-      .s_axis_c2h_tdata_1(s_axis_c2h_tdata_1),
-      .s_axis_c2h_tlast_1(s_axis_c2h_tlast_1),
-      .s_axis_c2h_tvalid_1(s_axis_c2h_tvalid_1),
-      .s_axis_c2h_tready_1(s_axis_c2h_tready_1),
-      .s_axis_c2h_tkeep_1(s_axis_c2h_tkeep_1),
       .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),
       .m_axis_h2c_tlast_0(m_axis_h2c_tlast_0),
       .m_axis_h2c_tvalid_0(m_axis_h2c_tvalid_0),
       .m_axis_h2c_tready_0(m_axis_h2c_tready_0),
       .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),
-      .m_axis_h2c_tdata_1(m_axis_h2c_tdata_1),
-      .m_axis_h2c_tlast_1(m_axis_h2c_tlast_1),
-      .m_axis_h2c_tvalid_1(m_axis_h2c_tvalid_1),
-      .m_axis_h2c_tready_1(m_axis_h2c_tready_1),
-      .m_axis_h2c_tkeep_1(m_axis_h2c_tkeep_1),
 
       // LITE interface   
       //-- AXI Master Write Address Channel
@@ -400,6 +380,52 @@ module xilinx_dma_pcie_ep #
 
 
 
+ 
+  //------------TRANSCEIVER DEBUG-----------------------------------
+      .pipe_txprbssel              (3'b000),
+      .pipe_rxprbssel              (3'b000),
+      .pipe_txprbsforceerr         (1'b0),
+      .pipe_rxprbscntreset         (1'b0),
+      .pipe_loopback               (3'b000),
+      .pipe_rxprbserr              ( ),
+      .pipe_txinhibit              ({PL_LINK_CAP_MAX_LINK_WIDTH{1'b0}}),
+      .pipe_rst_fsm                ( ),
+      .pipe_qrst_fsm               ( ),
+      .pipe_rate_fsm               ( ),
+      .pipe_sync_fsm_tx            ( ),
+      .pipe_sync_fsm_rx            ( ),
+      .pipe_drp_fsm                ( ),
+      .pipe_rst_idle               ( ),
+      .pipe_qrst_idle              ( ),
+      .pipe_rate_idle              ( ),
+      .pipe_eyescandataerror       ( ),
+      .pipe_rxstatus               ( ),
+      .pipe_dmonitorout            ( ),
+      .pipe_cpll_lock              ( ),  
+      .pipe_qpll_lock              ( ),     
+      .pipe_rxpmaresetdone         ( ),         
+      .pipe_rxbufstatus            ( ),            
+      .pipe_txphaligndone          ( ),           
+      .pipe_txphinitdone           ( ),            
+      .pipe_txdlysresetdone        ( ),        
+      .pipe_rxphaligndone          ( ),           
+      .pipe_rxdlysresetdone        ( ),         
+      .pipe_rxsyncdone             ( ),            
+      .pipe_rxdisperr              ( ),          
+      .pipe_rxnotintable           ( ),          
+      .pipe_rxcommadet             ( ),               
+      .gt_ch_drp_rdy               ( ),
+      .pipe_debug_0                ( ),
+      .pipe_debug_1                ( ),
+      .pipe_debug_2                ( ),
+      .pipe_debug_3                ( ),
+      .pipe_debug_4                ( ),
+      .pipe_debug_5                ( ),
+      .pipe_debug_6                ( ),
+      .pipe_debug_7                ( ),
+      .pipe_debug_8                ( ),
+      .pipe_debug_9                ( ),
+      .pipe_debug                  ( ),
       .usr_irq_req       (usr_irq_req),
       .usr_irq_ack       (usr_irq_ack),
       .msi_enable        (msi_enable),
@@ -464,21 +490,11 @@ module xilinx_dma_pcie_ep #
       .s_axis_c2h_tvalid_0(s_axis_c2h_tvalid_0), 
       .s_axis_c2h_tready_0(s_axis_c2h_tready_0),
       .s_axis_c2h_tkeep_0(s_axis_c2h_tkeep_0),
-      .s_axis_c2h_tdata_1(s_axis_c2h_tdata_1),
-      .s_axis_c2h_tlast_1(s_axis_c2h_tlast_1),
-      .s_axis_c2h_tvalid_1(s_axis_c2h_tvalid_1),
-      .s_axis_c2h_tready_1(s_axis_c2h_tready_1),
-      .s_axis_c2h_tkeep_1(s_axis_c2h_tkeep_1),
       .m_axis_h2c_tdata_0(m_axis_h2c_tdata_0),
       .m_axis_h2c_tlast_0(m_axis_h2c_tlast_0),
       .m_axis_h2c_tvalid_0(m_axis_h2c_tvalid_0),
       .m_axis_h2c_tready_0(m_axis_h2c_tready_0),
       .m_axis_h2c_tkeep_0(m_axis_h2c_tkeep_0),
-      .m_axis_h2c_tdata_1(m_axis_h2c_tdata_1),
-      .m_axis_h2c_tlast_1(m_axis_h2c_tlast_1),
-      .m_axis_h2c_tvalid_1(m_axis_h2c_tvalid_1),
-      .m_axis_h2c_tready_1(m_axis_h2c_tready_1),
-      .m_axis_h2c_tkeep_1(m_axis_h2c_tkeep_1),
 
       // AXI stream interface for the CQ forwarding
       .s_axib_awid      (m_axib_awid),

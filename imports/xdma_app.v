@@ -57,8 +57,8 @@
 module xdma_app #(
   parameter TCQ                         = 1,
   parameter C_M_AXI_ID_WIDTH            = 4,
-  parameter PL_LINK_CAP_MAX_LINK_WIDTH  = 8,
-  parameter C_DATA_WIDTH                = 128,
+  parameter PL_LINK_CAP_MAX_LINK_WIDTH  = 1,
+  parameter C_DATA_WIDTH                = 64,
   parameter C_M_AXI_DATA_WIDTH          = C_DATA_WIDTH,
   parameter C_S_AXI_DATA_WIDTH          = C_DATA_WIDTH,
   parameter C_S_AXIS_DATA_WIDTH         = C_DATA_WIDTH,
@@ -69,7 +69,7 @@ module xdma_app #(
   parameter C_S_AXIS_CC_USER_WIDTH      = ((C_DATA_WIDTH == 512) ?  81 : 33),
   parameter C_S_KEEP_WIDTH              = C_S_AXI_DATA_WIDTH / 32,
   parameter C_M_KEEP_WIDTH              = (C_M_AXI_DATA_WIDTH / 32),
-  parameter C_XDMA_NUM_CHNL             = 2
+  parameter C_XDMA_NUM_CHNL             = 1
 )
 (
 
@@ -102,21 +102,11 @@ module xdma_app #(
     output wire s_axis_c2h_tvalid_0,
     input  wire s_axis_c2h_tready_0,
     output wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_0,
-    output wire [C_DATA_WIDTH-1:0] s_axis_c2h_tdata_1,
-    output wire s_axis_c2h_tlast_1,
-    output wire s_axis_c2h_tvalid_1,
-    input  wire s_axis_c2h_tready_1,
-    output wire [C_DATA_WIDTH/8-1:0] s_axis_c2h_tkeep_1,
     input  wire [C_DATA_WIDTH-1:0] m_axis_h2c_tdata_0,
     input  wire m_axis_h2c_tlast_0,
     input  wire m_axis_h2c_tvalid_0,
     output wire m_axis_h2c_tready_0,
     input  wire [C_DATA_WIDTH/8-1:0] m_axis_h2c_tkeep_0,
-    input  wire [C_DATA_WIDTH-1:0] m_axis_h2c_tdata_1,
-    input  wire m_axis_h2c_tlast_1,
-    input  wire m_axis_h2c_tvalid_1,
-    output wire m_axis_h2c_tready_1,
-    input  wire [C_DATA_WIDTH/8-1:0] m_axis_h2c_tkeep_1,
 
   // AXI stream interface for the CQ forwarding
   input  wire  [C_M_AXI_ID_WIDTH-1:0]  s_axib_awid,
@@ -187,11 +177,6 @@ module xdma_app #(
       assign s_axis_c2h_tvalid_0 =  m_axis_h2c_tvalid_0;   
       assign s_axis_c2h_tkeep_0 =  m_axis_h2c_tkeep_0;  
       assign m_axis_h2c_tready_0 = s_axis_c2h_tready_0;
-      assign s_axis_c2h_tdata_1 =  m_axis_h2c_tdata_1;   
-      assign s_axis_c2h_tlast_1 =  m_axis_h2c_tlast_1;  
-      assign s_axis_c2h_tvalid_1 =  m_axis_h2c_tvalid_1;   
-      assign s_axis_c2h_tkeep_1 =  m_axis_h2c_tkeep_1;  
-      assign m_axis_h2c_tready_1 = s_axis_c2h_tready_1;
 
   // Block ram for the AXI Lite interface
   blk_mem_gen_0 blk_mem_axiLM_inst (

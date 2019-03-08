@@ -543,7 +543,7 @@ module xdma_0_pcie2_ip_pcie_7x # (
 
   input wire                sys_clk,
   input wire       [4:0]    pipe_rst_fsm,
-  input wire [(( 8 *3)-1):0] pipe_rxstatus,
+  input wire [(( 1 *3)-1):0] pipe_rxstatus,
 
 
   output wire               trn_clk,
@@ -1151,8 +1151,8 @@ xdma_0_pcie2_ip_pcie_bram_top_7x #(
   )
   pcie_block_i (
   
-    .TRNTD                               (trn_td                                     ),
-    .TRNTREM                             (trn_trem                                   ),
+    .TRNTD                               ({{(128-C_DATA_WIDTH){1'b0}},trn_td}          ),
+    .TRNTREM                             ({1'b0,trn_trem}          ),
 
 
     .TRNTSOF                             (trn_tsof                                   ),

@@ -4665,19 +4665,19 @@ assign cfg_interrupt_pending                             = pcie_dma_out.cfg_inte
    .s_axi_rdataeccparity(s_axib_ruser),
    .s_axi_rready(s_axib_rready),
    
-     .s_axis_c2h_tdata         ({s_axis_c2h_tdata_1,s_axis_c2h_tdata_0}),
-     .s_axis_c2h_tlast         ({s_axis_c2h_tlast_1,s_axis_c2h_tlast_0}),
-     .s_axis_c2h_tvalid        ({s_axis_c2h_tvalid_1,s_axis_c2h_tvalid_0}),
-     .s_axis_c2h_tready        ({s_axis_c2h_tready_1,s_axis_c2h_tready_0}),
-     .s_axis_c2h_tkeep         ({s_axis_c2h_tkeep_1, s_axis_c2h_tkeep_0}),
-     .s_axis_c2h_tparity       ({s_axis_c2h_tuser_1,s_axis_c2h_tuser_0}),
+     .s_axis_c2h_tdata         (s_axis_c2h_tdata_0),
+     .s_axis_c2h_tlast         (s_axis_c2h_tlast_0),
+     .s_axis_c2h_tvalid        (s_axis_c2h_tvalid_0),
+     .s_axis_c2h_tready        (s_axis_c2h_tready_0),
+     .s_axis_c2h_tkeep         (s_axis_c2h_tkeep_0),
+     .s_axis_c2h_tparity       (s_axis_c2h_tuser_0),
     .s_axis_c2h_tuser   (64'h0),
-     .m_axis_h2c_tdata         ({m_axis_h2c_tdata_1,m_axis_h2c_tdata_0}),
-     .m_axis_h2c_tlast         ({m_axis_h2c_tlast_1,m_axis_h2c_tlast_0}),
-     .m_axis_h2c_tvalid        ({m_axis_h2c_tvalid_1,m_axis_h2c_tvalid_0}),
-     .m_axis_h2c_tkeep         ({m_axis_h2c_tkeep_1,m_axis_h2c_tkeep_0}),
-     .m_axis_h2c_tready        ({m_axis_h2c_tready_1,m_axis_h2c_tready_0}),
-     .m_axis_h2c_tparity       ({m_axis_h2c_tuser_1,m_axis_h2c_tuser_0}),
+     .m_axis_h2c_tdata         (m_axis_h2c_tdata_0),
+     .m_axis_h2c_tlast         (m_axis_h2c_tlast_0),
+     .m_axis_h2c_tvalid        (m_axis_h2c_tvalid_0),
+     .m_axis_h2c_tkeep         (m_axis_h2c_tkeep_0),
+     .m_axis_h2c_tready        (m_axis_h2c_tready_0),
+     .m_axis_h2c_tparity       (m_axis_h2c_tuser_0),
     .m_axis_h2c_tuser   (),
 
     .usr_irq_req        (usr_irq_req),
@@ -4686,19 +4686,19 @@ assign cfg_interrupt_pending                             = pcie_dma_out.cfg_inte
     .usr_irq_fail       (usr_irq_fail),
 
 
-     .c2h_dsc_byp_ready ({c2h_dsc_byp_ready_1,c2h_dsc_byp_ready_0}),
-     .c2h_dsc_byp_src_addr   ({c2h_dsc_byp_src_addr_1,c2h_dsc_byp_src_addr_0}),
-     .c2h_dsc_byp_dst_addr   ({c2h_dsc_byp_dst_addr_1,c2h_dsc_byp_dst_addr_0}),
-     .c2h_dsc_byp_len        ({c2h_dsc_byp_len_1,c2h_dsc_byp_len_0}),
-     .c2h_dsc_byp_ctl        ({c2h_dsc_byp_ctl_1,c2h_dsc_byp_ctl_0}),
-     .c2h_dsc_byp_load       ({c2h_dsc_byp_load_1,c2h_dsc_byp_load_0}),
+     .c2h_dsc_byp_ready (c2h_dsc_byp_ready_0),
+     .c2h_dsc_byp_src_addr   (c2h_dsc_byp_src_addr_0),
+     .c2h_dsc_byp_dst_addr   (c2h_dsc_byp_dst_addr_0),
+     .c2h_dsc_byp_len        (c2h_dsc_byp_len_0),
+     .c2h_dsc_byp_ctl        (c2h_dsc_byp_ctl_0),
+     .c2h_dsc_byp_load       (c2h_dsc_byp_load_0),
 
-     .h2c_dsc_byp_ready ({h2c_dsc_byp_ready_1,h2c_dsc_byp_ready_0}),
-     .h2c_dsc_byp_src_addr   ({h2c_dsc_byp_src_addr_1,h2c_dsc_byp_src_addr_0}),
-     .h2c_dsc_byp_dst_addr   ({h2c_dsc_byp_dst_addr_1,h2c_dsc_byp_dst_addr_0}),
-     .h2c_dsc_byp_len        ({h2c_dsc_byp_len_1,h2c_dsc_byp_len_0}),
-     .h2c_dsc_byp_ctl        ({h2c_dsc_byp_ctl_1,h2c_dsc_byp_ctl_0}),
-     .h2c_dsc_byp_load       ({h2c_dsc_byp_load_1,h2c_dsc_byp_load_0}),
+     .h2c_dsc_byp_ready (h2c_dsc_byp_ready_0),
+     .h2c_dsc_byp_src_addr   (h2c_dsc_byp_src_addr_0),
+     .h2c_dsc_byp_dst_addr   (h2c_dsc_byp_dst_addr_0),
+     .h2c_dsc_byp_len        (h2c_dsc_byp_len_0),
+     .h2c_dsc_byp_ctl        (h2c_dsc_byp_ctl_0),
+     .h2c_dsc_byp_load       (h2c_dsc_byp_load_0),
 
     // H2C Descriptor Output Interface
     .h2c_desc_cmd_out_rdy              (1'b0),
@@ -4821,21 +4821,29 @@ xdma_v4_1_2_udma_ram_top
     .mi_c2h_wr_brg_dat            (mi_c2h_wr_brg_dat)
 );
 
+   assign s_axis_c2h_tready_1 = 1'b0;
    assign s_axis_c2h_tready_2 = 1'b0;
    assign s_axis_c2h_tready_3 = 1'b0;
+   assign s_axis_c2h_tuser_1 = 1'b0;
    assign s_axis_c2h_tuser_2 = 1'b0;
    assign s_axis_c2h_tuser_3 = 1'b0;
+   assign s_axis_c2h_tkeep_1 = 1'b0;
    assign s_axis_c2h_tkeep_2 = 1'b0;
    assign s_axis_c2h_tkeep_3 = 1'b0;
+   assign c2h_dsc_byp_ready_1 = 1'b0;
    assign c2h_dsc_byp_ready_2 = 1'b0;
    assign c2h_dsc_byp_ready_3 = 1'b0;
 
+   assign m_axis_h2c_tdata_1 = {C_M_AXIS_DATA_WIDTH{1'h0}};
+   assign m_axis_h2c_tlast_1 = 1'b0;
+   assign m_axis_h2c_tvalid_1 = 1'b0;
    assign m_axis_h2c_tdata_2 = {C_M_AXIS_DATA_WIDTH{1'h0}};
    assign m_axis_h2c_tlast_2 = 1'b0;
    assign m_axis_h2c_tvalid_2 = 1'b0;
    assign m_axis_h2c_tdata_3 = {C_M_AXIS_DATA_WIDTH{1'h0}};
    assign m_axis_h2c_tlast_3 = 1'b0;
    assign m_axis_h2c_tvalid_3 = 1'b0;
+   assign h2c_dsc_byp_ready_1 = 1'b0;
    assign h2c_dsc_byp_ready_2 = 1'b0;
    assign h2c_dsc_byp_ready_3 = 1'b0;
 
@@ -5058,6 +5066,53 @@ xdma_v4_1_2_udma_ram_top
     .cfg_ds_function_number                         ( cfg_ds_function_number ),
     .cfg_ds_port_number                             ( cfg_ds_port_number ),
 
+    //--------------------------------------------------------------------------
+    //  Transceiver Debug And Status Ports
+    //--------------------------------------------------------------------------
+    .pipe_txprbssel                                 ( pipe_txprbssel ),
+    .pipe_rxprbssel                                 ( pipe_rxprbssel ),
+    .pipe_txprbsforceerr                            ( pipe_txprbsforceerr ),
+    .pipe_rxprbscntreset                            ( pipe_rxprbscntreset ),
+    .pipe_loopback                                  ( pipe_loopback ),
+    .pipe_rxprbserr                                 ( pipe_rxprbserr ),
+    .pipe_txinhibit                                 ( pipe_txinhibit ),
+    .pipe_rst_fsm                                   ( pipe_rst_fsm ),
+    .pipe_qrst_fsm                                  ( pipe_qrst_fsm ),
+    .pipe_rate_fsm                                  ( pipe_rate_fsm ),
+    .pipe_sync_fsm_tx                               ( pipe_sync_fsm_tx ),
+    .pipe_sync_fsm_rx                               ( pipe_sync_fsm_rx ),
+    .pipe_drp_fsm                                   ( pipe_drp_fsm ),
+    .pipe_rst_idle                                  ( pipe_rst_idle ),
+    .pipe_qrst_idle                                 ( pipe_qrst_idle ),
+    .pipe_rate_idle                                 ( pipe_rate_idle ),
+    .pipe_eyescandataerror                          ( pipe_eyescandataerror ),
+    .pipe_rxstatus                                  ( pipe_rxstatus ),
+    .pipe_dmonitorout                               ( pipe_dmonitorout ),
+    .pipe_cpll_lock                                 ( pipe_cpll_lock ),
+    .pipe_qpll_lock                                 ( pipe_qpll_lock ),
+    .pipe_rxpmaresetdone                            ( pipe_rxpmaresetdone ),
+    .pipe_rxbufstatus                               ( pipe_rxbufstatus ),
+    .pipe_txphaligndone                             ( pipe_txphaligndone ),
+    .pipe_txphinitdone                              ( pipe_txphinitdone ),
+    .pipe_txdlysresetdone                           ( pipe_txdlysresetdone ),
+    .pipe_rxphaligndone                             ( pipe_rxphaligndone ),
+    .pipe_rxdlysresetdone                           ( pipe_rxdlysresetdone ),
+    .pipe_rxsyncdone                                ( pipe_rxsyncdone ),
+    .pipe_rxdisperr                                 ( pipe_rxdisperr ),
+    .pipe_rxnotintable                              ( pipe_rxnotintable ),
+    .pipe_rxcommadet                                ( pipe_rxcommadet ),
+    .gt_ch_drp_rdy                                  ( gt_ch_drp_rdy ),
+    .pipe_debug_0                                   ( pipe_debug_0 ),
+    .pipe_debug_1                                   ( pipe_debug_1 ),
+    .pipe_debug_2                                   ( pipe_debug_2 ),
+    .pipe_debug_3                                   ( pipe_debug_3 ),
+    .pipe_debug_4                                   ( pipe_debug_4 ),
+    .pipe_debug_5                                   ( pipe_debug_5 ),
+    .pipe_debug_6                                   ( pipe_debug_6 ),
+    .pipe_debug_7                                   ( pipe_debug_7 ),
+    .pipe_debug_8                                   ( pipe_debug_8 ),
+    .pipe_debug_9                                   ( pipe_debug_9 ),
+    .pipe_debug                                     ( pipe_debug ),
 
 
 

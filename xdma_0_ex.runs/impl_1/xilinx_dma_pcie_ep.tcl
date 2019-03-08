@@ -68,17 +68,17 @@ set rc [catch {
   create_project -in_memory -part xc7k410tffg900-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.cache/wt [current_project]
-  set_property parent.project_path d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.xpr [current_project]
-  set_property ip_output_repo d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.cache/ip [current_project]
+  set_property webtalk.parent_dir d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.cache/wt [current_project]
+  set_property parent.project_path d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.xpr [current_project]
+  set_property ip_output_repo d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.dcp
-  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci
-  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_xdc d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/pci-e/pg195-2/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc
-  read_xdc d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-2/xdma_0_ex/xdma_0_ex.srcs/constrs_1/imports/pci-e/FMx-PG195-PCIe-DMA/xdma_0_ex.srcs/constrs_1/new/k410tFM2Constraints.xdc
+  add_files -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.runs/synth_1/xilinx_dma_pcie_ep.dcp
+  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.xci
+  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_xdc d:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc
+  read_xdc D:/Documents/FPGA-Miner/xilinx-study/pci-e/pg195-4/xdma_0_ex/xdma_0_ex.srcs/k410tFM2Constraints.xdc
   link_design -top xilinx_dma_pcie_ep -part xc7k410tffg900-2
   close_msg_db -file init_design.pb
 } RESULT]

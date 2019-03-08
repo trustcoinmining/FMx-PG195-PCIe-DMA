@@ -104,8 +104,8 @@ module pci_exp_usrapp_tx #(
 parameter    Tcq = 1;
 localparam   [15:0] DMA_BYTE_CNT = 16'h0080;
 
-localparam   [3:0] LINK_CAP_MAX_LINK_WIDTH_EP = 4'h8;
-localparam   [2:0] LINK_CAP_MAX_LINK_SPEED_EP = 3'h2;
+localparam   [3:0] LINK_CAP_MAX_LINK_WIDTH_EP = 4'h1;
+localparam   [2:0] LINK_CAP_MAX_LINK_SPEED_EP = 3'h1;
                                
 localparam   [3:0] MAX_LINK_SPEED = (LINK_CAP_MAX_LINK_SPEED_EP==3'h4) ? 4'h3 : ((LINK_CAP_MAX_LINK_SPEED_EP==3'h2) ? 4'h2 : 4'h1);
 
